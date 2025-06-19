@@ -1,0 +1,13 @@
+.treatments {
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  max-width: 182px;
+  padding-top: 12px;
+  gap: 4px;
+}
+
+.span {
+  font-size: 16px;
+  color: #3c3c3c;
+}

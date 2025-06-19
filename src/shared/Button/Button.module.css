@@ -1,0 +1,18 @@
+.button {
+  padding: 12px 24px;
+  font-size: 20px;
+}
+
+.button_light {
+  background-color: #fff;
+  color: #3c3c3c;
+  border: 1px solid #3c3c3c;
+  padding: 8px 16px;
+}
+
+.button_dark {
+  background-color: #b36a66;
+  color: #fff;
+  border: 1px solid #3c3c3c;
+  padding: 8px 16px;
+}

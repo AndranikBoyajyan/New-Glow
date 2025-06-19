@@ -1,0 +1,27 @@
+.li {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.1vw;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.itemName {
+  font-size: 20px;
+  color: #3c3c3c;
+}
+
+.redirectLink {
+  text-decoration: none;
+}
+
+.openedDropdown {
+  background-color: #fff;
+  border-radius: 8px;
+}
