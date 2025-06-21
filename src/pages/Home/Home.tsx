@@ -1,6 +1,6 @@
 import FavoriteTreatments from "../../components/FavoriteTreatments";
 import RadianceBegin from "../../components/RadianceBegin";
-
+ 
 import styles from "./Home.module.css";
 export const Home = () => {
   return (

@@ -1,0 +1,16 @@
+.conatiner{
+  position: relative;
+  display: inline-block;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.treatment-name{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

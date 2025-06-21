@@ -1,0 +1,7 @@
+.conatiner{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    gap: 4px;
+    padding: 12px;
+}
