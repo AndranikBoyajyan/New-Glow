@@ -1,0 +1,18 @@
+export const classNames = {
+  homeSlider: "homeSlider",
+  radianceBegin: "radianceBegin",
+  radianceBeginLeft: "radianceBegin_left",
+  radianceBeginRight: "radianceBegin_right",
+  titleWrapper: "titleWrapper",
+  titleWrapperLeft: "titleWrapper_left",
+  titleWrapperRight: "titleWrapper_right",
+  subTitle: "subTitle",
+  infoTextWrapper: "infoTextWrapper",
+  infoTextWrapperLeft: "infoTextWrapper_left",
+  infoTextWrapperRight: "infoTextWrapper_right",
+  img: "img",
+  img1: "img1",
+  img2: "img2",
+  buttons: "buttons",
+  infoText: "infoText",
+};

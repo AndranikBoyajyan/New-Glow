@@ -14,8 +14,6 @@ export const Button: FC<ButtonProps> = ({
   className,
   font = "poppins-medium",
 }) => {
-  console.log(className);
-
   return (
     <button className={cn(styles.button, styles[className], font)}>
       {content}

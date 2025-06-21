@@ -1,12 +1,12 @@
+import { useState } from "react";
 import cn from "classnames";
 import homepageSlider1 from "../../../public/pngs/homepageSlider1.png";
 import homepageSlider2 from "../../../public/pngs/homepageSlider2.png";
+import { classNames } from "./constants/classnames";
+import TitleSVG from "../../assets/RadianceBeginsHere.svg";
 
-import TitleSVG from "../../assets/Title.svg";
-
+import HomeSlider from "../../features/HomeSlider";
 import styles from "./RadianceBegin.module.css";
-import { useState } from "react";
-import Button from "../../shared/Button";
 
 export const RadianceBegin = () => {
   const [animation, setAnimation] = useState(1);
@@ -16,104 +16,33 @@ export const RadianceBegin = () => {
   };
 
   return (
-    <>
-      <div className={styles.slideWrapper}>
-        <div
-          className={cn(styles.fadeSlide, {
-            [styles.activeSlide]: animation === 1,
-          })}
-        >
-          <div className={styles.homeSlider}>
-            <div
-              className={cn(styles.radianceBegin, styles.radianceBegin_left)}
-            >
-              <div
-                className={cn(styles.titleWrapper, styles.titleWrapper_left)}
-              >
-                <img src={TitleSVG} alt="Title" />
-                <span className={cn(styles.subTitle, "spectral-regular")}>
-                  Advanced Skincare Backed by Science
-                </span>
-              </div>
-              <div
-                className={cn(
-                  styles.infoTextWrapper,
-                  styles.infoTextWrapper_left
-                )}
-              >
-                <span className={cn(styles.infoText, "poppins-regular")}>
-                  We provide medically-informed treatments and custom plans
-                  designed to improve your skin health from the inside out.
-                </span>
-                <div className={styles.buttons}>
-                  <Button
-                    content="Book a consultation"
-                    className="button_dark"
-                  />
-                  <Button
-                    content="See all treatments"
-                    className="button_light"
-                  />
-                </div>
-              </div>
-            </div>
-            <img
-              className={cn(styles.img, styles.img1)}
-              src={homepageSlider1}
-              alt="slider1"
-            />
-          </div>
-        </div>
-
-        <div
-          className={cn(styles.fadeSlide, {
-            [styles.activeSlide]: animation === 2,
-          })}
-        >
-          <div className={styles.homeSlider}>
-            <div
-              className={cn(styles.radianceBegin, styles.radianceBegin_right)}
-            >
-              <img
-                className={cn(styles.img, styles.img2)}
-                src={homepageSlider2}
-                alt="slider2"
-              />
-
-              <div
-                className={cn(styles.titleWrapper, styles.titleWrapper_right)}
-              >
-                <img src={TitleSVG} alt="Title" />
-                <span className={cn(styles.subTitle, "spectral-regular")}>
-                  Advanced Skincare Backed by Science
-                </span>
-              </div>
-              <div
-                className={cn(
-                  styles.infoTextWrapper,
-                  styles.infoTextWrapper_right
-                )}
-              >
-                <span className={cn(styles.infoText, "poppins-regular")}>
-                  We provide medically-informed treatments and custom plans
-                  designed to improve your skin health from the inside out.
-                </span>
-                <div className={styles.buttons}>
-                  <Button
-                    content="Book a consultation"
-                    className="button_dark"
-                  />
-                  <Button
-                    content="See all treatments"
-                    className="button_light"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className={styles.slideWrapper}>
+      <div
+        className={cn(styles.fadeSlide, {
+          [styles.activeSlide]: animation === 1,
+        })}
+      >
+        <HomeSlider
+          classNames={classNames}
+          svg={TitleSVG}
+          imageSrc={homepageSlider1}
+          sliderSide="left"
+        />
       </div>
-      <div className={styles.buttons}>
+
+      <div
+        className={cn(styles.fadeSlide, {
+          [styles.activeSlide]: animation === 2,
+        })}
+      >
+        <HomeSlider
+          classNames={classNames}
+          svg={TitleSVG}
+          imageSrc={homepageSlider2}
+          sliderSide="right"
+        />
+      </div>
+      <div className={styles.sliderButtons}>
         <button
           name="first"
           className={cn(styles.slideBtn, {
@@ -129,6 +58,6 @@ export const RadianceBegin = () => {
           onClick={(e) => handleClick(e.currentTarget.name)}
         />
       </div>
-    </>
+    </div>
   );
 };
