@@ -1,30 +1,25 @@
-import type { TreatmentCard } from "../model";
+import type { ITreatment } from "../features/Treatments/model";
 
-export const treatments: TreatmentCard[] = [
+export const TREATMENTS: ITreatment[] = [
   {
     id: 1,
     name: "Chemical Peels",
-    imgUrl: "", // from ../public
   },
   {
     id: 2,
     name: "Microneedling",
-    imgUrl: "",
   },
   {
     id: 3,
     name: "Botox treatments",
-    imgUrl: "",
   },
   {
     id: 4,
     name: "Morpheus 8",
-    imgUrl: "",
   },
   {
     id: 5,
     name: "Laser Hair Removal",
-    imgUrl: "",
   },
   {
     id: 6,

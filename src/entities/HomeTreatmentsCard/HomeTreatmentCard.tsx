@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import cn from "classnames";
 import styles from "./homeTreatmentCard.module.css";
-import {Button} from "../../shared/Button/Button";
+import { Button } from "../../shared/Button/Button";
 
 interface HomeTreatmentCardProps {
   name: string;
@@ -12,12 +12,21 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
   name,
   imgUrl,
 }) => {
-  return (
-    <div className={cn(styles["conatiner"])}>
-      <img src={imgUrl} alt={name} className={styles.img} />
-      <span className={cn(styles["treatment-name"])}>{name}</span>
-      <Button content="LEARN MORE" className="learn-more-button"/> 
-    </div>
+  console.log({ name, imgUrl });
 
+  return (
+    <div className={styles.container}>
+      <img src={imgUrl} alt={name} className={styles.img} />
+      <div className={styles.treatmentNameAndButton}>
+        <span className={cn(styles.treatmentName, "poppins-regular")}>
+          {name}
+        </span>
+        <Button
+          content="LEARN MORE"
+          className="learn_more_button"
+          font="poppins-medium"
+        />
+      </div>
+    </div>
   );
 };

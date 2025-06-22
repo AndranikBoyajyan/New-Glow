@@ -1,11 +1,11 @@
 import TreatmentCard from "../../entities/TreatmentCard";
-import { treatments } from "../Treatments/constants/treatments";
+import { TREATMENTS } from "../../constants/treatments";
 import styles from "./TreatmentCards.module.css";
 
 export const TreatmentCards = () => {
   return (
     <div className={styles.cards}>
-      {treatments.map((treatment) => (
+      {TREATMENTS.map((treatment) => (
         <TreatmentCard
           key={treatment.id}
           name={treatment.name}

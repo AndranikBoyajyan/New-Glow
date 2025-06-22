@@ -1,4 +1,4 @@
-export interface Treatment {
+export interface ITreatment {
   id: number;
   name: string;
   imgUrl?: string;
