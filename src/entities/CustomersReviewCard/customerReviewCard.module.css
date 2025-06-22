@@ -1,0 +1,21 @@
+.customer_review_card{
+    background-color: hsla(0, 0%, 100%, 0.6);
+    border-radius: 16px;
+    width: 30vw;
+    padding: 16px;
+    position: relative;
+}
+.reviewer_name{
+    text-align: right;
+    font-weight: bold;
+}
+.comma_left{
+    position: absolute;
+    top: -40%;
+    left: -6%;
+}
+.comma_right{
+    position: absolute;
+    bottom: -50%;
+    right: -7%;
+}
