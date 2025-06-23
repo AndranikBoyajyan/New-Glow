@@ -1,4 +1,4 @@
-.container {
+.home_treatment_card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
   height: 100%;
 }
 
-.treatmentNameAndButton {
+.treatment_name_and_button {
   max-width: 70%;
   position: absolute;
   bottom: -15px;
@@ -22,6 +22,6 @@
   gap: 20px;
 }
 
-.treatmentName {
+.treatment_name {
   font-size: 20px;
 }

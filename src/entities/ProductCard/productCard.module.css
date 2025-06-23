@@ -1,4 +1,4 @@
-.conatiner{
+.product_card{
     display: flex;
     flex-direction: column;
     border: solid black 1px;

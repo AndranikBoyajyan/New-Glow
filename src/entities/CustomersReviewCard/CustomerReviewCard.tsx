@@ -1,5 +1,8 @@
 import type { FC } from "react";
+import cn from "classnames"
 import styles from "./customerReviewCard.module.css";
+import commaRight from "./pngs/commaRight.png";
+import commaLeft from "./pngs/commaLeft.png"
 
 interface CustomerReviewCardProps {
   text: string;
@@ -12,10 +15,10 @@ export const CustomerReviewCard: FC<CustomerReviewCardProps> = ({
 }) => {
   return (
     <div className={styles.customer_review_card}>
-      <img src="./pngs/commaRight.png" alt="" className={styles.comma_right}/>
-      <img src="./pngs/commaLeft.png" alt="" className={styles.comma_left}/>
-      <p>{text}</p>
-      <p className={styles.reviewer_name}>{name}</p>
+      <img src={commaRight} alt="" className={styles.comma_right}/>
+      <img src={commaLeft} alt="" className={styles.comma_left}/>
+      <p className={cn(styles.text, "poppins-regular")}>{text}</p>
+      <p className={cn(styles.reviewer_name, "poppins-regular")}>{name}</p>
     </div>
   );
 };

@@ -15,10 +15,10 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
   console.log({ name, imgUrl });
 
   return (
-    <div className={styles.container}>
+    <div className={styles.home_treatment_card}>
       <img src={imgUrl} alt={name} className={styles.img} />
-      <div className={styles.treatmentNameAndButton}>
-        <span className={cn(styles.treatmentName, "poppins-regular")}>
+      <div className={styles.treatment_name_and_button}>
+        <span className={cn(styles.treatment_name, "poppins-regular")}>
           {name}
         </span>
         <Button

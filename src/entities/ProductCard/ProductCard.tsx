@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import cn from "classnames";
 import styles from "./productCard.module.css";
 
 interface ProductCardProps {
@@ -14,9 +13,9 @@ export const ProductCard: FC<ProductCardProps> = ({
   price,
 }) => {
   return (
-    <div className={cn(styles["conatiner"])}>
+    <div className={styles.product_card}>
       <img src={imgUrl} alt={name} className={styles.img} />
-      <span className={cn(styles["treatment-name"])}>{name}</span>
+      <span className={styles.treatment_name}>{name}</span>
       <span>{price}</span>
     </div>
   );
