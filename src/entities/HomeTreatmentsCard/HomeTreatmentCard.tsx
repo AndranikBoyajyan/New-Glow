@@ -12,8 +12,6 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
   name,
   imgUrl,
 }) => {
-  console.log({ name, imgUrl });
-
   return (
     <div className={styles.home_treatment_card}>
       <img src={imgUrl} alt={name} className={styles.img} />
