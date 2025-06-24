@@ -1,6 +1,6 @@
 import { useState } from "react";
-import arrowDown from "../../../public/pngs/arrowDown.png";
-import arrowUp from "../../../public/pngs/arrowUp.png";
+import arrowDown from "/pngs/arrowDown.png";
+import arrowUp from "/pngs/arrowUp.png";
 import MenuItem from "../../features/MenuItem";
 
 import styles from "./Menu.module.css";

@@ -21,7 +21,7 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
         </span>
         <Button
           content="LEARN MORE"
-          className="learn_more_button"
+          className="button_weight_2"
           font="poppins-medium"
         />
       </div>

@@ -3,9 +3,16 @@
   font-size: 20px;
 }
 
-.button_light {
+.button_light_3 {
   background-color: #fff;
-  color: #3c3c3c;
+  color: #b36a66; /* rose3 */
+  border: 1px solid #3c3c3c;
+  padding: 8px 16px;
+}
+
+.button_light_4 {
+  background-color: #fff;
+  color: #8a4f4c; /* rose4 */
   border: 1px solid #3c3c3c;
   padding: 8px 16px;
 }
@@ -26,7 +33,7 @@
   font-size: 28px;
 }
 
-.learn_more_button {
+.button_weight_2 {
   border: 2px solid #8a4f4c;
   color: #8a4f4c;
 }

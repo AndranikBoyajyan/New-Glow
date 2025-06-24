@@ -1,6 +1,5 @@
 import ExpertCard from "../../features/ExpertCard";
 import cn from "classnames";
-import ourLocation from "../../../public/jpgs/ourLocation.jpg";
 import styles from "./HomeOurExperts.module.css";
 import Title from "../../shared/Title";
 
@@ -11,11 +10,6 @@ export const HomeOurExperts = () => {
         <ExpertCard />
       </div>
       <div className={styles.location}>
-        <img
-          className={styles.locationImg}
-          src={ourLocation}
-          alt="our location"
-        />
         <div className={styles.locationTextWrapper}>
           <Title
             text="OUR LOCATION"

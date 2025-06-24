@@ -1,26 +1,28 @@
-.footer{
-    background-color: #B36A66;
-    padding: 37px 179px 20px 179px;
-    color: white;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    text-align: start;
-    font-size: 16px;
+.footer {
+  background-color: #b36a66;
+  padding: 37px 179px 20px 179px;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: start;
+  font-size: 16px;
 }
-.address_info{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+
+.address_info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-.instagram_block{
-    background-color: #B36A66;
-    width: 100%;
-    color: white;
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 27px;
+
+.instagram_block {
+  background-color: #b36a66;
+  width: 100%;
+  color: white;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 27px;
 }
