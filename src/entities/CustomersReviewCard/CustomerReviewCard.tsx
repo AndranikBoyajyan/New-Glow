@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import cn from "classnames"
 import styles from "./customerReviewCard.module.css";
-import commaRight from "./pngs/commaRight.png";
-import commaLeft from "./pngs/commaLeft.png"
+import commaRight from "/pngs/commaRight.png";
+import commaLeft from "/pngs/commaLeft.png"
 
 interface CustomerReviewCardProps {
   text: string;

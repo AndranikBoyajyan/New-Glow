@@ -6,6 +6,8 @@ interface TreatmentCardProps {
   name: string;
   imgUrl: string;
   description: string;
+  duration: string;
+  price: string;
 }
 
 export const TreatmentCard: FC<TreatmentCardProps> = ({
