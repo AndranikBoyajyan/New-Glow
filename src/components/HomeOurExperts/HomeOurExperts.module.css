@@ -1,0 +1,39 @@
+.homeOurExperts {
+  width: 100%;
+  display: flex;
+  background-color: rgba(179, 106, 102, 0.1);
+}
+
+.homeOurExperts > .expert {
+  width: 33%;
+}
+
+.homeOurExperts > .location {
+  width: 67%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-basis: max-content;
+  margin-left: 1.7vw;
+}
+
+.locationTextWrapper {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  height: -webkit-fill-available;
+  margin: 18.5px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.address {
+  font-size: 20px;
+}
+
+.locationImg {
+  width: 100%;
+  height: 100%;
+}

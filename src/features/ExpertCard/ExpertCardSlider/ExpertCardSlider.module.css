@@ -1,0 +1,70 @@
+.expertCardSlider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.slidesContainer {
+  width: 32vw;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1vw;
+  font-size: 24px;
+}
+
+.expertName {
+  font-size: 20px;
+  color: #3c3c3c;
+}
+
+.expertProfession {
+  font-size: 16px;
+  color: #3c3c3c;
+}
+
+.expertCardSliderImg {
+  display: flex;
+  gap: 6px;
+}
+
+.arrowButton {
+  all: unset;
+  z-index: 2;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.leftArrow {
+  left: 0;
+}
+
+.rightArrow {
+  right: 0;
+}
+
+.arrowActive {
+  opacity: 1;
+}
