@@ -15,7 +15,12 @@ export const Button: FC<ButtonProps> = ({
   font = "poppins-medium",
 }) => {
   return (
-    <button className={cn(styles.button, styles[className], font)}>
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+      }}
+      className={cn(styles.button, styles[className], font)}
+    >
       {content}
     </button>
   );

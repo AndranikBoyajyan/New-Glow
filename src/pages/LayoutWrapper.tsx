@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import styles from "./styles.module.css";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
+import Subscribe from "../components/Subscribe";
 
 const LayoutWrapper = () => {
   return (
@@ -10,6 +11,7 @@ const LayoutWrapper = () => {
       <div className={styles.border}></div>
       <Menu />
       <Outlet />
+      <Subscribe />
       <Footer />
     </div>
   );

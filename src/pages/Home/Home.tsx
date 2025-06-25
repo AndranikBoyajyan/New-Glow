@@ -4,8 +4,10 @@ import HomeOurExperts from "../../components/HomeOurExperts";
 import RadianceBegin from "../../components/RadianceBegin";
 import CustomersReview from "../../components/CustomersReview";
 import SpecialPromo from "../../components/SpecialPromo";
+import HomeProducts from "../../components/HomeProducts";
 
 import styles from "./Home.module.css";
+
 export const Home = () => {
   return (
     <div className={styles.home}>
@@ -15,6 +17,7 @@ export const Home = () => {
       <HomeOurExperts />
       <SpecialPromo />
       <CustomersReview />
+      <HomeProducts />
     </div>
   );
 };
