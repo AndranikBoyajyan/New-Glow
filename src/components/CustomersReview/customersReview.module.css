@@ -1,0 +1,28 @@
+.customers_review{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    align-items: flex-start;
+}
+
+.title_wrapper{
+    margin-left: 3.3vw;
+}
+.reviews{
+    background-image: url("/pngs/OurCustomersBackground.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20vh 8vw;
+    display: flex;
+    justify-content: space-between;
+}
+.customer_review_left{
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+}
+.customer_review_right {
+    align-self: center;
+}
