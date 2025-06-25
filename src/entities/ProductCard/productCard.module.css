@@ -1,7 +1,15 @@
-.product_card{
-    display: flex;
-    flex-direction: column;
-    border: solid black 1px;
-    gap: 4px;
-    padding: 12px;
+.product_card {
+  display: flex;
+  flex-direction: column;
+  border: solid black 1px;
+  gap: 4px;
+  padding: 12px;
+}
+
+.treatmentName {
+  font-size: 16px;
+}
+
+.treatmentPrice {
+  font-size: 18px;
 }

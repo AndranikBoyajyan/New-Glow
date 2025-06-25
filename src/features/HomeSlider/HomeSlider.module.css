@@ -19,11 +19,11 @@
 }
 
 .radianceBegin_left {
-  margin-left: 2.5vw;
+  margin-left: 7vw;
 }
 
 .radianceBegin_right {
-  margin-right: 3.5vw;
+  margin-right: 7vw;
   align-items: end;
 }
 
@@ -53,6 +53,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .infoText {
@@ -72,7 +73,7 @@
 .img {
   background-size: 100%;
   background-repeat: no-repeat;
-  flex: 1;
+  flex: 2;
 }
 
 .img1 {

@@ -19,11 +19,13 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
         <span className={cn(styles.treatment_name, "poppins-regular")}>
           {name}
         </span>
-        <Button
-          content="LEARN MORE"
-          className="button_weight_2"
-          font="poppins-medium"
-        />
+        <div className={styles.buttonWrapper}>
+          <Button
+            content="LEARN MORE"
+            className="button_weight_2"
+            font="poppins-medium"
+          />
+        </div>
       </div>
     </div>
   );

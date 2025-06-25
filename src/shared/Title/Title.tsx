@@ -11,5 +11,9 @@ interface TitleProps {
 }
 
 export const Title: FC<TitleProps> = ({ text, font, className }) => {
-  return <h2 className={cn(styles.title, styles[className], font)}>{text}</h2>;
+  return (
+    <h2 className={cn(styles.title, styles[className], font)}>
+      {text.toUpperCase()}
+    </h2>
+  );
 };

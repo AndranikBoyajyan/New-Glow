@@ -1,21 +1,24 @@
-.customer_review_card{
-    background-color: hsla(0, 0%, 100%, 0.6);
-    border-radius: 16px;
-    width: 30vw;
-    padding: 16px;
-    position: relative;
+.customer_review_card {
+  background-color: hsla(0, 0%, 100%, 0.6);
+  border-radius: 16px;
+  width: 37vw;
+  padding: 42px 46px 38px;
+  position: relative;
+  text-align: left;
 }
-.reviewer_name{
-    text-align: right;
-    font-weight: bold;
+
+.comma_left {
+  position: absolute;
+  top: -40px;
+  left: -10px;
 }
-.comma_left{
-    position: absolute;
-    top: -40px;
-    left: -10px;
+.comma_right {
+  position: absolute;
+  bottom: -45px;
+  right: -20px;
 }
-.comma_right{
-    position: absolute;
-    bottom: -45px;
-    right: -20px;
+
+.reviewer_name {
+  text-align: right;
+  font-weight: bold;
 }
