@@ -1,6 +1,6 @@
 import { useState } from "react";
-import sliderArrowLeft from "../../../../public/pngs/sliderArrowLeft.png";
-import sliderArrowRight from "../../../../public/pngs/sliderArrowRight.png";
+import sliderArrowLeft from "/pngs/sliderArrowLeft.png";
+import sliderArrowRight from "/pngs/sliderArrowRight.png";
 
 import cn from "classnames";
 import { ourExperts } from "../constants/ourExperts";

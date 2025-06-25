@@ -1,5 +1,10 @@
 .homeSlider {
   width: 100%;
+  display: flex;
+}
+
+.homeSliderRight {
+  flex-flow: row-reverse;
 }
 
 .radianceBegin {
@@ -8,7 +13,9 @@
   align-items: start;
   justify-content: center;
   padding-top: 135px;
+  padding-bottom: 74px;
   gap: 114px;
+  flex: 2;
 }
 
 .radianceBegin_left {
@@ -63,18 +70,17 @@
 }
 
 .img {
-  position: absolute;
-  width: 36%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  flex: 1;
 }
 
 .img1 {
-  top: 0;
-  right: 0;
+  background-image: url("/pngs/homepageSlider1.png");
 }
 
 .img2 {
-  top: 0;
-  left: 0;
+  background-image: url("/pngs/homepageSlider2.png");
 }
 
 .buttons {

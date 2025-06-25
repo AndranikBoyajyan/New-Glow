@@ -3,6 +3,7 @@ import HomeAllTreatments from "../../components/HomeAllTreatments";
 import HomeOurExperts from "../../components/HomeOurExperts";
 import RadianceBegin from "../../components/RadianceBegin";
 import CustomersReview from "../../components/CustomersReview";
+import SpecialPromo from "../../components/SpecialPromo";
 
 import styles from "./Home.module.css";
 export const Home = () => {
@@ -12,6 +13,7 @@ export const Home = () => {
       <FavoriteTreatments />
       <HomeAllTreatments />
       <HomeOurExperts />
+      <SpecialPromo />
       <CustomersReview />
     </div>
   );

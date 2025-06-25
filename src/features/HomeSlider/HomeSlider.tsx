@@ -6,18 +6,20 @@ import type { FC } from "react";
 interface HomeSliderProps {
   classNames: Record<string, string>;
   svg: string;
-  imageSrc: string;
   sliderSide: "left" | "right";
 }
 
 export const HomeSlider: FC<HomeSliderProps> = ({
   classNames,
   svg,
-  imageSrc,
   sliderSide,
 }) => {
   return (
-    <div className={cn(styles[classNames.homeSlider])}>
+    <div
+      className={cn(styles[classNames.homeSlider], {
+        [styles[classNames.homeSliderRight]]: sliderSide === "right",
+      })}
+    >
       <div
         className={cn(styles[classNames.radianceBegin], {
           [styles[classNames.radianceBeginLeft]]: sliderSide === "left",
@@ -51,14 +53,20 @@ export const HomeSlider: FC<HomeSliderProps> = ({
           </div>
         </div>
       </div>
-      <img
+      {/* <img
         className={cn(styles[classNames.img], {
           [styles.img1]: sliderSide === "left",
           [styles.img2]: sliderSide === "right",
         })}
         src={imageSrc}
         alt="sliderImg"
-      />
+      /> */}
+      <div
+        className={cn(styles[classNames.img], {
+          [styles.img1]: sliderSide === "left",
+          [styles.img2]: sliderSide === "right",
+        })}
+      ></div>
     </div>
   );
 };

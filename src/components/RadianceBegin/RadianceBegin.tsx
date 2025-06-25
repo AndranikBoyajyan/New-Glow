@@ -1,7 +1,5 @@
 import { useState } from "react";
 import cn from "classnames";
-import homepageSlider1 from "../../../public/pngs/homepageSlider1.png";
-import homepageSlider2 from "../../../public/pngs/homepageSlider2.png";
 import { classNames } from "./constants/classnames";
 import TitleSVG from "../../assets/RadianceBeginsHere.svg";
 
@@ -22,12 +20,7 @@ export const RadianceBegin = () => {
           [styles.activeSlide]: animation === 1,
         })}
       >
-        <HomeSlider
-          classNames={classNames}
-          svg={TitleSVG}
-          imageSrc={homepageSlider1}
-          sliderSide="left"
-        />
+        <HomeSlider classNames={classNames} svg={TitleSVG} sliderSide="left" />
       </div>
 
       <div
@@ -35,12 +28,7 @@ export const RadianceBegin = () => {
           [styles.activeSlide]: animation === 2,
         })}
       >
-        <HomeSlider
-          classNames={classNames}
-          svg={TitleSVG}
-          imageSrc={homepageSlider2}
-          sliderSide="right"
-        />
+        <HomeSlider classNames={classNames} svg={TitleSVG} sliderSide="right" />
       </div>
       <div className={styles.sliderButtons}>
         <button

@@ -1,12 +1,10 @@
-import cn from "classnames"
+import cn from "classnames";
 import styles from "./footer.module.css";
 import instagramLogo from "/pngs/instagramLogo.png";
-import CustomerReviewCard from "../../entities/CustomersReviewCard";
 
 export const Footer = () => {
-
-    return (
-      <>
+  return (
+    <>
       <div className={cn(styles.footer, "poppins-medium")}>
         <div>
           <p>MENU</p>
@@ -39,8 +37,8 @@ export const Footer = () => {
             <p>Wednesday: 10am - 6pm</p>
             <p>Thursday: 10am - 5pm</p>
             <p>Friday: 10am - 5pm</p>
-            <p>​​Saturday: Closed</p>
-            <p>​Sunday: Closed</p>
+            <p>Saturday: Closed</p>
+            <p>Sunday: Closed</p>
           </div>
           <div>
             <p>PLEASE NOTE:</p>
@@ -50,10 +48,9 @@ export const Footer = () => {
         </div>
       </div>
       <div className={styles.instagram_block}>
-        <img src={instagramLogo} alt="" height={27}/>
+        <img src={instagramLogo} alt="" height={27} />
         <span>INSTAGRAM</span>
       </div>
-      </>
-    );
-
+    </>
+  );
 };
