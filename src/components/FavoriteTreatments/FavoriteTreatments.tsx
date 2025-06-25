@@ -1,8 +1,8 @@
 import FavoriteTreatmentsDescription from "../../entities/FavoriteTreatmentsDescription";
 import Button from "../../shared/Button";
-import favoritePng1 from "../../../public/pngs/favoritePng1.png";
-import favoritePng2 from "../../../public/pngs/favoritePng2.png";
-import favoritePng3 from "../../../public/pngs/favoritePng3.png";
+import favoritePng1 from "/pngs/favoritePng1.png";
+import favoritePng2 from "/pngs/favoritePng2.png";
+import favoritePng3 from "/pngs/favoritePng3.png";
 
 import styles from "./FavoriteTreatments.module.css";
 

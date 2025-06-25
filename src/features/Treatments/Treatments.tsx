@@ -10,7 +10,9 @@ export const Treatments = () => {
       {TREATMENTS.map((treatment) => (
         <Treatment key={treatment.id} name={treatment.name} />
       ))}
-      <span className={cn(styles.span, "poppins-medium-italic")}>See All</span>
+      <span className={cn(styles.seeAll, "poppins-medium-italic")}>
+        See All
+      </span>
     </div>
   );
 };

@@ -10,17 +10,16 @@
 
 .homeOurExperts > .location {
   width: 67%;
-  position: relative;
+  height: 680px; /* TODO */
   display: flex;
   align-items: center;
-  flex-basis: max-content;
   margin-left: 1.7vw;
+  background-image: url("/jpgs/ourLocation.jpg");
+  background-position: 0%;
+  background-repeat: no-repeat;
 }
 
 .locationTextWrapper {
-  position: absolute;
-  top: 0;
-  left: 25%;
   height: -webkit-fill-available;
   margin: 18.5px auto;
   display: flex;

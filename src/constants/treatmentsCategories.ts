@@ -1,8 +1,8 @@
-import injectablesImage from "../../public/pngs/injectablesHomeImage.png";
-import skincareImage from "../../public/pngs/skincareHomeImage.png";
-import faceAndBodySculptingImage from "../../public/pngs/faceAndBodySculptingHomeImage.png";
-import iplPhototherapyImage from "../../public/pngs/iplPhototherapyHomeImage.png";
-import laserHairRemovalImage from "../../public/pngs/laserHairRemovalHomeImage.png";
+import injectablesImage from "/pngs/injectablesHomeImage.png";
+import skincareImage from "/pngs/skincareHomeImage.png";
+import faceAndBodySculptingImage from "/pngs/faceAndBodySculptingHomeImage.png";
+import iplPhototherapyImage from "/pngs/iplPhototherapyHomeImage.png";
+import laserHairRemovalImage from "/pngs/laserHairRemovalHomeImage.png";
 
 export const TREATMENTS_CATEGORIES = [
   {
