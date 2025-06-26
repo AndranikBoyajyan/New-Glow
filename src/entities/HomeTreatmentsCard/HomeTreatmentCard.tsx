@@ -13,8 +13,14 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
   imgUrl,
 }) => {
   return (
-    <div className={styles.home_treatment_card}>
-      <img src={imgUrl} alt={name} className={styles.img} />
+    <div
+      className={styles.home_treatment_card}
+      style={{
+        backgroundImage: `url(${imgUrl})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className={styles.treatment_name_and_button}>
         <span className={cn(styles.treatment_name, "poppins-regular")}>
           {name}

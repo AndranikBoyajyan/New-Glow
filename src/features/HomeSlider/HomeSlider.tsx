@@ -26,13 +26,16 @@ export const HomeSlider: FC<HomeSliderProps> = ({
           [styles[classNames.radianceBeginRight]]: sliderSide === "right",
         })}
       >
-        <div
-          className={cn(styles[classNames.titleWrapper], {
-            [styles[classNames.titleWrapperLeft]]: sliderSide === "left",
-            [styles[classNames.titleWrapperRight]]: sliderSide === "right",
-          })}
-        >
-          <img src={svg} alt="Title" />
+        <div className={styles.titleTopSide}>
+          <div
+            className={cn(styles[classNames.titleWrapper], styles.svg, {
+              [styles[classNames.titleWrapperLeft]]: sliderSide === "left",
+              [styles[classNames.titleWrapperRight]]: sliderSide === "right",
+            })}
+            style={{
+              backgroundImage: `url(${svg})`,
+            }}
+          ></div>
           <span className={cn(styles[classNames.subTitle], "spectral-regular")}>
             Advanced Skincare Backed by Science
           </span>
@@ -53,14 +56,6 @@ export const HomeSlider: FC<HomeSliderProps> = ({
           </div>
         </div>
       </div>
-      {/* <img
-        className={cn(styles[classNames.img], {
-          [styles.img1]: sliderSide === "left",
-          [styles.img2]: sliderSide === "right",
-        })}
-        src={imageSrc}
-        alt="sliderImg"
-      /> */}
       <div
         className={cn(styles[classNames.img], {
           [styles.img1]: sliderSide === "left",
