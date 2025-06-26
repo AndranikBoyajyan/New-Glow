@@ -1,4 +1,5 @@
 .menu {
+  min-width: 545px;
   height: 36px;
   list-style: none;
   display: flex;

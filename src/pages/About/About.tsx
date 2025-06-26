@@ -1,3 +1,4 @@
+import AboutPageDescription from "../../components/AboutPageDescription";
 import AboutTitleBlock from "../../components/AboutTitleBlock";
 // import { useWindowSize } from "../../hooks/useWindowSize";
 import styles from "./About.module.css";
@@ -9,6 +10,7 @@ export const About = () => {
     <div className={styles.aboutPage}>
       <div className={styles.divider}></div>
       <AboutTitleBlock />
+      <AboutPageDescription />
     </div>
   );
 };

@@ -22,8 +22,8 @@
 }
 
 .descriptionWrapper {
-  width: 27.7vw;
-  height: min-content;
+  width: 28vw;
+  height: auto;
   display: flex;
   text-align: center;
   padding: 58px 39px;

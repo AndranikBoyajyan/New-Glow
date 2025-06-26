@@ -11,24 +11,30 @@ export const FavoriteTreatments = () => {
     <div className={styles.favoriteTreatments}>
       <FavoriteTreatmentsDescription />
       <div className={styles.imgs}>
-        <div className={styles.favoriteTreatment}>
-          <img src={favoritePng1} alt="" />
+        <div
+          className={styles.favoriteTreatment}
+          style={{ backgroundImage: `url(${favoritePng1})` }}
+        >
           <Button
             className="button_transparent"
             content="Botox treatment"
             font="poppins-regular"
           />
         </div>
-        <div className={styles.favoriteTreatment}>
-          <img src={favoritePng2} alt="" />
+        <div
+          className={styles.favoriteTreatment}
+          style={{ backgroundImage: `url(${favoritePng2})` }}
+        >
           <Button
             className="button_transparent"
             content="Morpheus 8"
             font="poppins-regular"
           />
         </div>
-        <div className={styles.favoriteTreatment}>
-          <img src={favoritePng3} alt="" />
+        <div
+          className={styles.favoriteTreatment}
+          style={{ backgroundImage: `url(${favoritePng3})` }}
+        >
           <Button
             className="button_transparent"
             content="Facial"
