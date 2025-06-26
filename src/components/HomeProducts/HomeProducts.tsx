@@ -7,7 +7,7 @@ export const HomeProducts = () => {
   return (
     <div className={styles.homeProducts}>
       <div className={styles.titleWrapper}>
-        <Title text="PRODUCTS" font="fjalla-one-regular" className="title_42" />
+        <Title text="PRODUCTS" font="fjalla-one-regular" />
       </div>
       <div className={styles.productsContainer}>
         {PRODUCTS.map((product) => (

@@ -1,9 +1,16 @@
-.title_42 {
-  font-size: 42px;
+.title {
   color: #b36a66;
+  font-size: 42px;
 }
 
-.title_42_white {
-  font-size: 42px;
+.title_white {
   color: #fff;
+}
+
+.title_h1_120 {
+  font-size: 120px; /* For About page */
+}
+
+.title_h1_96 {
+  font-size: 96px; /* For All Treatments page */
 }

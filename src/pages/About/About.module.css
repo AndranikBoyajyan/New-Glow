@@ -1,0 +1,13 @@
+.aboutPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 61px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(109, 109, 109, 0.4);
+}

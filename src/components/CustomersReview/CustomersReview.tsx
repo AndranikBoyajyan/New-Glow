@@ -10,11 +10,7 @@ export const CustomersReview = () => {
   return (
     <div className={styles.customers_review}>
       <div className={styles.title_wrapper}>
-        <Title
-          text="OUR CUSTOMERS ABOUT US"
-          font="fjalla-one-regular"
-          className="title_42"
-        />
+        <Title text="OUR CUSTOMERS ABOUT US" font="fjalla-one-regular" />
       </div>
       <div className={styles.reviews}>
         <div className={styles.customer_review_left}>
