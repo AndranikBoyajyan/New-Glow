@@ -7,11 +7,7 @@ export const Subscribe = () => {
   return (
     <div className={styles.subscribe}>
       <div className={styles.titleWrapper}>
-        <Title
-          text="Subscribe to our news"
-          className="title_42"
-          font="fjalla-one-regular"
-        />
+        <Title text="Subscribe to our news" font="fjalla-one-regular" />
       </div>
       <form className={styles.emailForm}>
         <input type="email" placeholder="Email" className={styles.emailInput} />

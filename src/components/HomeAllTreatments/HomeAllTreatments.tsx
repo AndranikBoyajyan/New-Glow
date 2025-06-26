@@ -8,11 +8,7 @@ export const HomeAllTreatments = () => {
   return (
     <div className={styles.homeAllTreatments}>
       <div className={styles.titleWrapper}>
-        <Title
-          text="ALL TREATMENTS"
-          font="fjalla-one-regular"
-          className="title_42"
-        />
+        <Title text="ALL TREATMENTS" font="fjalla-one-regular" />
       </div>
       <div className={styles.treatmentsContainer}>
         {TREATMENTS_CATEGORIES.map((treatmentCategory) => (

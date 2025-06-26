@@ -7,11 +7,7 @@ import styles from "./FavoriteTreatmentsDescription.module.css";
 export const FavoriteTreatmentsDescription = () => {
   return (
     <div className={styles.description}>
-      <Title
-        text="OUR FAVORITE TREATMENTS"
-        font="fjalla-one-regular"
-        className="title_42"
-      />
+      <Title text="OUR FAVORITE TREATMENTS" font="fjalla-one-regular" />
       <p className={cn(styles.paragraph, "poppins-regular")}>
         Botox, fillers, PDO thread lifts, PRP injections, and more—whatever your
         needs, we are here to fulfill them. Not sure which treatment is right
