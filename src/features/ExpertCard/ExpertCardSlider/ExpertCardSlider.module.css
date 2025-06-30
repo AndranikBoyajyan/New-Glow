@@ -7,22 +7,41 @@
 }
 
 .slidesContainer {
-  width: 32vw;
+  width: 30vw;
   overflow: hidden;
+  background-color: transparent;
 }
 
 .slides {
+  width: 67vw;
+  height: 580px;
   display: flex;
+  gap: 10px;
   transition: transform 0.3s ease-in-out;
+  background-color: transparent;
 }
 
 .slide {
+  width: 33vw;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1vw;
+  background-color: transparent;
+}
+
+.expertCardText {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 1vw;
-  font-size: 24px;
+  position: relative;
+  bottom: -50px;
 }
 
 .expertName {

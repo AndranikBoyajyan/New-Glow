@@ -1,3 +1,20 @@
+.homeSliderWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (width < 768px) {
+    justify-content: center;
+    position: relative;
+    min-height: 780px;
+    background-position: right;
+  }
+}
+
 .homeSlider {
   width: 100%;
   display: flex;
@@ -12,14 +29,32 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  padding-top: 135px;
-  padding-bottom: 74px;
+  padding: 135px 0 74px;
   gap: 34px;
   flex: 2;
+
+  @media (width < 1248px) {
+    padding: 108px 0 60px;
+    gap: 24px;
+  }
+
+  @media (width < 1024px) {
+    padding: 90px 0 48px;
+  }
+
+  @media (width < 768px) {
+    max-width: 360px;
+    padding: 60px 0 32px;
+    gap: 106px;
+  }
 }
 
 .radianceBegin_left {
   padding-left: 6vw;
+
+  @media (width < 1248px) {
+    padding-left: 4vw;
+  }
 }
 
 .radianceBegin_right {
@@ -33,6 +68,11 @@
   flex-direction: column;
   text-align: left;
   gap: 16px;
+
+  @media (width < 768px) {
+    align-items: center;
+    gap: 8px;
+  }
 }
 
 .titleWrapper {
@@ -56,51 +96,138 @@
   min-height: 514px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  @media (width < 1248px) {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  @media (width < 1024px) {
+    width: 100%;
+    min-height: 350px;
+  }
+
+  @media (width < 768px) {
+    width: 100%;
+    min-height: 200px;
+  }
 }
 
 .subTitle {
   font-size: 38px;
   color: #56453f;
+
+  @media (width < 1024px) {
+    font-size: 28px;
+  }
+
+  @media (width < 768px) {
+    font-size: 20px;
+  }
 }
 
 .infoTextWrapper {
   width: 48vw;
-  height: 144px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
+
+  @media (width < 768px) {
+    width: 100%;
+    gap: 16px;
+    justify-content: center;
+  }
 }
 
 .infoText {
   font-size: 22px;
   text-align: left;
   color: #b36a66;
+
+  @media (width < 768px) {
+    font-size: 16px;
+    text-align: center;
+    color: currentColor;
+  }
 }
 
 .infoTextWrapper_left {
   align-items: start;
+
+  @media (width < 768px) {
+    align-items: center;
+  }
 }
 
 .infoTextWrapper_right {
   align-items: end;
+
+  @media (width < 768px) {
+    align-items: center;
+  }
 }
 
 .img {
   background-size: cover;
   background-repeat: no-repeat;
-  flex: 1;
+  background-position: center;
+  flex: 2;
 }
 
 .img1 {
   background-image: url("/pngs/homepageSlider1.png");
+
+  @media (width < 768px) {
+    display: none;
+  }
 }
 
 .img2 {
   background-image: url("/pngs/homepageSlider2.png");
+
+  @media (width < 768px) {
+    display: none;
+  }
 }
 
 .buttons {
   display: flex;
-  gap: 24px;
+  gap: 22px;
+
+  @media (width < 768px) {
+    gap: 16px;
+    flex-direction: column;
+  }
+}
+
+.slideBtn {
+  width: 17px;
+  height: 17px;
+  background: #cc9f93;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  padding: 0;
+}
+
+.sliderButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+
+  @media (width < 768px) {
+    position: absolute;
+    bottom: 15px;
+  }
+}
+
+.active {
+  background-color: #56453f;
 }

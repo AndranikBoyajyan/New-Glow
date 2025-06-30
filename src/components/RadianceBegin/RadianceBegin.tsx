@@ -20,7 +20,13 @@ export const RadianceBegin = () => {
           [styles.activeSlide]: animation === 1,
         })}
       >
-        <HomeSlider classNames={classNames} svg={TitleSVG} sliderSide="left" />
+        <HomeSlider
+          classNames={classNames}
+          svg={TitleSVG}
+          sliderSide="left"
+          animation={animation}
+          handleClick={handleClick}
+        />
       </div>
 
       <div
@@ -28,22 +34,12 @@ export const RadianceBegin = () => {
           [styles.activeSlide]: animation === 2,
         })}
       >
-        <HomeSlider classNames={classNames} svg={TitleSVG} sliderSide="right" />
-      </div>
-      <div className={styles.sliderButtons}>
-        <button
-          name="first"
-          className={cn(styles.slideBtn, {
-            [styles.active]: animation === 1,
-          })}
-          onClick={(e) => handleClick(e.currentTarget.name)}
-        />
-        <button
-          name="second"
-          className={cn(styles.slideBtn, {
-            [styles.active]: animation === 2,
-          })}
-          onClick={(e) => handleClick(e.currentTarget.name)}
+        <HomeSlider
+          classNames={classNames}
+          svg={TitleSVG}
+          sliderSide="right"
+          animation={animation}
+          handleClick={handleClick}
         />
       </div>
     </div>

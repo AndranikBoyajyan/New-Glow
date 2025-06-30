@@ -19,30 +19,3 @@
   z-index: 1;
   position: relative;
 }
-
-.slideBtn {
-  width: 17px;
-  height: 17px;
-  background: #cc9f93;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  padding: 0;
-}
-
-.sliderButtons {
-  display: flex;
-  gap: 12px;
-  position: absolute;
-  left: 48.5vw;
-}
-
-.active {
-  background-color: #56453f;
-}

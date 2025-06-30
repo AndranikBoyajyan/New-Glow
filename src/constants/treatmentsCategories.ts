@@ -3,8 +3,9 @@ import skincareImage from "/pngs/skincareHomeImage.png";
 import faceAndBodySculptingImage from "/pngs/faceAndBodySculptingHomeImage.png";
 import iplPhototherapyImage from "/pngs/iplPhototherapyHomeImage.png";
 import laserHairRemovalImage from "/pngs/laserHairRemovalHomeImage.png";
+import type { ITreatmentCategory } from "../types/global.types";
 
-export const TREATMENTS_CATEGORIES = [
+export const TREATMENTS_CATEGORIES: ITreatmentCategory[] = [
   {
     id: 1,
     name: "Injectables",
