@@ -10,4 +10,9 @@
   box-sizing: content-box;
   z-index: 9;
   opacity: 0.75;
+
+  @media (max-width: 768px) {
+    min-width: max-content;
+    padding-top: 12px;
+  }
 }

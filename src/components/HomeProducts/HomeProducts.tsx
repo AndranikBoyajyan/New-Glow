@@ -1,9 +1,12 @@
 import { PRODUCTS } from "../../constants/products";
 import ProductCard from "../../entities/ProductCard";
+// import { useWindowSize } from "../../hooks/useWindowSize";
 import Title from "../../shared/Title";
 import styles from "./HomeProducts.module.css";
 
 export const HomeProducts = () => {
+  //   const { width } = useWindowSize();
+
   return (
     <div className={styles.homeProducts}>
       <div className={styles.titleWrapper}>

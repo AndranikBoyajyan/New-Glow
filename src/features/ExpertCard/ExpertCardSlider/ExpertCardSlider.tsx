@@ -5,9 +5,12 @@ import sliderArrowRight from "/pngs/sliderArrowRight.png";
 import cn from "classnames";
 import { ourExperts } from "../constants/ourExperts";
 import styles from "./expertCardSlider.module.css";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 
 export const ExpertCardSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const { width } = useWindowSize();
 
   const nextSlide = () => {
     if (currentSlide < ourExperts.length - 1) {
@@ -40,27 +43,29 @@ export const ExpertCardSlider = () => {
         <div className={styles.slidesContainer}>
           <div
             className={styles.slides}
-            style={{ transform: `translateX(-${currentSlide * 500}px)` }}
+            style={{
+              transform: `translateX(-${currentSlide * (width / 3)}px)`,
+            }}
           >
             {ourExperts.map((ourExpert) => (
-              <div className={styles.slide} key={ourExpert.id}>
-                <img
-                  src={ourExpert.imgUrl}
-                  alt={ourExpert.name}
-                  className={styles.expertImg}
-                  width={450}
-                />
-                <span className={cn(styles.expertName, "poppins-regular")}>
-                  {ourExpert.name}
-                </span>
-                <span
-                  className={cn(
-                    styles.expertProfession,
-                    "poppins-light-italic"
-                  )}
-                >
-                  {ourExpert.profession}
-                </span>
+              <div
+                className={styles.slide}
+                key={ourExpert.id}
+                style={{ backgroundImage: `url(${ourExpert.imgUrl})` }}
+              >
+                <div className={styles.expertCardText}>
+                  <span className={cn(styles.expertName, "poppins-regular")}>
+                    {ourExpert.name}
+                  </span>
+                  <span
+                    className={cn(
+                      styles.expertProfession,
+                      "poppins-light-italic"
+                    )}
+                  >
+                    {ourExpert.profession}
+                  </span>
+                </div>
               </div>
             ))}
           </div>

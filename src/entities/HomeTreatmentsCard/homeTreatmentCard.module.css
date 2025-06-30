@@ -1,10 +1,22 @@
 .home_treatment_card {
   width: 20%;
+  min-width: 200px;
   height: 680px;
   display: flex;
   justify-content: end;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 576px;
+    min-width: 50px;
+    justify-content: center;
+  }
+
   &&:hover {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* X Y Blur Color */
@@ -20,10 +32,21 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    height: -webkit-fill-available;
+    gap: 210px;
+  }
 }
 
 .treatment_name {
   font-size: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    color: rgba(246, 238, 225, 0.65);
+  }
 }
 
 .buttonWrapper {
@@ -31,4 +54,10 @@
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* X Y Blur Color */
   }
+}
+
+.sliderButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
 }

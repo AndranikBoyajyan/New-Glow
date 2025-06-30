@@ -1,5 +1,5 @@
 export const classNames = {
-  homeSlider: "homeSlider",
+  homeSliderWrapper: "homeSliderWrapper",
   homeSliderRight: "homeSliderRight",
   radianceBegin: "radianceBegin",
   radianceBeginLeft: "radianceBegin_left",
