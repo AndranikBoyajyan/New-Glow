@@ -1,0 +1,8 @@
+.all_treatments_filter_checkbox {
+  color: #8a4f4c;
+  display: flex;
+  gap: 0.5vw;
+}
+.checkbox {
+  accent-color: #8a4f4c;
+}

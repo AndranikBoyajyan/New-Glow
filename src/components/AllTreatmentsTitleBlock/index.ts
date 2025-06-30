@@ -1,3 +1,3 @@
-import { AllTratmentsTitleBlock } from "./AllTreatmentsTitleBlock";
+import { AllTreatmentsTitleBlock } from "./AllTreatmentsTitleBlock";
 
-export default AllTratmentsTitleBlock;
+export default AllTreatmentsTitleBlock;

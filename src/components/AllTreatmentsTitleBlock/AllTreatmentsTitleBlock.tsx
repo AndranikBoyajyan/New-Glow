@@ -1,7 +1,7 @@
 import Title from "../../shared/Title";
 import styles from "./AllTreatmentsTitleBlock.module.css";
 
-export const AllTratmentsTitleBlock = () => {
+export const AllTreatmentsTitleBlock = () => {
   return (
     <div className={styles.title_block}>
       <div className={styles.title_image}></div>
