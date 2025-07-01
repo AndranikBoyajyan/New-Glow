@@ -1,0 +1,9 @@
+.all_treatments_filters {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5vh 0;
+  border-bottom: 0.5px solid #3c3c3c;
+}

@@ -5,7 +5,7 @@ import cn from "classnames";
 interface CheckboxProps {
   text: string;
   font: string;
-  checked: boolean;
+  checked?: boolean;
   handleClick(arg?: number): void;
 }
 
