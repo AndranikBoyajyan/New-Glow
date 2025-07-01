@@ -40,7 +40,6 @@ export const HomeAllTreatments = () => {
               name={TREATMENTS_CATEGORIES[activeTreatment - 1].name}
               imgUrl={TREATMENTS_CATEGORIES[activeTreatment - 1].imgUrl}
               isMobile={isMobile}
-              treatmentCategories={TREATMENTS_CATEGORIES}
               activeTreatment={activeTreatment}
               setActiveTreatment={handleSetActiveTreatment}
             />

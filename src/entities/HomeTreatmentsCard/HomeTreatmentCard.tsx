@@ -2,13 +2,12 @@ import type { FC } from "react";
 import cn from "classnames";
 import styles from "./homeTreatmentCard.module.css";
 import { Button } from "../../shared/Button/Button";
-import type { ITreatmentCategory } from "../../types/global.types";
+import { TREATMENTS_CATEGORIES } from "../../constants/treatmentsCategories";
 
 interface HomeTreatmentCardProps {
   name: string;
   imgUrl: string;
   isMobile?: boolean;
-  treatmentCategories?: ITreatmentCategory[];
   activeTreatment?: number;
   setActiveTreatment?: (id: number) => void;
 }
@@ -17,7 +16,6 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
   name,
   imgUrl,
   isMobile,
-  treatmentCategories,
   activeTreatment,
   setActiveTreatment,
 }) => {
@@ -40,9 +38,9 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
           />
         </div>
       </div>
-      {isMobile && treatmentCategories && (
+      {isMobile && (
         <div className={styles.sliderButtons}>
-          {treatmentCategories.map((category) => (
+          {TREATMENTS_CATEGORIES.map((category) => (
             <Button
               key={category.id}
               className="slider_button"

@@ -1,0 +1,14 @@
+.aboutBookAConsultation {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 56px;
+}
+
+.text {
+  font-size: 28px;
+  color: #fae5e3;
+}

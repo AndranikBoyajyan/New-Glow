@@ -8,12 +8,7 @@ export const AboutTitleBlock = () => {
   return (
     <div className={styles.titleBlock}>
       <div className={styles.titleWrapper}>
-        <Title
-          text="About us"
-          className="title_h1_120"
-          isH1
-          font="dm-serif-display-regular"
-        />
+        <Title text="About us" className="title_h1_120" isH1 />
       </div>
       <div className={styles.topSideContent}>
         <div className={styles.descriptionWrapper}>

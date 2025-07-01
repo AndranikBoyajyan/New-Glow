@@ -1,0 +1,16 @@
+.aboutPageBottomSide {
+  width: 100%;
+  height: 255px;
+  display: flex;
+  background-color: #8a4f4c;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.aboutBookAConsultationImg {
+  width: 50%;
+  height: 125%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
