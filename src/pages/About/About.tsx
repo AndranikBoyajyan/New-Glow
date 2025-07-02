@@ -1,16 +1,17 @@
+import AboutPageBottomSide from "../../components/AboutPageBottomSide";
+import AboutPageCards from "../../components/AboutPageCards";
 import AboutPageDescription from "../../components/AboutPageDescription";
 import AboutTitleBlock from "../../components/AboutTitleBlock";
-// import { useWindowSize } from "../../hooks/useWindowSize";
 import styles from "./About.module.css";
 
 export const About = () => {
-  // const { width, height } = useWindowSize(); // TODO: use media queries
-
   return (
     <div className={styles.aboutPage}>
       <div className={styles.divider}></div>
       <AboutTitleBlock />
       <AboutPageDescription />
+      <AboutPageCards />
+      <AboutPageBottomSide />
     </div>
   );
 };
