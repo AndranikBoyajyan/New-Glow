@@ -10,30 +10,25 @@ export const TREATMENTS_CATEGORIES: ITreatmentCategory[] = [
     id: 1,
     name: "Injectables",
     imgUrl: injectablesImage,
-    checked: false,
   },
   {
     id: 2,
     name: "Skincare",
     imgUrl: skincareImage,
-    checked: false,
   },
   {
     id: 3,
     name: "Face And Body Sculpting",
     imgUrl: faceAndBodySculptingImage,
-    checked: false,
   },
   {
     id: 4,
     name: "IPL Phototherapy",
     imgUrl: iplPhototherapyImage,
-    checked: false,
   },
   {
     id: 5,
     name: "Laser Hair Removal",
     imgUrl: laserHairRemovalImage,
-    checked: false,
   },
 ];

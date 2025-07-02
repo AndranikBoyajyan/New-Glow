@@ -1,0 +1,25 @@
+.treatment_card_left {
+  background-color: #fae5e3;
+  display: flex;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.name_and_dscription_block {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.name {
+  color: #b36a66;
+  text-align: left;
+  font-size: 36px;
+  padding: 5px;
+}
+.description {
+  color: #3c3c3c;
+  text-align: left;
+  font-size: 18px;
+  padding: 5px;
+}
