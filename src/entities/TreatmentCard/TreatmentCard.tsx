@@ -14,12 +14,14 @@ export const TreatmentCard: FC<TreatmentCardProps> = ({
   description,
 }) => {
   return (
-    <div>
+    <div className={styles.treatment_card_left}>
       <img src={imgUrl} alt={name} className={styles.img} />
-      <span className={cn(styles.name, "poppins-extralight")}>{name}</span>
-      <span className={cn(styles.description, "poppins-regular")}>
-        {description}
-      </span>
+      <div className={styles.name_and_dscription_block}>
+        <div className={cn(styles.name, "poppins-extralight")}>{name}</div>
+        <span className={cn(styles.description, "poppins-regular")}>
+          {description}
+        </span>
+      </div>
     </div>
   );
 };
