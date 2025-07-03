@@ -9,7 +9,7 @@ import styles from "./RadianceBegin.module.css";
 export const RadianceBegin = () => {
   const [animation, setAnimation] = useState(1);
 
-  const handleClick = (name: string) => {
+  const handleSetAnimation = (name: string) => {
     setAnimation(name === "first" ? 1 : 2);
   };
 
@@ -25,7 +25,7 @@ export const RadianceBegin = () => {
           svg={TitleSVG}
           sliderSide="left"
           animation={animation}
-          handleClick={handleClick}
+          handleChangeSlide={handleSetAnimation}
         />
       </div>
 
@@ -39,7 +39,7 @@ export const RadianceBegin = () => {
           svg={TitleSVG}
           sliderSide="right"
           animation={animation}
-          handleClick={handleClick}
+          handleChangeSlide={handleSetAnimation}
         />
       </div>
     </div>

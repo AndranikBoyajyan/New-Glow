@@ -1,56 +1,60 @@
 import { useState, useEffect, type FC } from "react";
 import Checkbox from "../../../shared/Checkbox";
 import styles from "./allTreatmentsFilters.module.css";
-import type { ITreatmentCategory } from "../../../types/global.types";
+import { TREATMENTS_CATEGORIES } from "../../../constants/treatmentsCategories";
 
 interface AllTreatmentsFiltersProps {
-  categories: ITreatmentCategory[];
-  handleSetTreatments: (categoriesId: number[]) => void;
+  allIds: number[];
+  checkedCategoriesIds: number[];
+  handleSetCategoriesIds: (categoriesIds: number[]) => void;
 }
+
 export const AllTreatmentsFilters: FC<AllTreatmentsFiltersProps> = ({
-  categories,
-  handleSetTreatments,
+  allIds,
+  checkedCategoriesIds,
+  handleSetCategoriesIds,
 }) => {
-  const [allChecked, setAllchecked] = useState<boolean>(false);
-  const [checkedCategorysId, setCheckedCategorysId] = useState<number[]>([]);
+  const [allChecked, setAllChecked] = useState<boolean>(false);
 
   useEffect(() => {
-    if (categories.length === checkedCategorysId.length) {
-      setAllchecked(true);
+    if (allIds.length === checkedCategoriesIds.length) {
+      setAllChecked(true);
     } else {
-      setAllchecked(false);
+      setAllChecked(false);
     }
-  }, [categories, checkedCategorysId]);
+  }, [allIds.length, checkedCategoriesIds, handleSetCategoriesIds]);
 
   const handleClick = (id: number) => {
-    if (!checkedCategorysId.includes(id)) {
-      setCheckedCategorysId([...checkedCategorysId, id]);
+    if (!checkedCategoriesIds.includes(id)) {
+      handleSetCategoriesIds([...checkedCategoriesIds, id]);
     } else {
-      setCheckedCategorysId(checkedCategorysId.filter((item) => item !== id));
+      handleSetCategoriesIds(
+        checkedCategoriesIds.filter((categoryId) => categoryId !== id)
+      );
     }
   };
 
   const handleAllCheckedClick = () => {
-    setAllchecked(!allChecked);
-    if (allChecked) {
-      setCheckedCategorysId([]);
-    } else {
-      setCheckedCategorysId(categories.map((category) => category.id));
+    setAllChecked(!allChecked);
+
+    if (!allChecked) {
+      handleSetCategoriesIds(
+        TREATMENTS_CATEGORIES.map((category) => category.id)
+      );
     }
   };
-  handleSetTreatments(checkedCategorysId);
 
   return (
     <div className={styles.all_treatments_filters}>
-      {categories.map((treatmentCategory) => (
+      {TREATMENTS_CATEGORIES.map((treatmentCategory) => (
         <Checkbox
           key={treatmentCategory.id}
           text={treatmentCategory.name}
           font="poppins-regular"
           checked={
-            (allChecked && true) ||
-            checkedCategorysId.includes(treatmentCategory.id)
+            allChecked || checkedCategoriesIds.includes(treatmentCategory.id)
           }
+          labelClassName={"label_20"}
           handleClick={() => handleClick(treatmentCategory.id)}
         />
       ))}
@@ -58,6 +62,8 @@ export const AllTreatmentsFilters: FC<AllTreatmentsFiltersProps> = ({
         text="Select All"
         font="poppins-italic"
         checked={allChecked}
+        checkboxClassName={"selectAll"}
+        labelClassName={"label_16"}
         handleClick={handleAllCheckedClick}
       />
     </div>

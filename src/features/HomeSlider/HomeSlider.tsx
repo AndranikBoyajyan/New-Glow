@@ -2,16 +2,17 @@ import cn from "classnames";
 import homepageSlider1 from "/pngs/homepageSlider1.png";
 import homepageSlider2 from "/pngs/homepageSlider2.png";
 import Button from "../../shared/Button";
-import type { FC } from "react";
-import styles from "./HomeSlider.module.css";
+import { useMemo, type FC } from "react";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import styles from "./HomeSlider.module.css";
+import { useNavigate } from "react-router";
 
 interface HomeSliderProps {
   classNames: Record<string, string>;
   svg: string;
   sliderSide: "left" | "right";
   animation: number;
-  handleClick: (name: string) => void;
+  handleChangeSlide: (name: string) => void;
 }
 
 export const HomeSlider: FC<HomeSliderProps> = ({
@@ -19,17 +20,25 @@ export const HomeSlider: FC<HomeSliderProps> = ({
   svg,
   sliderSide,
   animation,
-  handleClick,
+  handleChangeSlide,
 }) => {
   const { width } = useWindowSize(); // TODO: use media queries
+  const sliderImgUrl = useMemo(
+    () => (animation === 1 ? homepageSlider1 : homepageSlider2),
+    [animation]
+  );
+
+  const navigate = useNavigate();
+
+  const handleSeeAllTreatments = () => {
+    navigate("alltreatments");
+  };
+
   return (
     <div
       className={styles[classNames.homeSliderWrapper]}
       style={{
-        backgroundImage:
-          width < 768
-            ? `url(${animation === 1 ? homepageSlider1 : homepageSlider2})`
-            : "",
+        backgroundImage: width < 768 ? `url(${sliderImgUrl})` : "",
       }}
     >
       <div
@@ -76,6 +85,7 @@ export const HomeSlider: FC<HomeSliderProps> = ({
               <Button
                 content="See all treatments"
                 className="button_light_transparent"
+                handleClick={handleSeeAllTreatments}
               />
             </div>
           </div>
@@ -93,14 +103,14 @@ export const HomeSlider: FC<HomeSliderProps> = ({
           className={cn(styles.slideBtn, {
             [styles.active]: animation === 1,
           })}
-          onClick={(e) => handleClick(e.currentTarget.name)}
+          onClick={(e) => handleChangeSlide(e.currentTarget.name)}
         />
         <button
           name="second"
           className={cn(styles.slideBtn, {
             [styles.active]: animation === 2,
           })}
-          onClick={(e) => handleClick(e.currentTarget.name)}
+          onClick={(e) => handleChangeSlide(e.currentTarget.name)}
         />
       </div>
     </div>

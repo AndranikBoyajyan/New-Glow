@@ -1,23 +1,33 @@
 import styles from "./allTreatmentsContent.module.css";
 import AllTreatmentsFilters from "./AllTreatmentsFilters";
-import Content from "./Content";
+import TreatmentsContent from "./TreatmentsContent";
 import { TREATMENTS_CATEGORIES } from "../../constants/treatmentsCategories";
 import { useState } from "react";
 
 export const AllTreatmentsContent = () => {
-  const [checkedCatidoiesIds, setCheckedCatidoiesIds] = useState<number[]>([]);
+  const allIds = TREATMENTS_CATEGORIES.map((category) => category.id);
 
-  const handleSetTreatments = (categoriesIds: number[]) => {
-    setCheckedCatidoiesIds(categoriesIds);
+  const [checkedCategoriesIds, setCheckedCategoriesIds] =
+    useState<number[]>(allIds);
+
+  const handleSetCategoriesIds = (categoriesIds: number[]) => {
+    setCheckedCategoriesIds(categoriesIds);
   };
 
   return (
     <div className={styles.all_treatments_content}>
       <AllTreatmentsFilters
-        categories={TREATMENTS_CATEGORIES}
-        handleSetTreatments={handleSetTreatments}
+        allIds={allIds}
+        checkedCategoriesIds={checkedCategoriesIds}
+        handleSetCategoriesIds={handleSetCategoriesIds}
       />
-      <Content checkedCatidoiesIds={checkedCatidoiesIds} />
+      {TREATMENTS_CATEGORIES.map((category) => (
+        <TreatmentsContent
+          key={category.id}
+          category={category}
+          isChecked={checkedCategoriesIds.includes(category.id)}
+        />
+      ))}
     </div>
   );
 };

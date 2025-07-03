@@ -1,36 +1,46 @@
+import { useState, type FC } from "react";
 import cn from "classnames";
-import styles from "./MenuItem.module.css";
 import Treatments from "../Treatments";
-import type { FC } from "react";
+import arrowDown from "/pngs/arrowDown.png";
+import arrowUp from "/pngs/arrowUp.png";
 import { Link } from "react-router";
 
+import styles from "./MenuItem.module.css";
 interface MenuItemProps {
   name: string;
   redirectUrl: string;
-  imgSrc?: string;
-  alt?: string;
-  isOpen?: boolean;
-  handleClick?: () => void;
+  isDropDown?: boolean;
 }
 
 export const MenuItem: FC<MenuItemProps> = ({
   name,
   redirectUrl,
-  imgSrc,
-  alt,
-  isOpen,
-  handleClick,
+  isDropDown,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSetOpenDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleBlur = () => {
+    setIsOpen(false);
+  };
+
+  const imgSrc = isOpen ? arrowUp : arrowDown;
+
   return (
     <li
+      tabIndex={isDropDown ? 0 : undefined}
       className={cn(styles.li, {
         [styles.openedDropdown]: isOpen,
       })}
+      onBlur={handleBlur}
     >
-      {imgSrc ? (
-        <div className={styles.menuItem} onClick={handleClick}>
+      {isDropDown ? (
+        <div className={styles.menuItem} onClick={handleSetOpenDropdown}>
           <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
-          <img src={imgSrc} alt={alt} className={styles.img} />
+          <img src={imgSrc} alt={"arrow"} className={styles.img} />
         </div>
       ) : (
         <Link to={redirectUrl} className={styles.redirectLink}>

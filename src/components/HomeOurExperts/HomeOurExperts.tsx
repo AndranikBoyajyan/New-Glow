@@ -2,8 +2,13 @@ import ExpertCard from "../../features/ExpertCard";
 import cn from "classnames";
 import styles from "./HomeOurExperts.module.css";
 import Title from "../../shared/Title";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 export const HomeOurExperts = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < 768;
+
   return (
     <div className={styles.homeOurExperts}>
       <div className={styles.expert}>
@@ -14,7 +19,7 @@ export const HomeOurExperts = () => {
           <Title
             text="OUR LOCATION"
             font="poppins-regular"
-            className="title_white"
+            className={!isMobile ? "title_white" : "title_32"}
           />
           <span className={cn(styles.address, "poppins-regular")}>
             10651 Riverside Drive Toluca Lake, CA 91602

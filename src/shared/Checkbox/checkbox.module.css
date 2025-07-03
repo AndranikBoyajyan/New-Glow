@@ -1,8 +1,25 @@
-.all_treatments_filter_checkbox {
+.checkboxWrapper {
   color: #8a4f4c;
   display: flex;
   gap: 0.5vw;
 }
 .checkbox {
   accent-color: #8a4f4c;
+}
+
+.label_16 {
+  font-size: 16px;
+}
+
+.label_20 {
+  font-size: 20px;
+}
+
+.selectAll {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  box-shadow: inset 0 0 0 2px white;
+  transition: background 0.2s;
+  border-radius: 12px;
 }

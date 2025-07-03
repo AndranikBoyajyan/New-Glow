@@ -6,6 +6,7 @@ const ErrorPage = () => {
   const handleClick = () => {
     navigate("/");
   };
+
   return (
     <div>
       <h2>Error 404 Page not found</h2>

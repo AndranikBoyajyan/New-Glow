@@ -32,7 +32,7 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
         </span>
         <div className={styles.buttonWrapper}>
           <Button
-            content="LEARN MORE"
+            content="Learn more"
             className="button_weight_2"
             font="poppins-medium"
           />
