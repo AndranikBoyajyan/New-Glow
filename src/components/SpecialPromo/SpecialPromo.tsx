@@ -29,7 +29,7 @@ export const SpecialPromo = () => {
                 font="poppins-medium"
               />
               <Button
-                content="See all PROMOS"
+                content="See all promos"
                 className="button_weight_2"
                 font="poppins-medium"
               />

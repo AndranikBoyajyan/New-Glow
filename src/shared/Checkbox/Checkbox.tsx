@@ -6,26 +6,32 @@ interface CheckboxProps {
   text: string;
   font: string;
   checked: boolean;
-  handleClick(arg?: number): void;
+  checkboxClassName?: string;
+  labelClassName: string;
+  handleClick?: (checked?: number) => void;
 }
 
 export const Checkbox: FC<CheckboxProps> = ({
   text,
   font,
   checked,
+  checkboxClassName,
+  labelClassName,
   handleClick,
 }) => {
   return (
-    <div className={cn(styles.all_treatments_filter_checkbox, font)}>
+    <div className={styles.checkboxWrapper}>
       <input
         type="checkbox"
         name="checkbox"
-        className={styles.checkbox}
+        className={cn(styles.checkbox, styles[checkboxClassName ?? ""])}
         id={text}
         checked={checked}
-        onClick={() => handleClick()}
+        onChange={() => handleClick?.()}
       />
-      <label htmlFor={text}>{text}</label>
+      <label htmlFor={text} className={cn(styles[labelClassName], font)}>
+        {text}
+      </label>
     </div>
   );
 };

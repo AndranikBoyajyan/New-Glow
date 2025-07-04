@@ -28,7 +28,7 @@ export const Button: FC<ButtonProps> = ({
         [styles.active]: isActive,
       })}
     >
-      {content}
+      {content.toUpperCase()}
     </button>
   );
 };
