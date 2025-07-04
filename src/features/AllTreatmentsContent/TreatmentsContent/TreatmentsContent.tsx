@@ -13,19 +13,28 @@ export const TreatmentsContent: FC<TreatmentsContentProps> = ({
   isChecked,
   category,
 }) => {
+  const { treatments, name: categoryName } = category;
+
   if (!isChecked) return null;
 
   return (
     <div className={styles.content}>
-      <Title text={category.name} font="fjalla-one-regular" />
-      {category.treatments.map((treatment) => (
-        <TreatmentCard
-          key={treatment.id}
-          name={treatment.name}
-          imgUrl={treatment.imgUrl}
-          description={treatment.description}
-        />
-      ))}
+      <Title
+        text={categoryName}
+        font="fjalla-one-regular"
+        className="title_40"
+      />
+      <div>
+        {treatments.map((treatment, index) => (
+          <TreatmentCard
+            key={treatment.id}
+            name={treatment.name}
+            imgUrl={treatment.imgUrl}
+            description={treatment.description}
+            isRight={index % 2 !== 0}
+          />
+        ))}
+      </div>
     </div>
   );
 };

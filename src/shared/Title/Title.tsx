@@ -17,6 +17,8 @@ export const Title: FC<TitleProps> = ({
   className,
   isH1,
 }) => {
+
+
   if (isH1)
     return (
       <h1 className={cn(styles.title, styles[className ?? ""], font)}>

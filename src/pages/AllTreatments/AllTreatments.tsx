@@ -1,14 +1,14 @@
-import AllTreatmentsContentWraper from "../../components/AllTreatmentsContentWraper";
+import AllTreatmentsContentWrapper from "../../components/AllTreatmentsContentWrapper";
 import AllTreatmentsTitleBlock from "../../components/AllTreatmentsTitleBlock";
+import Menu from "../../components/Menu";
 import styles from "./AllTreatments.module.css";
-// import AllTreatmentsFilter from "../../features/AllTreatmentsFilter";
 
 export const AllTreatments = () => {
   return (
-    <div className={styles.all_Tratments_page}>
+    <div className={styles.allTreatmentsPage}>
+      <Menu />
       <AllTreatmentsTitleBlock />
-      {/* <AllTreatmentsFilter /> */}
-      <AllTreatmentsContentWraper />
+      <AllTreatmentsContentWrapper />
     </div>
   );
 };

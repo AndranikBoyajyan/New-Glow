@@ -7,10 +7,12 @@ import SpecialPromo from "../../components/SpecialPromo";
 import HomeProducts from "../../components/HomeProducts";
 
 import styles from "./Home.module.css";
+import Menu from "../../components/Menu";
 
 export const Home = () => {
   return (
     <div className={styles.home}>
+      <Menu />
       <RadianceBegin />
       <FavoriteTreatments />
       <HomeAllTreatments />
