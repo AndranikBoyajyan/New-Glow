@@ -31,7 +31,7 @@ export const HomeSlider: FC<HomeSliderProps> = ({
   const navigate = useNavigate();
 
   const handleSeeAllTreatments = () => {
-    navigate("alltreatments");
+    navigate("all-treatments");
   };
 
   return (

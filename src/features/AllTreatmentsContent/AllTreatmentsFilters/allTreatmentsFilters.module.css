@@ -1,9 +1,22 @@
-.all_treatments_filters {
+.allTreatmentsFiltersWrapper {
   display: flex;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
-  padding: 5vh 0;
-  border-bottom: 0.5px solid #3c3c3c;
+  padding: 0 10px 20px;
+}
+
+.allTreatmentsFilters {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.divider {
+  width: 90%;
+  height: 0.5px;
+  background-color: #3c3c3c;
 }
