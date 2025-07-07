@@ -1,25 +1,36 @@
-import Treatment from "../../entities/Treatment";
+import TreatmentMenuItem from "../../entities/TreatmentMenuItem";
 import cn from "classnames";
 
 import styles from "./Treatments.module.css";
 import { TREATMENTS } from "../../constants/treatments";
-import { Link } from "react-router";
-import type { FC } from "react";
+import { Link, useNavigate, useParams } from "react-router";
+import { useState } from "react";
 
-interface TreatmentsProps {
-  handleBlur: () => void;
-}
+export const Treatments = () => {
+  const params = useParams();
+  const [redirectName, setRedirectName] = useState(params.name ?? "");
 
-export const Treatments: FC<TreatmentsProps> = ({ handleBlur }) => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (name: string) => {
+    const urlParamsName = name.replaceAll(" ", "-").toLowerCase();
+
+    setRedirectName(urlParamsName);
+
+    navigate(`/${urlParamsName}`);
+    if (redirectName === params.name) {
+      navigate(`/${urlParamsName}`, { replace: true });
+    }
+  };
+
   return (
-    <div
-      role="menu"
-      tabIndex={0}
-      className={styles.treatments}
-      onBlur={() => handleBlur()}
-    >
+    <div className={styles.treatments} role="menuitem">
       {TREATMENTS.map((treatment) => (
-        <Treatment key={treatment.id} name={treatment.name} />
+        <TreatmentMenuItem
+          key={treatment.id}
+          name={treatment.name}
+          handleClick={handleNavigate}
+        />
       ))}
       <Link
         to="/all-treatments"
