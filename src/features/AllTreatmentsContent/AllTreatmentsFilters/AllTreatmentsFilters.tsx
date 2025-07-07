@@ -45,27 +45,30 @@ export const AllTreatmentsFilters: FC<AllTreatmentsFiltersProps> = ({
   };
 
   return (
-    <div className={styles.all_treatments_filters}>
-      {TREATMENTS_CATEGORIES.map((treatmentCategory) => (
+    <div className={styles.allTreatmentsFiltersWrapper}>
+      <div className={styles.allTreatmentsFilters}>
+        {TREATMENTS_CATEGORIES.map((treatmentCategory) => (
+          <Checkbox
+            key={treatmentCategory.id}
+            text={treatmentCategory.name}
+            font="poppins-regular"
+            checked={
+              allChecked || checkedCategoriesIds.includes(treatmentCategory.id)
+            }
+            labelClassName={"label_20"}
+            handleClick={() => handleClick(treatmentCategory.id)}
+          />
+        ))}
         <Checkbox
-          key={treatmentCategory.id}
-          text={treatmentCategory.name}
-          font="poppins-regular"
-          checked={
-            allChecked || checkedCategoriesIds.includes(treatmentCategory.id)
-          }
-          labelClassName={"label_20"}
-          handleClick={() => handleClick(treatmentCategory.id)}
+          text="Select All"
+          font="poppins-italic"
+          checked={allChecked}
+          checkboxClassName={"selectAll"}
+          labelClassName={"label_16"}
+          handleClick={handleAllCheckedClick}
         />
-      ))}
-      <Checkbox
-        text="Select All"
-        font="poppins-italic"
-        checked={allChecked}
-        checkboxClassName={"selectAll"}
-        labelClassName={"label_16"}
-        handleClick={handleAllCheckedClick}
-      />
+      </div>
+      <div className={styles.divider}></div>
     </div>
   );
 };

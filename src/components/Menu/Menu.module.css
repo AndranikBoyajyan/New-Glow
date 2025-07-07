@@ -1,18 +1,45 @@
+.menuWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+
+  @media (width < 768px) {
+    align-self: flex-end;
+  }
+}
+
 .menu {
   min-width: 545px;
   height: 36px;
   list-style: none;
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
-  margin-top: 30px;
   gap: 2.8vw;
   box-sizing: content-box;
   z-index: 9;
   opacity: 0.75;
 
   @media (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
     min-width: max-content;
+    padding: 0;
     padding-top: 12px;
   }
+}
+
+.menuMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.menuBtn {
+  all: unset;
+  align-self: end;
+  padding: 0 8px 6px;
 }

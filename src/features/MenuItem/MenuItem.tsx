@@ -8,7 +8,7 @@ import { Link } from "react-router";
 import styles from "./MenuItem.module.css";
 interface MenuItemProps {
   name: string;
-  redirectUrl: string;
+  redirectUrl?: string;
   isDropDown?: boolean;
 }
 
@@ -23,31 +23,35 @@ export const MenuItem: FC<MenuItemProps> = ({
     setIsOpen(!isOpen);
   };
 
-  const handleBlur = () => {
+  const closeMenu = () => {
     setIsOpen(false);
+  };
+
+  const handleBlur = () => {
+    closeMenu();
   };
 
   const imgSrc = isOpen ? arrowUp : arrowDown;
 
   return (
     <li
-      tabIndex={isDropDown ? 0 : undefined}
       className={cn(styles.li, {
         [styles.openedDropdown]: isOpen,
       })}
-      onBlur={handleBlur}
     >
       {isDropDown ? (
-        <div className={styles.menuItem} onClick={handleSetOpenDropdown}>
-          <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
-          <img src={imgSrc} alt={"arrow"} className={styles.img} />
+        <div className={styles.dropdown} role="menuitem" onBlur={handleBlur}>
+          <button className={styles.menuItem} onClick={handleSetOpenDropdown}>
+            <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
+            <img src={imgSrc} alt={"arrow"} className={styles.img} />
+          </button>
+          {isOpen && <Treatments />}
         </div>
       ) : (
-        <Link to={redirectUrl} className={styles.redirectLink}>
+        <Link to={redirectUrl ?? ""} className={styles.redirectLink}>
           <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
         </Link>
       )}
-      {isOpen && <Treatments />}
     </li>
   );
 };

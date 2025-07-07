@@ -15,19 +15,21 @@ export const AllTreatmentsContent = () => {
   };
 
   return (
-    <div className={styles.all_treatments_content}>
+    <div className={styles.allTreatmentsContentAndFilters}>
       <AllTreatmentsFilters
         allIds={allIds}
         checkedCategoriesIds={checkedCategoriesIds}
         handleSetCategoriesIds={handleSetCategoriesIds}
       />
-      {TREATMENTS_CATEGORIES.map((category) => (
-        <TreatmentsContent
-          key={category.id}
-          category={category}
-          isChecked={checkedCategoriesIds.includes(category.id)}
-        />
-      ))}
+      <div className={styles.treatments}>
+        {TREATMENTS_CATEGORIES.map((category) => (
+          <TreatmentsContent
+            key={category.id}
+            category={category}
+            isChecked={checkedCategoriesIds.includes(category.id)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

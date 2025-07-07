@@ -19,8 +19,24 @@
   font-size: 32px;
 }
 
+.title_40 {
+  font-size: 40px;
+}
+
+.title_48 {
+  font-size: 48px;
+}
+
 .title_h1_120 {
   font-size: 120px; /* For About page */
+}
+
+.title_h1_124 {
+  font-size: 124px; /* For Error page (Mobile)*/
+}
+
+.title_h1_170 {
+  font-size: 170px; /* For Error page */
 }
 
 .title_h1_96 {
