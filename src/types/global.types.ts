@@ -6,3 +6,10 @@ export interface ITreatmentCategory {
   imgUrl: string;
   treatments: ITreatment[];
 }
+
+export interface ILaserPageTreatmentCardList {
+  id: number;
+  name: string;
+  duration: string;
+  price: string;
+}
