@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   width: 80vw;
-  border: solid 1px #3c3c3c;
   margin: 0 auto;
+  box-shadow: 2px 2px 2px #afafaf;
+  color: #3c3c3c;
 }
 .textBlock {
   width: 100%;
@@ -28,4 +29,7 @@
 .durationAndPriceBlock {
   display: flex;
   gap: 2vw;
+}
+.durationAndPriceBlock span {
+  font-weight: bold;
 }

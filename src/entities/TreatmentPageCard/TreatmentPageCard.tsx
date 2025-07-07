@@ -1,9 +1,9 @@
 import type { FC } from "react";
-import styles from "./TreatmentPageCards.module.css";
+import styles from "./TreatmentPageCard.module.css";
 import Title from "../../shared/Title";
 import Button from "../../shared/Button";
 
-interface TreatmentPageCardsProps {
+interface TreatmentPageCardProps {
   name: string;
   description: string;
   duration: string;
@@ -11,7 +11,7 @@ interface TreatmentPageCardsProps {
   imgUrl: string;
 }
 
-export const TreatmentPageCards: FC<TreatmentPageCardsProps> = ({
+export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
   name,
   description,
   duration,
@@ -20,9 +20,8 @@ export const TreatmentPageCards: FC<TreatmentPageCardsProps> = ({
 }) => {
   return (
     <div className={styles.treatmentPageCards}>
-      <div>
-        <img src={imgUrl} alt="" />
-      </div>
+      <img src={imgUrl} alt="" />
+
       <div className={styles.textBlock}>
         <div className={styles.descriptionAndTitleBlock}>
           <Title text={name} className="title_28" />
