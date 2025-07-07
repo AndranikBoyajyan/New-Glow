@@ -40,22 +40,18 @@ export const MenuItem: FC<MenuItemProps> = ({
       })}
     >
       {isDropDown ? (
-        <div
-          // role="menuitem"
-          // tabIndex={0}
-          className={styles.menuItem}
-          onClick={handleSetOpenDropdown}
-          // onBlur={handleBlur}
-        >
-          <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
-          <img src={imgSrc} alt={"arrow"} className={styles.img} />
+        <div className={styles.dropdown} role="menuitem" onBlur={handleBlur}>
+          <button className={styles.menuItem} onClick={handleSetOpenDropdown}>
+            <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
+            <img src={imgSrc} alt={"arrow"} className={styles.img} />
+          </button>
+          {isOpen && <Treatments />}
         </div>
       ) : (
         <Link to={redirectUrl ?? ""} className={styles.redirectLink}>
           <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
         </Link>
       )}
-      {isOpen && <Treatments handleBlur={handleBlur} />}
     </li>
   );
 };

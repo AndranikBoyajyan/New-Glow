@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 import "./App.css";
 import LayoutWrapper from "./pages/LayoutWrapper";
-import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import AllTreatments from "./pages/AllTreatments";
 import SingleTreatment from "./pages/SingleTreatment";
+import ErrorPage from "./pages/Error404";
 
 function App() {
   return (
