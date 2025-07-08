@@ -13,8 +13,10 @@ export const LaserPageTreatmentCard: FC<LaserPageTreatmentCardProps> = ({
   imgUrl,
 }) => {
   return (
-    <div className={styles.LaserPageTreatmentCard}>
-      <img src={imgUrl} alt="" />
+    <div
+      className={styles.LaserPageTreatmentCard}
+      style={{ backgroundImage: `url(${imgUrl})` }}
+    >
       <div className={styles.textBlock}>
         {list.map((treatmentType) => (
           <div key={treatmentType.id} className={styles.eachTreatmentType}>
