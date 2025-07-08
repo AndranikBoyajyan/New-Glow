@@ -14,7 +14,7 @@ export const LaserPageTreatmentCard: FC<LaserPageTreatmentCardProps> = ({
 }) => {
   return (
     <div
-      className={styles.LaserPageTreatmentCard}
+      className={styles.laserPageTreatmentCard}
       style={{ backgroundImage: `url(${imgUrl})` }}
     >
       <div className={styles.textBlock}>
