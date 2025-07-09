@@ -1,9 +1,9 @@
 import { Outlet } from "react-router";
 
-import Footer from "../components/Footer";
-import Subscribe from "../components/Subscribe";
-import Menu from "../components/Menu";
+import Footer from "../components/GeneralComponents/Footer";
+import Menu from "../components/GeneralComponents/Menu";
 import styles from "./styles.module.css";
+import Subscribe from "../components/GeneralComponents/Subscribe";
 
 const LayoutWrapper = () => {
   return (

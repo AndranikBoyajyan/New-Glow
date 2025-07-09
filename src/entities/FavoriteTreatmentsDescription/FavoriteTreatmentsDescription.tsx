@@ -4,6 +4,7 @@ import cn from "classnames";
 
 import styles from "./FavoriteTreatmentsDescription.module.css";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
 export const FavoriteTreatmentsDescription = () => {
   const { width } = useWindowSize();
@@ -12,7 +13,7 @@ export const FavoriteTreatmentsDescription = () => {
       <Title
         text="OUR FAVORITE TREATMENTS"
         font="fjalla-one-regular"
-        className={width < 768 ? "title_28" : ""}
+        className={width < MEDIA_TABLET_SMALL ? "title_28" : ""}
       />
       <p className={cn(styles.paragraph, "poppins-regular")}>
         Botox, fillers, PDO thread lifts, PRP injections, and more—whatever your

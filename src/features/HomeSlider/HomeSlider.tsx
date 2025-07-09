@@ -6,6 +6,7 @@ import { useMemo, type FC } from "react";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import styles from "./HomeSlider.module.css";
 import { useNavigate } from "react-router";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
 interface HomeSliderProps {
   classNames: Record<string, string>;
@@ -38,7 +39,8 @@ export const HomeSlider: FC<HomeSliderProps> = ({
     <div
       className={styles[classNames.homeSliderWrapper]}
       style={{
-        backgroundImage: width < 768 ? `url(${sliderImgUrl})` : "",
+        backgroundImage:
+          width < MEDIA_TABLET_SMALL ? `url(${sliderImgUrl})` : "",
       }}
     >
       <div
