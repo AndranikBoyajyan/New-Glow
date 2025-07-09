@@ -1,4 +1,4 @@
-import type { ILaserPageTreatmentCardList } from "../types/global.types";
+import type { ILaserPageTreatmentCardList } from "../../../types/global.types";
 
 interface ILaserTreatmentBodyPartsList {
   id: number;
@@ -9,7 +9,7 @@ interface ILaserTreatmentBodyPartsList {
 export const LASERTREATMENTBODYPARTSLIST: ILaserTreatmentBodyPartsList[] = [
   {
     id: 1,
-    imgUrl: "./pngs/image.png",
+    imgUrl: "./pngs/image1.png",
     bodyParts: [
       {
         id: 1,
@@ -75,7 +75,7 @@ export const LASERTREATMENTBODYPARTSLIST: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 2,
-    imgUrl: "./pngs/image.png",
+    imgUrl: "./pngs/image2.png",
     bodyParts: [
       {
         id: 1,
@@ -117,7 +117,7 @@ export const LASERTREATMENTBODYPARTSLIST: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 3,
-    imgUrl: "./pngs/image.png",
+    imgUrl: "./pngs/image3.png",
     bodyParts: [
       {
         id: 1,
@@ -165,7 +165,7 @@ export const LASERTREATMENTBODYPARTSLIST: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 4,
-    imgUrl: "./pngs/image.png",
+    imgUrl: "./pngs/image4.png",
     bodyParts: [
       {
         id: 1,
@@ -207,7 +207,7 @@ export const LASERTREATMENTBODYPARTSLIST: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 5,
-    imgUrl: "./pngs/image.png",
+    imgUrl: "./pngs/image5.png",
     bodyParts: [
       {
         id: 1,
@@ -261,7 +261,7 @@ export const LASERTREATMENTBODYPARTSLIST: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 6,
-    imgUrl: "./pngs/image.png",
+    imgUrl: "./pngs/image6.png",
     bodyParts: [
       {
         id: 1,

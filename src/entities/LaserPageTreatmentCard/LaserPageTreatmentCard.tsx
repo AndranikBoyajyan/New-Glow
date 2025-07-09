@@ -6,16 +6,19 @@ import Button from "../../shared/Button";
 interface LaserPageTreatmentCardProps {
   list: ILaserPageTreatmentCardList[];
   imgUrl: string;
+  key: number;
 }
 
 export const LaserPageTreatmentCard: FC<LaserPageTreatmentCardProps> = ({
   list,
   imgUrl,
+  key,
 }) => {
   return (
     <div
       className={styles.laserPageTreatmentCard}
       style={{ backgroundImage: `url(${imgUrl})` }}
+      key={key}
     >
       <div className={styles.textBlock}>
         {list.map((treatmentType) => (
