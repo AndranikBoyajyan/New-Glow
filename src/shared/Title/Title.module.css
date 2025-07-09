@@ -11,6 +11,10 @@
   color: #3c3c3c;
 }
 
+.title_24 {
+  font-size: 24px;
+}
+
 .title_28 {
   font-size: 28px;
 }
@@ -46,4 +50,8 @@
 .title_h1_75 {
   font-size: 75px; /* For All Treatments page */
   letter-spacing: 10px;
+}
+
+.title_h1_86 {
+  font-size: 86px; /* For Single Treatment page */
 }

@@ -1,0 +1,10 @@
+.singleTreatmentDescriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: 0 48px;
+}
+
+.singleTreatmentDescription {
+  font-size: 20px;
+}

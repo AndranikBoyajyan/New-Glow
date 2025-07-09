@@ -1,0 +1,52 @@
+.singleTreatmentHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.singleTreatmentHeaderContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.singleTreatmentHeaderBackGroundImg {
+  width: 95%;
+  height: 420px;
+  background-image: url("./pngs/allTreatmentsTitleBackground.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.singleTreatmentHeaderTitle {
+  margin-top: 115px;
+
+  width: 70%;
+  align-self: flex-end;
+}
+
+.singleTreatmentHeaderImage {
+  width: 27%;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+.divider {
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(60, 60, 60, 0.4);
+}
