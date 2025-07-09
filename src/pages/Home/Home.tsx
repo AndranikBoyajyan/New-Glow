@@ -1,11 +1,10 @@
-import FavoriteTreatments from "../../components/FavoriteTreatments";
-import HomeAllTreatments from "../../components/HomeAllTreatments";
-import HomeOurExperts from "../../components/HomeOurExperts";
-import RadianceBegin from "../../components/RadianceBegin";
-import CustomersReview from "../../components/CustomersReview";
-import SpecialPromo from "../../components/SpecialPromo";
-import HomeProducts from "../../components/HomeProducts";
-
+import FavoriteTreatments from "../../components/HomeComponents/FavoriteTreatments";
+import HomeAllTreatments from "../../components/HomeComponents/HomeAllTreatments";
+import HomeOurExperts from "../../components/HomeComponents/HomeOurExperts";
+import CustomersReview from "../../components/HomeComponents/CustomersReview";
+import RadianceBegin from "../../components/HomeComponents/RadianceBegin";
+import SpecialPromo from "../../components/HomeComponents/SpecialPromo";
+import HomeProducts from "../../components/HomeComponents/HomeProducts";
 import styles from "./Home.module.css";
 
 export const Home = () => {
