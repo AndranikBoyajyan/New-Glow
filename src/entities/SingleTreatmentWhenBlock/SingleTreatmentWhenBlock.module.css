@@ -1,0 +1,48 @@
+.WhenBlock {
+  width: 100%;
+  display: flex;
+  background-color: #b36a66;
+}
+
+.WhenBlockQuestionWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 48px;
+  gap: 16px;
+}
+
+.WhenBlockQuestionText {
+  font-size: 36px;
+  color: #fff6f5;
+}
+
+.whenBlockAnswersWithIcon {
+  display: flex;
+  text-align: start;
+  align-items: self-start;
+  gap: 10px;
+}
+
+.whenBlockAnswers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer {
+  color: #fff6f5;
+  font-size: 24px;
+}
+
+.answerDescription {
+  color: #fff6f5;
+  font-size: 17px;
+}
+
+.whenBlockImg {
+  width: 55vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

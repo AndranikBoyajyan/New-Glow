@@ -1,11 +1,12 @@
-.treatmentPageCards {
+.treatmentPageCard {
+  width: 75vw;
   display: flex;
   justify-content: space-between;
-  width: 80vw;
   margin: 0 auto;
   box-shadow: 2px 2px 2px #afafaf;
   color: #3c3c3c;
 }
+
 .textBlock {
   width: 100%;
   text-align: left;
@@ -14,11 +15,17 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
 .descriptionAndTitleBlock {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
+.description {
+  font-size: 16px;
+}
+
 .priceAndButtonBlock {
   display: flex;
   align-items: center;
@@ -26,10 +33,12 @@
   margin-right: 2vw;
   color: #8a4f4c;
 }
+
 .durationAndPriceBlock {
   display: flex;
-  gap: 2vw;
+  gap: 1.4vw;
 }
+
 .durationAndPriceBlock span {
-  font-weight: bold;
+  font-size: 24px;
 }
