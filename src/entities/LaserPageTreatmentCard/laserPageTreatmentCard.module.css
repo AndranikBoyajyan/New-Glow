@@ -1,0 +1,40 @@
+.laserPageTreatmentCard {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  box-shadow: 2px 2px 8px rgba(175, 175, 175, 0.6);
+  color: #3c3c3c;
+  background-repeat: no-repeat;
+  justify-content: end;
+  margin-bottom: 10px;
+}
+
+.textBlock {
+  width: 50%;
+  padding: 30px;
+  text-align: left;
+  background-color: #fff6f5;
+  color: #3c3c3c;
+}
+
+.eachTreatmentType {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.durationAndPriceBlock {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
