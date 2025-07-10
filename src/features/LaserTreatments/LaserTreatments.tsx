@@ -1,6 +1,6 @@
 import styles from "./laserTreatments.module.css";
 import LaserPageTreatmentCard from "../../entities/LaserPageTreatmentCard";
-import { LASERTREATMENTBODYPARTSLIST } from "./contants/laserPageTreatmentList";
+import { LASERTREATMENTBODYPARTSLIST } from "../../components/TreatmentsContainers/LaserHairRemoval/constants/CardInfo";
 
 export const LaserTreatments = () => {
   return (
