@@ -7,7 +7,7 @@ export const LaserTreatments = () => {
     <div className={styles.laserTreatments}>
       {LASERTREATMENTBODYPARTSLIST.map((test) => (
         <LaserPageTreatmentCard
-          list={test.bodyParts}
+          BodyPartList={test.bodyParts}
           imgUrl={test.imgUrl}
           key={test.id}
         />

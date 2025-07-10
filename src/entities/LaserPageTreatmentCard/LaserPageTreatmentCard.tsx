@@ -4,24 +4,21 @@ import styles from "./laserPageTreatmentCard.module.css";
 import Button from "../../shared/Button";
 
 interface LaserPageTreatmentCardProps {
-  list: ILaserPageTreatmentCardList[];
+  BodyPartList: ILaserPageTreatmentCardList[];
   imgUrl: string;
-  key: number;
 }
 
 export const LaserPageTreatmentCard: FC<LaserPageTreatmentCardProps> = ({
-  list,
+  BodyPartList,
   imgUrl,
-  key,
 }) => {
   return (
     <div
       className={styles.laserPageTreatmentCard}
       style={{ backgroundImage: `url(${imgUrl})` }}
-      key={key}
     >
       <div className={styles.textBlock}>
-        {list.map((treatmentType) => (
+        {BodyPartList.map((treatmentType) => (
           <div key={treatmentType.id} className={styles.eachTreatmentType}>
             <div>{treatmentType.name}</div>
             <div className={styles.durationAndPriceBlock}>
