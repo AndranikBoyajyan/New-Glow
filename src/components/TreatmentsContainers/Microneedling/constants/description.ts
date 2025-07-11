@@ -1,0 +1,2 @@
+export const description =
+  "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.";
