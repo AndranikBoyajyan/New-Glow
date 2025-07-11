@@ -16,8 +16,11 @@
   display: flex;
   justify-content: space-between;
   background-image: url("/pngs/OurCustomersBackground.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  flex-wrap: wrap;
+  gap: 48px;
 }
 
 .customer_review_left {
@@ -28,4 +31,51 @@
 
 .customer_review_right {
   align-self: center;
+}
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .reviews {
+    flex-direction: column;
+    padding: 10vh 6vw;
+    gap: 32px;
+  }
+
+  .title_wrapper {
+    margin-left: 6vw;
+  }
+
+  .customer_review_left {
+    gap: 8vh;
+  }
+
+  .customer_review_right {
+    align-self: flex-start;
+  }
+
+  /* 🎯 Font size adjustments for mobile */
+  .customers_review h1,
+  .customers_review h2,
+  .customers_review h3 {
+    font-size: 22px;
+  }
+
+  .customers_review p,
+  .customers_review span,
+  .customers_review li {
+    font-size: 16px;
+  }
+
+  /* If you have custom text classes like .text_32 etc., adjust here too: */
+  .text_32 {
+    font-size: 22px;
+  }
+
+  .text_24 {
+    font-size: 18px;
+  }
+
+  .text_18 {
+    font-size: 14px;
+  }
 }

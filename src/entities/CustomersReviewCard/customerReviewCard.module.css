@@ -12,6 +12,7 @@
   top: -40px;
   left: -10px;
 }
+
 .comma_right {
   position: absolute;
   bottom: -45px;
@@ -21,4 +22,32 @@
 .reviewer_name {
   text-align: right;
   font-weight: bold;
+  font-size: 18px;
+}
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .customer_review_card {
+    width: 85vw; /* Use most of the mobile screen */
+    padding: 24px 20px 28px;
+    font-size: 14px; /* Default font size inside */
+  }
+
+  .comma_left {
+    top: -30px;
+    left: -6px;
+    width: 24px;
+    height: auto;
+  }
+
+  .comma_right {
+    bottom: -30px;
+    right: -10px;
+    width: 24px;
+    height: auto;
+  }
+
+  .reviewer_name {
+    font-size: 16px;
+  }
 }
