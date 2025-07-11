@@ -1,9 +1,9 @@
 export const whenBlockTexts = {
   question: "When is microneedling a Good Choice",
-  imgUrl: "/pngs/microneedlingWhenImg.png",
+  imgUrl: "/pngs/chemicalPeelsWhenImg.png",
   answers: [
     {
-      answer: "Fine Lines and Wrinkles",
+      answer: " Fine Lines and Wrinkles",
       answerDescription:
         "Microneedling stimulates collagen and elastin production, which helps to plump the skin and reduce the appearance of fine lines. It’s especially effective around delicate areas like the mouth and eyes where early wrinkles tend to form.",
     },
