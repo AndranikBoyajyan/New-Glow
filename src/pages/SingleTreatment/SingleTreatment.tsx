@@ -6,6 +6,8 @@ import Microneedling from "../../components/TreatmentsContainers/Microneedling";
 import ChemicalPeels from "../../components/TreatmentsContainers/ChemicalPeels";
 import styles from "./SingleTreatment.module.css";
 import LaserHairRemoval from "../../components/TreatmentsContainers/LaserHairRemoval";
+import Facials from "../../components/TreatmentsContainers/Facials";
+import Morpheus8 from "../../components/TreatmentsContainers/Morpheus-8";
 
 export const SingleTreatment = () => {
   const treatmentsTrueNames = TREATMENTS.map((treatment) =>
@@ -19,6 +21,8 @@ export const SingleTreatment = () => {
   if (name === "microneedling") return <Microneedling />;
   if (name === "chemical-peels") return <ChemicalPeels />;
   if (name === "laser-hair-removal") return <LaserHairRemoval />;
+  if (name === "facials") return <Facials />;
+  if (name === "morpheus-8") return <Morpheus8 />;
 
   return <div className={styles.singleTreatment}>{name}</div>;
 };
