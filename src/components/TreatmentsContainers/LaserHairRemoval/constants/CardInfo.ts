@@ -1,4 +1,4 @@
-import type { ILaserPageTreatmentCardList } from "../../../types/global.types";
+import type { ILaserPageTreatmentCardList } from "../../../../types/global.types";
 
 interface ILaserTreatmentBodyPartsList {
   id: number;
@@ -6,7 +6,7 @@ interface ILaserTreatmentBodyPartsList {
   bodyParts: ILaserPageTreatmentCardList[];
 }
 
-export const LASERTREATMENTBODYPARTSLIST: ILaserTreatmentBodyPartsList[] = [
+export const cardsInfos: ILaserTreatmentBodyPartsList[] = [
   {
     id: 1,
     imgUrl: "./pngs/image1.png",
