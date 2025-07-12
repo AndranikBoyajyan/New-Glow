@@ -37,7 +37,10 @@ export const HomeSlider: FC<HomeSliderProps> = ({
 
   return (
     <div
-      className={styles[classNames.homeSliderWrapper]}
+      className={cn(styles[classNames.homeSliderWrapper], {
+        [styles[classNames.homeSliderWrapperLeft]]: animation === 1,
+        [styles[classNames.homeSliderWrapperRight]]: animation === 2,
+      })}
       style={{
         backgroundImage:
           width < MEDIA_TABLET_SMALL ? `url(${sliderImgUrl})` : "",

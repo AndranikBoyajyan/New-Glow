@@ -18,6 +18,7 @@
   background-image: url("./pngs/allTreatmentsTitleImg.png");
   background-repeat: no-repeat;
   background-position: right;
+  background-size: contain;
   width: 55%;
   height: 440px;
 }

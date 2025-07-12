@@ -31,12 +31,20 @@
   font-size: 48px;
 }
 
+.title_36 {
+  font-size: 36px;
+}
+
 .title_h1_120 {
   font-size: 120px; /* For About page */
 }
 
 .title_h1_124 {
   font-size: 124px; /* For Error page (Mobile)*/
+}
+
+.title_h1_152 {
+  font-size: 152px; /* For Error page (Tablet)*/
 }
 
 .title_h1_170 {

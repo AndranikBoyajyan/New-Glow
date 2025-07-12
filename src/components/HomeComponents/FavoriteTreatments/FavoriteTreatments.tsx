@@ -1,46 +1,36 @@
+import { Link } from "react-router";
 import FavoriteTreatmentsDescription from "../../../entities/FavoriteTreatmentsDescription";
 import Button from "../../../shared/Button";
-import favoritePng1 from "/pngs/favoritePng1.png";
-import favoritePng2 from "/pngs/favoritePng2.png";
-import favoritePng3 from "/pngs/favoritePng3.png";
 
+import { favoriteTreatments } from "./constants/favoriteTreatments";
 import styles from "./FavoriteTreatments.module.css";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const FavoriteTreatments = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={styles.favoriteTreatments}>
       <FavoriteTreatmentsDescription />
       <div className={styles.imgs}>
-        <div
-          className={styles.favoriteTreatment}
-          style={{ backgroundImage: `url(${favoritePng1})` }}
-        >
-          <Button
-            className="button_transparent"
-            content="Botox treatment"
-            font="poppins-regular"
-          />
-        </div>
-        <div
-          className={styles.favoriteTreatment}
-          style={{ backgroundImage: `url(${favoritePng2})` }}
-        >
-          <Button
-            className="button_transparent"
-            content="Morpheus 8"
-            font="poppins-regular"
-          />
-        </div>
-        <div
-          className={styles.favoriteTreatment}
-          style={{ backgroundImage: `url(${favoritePng3})` }}
-        >
-          <Button
-            className="button_transparent"
-            content="Facial"
-            font="poppins-regular"
-          />
-        </div>
+        {favoriteTreatments.map((treatment) => (
+          <Link
+            key={treatment.id}
+            className={styles.favoriteTreatment}
+            style={{ backgroundImage: `url(${treatment.imgUrl})` }}
+            to={`/${treatment.name.replaceAll(" ", "-").toLowerCase()}`}
+          >
+            <Button
+              className={
+                isMobile ? "button_transparent_white" : "button_transparent"
+              }
+              content={treatment.name}
+              font="poppins-regular"
+            />
+          </Link>
+        ))}
       </div>
     </div>
   );

@@ -51,7 +51,7 @@ export const TREATMENTS: ITreatment[] = [
   },
   {
     id: 7,
-    name: "Fat dissolving",
+    name: "Fat Dissolving",
     imgUrl: "./pngs/FatDisolving.png",
     categoryId: 3,
     description:

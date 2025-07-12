@@ -34,13 +34,15 @@ export const MenuItem: FC<MenuItemProps> = ({
   const imgSrc = isOpen ? arrowUp : arrowDown;
 
   return (
-    <li
-      className={cn(styles.li, {
-        [styles.openedDropdown]: isOpen,
-      })}
-    >
+    <li className={cn(styles.li)}>
       {isDropDown ? (
-        <div className={styles.dropdown} role="menuitem" onBlur={handleBlur}>
+        <div
+          className={cn(styles.dropdown, {
+            [styles.openedDropdown]: isOpen,
+          })}
+          role="menuitem"
+          onBlur={handleBlur}
+        >
           <button className={styles.menuItem} onClick={handleSetOpenDropdown}>
             <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
             <img src={imgSrc} alt={"arrow"} className={styles.img} />

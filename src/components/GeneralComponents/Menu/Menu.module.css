@@ -19,7 +19,6 @@
   gap: 2.8vw;
   box-sizing: content-box;
   z-index: 9;
-  opacity: 0.75;
 
   @media (max-width: 768px) {
     height: auto;

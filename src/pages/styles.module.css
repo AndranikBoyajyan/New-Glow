@@ -3,8 +3,12 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  background-color: #ffedeb;
   margin-top: 36px;
-  background-color: #fae5e3;
+
+  @media (width < 768px) {
+    margin-top: 0;
+  }
 }
 
 .border {

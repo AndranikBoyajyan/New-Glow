@@ -25,7 +25,7 @@
 }
 
 .description {
-  color: #3c3c3c;
+  color: rgba(60, 60, 60, 0.8);
   text-align: left;
   font-size: 18px;
   padding: 5px;

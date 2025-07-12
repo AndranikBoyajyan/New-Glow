@@ -11,8 +11,16 @@
     justify-content: center;
     position: relative;
     min-height: 780px;
-    background-position: right;
+    background-size: contain;
   }
+}
+
+.homeSliderWrapperLeft {
+  background-position: right;
+}
+
+.homeSliderWrapperRight {
+  background-position: left;
 }
 
 .homeSlider {
@@ -171,12 +179,15 @@
 .img {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   flex: 2;
 }
 
 .img1 {
   background-image: url("/pngs/homepageSlider1.png");
+
+  @media (width < 1024px) {
+    background-position: right;
+  }
 
   @media (width < 768px) {
     display: none;
@@ -185,6 +196,10 @@
 
 .img2 {
   background-image: url("/pngs/homepageSlider2.png");
+
+  @media (width < 1024px) {
+    background-position: left;
+  }
 
   @media (width < 768px) {
     display: none;
