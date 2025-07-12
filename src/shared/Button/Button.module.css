@@ -5,9 +5,13 @@
     cursor: pointer;
   }
 
-  @media (width < 1024px) {
+  @media (width < 1280px) {
     padding: 8px 16px;
     font-size: 16px;
+  }
+
+  @media (width < 1024px) {
+    padding: 8px 11px;
   }
 }
 
@@ -52,6 +56,12 @@
   padding: 8px 16px;
 }
 
+.button_dark_rose4 {
+  background-color: #8a4f4c;
+  color: #fff;
+  border: 1px solid #8a4f4c;
+}
+
 .button_light_transparent {
   background-color: transparent;
   color: #b36a66;
@@ -61,15 +71,26 @@
 .button_transparent {
   background-color: rgba(162, 112, 103, 0.7);
   color: #fff;
-  padding: 10px 56px;
   z-index: 2;
   border: none;
   font-size: 28px;
 }
 
+.button_transparent_white {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  color: #b36a66;
+}
+
 .button_weight_2 {
   border: 2px solid #8a4f4c;
   color: #8a4f4c;
+}
+
+.button_weight_2_transparent {
+  border: 2px solid #b36a66;
+  color: #b36a66;
+  background-color: transparent;
 }
 
 .button_send {

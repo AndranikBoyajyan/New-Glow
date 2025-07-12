@@ -4,10 +4,11 @@ import cn from "classnames";
 
 import styles from "./Error404.module.css";
 import { useWindowSize } from "../../hooks/useWindowSize";
-import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
+import { getSubTitleWidth, getTitleWidth } from "./helpers/getTitlesWidths";
 
 export const ErrorPage = () => {
   const { width } = useWindowSize();
+
   return (
     <div className={styles.errorPage}>
       <div className={styles.contentWrapper}>
@@ -16,15 +17,13 @@ export const ErrorPage = () => {
             <Title
               text="404"
               font="fjalla-one-regular"
-              className={
-                width >= MEDIA_TABLET_SMALL ? "title_h1_170" : "title_h1_124"
-              }
+              className={getTitleWidth(width)}
               isH1
             />
             <Title
               text="Page Not Found"
               font="poppins-regular"
-              className={width >= MEDIA_TABLET_SMALL ? "title_48" : "title_28"}
+              className={getSubTitleWidth(width)}
             />
           </div>
           <div className={styles.errorPageRedirect}>

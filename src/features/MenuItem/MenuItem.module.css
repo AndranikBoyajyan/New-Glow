@@ -12,7 +12,6 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  background-color: #fff6f5;
 }
 
 .treatments {
@@ -33,12 +32,14 @@
 .itemName {
   font-size: 20px;
   color: #3c3c3c;
+  opacity: 0.75;
 }
 
 .redirectLink {
   text-decoration: none;
 }
 
-.dropdown {
-  border-radius: 8px;
+.openedDropdown {
+  border: 0.1px solid #3c3c3c;
+  border-top: none;
 }

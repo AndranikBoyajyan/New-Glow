@@ -17,20 +17,20 @@ export const SpecialPromo = () => {
         <div className={styles.specialPromoBottomSideWrapper}>
           <div className={styles.textAndButtons}>
             <span className={cn(styles.text_56, "dm-serif-display-regular")}>
-              Buy 2 facials
+              BUY 2 FACIALS
             </span>
-            <span className={cn(styles.text_78, "dm-serif-display-regular")}>
-              GET 3RD free
+            <span className={cn(styles.text_78, "dm-serif-display-italic")}>
+              GET 3RD FREE
             </span>
             <div className={styles.buttons}>
               <Button
                 content="Book a consultation"
-                className="button_dark"
+                className="button_dark_rose4"
                 font="poppins-medium"
               />
               <Button
                 content="See all promos"
-                className="button_weight_2"
+                className="button_weight_2_transparent"
                 font="poppins-medium"
               />
             </div>
