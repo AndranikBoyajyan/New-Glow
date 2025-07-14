@@ -1,0 +1,2 @@
+export const description =
+  "Biorevitalization is a non-surgical cosmetic treatment that rejuvenates the skin by deeply hydrating it and stimulating natural collagen production. It involves injecting active ingredients like hyaluronic acid, PRP (platelet-rich plasma), or other revitalizing substances into the skin. This treatment improves skin tone, elasticity, and texture, and helps reduce fine lines and dullness.";
