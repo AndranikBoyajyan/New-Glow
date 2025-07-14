@@ -1,0 +1,2 @@
+export const description =
+  "Fat-dissolving injections—also known as lipolytic injections—are non-surgical treatments designed to reduce small pockets of stubborn fat. They're commonly used on areas like the double chin, belly, thighs, arms, back, and love handles. Here’s a practical overview: The most common ingredient is deoxycholic acid (like in Kybella), which breaks down fat cell membranes. Once destroyed, the fat is processed and eliminated naturally by the body over several weeks.";
