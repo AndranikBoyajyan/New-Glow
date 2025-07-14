@@ -11,6 +11,7 @@ import FatDissolving from "../../components/TreatmentsContainers/FatDissolving";
 import FacialContouring from "../../components/TreatmentsContainers/FacialContouring";
 import Biorevitalization from "../../components/TreatmentsContainers/Biorevitalization";
 import BotoxTreatments from "../../components/TreatmentsContainers/BotoxTreatments";
+import VitaminTherapy from "../../components/TreatmentsContainers/VitaminTherapy";
 
 export const SingleTreatment = () => {
   const treatmentsTrueNames = TREATMENTS.map((treatment) =>
@@ -30,6 +31,7 @@ export const SingleTreatment = () => {
   if (name === "facial-contouring") return <FacialContouring />;
   if (name === "biorevitalization") return <Biorevitalization />;
   if (name === "botox-treatments") return <BotoxTreatments />;
+  if (name === "vitamin-therapy") return <VitaminTherapy />;
 
   return <div className={styles.singleTreatment}>{name}</div>;
 };
