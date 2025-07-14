@@ -1,0 +1,150 @@
+.firstSlide {
+  display: flex;
+
+  @media (width < 768px) {
+    background-image: url("./pngs/homepageSlider1.png");
+    width: 100%;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  @media (width < 450px) {
+    width: 100%;
+    background-size: contain;
+  }
+}
+
+.radianceBegin {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 120px 0 74px 6vw;
+  gap: 34px;
+  flex: 2;
+
+  @media (width < 1248px) {
+    padding: 108px 0 60px 4vw;
+    gap: 24px;
+  }
+
+  @media (width < 1024px) {
+    padding: 90px 0 48px 2vw;
+  }
+
+  @media (width < 768px) {
+    max-width: 360px;
+    padding: 60px 0 32px 2vw;
+    gap: 57px;
+  }
+}
+
+.titleTopSide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 16px;
+
+  @media (width < 768px) {
+    gap: 8px;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  gap: 10px;
+}
+
+.svg {
+  width: 90%;
+  min-height: 480px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (width < 1248px) {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  @media (width < 1024px) {
+    width: 100%;
+    min-height: 350px;
+  }
+
+  @media (width < 768px) {
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
+.subTitle {
+  font-size: 38px;
+  color: #56453f;
+
+  @media (width < 1024px) {
+    font-size: 28px;
+  }
+
+  @media (width < 768px) {
+    font-size: 20px;
+  }
+}
+
+.infoTextWrapper {
+  width: 48vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+
+  @media (width < 768px) {
+    width: 100%;
+    gap: 16px;
+    justify-content: center;
+  }
+}
+
+.infoText {
+  font-size: 22px;
+  text-align: left;
+  color: #b36a66;
+
+  @media (width < 768px) {
+    font-size: 16px;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 22px;
+
+  @media (width < 768px) {
+    width: 80%;
+    gap: 16px;
+    flex-direction: column;
+  }
+}
+
+.img {
+  background-image: url("./pngs/homepageSlider1.png");
+  width: 50vw;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 2;
+
+  @media (width < 1248px) {
+    width: 100vw;
+    background-size: 100% 100%;
+    flex: 3;
+  }
+
+  @media (width < 768px) {
+    display: none;
+  }
+}

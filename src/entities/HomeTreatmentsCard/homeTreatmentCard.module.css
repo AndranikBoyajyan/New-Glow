@@ -12,14 +12,24 @@
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 576px;
-    min-width: 50px;
     justify-content: center;
   }
 
   &&:hover {
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* X Y Blur Color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.home_treatment_card::before {
+  @media (max-width: 768px) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
   }
 }
 

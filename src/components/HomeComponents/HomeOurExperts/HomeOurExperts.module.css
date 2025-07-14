@@ -6,12 +6,16 @@
   @media (width < 768px) {
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 48px;
   }
 }
 
 .homeOurExperts > .expert {
   width: 33%;
+
+  @media (width < 768px) {
+    width: 100%;
+  }
 }
 
 .homeOurExperts > .location {

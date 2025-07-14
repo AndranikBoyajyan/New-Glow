@@ -1,4 +1,11 @@
 .expertCard {
   width: 95%;
   margin: 15px 22px;
+
+  @media (width < 768px) {
+    width: 100%;
+    padding: 20px 0 50px;
+    margin: 0;
+    background-color: #f9eae3;
+  }
 }
