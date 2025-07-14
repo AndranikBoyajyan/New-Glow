@@ -5,9 +5,11 @@ import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";
 
 import { whenBlockTexts } from "./constants/whenBlockTexts";
-import styles from "./fatDissolving.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
+import SingleTreatmentPatientsResults from "../../../entities/SingleTreatmentPatientsResults";
+import Button from "../../../shared/Button";
+import styles from "./fatDissolving.module.css";
 
 export const FatDissolving = () => {
   return (
@@ -28,6 +30,12 @@ export const FatDissolving = () => {
         {cardsInfos.map((cardInfo) => (
           <TreatmentPageCard key={cardInfo.id} {...cardInfo} />
         ))}
+        <div className={styles.fatDissolvingBookButton}>
+          <Button content="Book a consultation" className="button_dark" />
+        </div>
+      </div>
+      <div className={styles.patientsResultsWrapper}>
+        <SingleTreatmentPatientsResults firstName="Acne detox facial (1 course completed) " />
       </div>
     </div>
   );
