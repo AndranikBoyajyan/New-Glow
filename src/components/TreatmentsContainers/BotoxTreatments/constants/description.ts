@@ -1,0 +1,2 @@
+export const description =
+  "Botox is a purified protein that relaxes targeted muscles, smoothing fine lines and dynamic wrinkles caused by facial expressions.The result is a naturally refreshed, youthful look — without changing your unique features.Treatments are quick, safe, and require minimal downtime.Results typically appear within 3–7 days and last 3–6 months.Perfect for clients seeking a refreshed, youthful look without altering facial expressions.";

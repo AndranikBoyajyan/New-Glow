@@ -15,6 +15,10 @@
 .WhenBlockQuestionText {
   font-size: 36px;
   color: #fff6f5;
+
+  @media (width < 1024px) {
+    font-size: 30px;
+  }
 }
 
 .whenBlockAnswersWithIcon {
@@ -33,16 +37,29 @@
 .answer {
   color: #fff6f5;
   font-size: 24px;
+
+  @media (width < 1024px) {
+    font-size: 18px;
+  }
 }
 
 .answerDescription {
   color: #fff6f5;
   font-size: 17px;
+
+  @media (width < 1024px) {
+    font-size: 14px;
+  }
 }
 
 .whenBlockImg {
   width: 55vw;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+
+  @media (width < 1024px) {
+    width: 100%;
+    background-size: contain;
+  }
 }
