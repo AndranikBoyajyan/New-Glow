@@ -1,0 +1,101 @@
+.patientsResults {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 3.3vw;
+  gap: 24px;
+}
+
+.patientsResultsContent {
+  display: flex;
+  gap: 24px;
+}
+
+.imgs {
+  display: flex;
+}
+
+.firstTreatmentResult,
+.secondTreatmentResult {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.beforeImg1 {
+  width: 23vw;
+  height: 255px;
+  background-image: url("/pngs/OurCustomersBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (width < 1280px) {
+    height: 230px;
+  }
+
+  @media (width < 1024px) {
+    height: 200px;
+  }
+}
+
+.afterImg1 {
+  width: 23vw;
+  height: 255px;
+  background-image: url("/pngs/OurCustomersBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (width < 1280px) {
+    height: 230px;
+  }
+
+  @media (width < 1024px) {
+    height: 200px;
+  }
+}
+
+.beforeImg2 {
+  width: 23vw;
+  height: 383px;
+  background-image: url("/pngs/allTreatmentsTitleImg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (width < 1280px) {
+    height: 300px;
+  }
+
+  @media (width < 1024px) {
+    height: 240px;
+  }
+
+  /* TODO */
+}
+
+.afterImg2 {
+  width: 23vw;
+  height: 383px;
+  background-image: url("/pngs/allTreatmentsTitleImg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (width < 1280px) {
+    height: 300px;
+  }
+
+  @media (width < 1024px) {
+    height: 240px;
+  }
+
+  /* TODO */
+}
+
+.treatmentName {
+  font-size: 20px;
+  color: #3c3c3c;
+}
