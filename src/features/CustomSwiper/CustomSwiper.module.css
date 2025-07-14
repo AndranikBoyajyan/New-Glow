@@ -1,0 +1,32 @@
+.swiper {
+  width: 100%;
+}
+
+.swiperWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bullets {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  position: absolute;
+  left: auto;
+  z-index: 2;
+}
+
+.bullets_home_all_treatments {
+  bottom: 60px;
+}
+
+.bullets_radiance_begin {
+  bottom: -30px;
+}
+
+.bullets_experts {
+  bottom: -30px;
+}

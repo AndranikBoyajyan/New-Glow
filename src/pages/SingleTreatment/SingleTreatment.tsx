@@ -1,7 +1,6 @@
-import { Navigate } from "react-router";
+import { Navigate, useParams } from "react-router";
 
 import { TREATMENTS } from "../../constants/treatments";
-import useUrlParams from "../../hooks/useUrlParams";
 import Microneedling from "../../components/TreatmentsContainers/Microneedling";
 import ChemicalPeels from "../../components/TreatmentsContainers/ChemicalPeels";
 import styles from "./SingleTreatment.module.css";
@@ -14,7 +13,7 @@ export const SingleTreatment = () => {
     treatment.name.replaceAll(" ", "-").toLowerCase()
   );
 
-  const { name } = useUrlParams();
+  const { name } = useParams();
 
   if (name && !treatmentsTrueNames.includes(name))
     return <Navigate to={`/pageNotFound`} />;

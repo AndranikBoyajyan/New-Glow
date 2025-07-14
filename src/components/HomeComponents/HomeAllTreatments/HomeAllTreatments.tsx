@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TREATMENTS_CATEGORIES } from "../../../constants/treatmentsCategories";
 import HomeTreatmentCard from "../../../entities/HomeTreatmentsCard";
 import { useWindowSize } from "../../../hooks/useWindowSize";
@@ -6,16 +5,12 @@ import Title from "../../../shared/Title";
 
 import styles from "./HomeAllTreatments.module.css";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import CustomSwiper from "../../../features/CustomSwiper";
 
 export const HomeAllTreatments = () => {
-  const [activeTreatment, setActiveTreatment] = useState(1);
   const { width } = useWindowSize();
 
   const isMobile = width < MEDIA_TABLET_SMALL;
-
-  const handleSetActiveTreatment = (id: number) => {
-    setActiveTreatment(id);
-  };
 
   return (
     <div className={styles.homeAllTreatments}>
@@ -36,15 +31,16 @@ export const HomeAllTreatments = () => {
             />
           ))
         ) : (
-          <div className={styles.fill}>
-            <HomeTreatmentCard
-              name={TREATMENTS_CATEGORIES[activeTreatment - 1].name}
-              imgUrl={TREATMENTS_CATEGORIES[activeTreatment - 1].imgUrl}
-              isMobile={isMobile}
-              activeTreatment={activeTreatment}
-              setActiveTreatment={handleSetActiveTreatment}
-            />
-          </div>
+          <CustomSwiper
+            slides={TREATMENTS_CATEGORIES.map((category) => (
+              <HomeTreatmentCard
+                key={category.id}
+                name={category.name}
+                imgUrl={category.imgUrl}
+              />
+            ))}
+            bulletsClassName="bullets_home_all_treatments"
+          />
         )}
       </div>
     </div>

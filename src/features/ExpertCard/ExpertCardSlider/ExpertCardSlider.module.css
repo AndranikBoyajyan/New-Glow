@@ -1,29 +1,11 @@
-.expertCardSlider {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
+.swiperContainer {
+  @media (width < 768px) {
+    width: 100%;
+  }
 }
-
-.slidesContainer {
-  width: 30vw;
-  overflow: hidden;
-  background-color: transparent;
-}
-
-.slides {
-  width: 67vw;
-  height: 580px;
-  display: flex;
-  gap: 10px;
-  transition: transform 0.3s ease-in-out;
-  background-color: transparent;
-}
-
 .slide {
-  width: 33vw;
-  height: 530px;
+  width: 100%;
+  height: 570px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -33,6 +15,19 @@
   background-size: cover;
   margin-left: 1vw;
   background-color: transparent;
+
+  @media (width < 1024px) {
+    margin-left: 0;
+    width: 100%;
+    height: 530px;
+    background-position: center;
+  }
+
+  @media (width < 768px) {
+    width: 100%;
+    height: 576px;
+    background-position: center;
+  }
 }
 
 .expertCardText {
@@ -40,8 +35,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  bottom: -50px;
+
+  @media (width < 768px) {
+    width: 100%;
+    height: inherit;
+    background-color: rgba(138, 79, 76, 0.8);
+    margin: 0;
+    color: #fff;
+  }
 }
 
 .expertName {
@@ -52,38 +53,4 @@
 .expertProfession {
   font-size: 16px;
   color: #3c3c3c;
-}
-
-.expertCardSliderImg {
-  display: flex;
-  gap: 6px;
-}
-
-.arrowButton {
-  all: unset;
-  z-index: 2;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  opacity: 0.5;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.leftArrow {
-  left: 0;
-}
-
-.rightArrow {
-  right: 0;
-}
-
-.arrowActive {
-  opacity: 1;
 }
