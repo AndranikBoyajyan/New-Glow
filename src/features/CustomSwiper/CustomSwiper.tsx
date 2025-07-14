@@ -42,8 +42,6 @@ export const CustomSwiper: FC<CustomSwiperProps> = ({
     } else setCurrentSlide((prev) => prev - 1);
   };
 
-  console.log({ slidesPerView });
-
   const handleChangeSlide = (idx: number | undefined) => {
     setCurrentSlide(idx ?? 0);
     swiperRef.current?.slideTo(idx ?? 0);
