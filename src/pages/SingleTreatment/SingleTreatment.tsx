@@ -8,6 +8,7 @@ import LaserHairRemoval from "../../components/TreatmentsContainers/LaserHairRem
 import Facials from "../../components/TreatmentsContainers/Facials";
 import Morpheus8 from "../../components/TreatmentsContainers/Morpheus-8";
 import FatDissolving from "../../components/TreatmentsContainers/FatDissolving";
+import FacialContouring from "../../components/TreatmentsContainers/FacialContouring";
 
 export const SingleTreatment = () => {
   const treatmentsTrueNames = TREATMENTS.map((treatment) =>
@@ -24,6 +25,7 @@ export const SingleTreatment = () => {
   if (name === "facials") return <Facials />;
   if (name === "morpheus-8") return <Morpheus8 />;
   if (name === "fat-dissolving") return <FatDissolving />;
+  if (name === "facial-contouring") return <FacialContouring />;
 
   return <div className={styles.singleTreatment}>{name}</div>;
 };
