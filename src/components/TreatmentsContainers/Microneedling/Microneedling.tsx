@@ -1,21 +1,21 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import chemicalPeelsHeaderImg from "/pngs/chemicalPeelsHeaderImg.png";
+import microneedlingHeaderImg from "/pngs/microneedlingHeaderImg.png";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";
 
 import { whenBlockTexts } from "./constants/whenBlockTexts";
-import styles from "./microneedling.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
+import styles from "./Microneedling.module.css";
 
 export const Microneedling = () => {
   return (
-    <div className={styles.chemicalPeels}>
-      <div className={styles.chemicalPeelsTopSide}>
+    <div className={styles.microneedling}>
+      <div className={styles.microneedlingTopSide}>
         <SingleTreatmentHeader
           title="Microneedling"
-          imgUrl={chemicalPeelsHeaderImg}
+          imgUrl={microneedlingHeaderImg}
         />
         <SingleTreatmentDescription description={description} />
         <SingleTreatmentWhenBlock

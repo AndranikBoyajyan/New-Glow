@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import IPLPhotothrapyHeader from "/pngs/IPLPhotothrapyHeader.png";
+import IPLPhototherapyHeader from "/pngs/IPLPhototherapyHeader.png";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";
@@ -18,7 +18,7 @@ export const BotoxTreatments = () => {
       <div className={styles.botoxTreatmentsTopSide}>
         <SingleTreatmentHeader
           title="Botox Treatments"
-          imgUrl={IPLPhotothrapyHeader}
+          imgUrl={IPLPhototherapyHeader}
         />
         <SingleTreatmentDescription description={description} />
         <SingleTreatmentWhenBlock

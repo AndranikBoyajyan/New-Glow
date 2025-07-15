@@ -1,0 +1,21 @@
+.microneedling {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.microneedlingTopSide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
