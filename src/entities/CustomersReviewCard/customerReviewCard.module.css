@@ -25,26 +25,11 @@
   font-size: 18px;
 }
 
-/* ✅ Mobile Responsive Styles */
 @media (max-width: 768px) {
   .customer_review_card {
-    width: 85vw; /* Use most of the mobile screen */
+    width: 85vw;
     padding: 24px 20px 28px;
-    font-size: 14px; /* Default font size inside */
-  }
-
-  .comma_left {
-    top: -30px;
-    left: -6px;
-    width: 24px;
-    height: auto;
-  }
-
-  .comma_right {
-    bottom: -30px;
-    right: -10px;
-    width: 24px;
-    height: auto;
+    font-size: 14px;
   }
 
   .reviewer_name {
