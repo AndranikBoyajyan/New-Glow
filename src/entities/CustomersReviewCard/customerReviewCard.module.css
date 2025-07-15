@@ -19,10 +19,14 @@
   right: -20px;
 }
 
+.description {
+  font-size: 18px;
+  color: #3c3c3c;
+}
+
 .reviewer_name {
   text-align: right;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {

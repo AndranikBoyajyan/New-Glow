@@ -18,7 +18,7 @@ export const CustomerReviewCard: FC<CustomerReviewCardProps> = ({
       <img src={commaRight} alt="" className={styles.comma_right} />
       <img src={commaLeft} alt="" className={styles.comma_left} />
       <p className={cn(styles.description, "poppins-regular")}>{text}</p>
-      <p className={cn(styles.reviewer_name, "poppins-regular")}>{name}</p>
+      <p className={cn(styles.reviewer_name, "poppins-semibold")}>{name}</p>
     </div>
   );
 };
