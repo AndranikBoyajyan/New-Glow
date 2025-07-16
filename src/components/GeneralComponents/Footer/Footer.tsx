@@ -1,12 +1,17 @@
 import cn from "classnames";
 import styles from "./footer.module.css";
 import instagramLogo from "/pngs/instagramLogo.png";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const Footer = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
-    <>
-      <div className={cn(styles.footer, "poppins-medium")}>
-        <div>
+    <div className={cn(styles.footer, "poppins-regular")}>
+      <div className={styles.footerTexts}>
+        <div className={styles.menu}>
           <p>MENU</p>
           <p>Privacy Policy</p>
           <p>Refund Policy</p>
@@ -14,14 +19,12 @@ export const Footer = () => {
           <p>Accessibility Statement</p>
         </div>
         <div className={styles.address_info}>
-          <div>
-            <p>OUR ADDRESS</p>
-            <p>10651 Riverside Drive</p>
-            <p>Toluca Lake, CA 91602</p>
-            <p>newglow@yahoo.com</p>
-          </div>
+          <p>OUR ADDRESS</p>
+          <p>10651 Riverside Drive</p>
+          <p>Toluca Lake, CA 91602</p>
+          <p>newglow@yahoo.com</p>
         </div>
-        <div className={styles.address_info}>
+        <div className={styles.openHours}>
           <div>
             <p>OPEN HOURS (By Appointment Only)</p>
             <p>Monday: 10am - 5pm</p>
@@ -38,8 +41,8 @@ export const Footer = () => {
             <p>1pm-2pm</p>
           </div>
           <div>
-            <p>Call Us: 818-747-2470</p>
-            <p>Text Us: 818-570-7990</p>
+            <p className="poppins-semibold">Call Us: 818-747-2470</p>
+            <p className="poppins-semibold">Text Us: 818-570-7990</p>
           </div>
           <div>
             <p>After Hours Medical</p>
@@ -48,10 +51,12 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={styles.instagram_block}>
-        <img src={instagramLogo} alt="" height={27} />
-        <span>INSTAGRAM</span>
-      </div>
-    </>
+      {!isMobile && (
+        <div className={styles.instagram_block}>
+          <img src={instagramLogo} alt="" height={27} />
+          <span>INSTAGRAM</span>
+        </div>
+      )}
+    </div>
   );
 };

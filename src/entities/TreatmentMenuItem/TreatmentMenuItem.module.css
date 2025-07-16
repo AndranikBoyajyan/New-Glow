@@ -1,9 +1,9 @@
 .treatment {
-  height: 36px;
+  height: 34px;
   display: flex;
   justify-content: start;
   align-items: center;
-  background-color: inherit;
+  background-color: #ffedebfd;
   border-bottom: 0.5px solid #3c3c3c58;
   margin: 0 4px;
   cursor: pointer;

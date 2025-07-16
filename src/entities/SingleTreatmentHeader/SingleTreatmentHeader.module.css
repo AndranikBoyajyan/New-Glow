@@ -5,12 +5,11 @@
   flex-direction: row-reverse;
   align-items: center;
   margin-top: 30px;
-  padding: 20px;
+  padding: 20px 20px 0;
 }
 
 .singleTreatmentHeaderContent {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,6 +24,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
+
+  @media (width < 1248px) {
+    height: 400px;
+  }
+
+  @media (width < 1024px) {
+    height: 350px;
+  }
+
+  @media (width < 768px) {
+    height: 300px;
+  }
 }
 
 .singleTreatmentHeaderTitle {

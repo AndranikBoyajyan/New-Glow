@@ -6,6 +6,7 @@ import { favoriteTreatments } from "./constants/favoriteTreatments";
 import styles from "./FavoriteTreatments.module.css";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import { getTreatmentPath } from "../../../helpers/getTreatmentPath";
 
 export const FavoriteTreatments = () => {
   const { width } = useWindowSize();
@@ -20,7 +21,7 @@ export const FavoriteTreatments = () => {
             key={treatment.id}
             className={styles.favoriteTreatment}
             style={{ backgroundImage: `url(${treatment.imgUrl})` }}
-            to={`/${treatment.name.replaceAll(" ", "-").toLowerCase()}`}
+            to={`/${getTreatmentPath(treatment.name)}`}
           >
             <Button
               className={
