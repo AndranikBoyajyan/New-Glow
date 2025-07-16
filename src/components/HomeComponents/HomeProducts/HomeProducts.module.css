@@ -34,4 +34,20 @@
   justify-content: center;
   gap: 48px;
   margin: 0 24px;
+  @media (width < 768px) {
+    max-height: 1450px;
+    overflow: hidden;
+  }
+}
+.productsContainerVisible {
+  max-width: 1320px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  margin: 0 24px;
+  @media (width < 768px) {
+    overflow: visible;
+  }
 }

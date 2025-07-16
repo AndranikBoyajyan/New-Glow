@@ -20,14 +20,6 @@ export const Footer = () => {
             <p>Toluca Lake, CA 91602</p>
             <p>newglow@yahoo.com</p>
           </div>
-          <div>
-            <p>Call Us: 818-747-2470</p>
-            <p>Text Us: 818-570-7990</p>
-          </div>
-          <div>
-            <p>After Hours Medical Emergency:</p>
-            <p>818-570-7960</p>
-          </div>
         </div>
         <div className={styles.address_info}>
           <div>
@@ -44,6 +36,15 @@ export const Footer = () => {
             <p>PLEASE NOTE:</p>
             <p>Closed For Lunch</p>
             <p>1pm-2pm</p>
+          </div>
+          <div>
+            <p>Call Us: 818-747-2470</p>
+            <p>Text Us: 818-570-7990</p>
+          </div>
+          <div>
+            <p>After Hours Medical</p>
+            <p>Emergency:</p>
+            <p>818-570-7960</p>
           </div>
         </div>
       </div>

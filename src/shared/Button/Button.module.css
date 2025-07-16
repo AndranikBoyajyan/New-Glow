@@ -108,3 +108,10 @@
   color: #fff;
   background-color: #b36a66;
 }
+
+.button_see_more {
+  border: none;
+  outline: none;
+  color: #b36a66;
+  background-color: transparent;
+}
