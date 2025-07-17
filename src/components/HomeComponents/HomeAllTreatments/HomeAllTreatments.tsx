@@ -28,7 +28,6 @@ export const HomeAllTreatments = () => {
               key={treatmentCategory.id}
               name={treatmentCategory.name}
               imgUrl={treatmentCategory.imgUrl}
-              id={treatmentCategory.id.toString()}
             />
           ))
         ) : (
@@ -38,7 +37,6 @@ export const HomeAllTreatments = () => {
                 key={category.id}
                 name={category.name}
                 imgUrl={category.imgUrl}
-                id={category.id.toString()}
               />
             ))}
             bulletsClassName="bullets_home_all_treatments"
