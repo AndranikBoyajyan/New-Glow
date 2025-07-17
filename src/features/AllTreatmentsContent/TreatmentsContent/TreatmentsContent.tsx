@@ -14,7 +14,7 @@ export const TreatmentsContent: FC<TreatmentsContentProps> = ({
   isChecked,
   category,
 }) => {
-  const { treatments, name: categoryName } = category;
+  const { treatments, name: categoryName, id } = category;
 
   const location = useLocation();
 
@@ -47,6 +47,7 @@ export const TreatmentsContent: FC<TreatmentsContentProps> = ({
 
   return (
     <div className={styles.content} id={urlParamsName}>
+
       <Title
         text={categoryName}
         font="fjalla-one-regular"

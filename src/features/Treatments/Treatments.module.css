@@ -1,7 +1,7 @@
 .treatments {
   display: flex;
   flex-direction: column;
-  background-color: inherit;
+  background-color: #ffedeb7e;
   max-width: 182px;
   padding-top: 12px;
   gap: 4px;

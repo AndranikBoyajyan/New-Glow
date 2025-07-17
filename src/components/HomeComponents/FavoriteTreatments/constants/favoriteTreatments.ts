@@ -2,7 +2,7 @@ export const favoriteTreatments = [
   {
     id: 1,
     imgUrl: "./pngs/favoritePng1.png",
-    name: "Botox treatment",
+    name: "Botox treatments",
   },
   {
     id: 2,
@@ -12,6 +12,6 @@ export const favoriteTreatments = [
   {
     id: 3,
     imgUrl: "./pngs/favoritePng3.png",
-    name: "Facial",
+    name: "Facials",
   },
 ];
