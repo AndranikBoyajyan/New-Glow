@@ -4,13 +4,10 @@
   @media (width < 768px) {
     background-image: url("./pngs/homepageSlider2.png");
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
-  }
-
-  @media (width < 450px) {
-    background-size: contain;
+    justify-content: end;
   }
 }
 
@@ -19,7 +16,7 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  padding: 120px 0 74px 6vw;
+  padding: 120px 6vw 74px 0;
   gap: 34px;
   flex: 2;
 

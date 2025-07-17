@@ -2,7 +2,8 @@ import { type FC } from "react";
 import cn from "classnames";
 import styles from "./homeTreatmentCard.module.css";
 import { Button } from "../../shared/Button/Button";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
+
 
 interface HomeTreatmentCardProps {
   name: string;
@@ -15,12 +16,27 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
   imgUrl,
   id,
 }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const urlParamsName = name.replaceAll(" ", "-").toLowerCase();
+
+  const handleRedirect = () => {
+    navigate(`/all-treatments#${urlParamsName}`);
+  };
+
+  console.log({ location });
+
   return (
     <Link
-      to={`/all-treatments#${id}`}
+
+      to={`/all-treatments`}
+      state={{ scrollTo: urlParamsName }}
+
       className={styles.home_treatment_card}
       style={{
         backgroundImage: `url(${imgUrl})`,
+        textDecoration: "none",
       }}
     >
       <div className={styles.treatment_name_and_button}>
@@ -32,6 +48,7 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
             content="Learn more"
             className="button_weight_2"
             font="poppins-medium"
+            handleClick={handleRedirect}
           />
         </div>
       </div>

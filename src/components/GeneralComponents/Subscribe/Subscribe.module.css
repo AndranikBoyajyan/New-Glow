@@ -7,10 +7,19 @@
   gap: 50px;
   margin-top: 70px;
   margin-bottom: 50px;
+
+  @media (width < 768px) {
+    margin: 60px auto;
+  }
 }
 
 .titleWrapper {
   margin-left: 3.3vw;
+
+  @media (width < 768px) {
+    margin-left: 0;
+    align-self: center;
+  }
 }
 
 .emailForm {
@@ -20,6 +29,11 @@
   justify-content: space-between;
   gap: 20px;
   margin: 0 auto;
+
+  @media (width < 768px) {
+    width: 84%;
+    gap: 32px;
+  }
 }
 
 .emailInput {
@@ -34,4 +48,8 @@
   height: 1px;
   margin: 0 auto;
   background-color: #b36a66;
+
+  @media (width < 768px) {
+    width: 82%;
+  }
 }

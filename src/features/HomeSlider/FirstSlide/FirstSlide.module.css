@@ -4,14 +4,9 @@
   @media (width < 768px) {
     background-image: url("./pngs/homepageSlider1.png");
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
-  }
-
-  @media (width < 450px) {
-    width: 100%;
-    background-size: contain;
   }
 }
 
