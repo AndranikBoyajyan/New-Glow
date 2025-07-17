@@ -9,7 +9,7 @@ import { useState } from "react";
 
 export const HomeProducts = () => {
   const { width } = useWindowSize();
-  const [showMore, setShowMore] = useState(false);
+  const [isShowMore, setIsShowMore] = useState(false);
   const isMobile = width < MEDIA_TABLET_SMALL;
 
   return (
@@ -19,7 +19,9 @@ export const HomeProducts = () => {
       </div>
       <div
         className={
-          showMore ? styles.productsContainerVisible : styles.productsContainer
+          isShowMore
+            ? styles.productsContainerVisible
+            : styles.productsContainer
         }
       >
         {PRODUCTS.map((product) => (
@@ -33,9 +35,9 @@ export const HomeProducts = () => {
       </div>
       {isMobile ? (
         <Button
-          content={showMore ? "show less" : "show more"}
+          content={isShowMore ? "show less" : "show more"}
           className="button_see_more"
-          handleClick={() => setShowMore(!showMore)}
+          handleClick={() => setIsShowMore(!isShowMore)}
         />
       ) : null}
     </div>

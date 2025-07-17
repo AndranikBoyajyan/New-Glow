@@ -17,7 +17,7 @@
 .treatments {
   display: flex;
   flex-direction: column;
-  background-color: inherit;
+  background-color: #ffedebeb;
   max-width: 182px;
   padding-top: 12px;
   gap: 4px;
@@ -26,7 +26,7 @@
 .seeAll {
   font-size: 16px;
   color: #3c3c3c;
-  padding: 6px 60px 10px;
+  margin: 6px auto 10px;
 }
 
 .itemName {
@@ -40,6 +40,6 @@
 }
 
 .openedDropdown {
-  border: 0.1px solid #3c3c3c;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.2);
   border-top: none;
 }

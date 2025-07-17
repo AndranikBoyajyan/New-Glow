@@ -13,12 +13,12 @@ export const TreatmentsContent: FC<TreatmentsContentProps> = ({
   isChecked,
   category,
 }) => {
-  const { treatments, name: categoryName } = category;
+  const { treatments, name: categoryName, id } = category;
 
   if (!isChecked) return null;
 
   return (
-    <div className={styles.content}>
+    <div className={styles.content} id={id.toString()}>
       <Title
         text={categoryName}
         font="fjalla-one-regular"
