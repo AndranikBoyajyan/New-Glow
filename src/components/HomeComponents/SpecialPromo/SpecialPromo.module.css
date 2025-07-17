@@ -34,6 +34,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (width < 768px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
 }
 
 .textAndButtons {

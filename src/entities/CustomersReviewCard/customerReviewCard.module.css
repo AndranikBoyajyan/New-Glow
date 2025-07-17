@@ -5,6 +5,11 @@
   padding: 42px 46px 38px;
   position: relative;
   text-align: left;
+
+  @media (width < 1280px) {
+    width: 85vw;
+    padding: 24px 20px 28px;
+  }
 }
 
 .comma_left {
@@ -31,9 +36,9 @@
 
 @media (max-width: 768px) {
   .customer_review_card {
-    width: 85vw;
-    padding: 24px 20px 28px;
+    width: 90vw;
     font-size: 14px;
+    padding: 20px 18px 24px;
   }
 
   .reviewer_name {

@@ -3,6 +3,8 @@ import cn from "classnames";
 import styles from "./customerReviewCard.module.css";
 import commaRight from "/pngs/commaRight.png";
 import commaLeft from "/pngs/commaLeft.png";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
 interface CustomerReviewCardProps {
   text: string;
@@ -13,10 +15,17 @@ export const CustomerReviewCard: FC<CustomerReviewCardProps> = ({
   text,
   name,
 }) => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={styles.customer_review_card}>
-      <img src={commaRight} alt="" className={styles.comma_right} />
-      <img src={commaLeft} alt="" className={styles.comma_left} />
+      {!isMobile && (
+        <img src={commaRight} alt="" className={styles.comma_right} />
+      )}
+      {!isMobile && (
+        <img src={commaLeft} alt="" className={styles.comma_left} />
+      )}
       <p className={cn(styles.description, "poppins-regular")}>{text}</p>
       <p className={cn(styles.reviewer_name, "poppins-semibold")}>{name}</p>
     </div>

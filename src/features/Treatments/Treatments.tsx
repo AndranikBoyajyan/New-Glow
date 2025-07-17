@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import styles from "./Treatments.module.css";
 import { TREATMENTS } from "../../constants/treatments";
-import { Link, useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useState } from "react";
 
 export const Treatments = () => {
@@ -13,6 +13,11 @@ export const Treatments = () => {
   const navigate = useNavigate();
 
   const handleNavigate = (name: string) => {
+    if (name === "all-treatments") {
+      navigate(`/all-treatments`);
+      return;
+    }
+
     const urlParamsName = name.replaceAll(" ", "-").toLowerCase();
 
     setRedirectName(urlParamsName);
@@ -32,13 +37,14 @@ export const Treatments = () => {
           handleClick={handleNavigate}
         />
       ))}
-      <Link
-        to="/all-treatments"
+      <button
+        onMouseDown={() => {
+          handleNavigate("all-treatments");
+        }}
         className={cn(styles.seeAll, "poppins-medium-italic")}
-        style={{ textDecoration: "none" }}
       >
         See All
-      </Link>
+      </button>
     </div>
   );
 };

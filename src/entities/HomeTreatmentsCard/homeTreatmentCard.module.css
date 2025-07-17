@@ -51,6 +51,7 @@
 
 .treatment_name {
   font-size: 20px;
+  color: #3c3c3c;
 
   @media (max-width: 768px) {
     font-size: 36px;
