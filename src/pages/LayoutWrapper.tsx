@@ -3,15 +3,11 @@ import { Outlet } from "react-router";
 import Footer from "../components/GeneralComponents/Footer";
 import styles from "./styles.module.css";
 import Subscribe from "../components/GeneralComponents/Subscribe";
-import { useWindowSize } from "../hooks/useWindowSize";
-import { MEDIA_TABLET_SMALL } from "../constants/windowSizes";
 import Header from "../components/GeneralComponents/Header";
-
 
 const LayoutWrapper = () => {
   return (
     <div className={styles.wrapper}>
-      {!isMobile && <div className={styles.border}></div>}
       <Header />
       <Outlet />
       <Subscribe />
