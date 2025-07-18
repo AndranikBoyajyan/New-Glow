@@ -36,11 +36,16 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
               {description}
             </span>
           </div>
-          <Button
-            content={showMore ? "show less" : "show more"}
-            className="button_see_more_blue"
-            handleClick={() => setShowMore(!showMore)}
-          />
+          <div>
+            <button
+              className={styles.showMoreButton}
+              onClick={() => setShowMore(!showMore)}
+            >
+              <span className={styles.showMoreButtonWrapper}>
+                {showMore ? "Show Less" : "Show More"}
+              </span>
+            </button>
+          </div>
         </div>
 
         <div className={styles.priceAndButtonBlock}>
