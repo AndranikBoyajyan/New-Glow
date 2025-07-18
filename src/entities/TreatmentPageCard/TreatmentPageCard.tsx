@@ -3,6 +3,8 @@ import styles from "./TreatmentPageCard.module.css";
 import Title from "../../shared/Title";
 import cn from "classnames";
 import Button from "../../shared/Button";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
 interface TreatmentPageCardProps {
   name: string;
@@ -19,14 +21,20 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
   price,
   imgUrl,
 }) => {
+  const { width } = useWindowSize();
   const [showMore, setShowMore] = useState(false);
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={styles.treatmentPageCard}>
       <img src={imgUrl} alt="" />
 
       <div className={styles.textBlock}>
         <div className={styles.descriptionAndTitleBlock}>
-          <Title text={name} className="title_24" />
+          <Title
+            text={name}
+            className={isMobile ? "title_20" : "title_24"}
+            font="poppins-light"
+          />
           <div
             className={
               !showMore ? styles.descriptionBlock : styles.descriptionBlockShow
