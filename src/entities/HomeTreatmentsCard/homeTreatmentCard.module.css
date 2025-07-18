@@ -1,5 +1,5 @@
 .home_treatment_card {
-  width: 20%;
+  width: 19%;
   min-width: 200px;
   height: 680px;
   display: flex;
@@ -20,6 +20,11 @@
   &&:hover {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    width: 23vw;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 

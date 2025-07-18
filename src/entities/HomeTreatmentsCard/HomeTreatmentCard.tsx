@@ -2,22 +2,18 @@ import { type FC } from "react";
 import cn from "classnames";
 import styles from "./homeTreatmentCard.module.css";
 import { Button } from "../../shared/Button/Button";
-import { Link, useLocation, useNavigate } from "react-router";
-
+import { Link, useNavigate } from "react-router";
 
 interface HomeTreatmentCardProps {
   name: string;
   imgUrl: string;
-  id: string;
 }
 
 export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
   name,
   imgUrl,
-  id,
 }) => {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const urlParamsName = name.replaceAll(" ", "-").toLowerCase();
 
@@ -25,14 +21,10 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
     navigate(`/all-treatments#${urlParamsName}`);
   };
 
-  console.log({ location });
-
   return (
     <Link
-
       to={`/all-treatments`}
       state={{ scrollTo: urlParamsName }}
-
       className={styles.home_treatment_card}
       style={{
         backgroundImage: `url(${imgUrl})`,

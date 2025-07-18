@@ -3,14 +3,13 @@ import ProductCard from "../../../entities/ProductCard";
 import Title from "../../../shared/Title";
 import styles from "./HomeProducts.module.css";
 import { useWindowSize } from "../../../hooks/useWindowSize";
-import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 import Button from "../../../shared/Button";
 import { useState } from "react";
 
 export const HomeProducts = () => {
   const { width } = useWindowSize();
   const [isShowMore, setIsShowMore] = useState(false);
-  const isMobile = width < MEDIA_TABLET_SMALL;
+  const isTablet = width < 832;
 
   return (
     <div className={styles.homeProducts}>
@@ -33,13 +32,13 @@ export const HomeProducts = () => {
           />
         ))}
       </div>
-      {isMobile ? (
+      {isTablet && (
         <Button
           content={isShowMore ? "show less" : "show more"}
           className="button_see_more"
           handleClick={() => setIsShowMore(!isShowMore)}
         />
-      ) : null}
+      )}
     </div>
   );
 };
