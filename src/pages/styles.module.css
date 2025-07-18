@@ -4,7 +4,6 @@
   justify-content: start;
   align-items: center;
   background-color: #ffedeb;
-  margin-top: 36px;
 
   @media (width < 768px) {
     margin-top: 0;

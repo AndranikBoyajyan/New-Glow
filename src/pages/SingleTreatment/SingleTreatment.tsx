@@ -13,10 +13,11 @@ import Biorevitalization from "../../components/TreatmentsContainers/Biorevitali
 import BotoxTreatments from "../../components/TreatmentsContainers/BotoxTreatments";
 import VitaminTherapy from "../../components/TreatmentsContainers/VitaminTherapy";
 import IPLPhototherapy from "../../components/TreatmentsContainers/IPLPhototherapy";
+import { getTreatmentPath } from "../../helpers/getTreatmentPath";
 
 export const SingleTreatment = () => {
   const treatmentsTrueNames = TREATMENTS.map((treatment) =>
-    treatment.name.replaceAll(" ", "-").toLowerCase()
+    getTreatmentPath(treatment.name)
   );
 
   const { name } = useParams();

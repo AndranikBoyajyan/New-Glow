@@ -2,6 +2,8 @@ import Title from "../../shared/Title";
 import cn from "classnames";
 import type { FC } from "react";
 import styles from "./SingleTreatmentHeader.module.css";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
 interface SingleTreatmentHeaderProps {
   title: string;
@@ -12,6 +14,9 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
   title,
   imgUrl,
 }) => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div
       className={cn(
@@ -20,9 +25,11 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
       )}
     >
       <div className={styles.singleTreatmentHeaderContent}>
-        <div className={styles.singleTreatmentHeaderTitle}>
-          <Title text={title} className="title_h1_86" isH1 />
-        </div>
+        {!isMobile && (
+          <div className={styles.singleTreatmentHeaderTitle}>
+            <Title text={title} className={"title_h1_86"} isH1 />
+          </div>
+        )}
         <div
           className={styles.singleTreatmentHeaderImage}
           style={{ backgroundImage: `url(${imgUrl})` }}

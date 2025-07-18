@@ -41,7 +41,11 @@ export const CustomersReview = () => {
       ) : (
         <div className={styles.customers_review}>
           <div className={styles.title_wrapper}>
-            <Title text="OUR CUSTOMERS ABOUT US" font="fjalla-one-regular" />
+            <Title
+              text="OUR CUSTOMERS ABOUT US"
+              font="fjalla-one-regular"
+              className="title_32"
+            />
           </div>
           <div className={styles.reviews}>
             <CustomSwiper

@@ -11,6 +11,7 @@
 .singleTreatmentHeaderContent {
   width: 100%;
   display: flex;
+  height: inherit;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -26,6 +27,7 @@
   flex-direction: column;
 
   @media (width < 1248px) {
+    width: 85%;
     height: 400px;
   }
 
@@ -52,6 +54,11 @@
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (width < 1280px) {
+    width: 38%;
+    background-size: cover;
+  }
 }
 
 .divider {

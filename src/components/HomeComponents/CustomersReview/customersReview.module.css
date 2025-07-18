@@ -2,17 +2,21 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10vh;
   align-items: flex-start;
 }
 
 .title_wrapper {
   margin-left: 3.3vw;
+
+  @media (width < 768px) {
+    margin-left: 0;
+    align-self: center;
+  }
 }
 
 .reviews {
   width: 100%;
-  padding: 20vh 8vw;
+  padding: 16vh 8vw;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr;
@@ -27,13 +31,13 @@
   @media (width < 1280px) {
     display: flex;
     flex-direction: column;
-    padding: 20vh 0;
+    padding: 16vh 0;
   }
 
   @media (width < 768px) {
     width: 100%;
     align-items: center;
-    padding: 20vh 3.3vw;
+    padding: 16vh 3.3vw;
   }
 }
 

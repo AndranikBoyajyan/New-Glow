@@ -52,6 +52,11 @@
   max-width: 100%;
 }
 
+.promoText {
+  display: flex;
+  flex-direction: column;
+}
+
 .text_56 {
   font-size: 56px;
   color: #8a4f4c;
@@ -95,10 +100,12 @@
   }
 
   .text_56 {
-    font-size: 32px;
+    font-size: 28px;
+    color: #fff;
   }
 
   .text_78 {
+    color: #fff;
     font-size: 42px;
     padding-left: 0;
   }
@@ -106,11 +113,11 @@
   .buttons {
     flex-direction: column;
     padding-left: 0;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .textAndButtons {
-    margin: 32px 16px;
+    margin: 32px 12px;
   }
 
   .rightSideText {
