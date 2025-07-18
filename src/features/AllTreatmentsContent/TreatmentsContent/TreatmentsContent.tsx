@@ -4,6 +4,7 @@ import Title from "../../../shared/Title";
 import type { ITreatmentCategory } from "../../../types/global.types";
 import styles from "./TreatmentsContent.module.css";
 import { useLocation } from "react-router";
+import { getTreatmentPath } from "../../../helpers/getTreatmentPath";
 
 interface TreatmentsContentProps {
   isChecked: boolean;
@@ -14,17 +15,11 @@ export const TreatmentsContent: FC<TreatmentsContentProps> = ({
   isChecked,
   category,
 }) => {
-  const { treatments, name: categoryName, id } = category;
+  const { treatments, name: categoryName } = category;
 
   const location = useLocation();
 
-  const urlParamsName = categoryName.replaceAll(" ", "-").toLowerCase();
-
-  console.log({
-    location,
-    repl: location.hash.replace("#", ""),
-    scroll: location.state,
-  });
+  const urlParamsName = getTreatmentPath(categoryName);
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -47,7 +42,6 @@ export const TreatmentsContent: FC<TreatmentsContentProps> = ({
 
   return (
     <div className={styles.content} id={urlParamsName}>
-
       <Title
         text={categoryName}
         font="fjalla-one-regular"

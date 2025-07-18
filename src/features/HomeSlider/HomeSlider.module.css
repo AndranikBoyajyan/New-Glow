@@ -101,18 +101,18 @@
 
 .svg {
   width: 90%;
-  min-height: 480px;
+  min-height: 360px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
   @media (width < 1248px) {
     width: 100%;
-    min-height: 400px;
+    min-height: 280px;
   }
 
   @media (width < 1024px) {
     width: 100%;
-    min-height: 350px;
+    min-height: 240px;
   }
 
   @media (width < 768px) {

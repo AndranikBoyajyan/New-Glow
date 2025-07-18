@@ -2,6 +2,7 @@ import type { FC } from "react";
 import cn from "classnames";
 import styles from "./TreatmentCard.module.css";
 import { Link } from "react-router";
+import { getTreatmentPath } from "../../helpers/getTreatmentPath";
 
 interface TreatmentCardProps {
   name: string;
@@ -16,7 +17,7 @@ export const TreatmentCard: FC<TreatmentCardProps> = ({
   description,
   isRight,
 }) => {
-  const urlParamsName = name.replaceAll(" ", "-").toLowerCase();
+  const urlParamsName = getTreatmentPath(name);
 
   return (
     <Link to={urlParamsName} style={{ textDecoration: "none" }}>

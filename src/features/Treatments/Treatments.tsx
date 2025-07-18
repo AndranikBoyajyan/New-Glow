@@ -5,6 +5,7 @@ import styles from "./Treatments.module.css";
 import { TREATMENTS } from "../../constants/treatments";
 import { useNavigate, useParams } from "react-router";
 import { useState } from "react";
+import { getTreatmentPath } from "../../helpers/getTreatmentPath";
 
 export const Treatments = () => {
   const params = useParams();
@@ -18,7 +19,7 @@ export const Treatments = () => {
       return;
     }
 
-    const urlParamsName = name.replaceAll(" ", "-").toLowerCase();
+    const urlParamsName = getTreatmentPath(name);
 
     setRedirectName(urlParamsName);
 

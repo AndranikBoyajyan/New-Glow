@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 16px;
 
   @media (width < 768px) {
     align-self: flex-end;
@@ -20,7 +20,7 @@
   box-sizing: content-box;
   z-index: 9;
 
-  @media (max-width: 768px) {
+  @media (width < 768px) {
     height: auto;
     flex-direction: column;
     min-width: max-content;
