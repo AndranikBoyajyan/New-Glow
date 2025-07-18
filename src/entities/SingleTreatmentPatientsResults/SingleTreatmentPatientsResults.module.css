@@ -5,6 +5,10 @@
   text-align: left;
   padding: 0 3.3vw;
   gap: 24px;
+
+  @media (width < 768px) {
+    padding: 0 0.6vw;
+  }
 }
 
 .patientsResultsContent {
@@ -14,85 +18,83 @@
 
 .imgs {
   display: flex;
+  height: 383px;
+
+  @media (width < 1280px) {
+    height: 300px;
+  }
+
+  @media (width < 1024px) {
+    height: 240px;
+  }
+
+  @media (width < 768px) {
+    height: 250px;
+  }
 }
 
-.firstTreatmentResult,
-.secondTreatmentResult {
+.treatmentResult {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.beforeImg1 {
-  width: 23vw;
-  height: 255px;
-  background-image: url("/pngs/OurCustomersBackground.png");
-  background-size: cover;
+.result1 {
+  flex: 1;
+}
+
+.result2 {
+  flex: 1;
+}
+
+.img {
+  width: 20vw;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
 
-  @media (width < 1280px) {
-    height: 230px;
+  @media (width < 768px) {
+    width: 50%;
   }
+}
 
-  @media (width < 1024px) {
-    height: 200px;
-  }
+.beforeImg1 {
+  background-image: url("/pngs/beforeImg1.png");
+  background-position: right;
 }
 
 .afterImg1 {
-  width: 23vw;
-  height: 255px;
-  background-image: url("/pngs/OurCustomersBackground.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (width < 1280px) {
-    height: 230px;
-  }
-
-  @media (width < 1024px) {
-    height: 200px;
-  }
+  background-image: url("/pngs/afterImg1.png");
+  background-position: left;
 }
 
 .beforeImg2 {
-  width: 23vw;
-  height: 383px;
-  background-image: url("/pngs/allTreatmentsTitleImg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (width < 1280px) {
-    height: 300px;
-  }
-
-  @media (width < 1024px) {
-    height: 240px;
-  }
-
-  /* TODO */
+  background-image: url("/pngs/beforeImg2.png");
+  background-position: right;
 }
 
 .afterImg2 {
-  width: 23vw;
-  height: 383px;
-  background-image: url("/pngs/allTreatmentsTitleImg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("/pngs/afterImg2.png");
+  background-position: left;
+}
 
-  @media (width < 1280px) {
-    height: 300px;
+.beforeTextWrapper,
+.afterTextWrapper {
+  width: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(179, 106, 102, 0.6);
+  padding: 3px 15px;
+  margin: 7px;
+
+  @media (width < 768px) {
+    margin: 0 auto;
   }
+}
 
-  @media (width < 1024px) {
-    height: 240px;
-  }
-
-  /* TODO */
+.text {
+  color: #f6e2de;
+  font-size: 18px;
 }
 
 .treatmentName {

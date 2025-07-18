@@ -3,6 +3,7 @@ import cn from "classnames";
 import styles from "./homeTreatmentCard.module.css";
 import { Button } from "../../shared/Button/Button";
 import { Link, useNavigate } from "react-router";
+import { getTreatmentPath } from "../../helpers/getTreatmentPath";
 
 interface HomeTreatmentCardProps {
   name: string;
@@ -15,7 +16,7 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const urlParamsName = name.replaceAll(" ", "-").toLowerCase();
+  const urlParamsName = getTreatmentPath(name);
 
   const handleRedirect = () => {
     navigate(`/all-treatments#${urlParamsName}`);
