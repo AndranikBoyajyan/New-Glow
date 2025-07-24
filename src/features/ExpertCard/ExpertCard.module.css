@@ -1,11 +1,21 @@
 .expertCard {
   width: 95%;
   margin: 15px 22px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 400px;
+}
 
-  @media (width < 768px) {
+@media (width < 768px) {
+  .expertCard {
     width: 100%;
     padding: 20px 0 50px;
     margin: 0;
     background-color: #f9eae3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 300px;
   }
 }

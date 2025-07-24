@@ -49,7 +49,9 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
               className={styles.showMoreButton}
               onClick={() => setShowMore(!showMore)}
             >
-              <span className={styles.showMoreButtonWrapper}>
+              <span
+                className={cn(styles.showMoreButtonWrapper, "poppins-italic")}
+              >
                 {showMore ? "Show Less" : "Show More"}
               </span>
             </button>

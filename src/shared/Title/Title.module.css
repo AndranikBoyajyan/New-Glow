@@ -91,3 +91,8 @@
 .title_h1_36 {
   font-size: 36px; /* For Single Treatment page (Mobile) */
 }
+.title_h1_42 {
+  color: #fff;
+  font-size: 42px;
+  letter-spacing: 5%;
+}

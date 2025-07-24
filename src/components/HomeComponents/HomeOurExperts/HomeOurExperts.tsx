@@ -19,8 +19,8 @@ export const HomeOurExperts = () => {
         <div className={styles.locationTextWrapper}>
           <Title
             text="OUR LOCATION"
-            font="poppins-regular"
-            className={!isMobile ? "title_white" : "title_32"}
+            font="Fjalla-regular"
+            className={!isMobile ? "title_h1_42" : "title_32"}
           />
           <span className={cn(styles.address, "poppins-regular")}>
             10651 Riverside Drive Toluca Lake, CA 91602
