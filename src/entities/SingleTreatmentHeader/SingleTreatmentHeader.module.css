@@ -27,7 +27,7 @@
   flex-direction: column;
 
   @media (width < 1248px) {
-    width: 85%;
+    width: 100%;
     height: 400px;
   }
 
@@ -42,20 +42,19 @@
 
 .singleTreatmentHeaderTitle {
   margin-top: 115px;
-
   width: 70%;
   align-self: flex-end;
 }
 
 .singleTreatmentHeaderImage {
-  width: 27%;
+  width: 32%;
   position: absolute;
   left: 0;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
 
-  @media (width < 1280px) {
+  @media (width <= 1280px) {
     width: 38%;
     background-size: cover;
   }

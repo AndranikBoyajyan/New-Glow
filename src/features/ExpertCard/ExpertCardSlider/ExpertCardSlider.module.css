@@ -40,8 +40,9 @@
     width: 100%;
     height: inherit;
     background-color: rgba(138, 79, 76, 0.8);
-    margin: 0;
     color: #fff;
+    margin: 0;
+    padding: 8px 0;
   }
 }
 

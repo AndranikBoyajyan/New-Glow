@@ -4,12 +4,18 @@ import menuImg from "/pngs/burgerMenuImg.png";
 
 import styles from "./Menu.module.css";
 import { useState } from "react";
-import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import {
+  // MEDIA_TABLET,
+  // MEDIA_TABLET_LARGE,
+  MEDIA_TABLET_SMALL,
+} from "../../../constants/windowSizes";
 
 export const Menu = () => {
   const { width } = useWindowSize();
   const [isOpen, setIsOpen] = useState(false);
 
+  // const isTabletLarge = width < MEDIA_TABLET_LARGE;
+  // const isTabletSmall = width < MEDIA_TABLET;
   const isMobile = width < MEDIA_TABLET_SMALL;
 
   return (

@@ -8,9 +8,19 @@
   text-align: left;
   gap: 11px;
   padding: 70px 81px 80px;
+
+  @media (width < 768px) {
+    padding: 0 16px;
+    padding-top: 0;
+  }
 }
 
 .description {
   font-size: 20px;
   color: #3c3c3c;
+
+  @media (width < 768px) {
+    font-size: 16px;
+    text-align: center;
+  }
 }

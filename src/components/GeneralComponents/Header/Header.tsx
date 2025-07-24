@@ -3,8 +3,13 @@ import cn from "classnames";
 
 import styles from "./Header.module.css";
 import Menu from "../Menu";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const Header = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -19,12 +24,14 @@ export const Header = () => {
       <div className={styles.menu}>
         <Menu />
       </div>
-      <div className={styles.phoneNumberWrapper}>
-        <img src={"/pngs/phone.png"} alt="phone" />
-        <span className={cn(styles.phoneNumber, "poppins-regular")}>
-          +715462316473
-        </span>
-      </div>
+      {!isMobile && (
+        <div className={styles.phoneNumberWrapper}>
+          <img src={"/pngs/phone.png"} alt="phone" />
+          <span className={cn(styles.phoneNumber, "poppins-regular")}>
+            +715462316473
+          </span>
+        </div>
+      )}
     </div>
   );
 };
