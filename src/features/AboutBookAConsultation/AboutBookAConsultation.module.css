@@ -6,9 +6,18 @@
   justify-content: center;
   gap: 20px;
   padding: 56px;
+
+  @media (width < 768px) {
+    width: 100%;
+    padding: 38px 16px;
+  }
 }
 
 .text {
   font-size: 28px;
   color: #fae5e3;
+
+  @media (width < 768px) {
+    font-size: 18px;
+  }
 }
