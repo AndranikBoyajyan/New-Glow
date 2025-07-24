@@ -4,6 +4,19 @@
   align-items: center;
   padding: 16px 48px 0;
   gap: 10vw;
+
+  @media (width <= 1280px) {
+    padding: 16px 36px 0;
+    gap: 8vw;
+  }
+
+  @media (width <= 1024px) {
+    justify-content: space-between;
+  }
+
+  @media (width <= 768px) {
+    padding: 12px 12px;
+  }
 }
 
 .logo {
@@ -11,19 +24,42 @@
   flex-direction: column;
   align-items: end;
   padding-right: 24px;
+
+  @media (width < 768px) {
+    padding-right: 0;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .logoSvg {
-  width: 13vw;
+  width: 14vw;
   height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (width <= 1280px) {
+    width: 12vw;
+    height: 24px;
+  }
+
+  @media (width < 768px) {
+    height: 16px;
+  }
 }
 
 .logoText {
   font-size: 16px;
   color: #3c3c3c;
+
+  @media (width <= 1280px) {
+    font-size: 14px;
+  }
+}
+
+.menu {
+  display: flex;
 }
 
 .phoneNumberWrapper {
@@ -31,6 +67,10 @@
   padding: 8px 12px;
   display: flex;
   align-items: center;
+
+  @media (width <= 1280px) {
+    padding: 6px 9px;
+  }
 }
 
 .phoneNumber {

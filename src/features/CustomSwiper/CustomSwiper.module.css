@@ -25,7 +25,11 @@
 }
 
 .bullets_radiance_begin {
-  bottom: -20px;
+  bottom: -30px;
+
+  @media (width < 768px) {
+    bottom: 6vh;
+  }
 }
 
 .bullets_experts {

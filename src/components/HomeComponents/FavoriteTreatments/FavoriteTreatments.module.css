@@ -2,12 +2,14 @@
   width: 100%;
   display: flex;
   gap: 20px;
+  margin-top: 20px;
 
   @media (width < 1440px) {
     flex-direction: column;
   }
 
   @media (width < 768px) {
+    margin-top: 0;
     flex-direction: column;
     align-items: center;
   }
@@ -34,7 +36,7 @@
 }
 
 .favoriteTreatment {
-  width: 33.333%;
+  width: calc(100% / 3);
   height: 488px;
   display: flex;
   flex-direction: column;
