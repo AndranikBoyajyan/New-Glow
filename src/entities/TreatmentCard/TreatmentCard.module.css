@@ -30,3 +30,25 @@
   font-size: 18px;
   padding: 5px;
 }
+.buttonWrapper {
+  opacity: 0;
+  padding: 40px 0;
+  pointer-events: none;
+}
+
+.buttonWrapperAnimate {
+  padding: 40px 0;
+  animation: slideRight 2s ease-out forwards;
+  pointer-events: auto;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(90%);
+    opacity: 1;
+  }
+}
