@@ -14,7 +14,7 @@ export const LaserHairRemoval = () => {
     <div className={styles.laserHairRemoval}>
       <div className={styles.laserHairRemovalTopSide}>
         <SingleTreatmentHeader
-          title="Laser Heir Removal"
+          title="Laser Hair Removal"
           imgUrl={LaserHairRemovalHeaderImg}
         />
         <SingleTreatmentDescription description={description} />

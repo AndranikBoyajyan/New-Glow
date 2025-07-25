@@ -28,7 +28,7 @@ export const Header = () => {
         <div className={styles.phoneNumberWrapper}>
           <img src={"/pngs/phone.png"} alt="phone" />
           <span className={cn(styles.phoneNumber, "poppins-regular")}>
-            +715462316473
+            +818 747 2470
           </span>
         </div>
       )}
