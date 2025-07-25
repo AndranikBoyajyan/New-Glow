@@ -3,8 +3,17 @@
   flex-direction: column;
   text-align: start;
   margin: 0 48px;
+
+  @media (width < 768px) {
+    margin: 0;
+    padding: 4px 16px 10px;
+  }
 }
 
 .singleTreatmentDescription {
   font-size: 20px;
+
+  @media (width < 768px) {
+    font-size: 14px;
+  }
 }

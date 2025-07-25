@@ -83,7 +83,7 @@ export const TREATMENTS: ITreatment[] = [
   },
   {
     id: 11,
-    name: "Sculpta",
+    name: "Sculptra",
     imgUrl: "./pngs/Sculptra.png",
     categoryId: 1,
     description:

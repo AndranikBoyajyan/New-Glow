@@ -17,20 +17,24 @@ export const FavoriteTreatments = () => {
       <FavoriteTreatmentsDescription />
       <div className={styles.imgs}>
         {favoriteTreatments.map((treatment) => (
-          <Link
+          <div
             key={treatment.id}
             className={styles.favoriteTreatment}
             style={{ backgroundImage: `url(${treatment.imgUrl})` }}
-            to={`/${getTreatmentPath(treatment.name)}`}
           >
-            <Button
-              className={
-                isMobile ? "button_transparent_white" : "button_transparent"
-              }
-              content={treatment.name}
-              font="poppins-regular"
-            />
-          </Link>
+            <Link
+              to={`/${getTreatmentPath(treatment.name)}`}
+              className={styles.link}
+            >
+              <Button
+                className={
+                  isMobile ? "button_transparent_white" : "button_transparent"
+                }
+                content={treatment.name}
+                font="poppins-regular"
+              />
+            </Link>
+          </div>
         ))}
       </div>
     </div>

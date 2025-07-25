@@ -17,7 +17,7 @@
 .treatments {
   display: flex;
   flex-direction: column;
-  background-color: #ffedebeb;
+  background-color: #ffedebf0;
   max-width: 182px;
   padding-top: 12px;
   gap: 4px;

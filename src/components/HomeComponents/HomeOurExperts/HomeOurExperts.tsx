@@ -19,7 +19,7 @@ export const HomeOurExperts = () => {
         <div className={styles.locationTextWrapper}>
           <Title
             text="OUR LOCATION"
-            font="poppins-regular"
+            font="fjalla-one-regular"
             className={!isMobile ? "title_white" : "title_32"}
           />
           <span className={cn(styles.address, "poppins-regular")}>

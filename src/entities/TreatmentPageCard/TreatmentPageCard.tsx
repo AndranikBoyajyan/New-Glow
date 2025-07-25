@@ -52,7 +52,7 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
               <span
                 className={cn(styles.showMoreButtonWrapper, "poppins-italic")}
               >
-                {showMore ? "Show Less" : "Show More"}
+                {showMore ? "less" : "read more"}
               </span>
             </button>
           </div>

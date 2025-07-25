@@ -2,6 +2,8 @@ import type { FC } from "react";
 import cn from "classnames";
 import styles from "./SingleTreatmentWhenBlock.module.css";
 import type { IAnswer } from "../../components/TreatmentsContainers/types/model";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
 interface SingleTreatmentWhenBlockProps {
   question: string;
@@ -14,14 +16,32 @@ export const SingleTreatmentWhenBlock: FC<SingleTreatmentWhenBlockProps> = ({
   answers,
   imgUrl,
 }) => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
-    <div className={styles.WhenBlock}>
-      <div className={styles.WhenBlockQuestionWrapper}>
-        <span
-          className={cn(styles.WhenBlockQuestionText, "fjalla-one-regular")}
+    <div className={isMobile ? styles.WhenBlockMobile : styles.WhenBlock}>
+      {isMobile && (
+        <div
+          className={styles.whenBlockQuestionWrapperMobile}
+          style={{ backgroundImage: `url(${imgUrl})` }}
         >
-          {question}
-        </span>
+          <span
+            className={cn(styles.WhenBlockQuestionText, "fjalla-one-regular")}
+          >
+            {question.toUpperCase()}
+          </span>
+          <div className={styles.whenBlockImg}></div>
+        </div>
+      )}
+      <div className={styles.WhenBlockQuestionWrapper}>
+        {!isMobile && (
+          <span
+            className={cn(styles.WhenBlockQuestionText, "fjalla-one-regular")}
+          >
+            {question}
+          </span>
+        )}
         {answers.map((answer, index) => (
           <div
             key={answer.answer + index}
@@ -39,10 +59,12 @@ export const SingleTreatmentWhenBlock: FC<SingleTreatmentWhenBlockProps> = ({
           </div>
         ))}
       </div>
-      <div
-        style={{ backgroundImage: `url(${imgUrl})` }}
-        className={styles.whenBlockImg}
-      ></div>
+      {!isMobile && (
+        <div
+          style={{ backgroundImage: `url(${imgUrl})` }}
+          className={styles.whenBlockImg}
+        ></div>
+      )}
     </div>
   );
 };

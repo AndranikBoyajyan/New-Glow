@@ -53,10 +53,7 @@
   text-align: center;
   padding: 58px 39px;
   gap: 10px;
-  background-color: #b36a66;
-
-  @media (width <= 1280px) {
-  }
+  background-color: #b36a66f2;
 
   @media (width <= 1024px) {
     justify-content: center;

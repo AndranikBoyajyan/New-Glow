@@ -10,14 +10,40 @@
   text-align: start;
   padding: 48px;
   gap: 16px;
+
+  @media (width < 768px) {
+    padding: 20px;
+    gap: 10px;
+  }
+}
+
+.whenBlockQuestionWrapperMobile {
+  width: 100vw;
+  height: 172px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ffedeb;
+  padding-left: 16px;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .WhenBlockQuestionText {
   font-size: 36px;
   color: #fff6f5;
+  text-align: left;
 
   @media (width < 1024px) {
     font-size: 30px;
+  }
+
+  @media (width < 768px) {
+    font-size: 24px;
+    color: #b36a66;
+    line-height: 150%;
+    width: 60%;
   }
 }
 
@@ -41,6 +67,10 @@
   @media (width < 1024px) {
     font-size: 18px;
   }
+
+  @media (width < 768px) {
+    font-size: 14px;
+  }
 }
 
 .answerDescription {
@@ -49,6 +79,10 @@
 
   @media (width < 1024px) {
     font-size: 14px;
+  }
+
+  @media (width < 768px) {
+    font-size: 12px;
   }
 }
 
@@ -62,4 +96,16 @@
     width: 100%;
     background-size: contain;
   }
+
+  @media (width < 768px) {
+    display: none;
+  }
+}
+
+.WhenBlockMobile {
+  display: flex;
+  flex-direction: column;
+  background-color: #b36a66;
+  padding: 20px;
+  padding-top: 0;
 }
