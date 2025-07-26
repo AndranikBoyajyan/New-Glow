@@ -115,3 +115,17 @@
   color: #b36a66;
   background-color: transparent;
 }
+
+.button_all_treatments {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  padding: 10.5px 14px;
+  border: none;
+  color: #fff;
+  background-color: #b36a66;
+  border-radius: 50%;
+}
