@@ -2,7 +2,7 @@
   display: flex;
 
   @media (width < 768px) {
-    background-image: url("./pngs/homepageSlider2.png");
+    background-image: url("/pngs/homepageSlider2.png");
     width: 100%;
     background-size: contain;
     background-position: left;
@@ -127,7 +127,7 @@
 }
 
 .img {
-  background-image: url("./pngs/homepageSlider2.png");
+  background-image: url("/pngs/homepageSlider2.png");
   width: 50vw;
   background-position: left;
   background-size: contain;

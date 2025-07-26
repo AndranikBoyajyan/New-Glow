@@ -42,17 +42,19 @@ export const TreatmentsContent: FC<TreatmentsContentProps> = ({
 
   return (
     <div className={styles.content} id={urlParamsName}>
-      <Title
-        text={categoryName}
-        font="fjalla-one-regular"
-        className="title_40"
-      />
-      <div>
+      <div className={styles.titleWrapper}>
+        <Title
+          text={categoryName}
+          font="fjalla-one-regular"
+          className="title_40"
+        />
+      </div>
+      <div className={styles.treatmentsWrapper}>
         {treatments.map((treatment, index) => (
           <TreatmentCard
             key={treatment.id}
             name={treatment.name}
-            imgUrl={treatment.imgUrl}
+            imgUrl={treatment.imgUrl.replace(".", "")}
             description={treatment.description}
             isRight={index % 2 !== 0}
           />
