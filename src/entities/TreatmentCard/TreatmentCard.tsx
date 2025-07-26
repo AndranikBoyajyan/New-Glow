@@ -4,6 +4,8 @@ import styles from "./TreatmentCard.module.css";
 import { Link } from "react-router";
 import { getTreatmentPath } from "../../helpers/getTreatmentPath";
 import Button from "../../shared/Button";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
 interface TreatmentCardProps {
   name: string;
@@ -18,6 +20,10 @@ export const TreatmentCard: FC<TreatmentCardProps> = ({
   description,
   isRight,
 }) => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   const [animate, setAnimate] = useState(false);
   const urlParamsName = getTreatmentPath(name);
 
@@ -26,33 +32,44 @@ export const TreatmentCard: FC<TreatmentCardProps> = ({
   };
 
   const handleMouseLeave = () => {
-    setTimeout(() => {
-      setAnimate(false);
-    }, 2000);
+    setAnimate(false);
   };
 
   return (
-    <Link to={urlParamsName} style={{ textDecoration: "none" }}>
+    <Link
+      to={urlParamsName}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={styles.link}
+    >
       <div
         className={cn(styles.treatmentCard, {
           [styles.treatmentCardRight]: isRight,
         })}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
-        <img src={imgUrl} alt={name} className={styles.img} />
+        <div
+          style={{ backgroundImage: `url(${imgUrl})` }}
+          className={styles.img}
+        ></div>
         <div className={styles.name_and_description_block}>
           <div className={cn(styles.name, "poppins-extralight")}>{name}</div>
           <span className={cn(styles.description, "poppins-regular")}>
             {description}
           </span>
           <div
-            className={cn(
-              styles.buttonWrapper,
-              animate && styles.buttonWrapperAnimate
-            )}
+            className={cn(styles.buttonWrapper, {
+              [styles.buttonWrapperAnimate]: animate && !isMobile,
+            })}
           >
-            <Button className="button_all_treatments" content=">" />
+            {!isMobile ? (
+              <Button className="button_redirect" content=">" />
+            ) : (
+              <Button
+                className="button_view_all"
+                content="View All"
+                font="poppins-regular"
+              />
+            )}
           </div>
         </div>
       </div>

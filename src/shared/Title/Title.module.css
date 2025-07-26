@@ -88,6 +88,11 @@
   font-size: 60px; /* For Single Treatment page (Tablet Small) */
 }
 
+.title_h1_40 {
+  font-size: 40px; /* For All Treatments page (Mobile) */
+  color: #8a4f4c;
+}
+
 .title_h1_36 {
   font-size: 36px; /* For Single Treatment page (Mobile) */
 }

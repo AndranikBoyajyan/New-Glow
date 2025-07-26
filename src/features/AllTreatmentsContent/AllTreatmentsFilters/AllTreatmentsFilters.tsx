@@ -2,6 +2,8 @@ import { useState, useEffect, type FC } from "react";
 import Checkbox from "../../../shared/Checkbox";
 import styles from "./allTreatmentsFilters.module.css";
 import { TREATMENTS_CATEGORIES } from "../../../constants/treatmentsCategories";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 interface AllTreatmentsFiltersProps {
   allIds: number[];
@@ -15,6 +17,9 @@ export const AllTreatmentsFilters: FC<AllTreatmentsFiltersProps> = ({
   handleSetCategoriesIds,
 }) => {
   const [allChecked, setAllChecked] = useState<boolean>(false);
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
 
   useEffect(() => {
     if (allIds.length === checkedCategoriesIds.length) {
@@ -55,20 +60,25 @@ export const AllTreatmentsFilters: FC<AllTreatmentsFiltersProps> = ({
             checked={
               allChecked || checkedCategoriesIds.includes(treatmentCategory.id)
             }
-            labelClassName={"label_20"}
+            checkboxClassName={!isMobile ? "checkbox" : "hidden_input"}
+            labelClassName={!isMobile ? "label_20" : "checkbox_label_button"}
             handleClick={() => handleClick(treatmentCategory.id)}
           />
         ))}
-        <Checkbox
-          text="Select All"
-          font="poppins-italic"
-          checked={allChecked}
-          checkboxClassName={"selectAll"}
-          labelClassName={"label_16"}
-          handleClick={handleAllCheckedClick}
-        />
+        <div className={styles.allSelectCheckboxWrapper}>
+          <Checkbox
+            text="Select All"
+            font="poppins-italic"
+            checked={allChecked}
+            checkboxClassName={!isMobile ? "selectAll" : "hidden_input"}
+            labelClassName={
+              !isMobile ? "label_16" : "checkbox_label_button_selectAll"
+            }
+            handleClick={handleAllCheckedClick}
+          />
+        </div>
       </div>
-      <div className={styles.divider}></div>
+      {!isMobile && <div className={styles.divider}></div>}
     </div>
   );
 };
