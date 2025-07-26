@@ -44,7 +44,7 @@
   font-size: 27px;
 }
 
-@media (max-width: 768px) {
+@media (width < 768px) {
   .footer {
     background-color: #b36a66;
     display: flex;

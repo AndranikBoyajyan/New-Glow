@@ -12,6 +12,10 @@ export const Menu = () => {
 
   const isMobile = width < MEDIA_TABLET_SMALL;
 
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className={styles.menuWrapper}>
       {isMobile ? (
@@ -21,10 +25,26 @@ export const Menu = () => {
           </button>
           {isOpen && (
             <ul className={styles.menu}>
-              <MenuItem redirectUrl="/about" name="ABOUT US" />
-              <MenuItem name="TREATMENTS" isDropDown />
-              <MenuItem redirectUrl="/products" name="PRODUCTS" />
-              <MenuItem redirectUrl="/blog" name="BLOG" />
+              <MenuItem
+                redirectUrl="/about"
+                name="ABOUT US"
+                onClose={handleCloseModal}
+              />
+              <MenuItem
+                name="TREATMENTS"
+                isDropDown
+                onClose={handleCloseModal}
+              />
+              <MenuItem
+                redirectUrl="/products"
+                name="PRODUCTS"
+                onClose={handleCloseModal}
+              />
+              <MenuItem
+                redirectUrl="/blog"
+                name="BLOG"
+                onClose={handleCloseModal}
+              />
             </ul>
           )}
         </div>

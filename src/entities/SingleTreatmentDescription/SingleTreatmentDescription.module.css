@@ -12,6 +12,7 @@
 
 .singleTreatmentDescription {
   font-size: 20px;
+  color: #3c3c3c;
 
   @media (width < 768px) {
     font-size: 14px;

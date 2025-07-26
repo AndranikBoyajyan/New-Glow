@@ -28,6 +28,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (width <= 1024px) {
+    margin-left: 0;
+    height: auto;
+  }
+
   @media (width < 768px) {
     margin-left: 0;
     width: 100%;

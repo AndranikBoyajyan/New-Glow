@@ -21,9 +21,13 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
   price,
   imgUrl,
 }) => {
-  const { width } = useWindowSize();
   const [showMore, setShowMore] = useState(false);
+
+  const { width } = useWindowSize();
   const isMobile = width < MEDIA_TABLET_SMALL;
+
+  const slicedDescription = description.slice(0, description.indexOf(".") + 1);
+
   return (
     <div className={styles.treatmentPageCard}>
       <img src={imgUrl} alt="" />
@@ -41,7 +45,7 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
             }
           >
             <span className={cn(styles.description, "poppins-regular")}>
-              {description}
+              {showMore ? description : slicedDescription}
             </span>
           </div>
           <div>

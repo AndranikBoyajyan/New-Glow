@@ -9,13 +9,19 @@ interface SingleTreatmentDescriptionProps {
 export const SingleTreatmentDescription: FC<
   SingleTreatmentDescriptionProps
 > = ({ description }) => {
+  const descriptionParts = description.split(".");
+  descriptionParts.pop();
+
   return (
     <div className={styles.singleTreatmentDescriptionWrapper}>
-      <span
-        className={cn(styles.singleTreatmentDescription, "poppins-regular")}
-      >
-        {description}
-      </span>
+      {descriptionParts.map((descriptionPart) => (
+        <span
+          key={descriptionPart}
+          className={cn(styles.singleTreatmentDescription, "poppins-regular")}
+        >
+          {descriptionPart}
+        </span>
+      ))}
     </div>
   );
 };

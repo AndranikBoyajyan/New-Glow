@@ -42,4 +42,8 @@
   all: unset;
   align-self: end;
   padding: 0 8px 6px;
+
+  @media (width < 768px) {
+    align-self: center;
+  }
 }

@@ -89,7 +89,7 @@
   color: #4e3c31;
 }
 
-@media (max-width: 768px) {
+@media (width < 768px) {
   .specialPromoContent {
     height: auto;
     gap: 24px;

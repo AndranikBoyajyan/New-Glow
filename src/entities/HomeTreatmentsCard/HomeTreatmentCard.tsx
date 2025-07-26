@@ -4,6 +4,8 @@ import styles from "./homeTreatmentCard.module.css";
 import { Button } from "../../shared/Button/Button";
 import { Link, useNavigate } from "react-router";
 import { getTreatmentPath } from "../../helpers/getTreatmentPath";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
 interface HomeTreatmentCardProps {
   name: string;
@@ -14,6 +16,9 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
   name,
   imgUrl,
 }) => {
+  const { width } = useWindowSize();
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   const navigate = useNavigate();
 
   const urlParamsName = getTreatmentPath(name);
@@ -29,7 +34,6 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
       className={styles.home_treatment_card}
       style={{
         backgroundImage: `url(${imgUrl})`,
-        textDecoration: "none",
       }}
     >
       <div className={styles.treatment_name_and_button}>
@@ -45,6 +49,7 @@ export const HomeTreatmentCard: FC<HomeTreatmentCardProps> = ({
           />
         </div>
       </div>
+      {!isMobile && <div className={styles.gradient}></div>}
     </Link>
   );
 };
