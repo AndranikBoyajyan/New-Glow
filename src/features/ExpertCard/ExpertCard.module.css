@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   background-position: center;
   min-height: 400px;
+
+  @media (width <= 1024px) {
+    margin: 15px 10px 0;
+  }
 }
 
 @media (width < 768px) {

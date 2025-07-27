@@ -5,7 +5,7 @@
   align-items: start;
   gap: 32px;
 
-  @media (max-width: 768px) {
+  @media (width < 768px) {
     align-items: center;
     position: relative;
     overflow: hidden;
@@ -15,17 +15,17 @@
 .titleWrapper {
   margin-left: 3.3vw;
 
-  @media (max-width: 768px) {
+  @media (width < 768px) {
     margin-left: 0;
   }
 }
 
 .treatmentsContainer {
-  width: 106vw;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: 768px) {
+  @media (width < 768px) {
     width: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
