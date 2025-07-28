@@ -49,7 +49,7 @@ export const MenuItem: FC<MenuItemProps> = ({
             [styles.openedDropdown]: isOpen,
           })}
           role="menuitem"
-          // onBlur={handleBlur}
+          onBlur={handleBlur}
         >
           <button className={styles.menuItem} onClick={handleSetOpenDropdown}>
             <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
