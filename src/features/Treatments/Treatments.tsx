@@ -31,6 +31,14 @@ export const Treatments = () => {
 
   return (
     <div className={styles.treatments} role="menuitem">
+      <button
+        onMouseDown={() => {
+          handleNavigate("all-treatments");
+        }}
+        className={cn(styles.seeAll, "poppins-regular")}
+      >
+        See All
+      </button>
       {TREATMENTS.map((treatment) => (
         <TreatmentMenuItem
           key={treatment.id}
@@ -38,14 +46,6 @@ export const Treatments = () => {
           handleClick={handleNavigate}
         />
       ))}
-      <button
-        onMouseDown={() => {
-          handleNavigate("all-treatments");
-        }}
-        className={cn(styles.seeAll, "poppins-medium-italic")}
-      >
-        See All
-      </button>
     </div>
   );
 };
