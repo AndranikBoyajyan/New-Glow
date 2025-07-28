@@ -35,9 +35,11 @@ export const Treatments = () => {
         onMouseDown={() => {
           handleNavigate("all-treatments");
         }}
-        className={cn(styles.seeAll, "poppins-regular")}
+        className={cn(styles.seeAllButton)}
       >
-        See All
+        <span className={cn(styles.seeAllText, "poppins-semibold")}>
+          See All
+        </span>
       </button>
       {TREATMENTS.map((treatment) => (
         <TreatmentMenuItem
