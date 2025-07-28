@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  padding: 60px 0 0 6vw;
+  padding-left: 6vw;
   gap: 34px;
   flex: 3;
 
@@ -127,7 +127,7 @@
 
 .img {
   background-image: url("/pngs/homepageSlider1.png");
-  width: 50vw;
+  height: 92vh;
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;

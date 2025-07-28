@@ -25,7 +25,7 @@
 .singleTreatmentHeaderBackGroundImg {
   width: 95%;
   height: 420px;
-  background-image: url("./pngs/treatmentHeaderBgImg.png");
+  background-image: url("/pngs/treatmentHeaderBgImg.png");
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -45,8 +45,8 @@
 }
 
 .singleTreatmentHeaderTitle {
-  margin-top: 115px;
-  width: 70%;
+  margin-top: 100px;
+  width: 60%;
   align-self: flex-end;
 }
 
@@ -60,7 +60,7 @@
 
   @media (width <= 1280px) {
     width: 38%;
-    background-size: cover;
+    background-size: contain;
   }
 }
 

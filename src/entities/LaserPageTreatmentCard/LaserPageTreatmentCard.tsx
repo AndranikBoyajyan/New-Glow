@@ -27,10 +27,10 @@ export const LaserPageTreatmentCard: FC<LaserPageTreatmentCardProps> = ({
                 {treatmentType.name}
               </span>
               <div className={styles.durationAndPriceBlock}>
-                <span className={cn(styles.txt, "poppins-italic")}>
+                <span className={cn(styles.txt, "poppins-light-italic")}>
                   {treatmentType.duration}
                 </span>
-                <span className={cn(styles.txt, "poppins-italic")}>
+                <span className={cn(styles.txt, "poppins-light-italic")}>
                   {treatmentType.price}
                 </span>
               </div>
