@@ -90,7 +90,7 @@
   width: 55vw;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
   @media (width < 1024px) {
     width: 100%;

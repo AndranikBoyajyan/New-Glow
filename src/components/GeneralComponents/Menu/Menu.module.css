@@ -20,6 +20,16 @@
   gap: 2.8vw;
   box-sizing: content-box;
   z-index: 9;
+  padding-left: 0;
+
+  @media (width <= 1280px) {
+    min-width: max-content;
+    gap: 2vw;
+  }
+
+  @media (width <= 1024px) {
+    gap: 1.6vw;
+  }
 
   @media (width < 768px) {
     height: auto;
