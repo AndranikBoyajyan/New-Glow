@@ -51,7 +51,7 @@
 
 .treatment_name_and_button {
   position: relative;
-  bottom: -35vh;
+  bottom: -34vh;
   max-width: 70%;
   display: flex;
   flex-direction: column;
@@ -59,6 +59,10 @@
   justify-content: center;
   gap: 20px;
   z-index: 2;
+
+  @media (width < 1280px) {
+    bottom: -32vh;
+  }
 
   @media (width < 768px) {
     max-width: 100%;

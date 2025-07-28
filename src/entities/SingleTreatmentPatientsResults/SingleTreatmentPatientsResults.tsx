@@ -67,8 +67,32 @@ export const SingleTreatmentPatientsResults: FC<
         {!isMobile && (
           <div className={cn(styles.treatmentResult, styles.result2)}>
             <div className={styles.imgs}>
-              <div className={cn(styles.beforeImg2, styles.img)}></div>
-              <div className={cn(styles.afterImg2, styles.img)}></div>
+              <div className={cn(styles.beforeImg2, styles.img)}>
+                <div className={styles.beforeTextWrapper}>
+                  <span
+                    className={cn(
+                      styles.text,
+                      styles.before1,
+                      "fjalla-one-regular"
+                    )}
+                  >
+                    Before
+                  </span>
+                </div>
+              </div>
+              <div className={cn(styles.afterImg2, styles.img)}>
+                <div className={styles.afterTextWrapper}>
+                  <span
+                    className={cn(
+                      styles.text,
+                      styles.after1,
+                      "fjalla-one-regular"
+                    )}
+                  >
+                    After
+                  </span>
+                </div>
+              </div>
             </div>
             <span className={cn(styles.treatmentName, "poppins-semibold")}>
               Hydro facial
