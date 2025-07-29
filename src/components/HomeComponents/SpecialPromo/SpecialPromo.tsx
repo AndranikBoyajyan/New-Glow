@@ -32,12 +32,12 @@ export const SpecialPromo = () => {
             <div className={styles.buttons}>
               <Button
                 content="Book a consultation"
-                className="button_dark_rose4"
+                className="button_dark"
                 font="poppins-medium"
               />
               <Button
                 content="See all promos"
-                className="button_weight_2_transparent"
+                className="button_light_transparent"
                 font="poppins-medium"
               />
             </div>

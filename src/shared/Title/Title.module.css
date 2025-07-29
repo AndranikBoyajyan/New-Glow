@@ -75,17 +75,17 @@
   font-size: 86px; /* For Single Treatment page */
 }
 
-.title_h1_75 {
-  font-size: 75px; /* For All Treatments page */
+.title_h1_82 {
+  font-size: 82px; /* For All Treatments page */
   letter-spacing: 10px;
 }
 
 .title_h1_72 {
-  font-size: 72px; /* For Single Treatment page (Tablet Large) */
+  font-size: 72px; /* For Single Treatment and All Treatments page (Tablet Large) */
 }
 
 .title_h1_60 {
-  font-size: 60px; /* For Single Treatment page (Tablet Small) */
+  font-size: 60px; /* For Single Treatment and All Treatments page (Tablet Small) */
 }
 
 .title_h1_40 {

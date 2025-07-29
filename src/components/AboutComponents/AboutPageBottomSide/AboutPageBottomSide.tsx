@@ -2,13 +2,13 @@ import aboutBottomSideImg from "/pngs/aboutPageBottomSide.png";
 
 import AboutBookAConsultation from "../../../features/AboutBookAConsultation";
 import { useWindowSize } from "../../../hooks/useWindowSize";
-import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import { MEDIA_TABLET } from "../../../constants/windowSizes";
 import styles from "./AboutPageBottomSide.module.css";
 
 export const AboutPageBottomSide = () => {
   const { width } = useWindowSize();
 
-  const isMobile = width < MEDIA_TABLET_SMALL;
+  const isMobile = width < MEDIA_TABLET;
   return (
     <div
       className={styles.aboutPageBottomSide}

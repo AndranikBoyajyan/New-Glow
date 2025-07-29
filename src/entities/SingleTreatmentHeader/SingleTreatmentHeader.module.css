@@ -11,25 +11,33 @@
     padding: 20px 46px 0;
     margin-top: 0;
   }
+
+  @media (width < 1024px) {
+    padding: 20px 20px 0;
+  }
+
+  @media (width < 768px) {
+    padding: 20px 16px 0;
+  }
 }
 
 .singleTreatmentHeaderContent {
-  width: 100%;
+  width: 100vw;
   display: flex;
   height: inherit;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: space-between;
-  position: relative;
 }
 
 .singleTreatmentHeaderBackGroundImg {
-  width: 95%;
   height: 420px;
   background-image: url("/pngs/treatmentHeaderBgImg.png");
+  background-size: cover;
   background-position: 100%;
+  width: 100vw;
   background-repeat: no-repeat;
-  background-size: contain;
   flex-direction: column;
+  border-bottom: 1px solid rgba(60, 60, 60, 0.4);
 
   @media (width < 1248px) {
     height: 400px;
@@ -40,28 +48,25 @@
   }
 
   @media (width < 768px) {
+    border-bottom: none;
     height: 300px;
   }
 }
 
 .singleTreatmentHeaderTitle {
-  margin-top: 100px;
   width: 60%;
-  align-self: flex-end;
+  align-self: center;
+
+  @media (width < 1024px) {
+    margin-right: 4vw;
+  }
 }
 
 .singleTreatmentHeaderImage {
-  width: 32%;
-  position: absolute;
-  left: 0;
+  width: 40vw;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
-
-  @media (width <= 1280px) {
-    width: 38%;
-    background-size: contain;
-  }
 }
 
 .divider {
