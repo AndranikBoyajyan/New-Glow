@@ -9,6 +9,7 @@ interface ButtonProps {
   slideIndex?: number;
   isActive?: boolean;
   font?: string;
+  isSliderBgDark?: boolean;
   handleClick?: (index?: number) => void;
 }
 
@@ -18,6 +19,7 @@ export const Button: FC<ButtonProps> = ({
   slideIndex,
   isActive,
   font = "poppins-medium",
+  isSliderBgDark,
   handleClick,
 }) => {
   return (
@@ -28,6 +30,8 @@ export const Button: FC<ButtonProps> = ({
       }}
       className={cn(styles.button, styles[className], font, {
         [styles.active]: isActive,
+        [styles.slider_button_light]: isSliderBgDark,
+        [styles.active_light]: isSliderBgDark && isActive,
       })}
     >
       {content.toUpperCase()}

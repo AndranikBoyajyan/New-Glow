@@ -1,5 +1,6 @@
 .secondSlide {
   display: flex;
+  border-bottom: 1px solid rgba(60, 60, 60, 0.2);
 
   @media (width < 768px) {
     background-image: url("/pngs/homepageSlider2.png");
