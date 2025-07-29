@@ -28,6 +28,7 @@
   flex-direction: column;
   align-items: end;
   padding-right: 24px;
+  text-decoration: none;
 
   @media (width < 1024px) {
     padding-right: 0;

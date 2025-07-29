@@ -24,7 +24,7 @@
     justify-content: space-evenly;
   }
 
-  @media (width < 768px) {
+  @media (width <= 768px) {
     justify-content: start;
     padding: 0;
     gap: 3vw;

@@ -53,7 +53,7 @@ export const MenuItem: FC<MenuItemProps> = ({
         >
           <button className={styles.menuItem} onClick={handleSetOpenDropdown}>
             <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
-            <img src={imgSrc} alt={"arrow"} className={styles.img} />
+            <img src={imgSrc} alt={"arrow"} className={styles.arrowIcon} />
           </button>
           {isOpen && <Treatments />}
         </div>

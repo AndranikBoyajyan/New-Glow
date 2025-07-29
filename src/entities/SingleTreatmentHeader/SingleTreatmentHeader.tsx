@@ -48,7 +48,6 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
           style={{ backgroundImage: `url(${imgUrl})` }}
         ></div>
       </div>
-      {!isMobile && <div className={styles.divider}></div>}
     </div>
   );
 };

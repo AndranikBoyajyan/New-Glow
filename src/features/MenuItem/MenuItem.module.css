@@ -13,6 +13,15 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+
+  @media (width < 1024px) {
+    min-width: 120px;
+    gap: 4px;
+  }
+}
+
+.arrowIcon {
+  height: 22px;
 }
 
 .treatments {
@@ -28,6 +37,10 @@
   font-size: 16px;
   color: #3c3c3c;
   margin: 6px auto 10px;
+
+  @media (width < 1024px) {
+    font-size: 12px;
+  }
 }
 
 .itemName {

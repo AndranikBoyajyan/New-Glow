@@ -5,6 +5,7 @@ import styles from "./Header.module.css";
 import Menu from "../Menu";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import { Link } from "react-router";
 
 export const Header = () => {
   const { width } = useWindowSize();
@@ -12,7 +13,7 @@ export const Header = () => {
   const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={styles.header}>
-      <div className={styles.logo}>
+      <Link to="/" className={styles.logo}>
         <div
           className={styles.logoSvg}
           style={{ backgroundImage: `url(${LogoSVG})` }}
@@ -20,7 +21,7 @@ export const Header = () => {
         <span className={cn(styles.logoText, "poppins-extralight")}>
           MED SPA
         </span>
-      </div>
+      </Link>
       <div className={styles.menu}>
         <Menu />
       </div>

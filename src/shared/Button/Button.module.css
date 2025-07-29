@@ -1,6 +1,7 @@
 .button {
   padding: 12px 24px;
   font-size: 20px;
+
   &&:hover {
     cursor: pointer;
   }
@@ -20,12 +21,13 @@
   }
 }
 
-.slider_button {
+.slider_button,
+.slider_button_light {
   width: 17px;
   height: 17px;
-  background: #cc9f93;
+  background: transparent;
   color: #fff;
-  border: none;
+  border: 2px solid #8a4f4c;
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s;
@@ -36,12 +38,21 @@
   padding: 0;
 }
 
+.slider_button_light {
+  background-color: transparent;
+  border: 2px solid #ffedeb;
+}
+
 .slider_button_arrow {
   all: unset;
 }
 
 .active {
-  background-color: #56453f;
+  background-color: #8a4f4c;
+}
+
+.active_light {
+  background-color: #ffedeb;
 }
 
 .button_light_3 {
@@ -65,7 +76,7 @@
   padding: 8px 16px;
 }
 
-.button_dark_rose4 {
+.button_dark:hover {
   background-color: #8a4f4c;
   color: #fff;
   border: 1px solid #8a4f4c;
@@ -75,6 +86,10 @@
   background-color: transparent;
   color: #b36a66;
   border: 2px solid #b36a66;
+}
+
+.button_light_transparent:hover {
+  border: 3px solid #8a4f4c;
 }
 
 .button_transparent {
@@ -94,12 +109,6 @@
 .button_weight_2 {
   border: 2px solid #8a4f4c;
   color: #8a4f4c;
-}
-
-.button_weight_2_transparent {
-  border: 2px solid #b36a66;
-  color: #b36a66;
-  background-color: transparent;
 }
 
 .button_send {

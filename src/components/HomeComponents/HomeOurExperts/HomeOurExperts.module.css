@@ -24,9 +24,10 @@
   align-items: center;
   margin-left: 1.7vw;
   background-image: url("/jpgs/ourLocation.jpg");
-  background-position: 0;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 
   @media (width <= 1024px) {
     margin-left: 0;
@@ -37,7 +38,21 @@
     margin-left: 0;
     width: 100%;
     height: 476px;
-    background-position: center;
+  }
+}
+
+.location::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  @media (width < 768px) {
+    width: 100%;
+    background: none;
   }
 }
 
@@ -49,6 +64,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 24px 20px;
+  z-index: 4;
 
   @media (width < 768px) {
     width: 100%;

@@ -94,6 +94,9 @@ export const CustomSwiper: FC<CustomSwiperProps> = ({
               slideIndex={index}
               isActive={currentSlide === index}
               handleClick={handleChangeSlide}
+              isSliderBgDark={
+                bulletsClassName === "bullets_home_all_treatments"
+              } // TODO remove this
             />
           ))}
         </div>

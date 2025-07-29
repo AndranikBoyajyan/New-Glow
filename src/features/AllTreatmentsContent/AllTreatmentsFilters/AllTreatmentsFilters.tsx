@@ -19,7 +19,7 @@ export const AllTreatmentsFilters: FC<AllTreatmentsFiltersProps> = ({
   const [allChecked, setAllChecked] = useState<boolean>(false);
   const { width } = useWindowSize();
 
-  const isMobile = width < MEDIA_TABLET_SMALL;
+  const isMobile = width <= MEDIA_TABLET_SMALL;
 
   useEffect(() => {
     if (allIds.length === checkedCategoriesIds.length) {

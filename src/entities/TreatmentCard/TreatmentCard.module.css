@@ -28,7 +28,7 @@
 }
 
 .img {
-  flex: 3;
+  flex: 8;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -42,7 +42,7 @@
 
 .name_and_description_block {
   display: flex;
-  flex: 5;
+  flex: 11;
   flex-direction: column;
   justify-content: center;
   padding: 50px 20px 0;
@@ -72,6 +72,7 @@
   font-size: 18px;
   padding: 5px;
 }
+
 .buttonWrapper {
   opacity: 0;
   padding: 40px 0;
@@ -90,27 +91,11 @@
 
 .buttonWrapperAnimate {
   padding: 40px 0;
-  animation: slideRightDesktop 2s ease-out forwards;
+  animation: slideRightDesktop 1s ease-out forwards;
   pointer-events: auto;
-
-  @media (width < 768px) {
-    animation: slideRightMobile 2s ease-out forwards;
-    padding: 15px 0;
-  }
 }
 
 @keyframes slideRightDesktop {
-  from {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(90%);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRightMobile {
   from {
     transform: translateX(0);
     opacity: 0;
