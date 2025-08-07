@@ -1,14 +1,27 @@
-.menuWrapper {
+.menuWrapperOpen {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   @media (width < 768px) {
-    width: 50px;
-    height: 39px;
-    align-self: flex-end;
+    width: 100vw;
+    height: 100vh;
+    align-self: stretch;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 1000;
+    justify-content: center;
+    background-color: #ffedeb;
   }
+}
+.menuWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
@@ -37,6 +50,9 @@
     min-width: max-content;
     padding: 0;
     padding-top: 12px;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
   }
 }
 
@@ -56,4 +72,10 @@
   @media (width < 768px) {
     align-self: center;
   }
+}
+.menuBtnOpen {
+  all: unset;
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }
