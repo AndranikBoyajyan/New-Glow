@@ -7,9 +7,10 @@
   gap: 4px;
 
   @media (width < 1024px) {
-    max-width: 120px;
+    max-width: 130px;
     padding-top: 4px;
     gap: 4px;
+    background-color: #ffedeb;
   }
 }
 

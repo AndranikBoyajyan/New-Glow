@@ -1,6 +1,7 @@
 import MenuItem from "../../../features/MenuItem";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import menuImg from "/pngs/burgerMenuImg.png";
+import manuCloseImg from "/pngs/mobileMenuCloseIcon.png";
 
 import styles from "./Menu.module.css";
 import { useState } from "react";
@@ -17,11 +18,22 @@ export const Menu = () => {
   };
 
   return (
-    <div className={styles.menuWrapper}>
+    <div
+      className={
+        isMobile && isOpen ? styles.menuWrapperOpen : styles.menuWrapper
+      }
+    >
       {isMobile ? (
         <div className={styles.menuMobile}>
-          <button className={styles.menuBtn} onClick={() => setIsOpen(!isOpen)}>
-            <img src={menuImg} alt="menu" className={styles.menuImg} />
+          <button
+            className={isMobile && isOpen ? styles.menuBtnOpen : styles.menuBtn}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <img
+              src={isMobile && isOpen ? manuCloseImg : menuImg}
+              alt="menu"
+              className={styles.menuImg}
+            />
           </button>
           {isOpen && (
             <ul className={styles.menu}>

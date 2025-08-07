@@ -64,4 +64,8 @@
 .openedDropdown {
   box-shadow: 5px 0 5px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.1);
   border-top: none;
+
+  @media (width < 768px) {
+    box-shadow: none;
+  }
 }
