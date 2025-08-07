@@ -12,11 +12,13 @@ import {
 interface SingleTreatmentHeaderProps {
   title: string;
   imgUrl: string;
+  isLaserPage?: boolean;
 }
 
 export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
   title,
   imgUrl,
+  isLaserPage,
 }) => {
   const { width } = useWindowSize();
 
@@ -25,9 +27,9 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
   const isMobile = width < MEDIA_TABLET_SMALL;
 
   const getTitleClassName = () => {
-    if (isTabletLarge) return "title_h1_72";
-    if (isTabletSmall) return "title_h1_60";
     if (isMobile) return "title_h1_36";
+    if (isTabletSmall) return "title_h1_60";
+    if (isTabletLarge) return "title_h1_72";
 
     return "title_h1_86";
   };
@@ -44,7 +46,9 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
           </div>
         )}
         <div
-          className={styles.singleTreatmentHeaderImage}
+          className={cn(styles.singleTreatmentHeaderImage, {
+            [styles.laserPageHeaderImage]: isLaserPage,
+          })}
           style={{ backgroundImage: `url(${imgUrl})` }}
         ></div>
       </div>

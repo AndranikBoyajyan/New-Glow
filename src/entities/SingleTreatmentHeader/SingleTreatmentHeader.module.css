@@ -54,7 +54,7 @@
 }
 
 .singleTreatmentHeaderTitle {
-  width: 60%;
+  width: 56%;
   align-self: center;
 
   @media (width < 1024px) {
@@ -62,11 +62,27 @@
   }
 }
 
-.singleTreatmentHeaderImage {
+.singleTreatmentHeaderImage,
+.laserPageHeaderImage {
   width: 40vw;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.laserPageHeaderImage {
+  height: 110%;
+}
+
+@media (width < 1024px) {
+  .singleTreatmentHeaderImage {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .laserPageHeaderImage {
+    background-size: contain;
+  }
 }
 
 .divider {
