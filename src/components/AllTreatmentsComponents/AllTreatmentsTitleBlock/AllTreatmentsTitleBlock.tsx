@@ -12,7 +12,7 @@ export const AllTreatmentsTitleBlock = () => {
 
   const isTabletLarge = width <= MEDIA_TABLET_LARGE;
   const isTabletSmall = width <= MEDIA_TABLET;
-  const isMobile = width < MEDIA_TABLET_SMALL;
+  const isMobile = width <= MEDIA_TABLET_SMALL;
 
   const getTitleClassName = () => {
     if (isMobile) return "title_h1_40";

@@ -16,6 +16,7 @@ export const LaserHairRemoval = () => {
         <SingleTreatmentHeader
           title="Laser Hair Removal"
           imgUrl={LaserHairRemovalHeaderImg}
+          isLaserPage
         />
         <SingleTreatmentDescription description={description} />
         <SingleTreatmentWhenBlock
