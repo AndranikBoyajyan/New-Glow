@@ -18,9 +18,6 @@ export const Header = () => {
           className={styles.logoSvg}
           style={{ backgroundImage: `url(${LogoSVG})` }}
         ></div>
-        <span className={cn(styles.logoText, "poppins-extralight")}>
-          MED SPA
-        </span>
       </Link>
       <div className={styles.menu}>
         <Menu />
@@ -29,7 +26,8 @@ export const Header = () => {
         <div className={styles.phoneNumberWrapper}>
           <img src={"/pngs/phone.png"} alt="phone" />
           <span className={cn(styles.phoneNumber, "poppins-regular")}>
-            +818 747 2470
+            {" "}
+            818 747 2470
           </span>
         </div>
       )}

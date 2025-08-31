@@ -99,7 +99,7 @@
   gap: 30px;
 
   @media (width < 768px) {
-    width: 100%;
+    width: 70%;
     gap: 16px;
     justify-content: center;
   }

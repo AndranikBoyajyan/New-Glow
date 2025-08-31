@@ -84,6 +84,7 @@
   padding: 8px 12px;
   display: flex;
   align-items: center;
+  gap: 6px;
 
   @media (width <= 1280px) {
     padding: 6px 9px;
