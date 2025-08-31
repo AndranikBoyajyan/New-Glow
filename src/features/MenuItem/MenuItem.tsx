@@ -53,7 +53,11 @@ export const MenuItem: FC<MenuItemProps> = ({
           {isOpen && <Treatments />}
         </div>
       ) : (
-        <Link to={redirectUrl ?? ""} className={styles.redirectLink}>
+        <Link
+          to={redirectUrl ?? ""}
+          className={styles.redirectLink}
+          onClick={onClose}
+        >
           <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
         </Link>
       )}

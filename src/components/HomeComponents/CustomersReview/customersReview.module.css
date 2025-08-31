@@ -35,9 +35,8 @@
   }
 
   @media (width < 768px) {
-    width: 100%;
     align-items: center;
-    padding: 16vh 3.3vw;
+    padding: 14vh 3.3vw;
   }
 }
 
