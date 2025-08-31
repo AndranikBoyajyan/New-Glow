@@ -18,6 +18,7 @@ export const Menu = () => {
 
   const handleCloseModal = () => {
     setIsOpen(false);
+    console.log("close");
   };
 
   return (
@@ -40,7 +41,7 @@ export const Menu = () => {
           </button>
           {isOpen && (
             <ul className={styles.menu}>
-              <Link to="/" className={styles.logo}>
+              <Link to="/" className={styles.logo} onClick={handleCloseModal}>
                 <div
                   className={styles.logoSvg}
                   style={{ backgroundImage: `url(${LogoSVG})` }}

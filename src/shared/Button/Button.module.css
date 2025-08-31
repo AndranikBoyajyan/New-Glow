@@ -146,7 +146,8 @@
 
 .button_view_all {
   width: 100%;
-  height: 32px;
+  padding: 10px 16px;
+  height: 40px;
   background-color: transparent;
   border: 1px solid #b36a66;
   color: #b36a66;

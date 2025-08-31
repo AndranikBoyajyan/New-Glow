@@ -74,9 +74,8 @@
 }
 
 .buttonWrapper {
-  opacity: 0;
-  padding: 40px 0;
-  pointer-events: none;
+  width: 40%;
+  padding: 20px 0 40px;
 
   @media (width < 768px) {
     width: 100%;
@@ -86,22 +85,5 @@
     opacity: 1;
     padding: 0;
     margin: 8px 0;
-  }
-}
-
-.buttonWrapperAnimate {
-  padding: 40px 0;
-  animation: slideRightDesktop 1s ease-out forwards;
-  pointer-events: auto;
-}
-
-@keyframes slideRightDesktop {
-  from {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(80%);
-    opacity: 1;
   }
 }
