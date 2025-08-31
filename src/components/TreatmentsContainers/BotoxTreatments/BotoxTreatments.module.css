@@ -23,6 +23,7 @@
 .chooseBy {
   display: flex;
   gap: 50px;
+  cursor: pointer;
 }
 
 .pdoTitle {

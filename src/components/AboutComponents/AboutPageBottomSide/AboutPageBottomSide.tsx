@@ -14,13 +14,15 @@ export const AboutPageBottomSide = () => {
       className={styles.aboutPageBottomSide}
       style={isMobile ? { backgroundImage: `url(${aboutBottomSideImg})` } : {}}
     >
-      <AboutBookAConsultation />
-      {!isMobile && (
-        <div
-          className={styles.aboutBookAConsultationImg}
-          style={{ backgroundImage: `url(${aboutBottomSideImg})` }}
-        ></div>
-      )}
+      <div className={styles.aboutPageBottomSideBefore}>
+        <AboutBookAConsultation />
+        {!isMobile && (
+          <div
+            className={styles.aboutBookAConsultationImg}
+            style={{ backgroundImage: `url(${aboutBottomSideImg})` }}
+          ></div>
+        )}
+      </div>
     </div>
   );
 };

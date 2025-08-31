@@ -30,7 +30,7 @@ export const Biorevitalization = () => {
           PDO THREADS
         </span>
         <span className={cn(styles.pdoTitle, "poppins-regular")}>
-          PRP(Platelet-Rich Plasma)
+          {"PRP(Platelet-Rich Plasma)".toUpperCase()}
         </span>
       </div>
       <div className={cn(styles.textBlock, "poppins-semibold")}>

@@ -17,11 +17,39 @@
     background-color: #ffedeb;
   }
 }
+
 .menuWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-right: 24px;
+  text-decoration: none;
+}
+
+.logoSvg {
+  width: 25vw;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.phoneNumberWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phoneNumber {
+  font-size: 14px;
+  color: #8a4f4cbe;
 }
 
 .menu {
@@ -50,7 +78,7 @@
     min-width: max-content;
     padding: 0;
     padding-top: 12px;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 24px;
   }

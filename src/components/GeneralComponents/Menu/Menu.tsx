@@ -1,11 +1,14 @@
 import MenuItem from "../../../features/MenuItem";
+import cn from "classnames";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import menuImg from "/pngs/burgerMenuImg.png";
-import manuCloseImg from "/pngs/mobileMenuCloseIcon.png";
+import LogoSVG from "../../../assets/Logo.svg";
+import menuCloseImg from "/pngs/mobileMenuCloseIcon.png";
 
 import styles from "./Menu.module.css";
 import { useState } from "react";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import { Link } from "react-router";
 
 export const Menu = () => {
   const { width } = useWindowSize();
@@ -30,13 +33,19 @@ export const Menu = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             <img
-              src={isMobile && isOpen ? manuCloseImg : menuImg}
+              src={isMobile && isOpen ? menuCloseImg : menuImg}
               alt="menu"
               className={styles.menuImg}
             />
           </button>
           {isOpen && (
             <ul className={styles.menu}>
+              <Link to="/" className={styles.logo}>
+                <div
+                  className={styles.logoSvg}
+                  style={{ backgroundImage: `url(${LogoSVG})` }}
+                ></div>
+              </Link>
               <MenuItem
                 redirectUrl="/about"
                 name="ABOUT US"
@@ -57,6 +66,13 @@ export const Menu = () => {
                 name="BLOG"
                 onClose={handleCloseModal}
               />
+              <div className={styles.phoneNumberWrapper}>
+                <img src={"/pngs/phone.png"} alt="phone" />
+                <span className={cn(styles.phoneNumber, "poppins-light")}>
+                  {" "}
+                  818 747 2470
+                </span>
+              </div>
             </ul>
           )}
         </div>

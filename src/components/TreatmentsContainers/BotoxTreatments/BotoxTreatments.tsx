@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import IPLPhototherapyHeader from "/pngs/IPLPhototherapyHeader.png";
+import botoxTreatmentHeaderImg from "/pngs/botoxTreatmentHeaderImg.png";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";
@@ -18,7 +18,7 @@ export const BotoxTreatments = () => {
       <div className={styles.botoxTreatmentsTopSide}>
         <SingleTreatmentHeader
           title="Botox Treatments"
-          imgUrl={IPLPhototherapyHeader}
+          imgUrl={botoxTreatmentHeaderImg}
         />
         <SingleTreatmentDescription description={description} />
         <SingleTreatmentWhenBlock
@@ -31,10 +31,10 @@ export const BotoxTreatments = () => {
         <h3
           className={cn(styles.pdoTitle, styles.underline, "poppins-regular")}
         >
-          CHOOSE By TREATMENT
+          {"CHOOSE By TREATMENT".toUpperCase()}
         </h3>
         <h3 className={cn(styles.pdoTitle, "poppins-regular")}>
-          CHOOSE by Medication
+          {"CHOOSE by Medication".toUpperCase()}
         </h3>
       </div>
       <div className={styles.cards}>
