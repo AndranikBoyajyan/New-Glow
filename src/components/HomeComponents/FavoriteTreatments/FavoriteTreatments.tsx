@@ -20,11 +20,9 @@ export const FavoriteTreatments = () => {
               className={styles.favoriteTreatment}
               style={{ backgroundImage: `url(${treatment.imgUrl})` }}
             >
-              {/* <Link className={styles.link}> */}
               <span className={cn(styles.name, "poppins-regular")}>
                 {treatment.name}
               </span>
-              {/* </Link> */}
             </div>
           </Link>
         ))}

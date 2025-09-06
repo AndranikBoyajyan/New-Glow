@@ -18,7 +18,6 @@ export const Menu = () => {
 
   const handleCloseModal = () => {
     setIsOpen(false);
-    console.log("close");
   };
 
   return (

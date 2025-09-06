@@ -9,8 +9,21 @@ import styles from "./Biorevitalization.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
 import Button from "../../../shared/Button";
+import { useCallback, useState } from "react";
+import Dialog from "../../../shared/Dialog";
+import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
 
 export const Biorevitalization = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = useCallback(() => {
+    setIsOpen(true);
+  }, [setIsOpen]);
+
+  const handleCloseModal = useCallback(() => {
+    setIsOpen(false);
+  }, [setIsOpen]);
+
   return (
     <div className={styles.biorevitalization}>
       <div className={styles.biorevitalizationTopSide}>
@@ -48,9 +61,20 @@ export const Biorevitalization = () => {
           <TreatmentPageCard key={cardInfo.id} {...cardInfo} />
         ))}
         <div className={styles.biorevitalizationBookButton}>
-          <Button content="Book a consultation" className="button_dark" />
+          <Button
+            content="Book a consultation"
+            className="button_dark"
+            handleClick={handleOpenModal}
+          />
         </div>
       </div>
+      <Dialog
+        open={isOpen}
+        onClose={handleCloseModal}
+        contentClassName={"consultationPopupContent"}
+      >
+        <BookAConsultationPopup onClose={handleCloseModal} />
+      </Dialog>
     </div>
   );
 };
