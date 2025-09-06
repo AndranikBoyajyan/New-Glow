@@ -1,0 +1,50 @@
+.consultationFormWrapper {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 37.5px 22.5px;
+  background-color: #f4eae991;
+}
+
+.description {
+  font-size: 16px;
+  color: #3c3c3cdd;
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input {
+  width: 100%;
+  height: 37px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 24px;
+  background-color: #f4eae9;
+  border: none;
+  font-size: 16px;
+}
+
+.form button {
+  width: 50%;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

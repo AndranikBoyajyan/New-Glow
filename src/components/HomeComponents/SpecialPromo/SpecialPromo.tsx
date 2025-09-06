@@ -4,11 +4,24 @@ import styles from "./SpecialPromo.module.css";
 import Button from "../../../shared/Button";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import { useCallback, useState } from "react";
+import Dialog from "../../../shared/Dialog";
+import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
 
 export const SpecialPromo = () => {
   const { width } = useWindowSize();
-
   const isMobile = width < MEDIA_TABLET_SMALL;
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = useCallback(() => {
+    setIsOpen(true);
+  }, [setIsOpen]);
+
+  const handleCloseModal = useCallback(() => {
+    setIsOpen(false);
+  }, [setIsOpen]);
+
   return (
     <div className={styles.specialPromo}>
       <div className={styles.specialPromoContent}>
@@ -34,6 +47,7 @@ export const SpecialPromo = () => {
                 content="Book a consultation"
                 className="button_dark"
                 font="poppins-medium"
+                handleClick={handleOpenModal}
               />
               <Button
                 content="See all promos"
@@ -57,6 +71,13 @@ export const SpecialPromo = () => {
           )}
         </div>
       </div>
+      <Dialog
+        open={isOpen}
+        onClose={handleCloseModal}
+        contentClassName={"consultationPopupContent"}
+      >
+        <BookAConsultationPopup onClose={handleCloseModal} />
+      </Dialog>
     </div>
   );
 };

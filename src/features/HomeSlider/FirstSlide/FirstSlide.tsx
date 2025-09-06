@@ -6,9 +6,13 @@ import TitleSvg from "../../../assets/RadianceBeginsHere.svg";
 import styles from "./FirstSlide.module.css";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import { useCallback, useState } from "react";
+import { Dialog } from "../../../shared/Dialog/Dialog";
+import BookAConsultationPopup from "../../../components/GeneralComponents/BookAConsultationPopup";
 
 export const FirstSlide = () => {
   const { width } = useWindowSize();
+  const [isOpen, setIsOpen] = useState(false);
 
   const isMobile = width < MEDIA_TABLET_SMALL;
   const navigate = useNavigate();
@@ -16,6 +20,14 @@ export const FirstSlide = () => {
   const handleSeeAllTreatments = () => {
     navigate("all-treatments");
   };
+
+  const handleOpenModal = useCallback(() => {
+    setIsOpen(true);
+  }, [setIsOpen]);
+
+  const handleCloseModal = useCallback(() => {
+    setIsOpen(false);
+  }, [setIsOpen]);
 
   return (
     <div
@@ -42,7 +54,11 @@ export const FirstSlide = () => {
             to improve your skin health from the inside out.
           </span>
           <div className={styles.buttons}>
-            <Button content="Book a consultation" className="button_dark" />
+            <Button
+              content="Book a consultation"
+              className="button_dark"
+              handleClick={handleOpenModal}
+            />
             <Button
               content="See all treatments"
               className="button_light_transparent"
@@ -52,6 +68,13 @@ export const FirstSlide = () => {
         </div>
       </div>
       <div className={cn(styles.img)}></div>
+      <Dialog
+        open={isOpen}
+        onClose={handleCloseModal}
+        contentClassName={"consultationPopupContent"}
+      >
+        <BookAConsultationPopup onClose={handleCloseModal} />
+      </Dialog>
     </div>
   );
 };

@@ -11,8 +11,20 @@ import Button from "../../../shared/Button";
 
 import styles from "./BotoxTreatments.module.css";
 import SingleTreatmentPatientsResults from "../../../entities/SingleTreatmentPatientsResults";
+import Dialog from "../../../shared/Dialog";
+import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
+import { useCallback, useState } from "react";
 
 export const BotoxTreatments = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = useCallback(() => {
+    setIsOpen(true);
+  }, [setIsOpen]);
+
+  const handleCloseModal = useCallback(() => {
+    setIsOpen(false);
+  }, [setIsOpen]);
   return (
     <div className={styles.botoxTreatments}>
       <div className={styles.botoxTreatmentsTopSide}>
@@ -42,12 +54,23 @@ export const BotoxTreatments = () => {
           <TreatmentPageCard key={cardInfo.id} {...cardInfo} />
         ))}
         <div className={styles.botoxTreatmentsBookButton}>
-          <Button content="Book a consultation" className="button_dark" />
+          <Button
+            content="Book a consultation"
+            className="button_dark"
+            handleClick={handleOpenModal}
+          />
         </div>
       </div>
       <div className={styles.patientsResultsWrapper}>
         <SingleTreatmentPatientsResults firstName="Eyeopening and Bunny Lines botox (Xeomin)" />
       </div>
+      <Dialog
+        open={isOpen}
+        onClose={handleCloseModal}
+        contentClassName={"consultationPopupContent"}
+      >
+        <BookAConsultationPopup onClose={handleCloseModal} />
+      </Dialog>
     </div>
   );
 };

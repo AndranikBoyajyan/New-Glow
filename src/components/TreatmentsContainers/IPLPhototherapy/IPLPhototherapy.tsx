@@ -9,8 +9,21 @@ import styles from "./IPLPhototherapy.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
 import Button from "../../../shared/Button";
+import { useCallback, useState } from "react";
+import Dialog from "../../../shared/Dialog";
+import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
 
 export const IPLPhototherapy = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = useCallback(() => {
+    setIsOpen(true);
+  }, [setIsOpen]);
+
+  const handleCloseModal = useCallback(() => {
+    setIsOpen(false);
+  }, [setIsOpen]);
+
   return (
     <div className={styles.IPLPhototherapy}>
       <div className={styles.IPLPhototherapyTopSide}>
@@ -30,9 +43,20 @@ export const IPLPhototherapy = () => {
           <TreatmentPageCard key={cardInfo.id} {...cardInfo} />
         ))}
         <div className={styles.IplBookButton}>
-          <Button content="Book a consultation" className="button_dark" />
+          <Button
+            content="Book a consultation"
+            className="button_dark"
+            handleClick={handleOpenModal}
+          />
         </div>
       </div>
+      <Dialog
+        open={isOpen}
+        onClose={handleCloseModal}
+        contentClassName={"consultationPopupContent"}
+      >
+        <BookAConsultationPopup onClose={handleCloseModal} />
+      </Dialog>
     </div>
   );
 };

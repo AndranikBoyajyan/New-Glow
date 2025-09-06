@@ -5,6 +5,7 @@
   @media (width < 768px) {
     background-image: url("/pngs/homepageSlider2.png");
     width: 100%;
+    height: 720px;
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
@@ -59,7 +60,7 @@
 .svg {
   width: 90%;
   min-height: 360px;
-  background-size: 100% 100%;
+  background-size: contain;
   background-repeat: no-repeat;
 
   @media (width < 1248px) {

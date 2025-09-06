@@ -21,8 +21,8 @@
   }
 }
 
-.aboutPageBottomSideBefore::before {
-  @media (width < 768px) {
+@media (width < 768px) {
+  .aboutPageBottomSide::before {
     content: "";
     position: absolute;
     top: 0;
