@@ -40,6 +40,11 @@
   font-size: 32px;
 }
 
+.title_32_white {
+  font-size: 32px;
+  color: #fff;
+}
+
 .title_40 {
   font-size: 40px;
 }

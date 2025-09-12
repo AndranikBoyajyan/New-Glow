@@ -1,7 +1,10 @@
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import cn from "classnames";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import Button from "../../../shared/Button";
 import Title from "../../../shared/Title";
+import instagramLogo from "/pngs/instagramLogo.png";
+
 import styles from "./subscribe.module.css";
 
 export const Subscribe = () => {
@@ -14,15 +17,22 @@ export const Subscribe = () => {
         <Title
           text="Subscribe to our news"
           font="fjalla-one-regular"
-          className={isMobile ? "title_32" : ""}
+          className={isMobile ? "title_32_white" : "title_white"}
         />
       </div>
       <form className={styles.emailForm}>
         <input type="email" placeholder="Email" className={styles.emailInput} />
-        <Button className="button_send" content=">" />
+        <Button className="button_send_white" content=">" />
       </form>
-      <div className={styles.divider}></div>
-      <div className={styles.ourLinks}></div>
+      <span className={cn(styles.followText, "poppins-regular")}>
+        Follow us on social media
+      </span>
+      <div className={styles.instagramWrapper}>
+        <img src={instagramLogo} alt="insta" />
+        <span className={cn(styles.instagramText, "poppins-regular")}>
+          INSTAGRAM
+        </span>
+      </div>
     </div>
   );
 };
