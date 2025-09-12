@@ -111,7 +111,8 @@
   color: #8a4f4c;
 }
 
-.button_send {
+.button_send,
+.button_send_white {
   width: 48px;
   display: flex;
   align-items: center;
@@ -121,6 +122,11 @@
   border: none;
   color: #fff;
   background-color: #b36a66;
+}
+
+.button_send_white {
+  background-color: #fff;
+  color: #b36a66;
 }
 
 .button_see_more {

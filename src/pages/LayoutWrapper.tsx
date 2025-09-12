@@ -10,7 +10,6 @@ const LayoutWrapper = () => {
     <div className={styles.wrapper}>
       <Header />
       <Outlet />
-      <Subscribe />
       <Footer />
     </div>
   );
