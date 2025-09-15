@@ -5,7 +5,9 @@ import ExpertCardSlider from "./ExpertCardSlider";
 export const ExpertCard = () => {
   return (
     <div className={styles.expertCard}>
-      <Title text="OUR EXPERTS" font="fjalla-one-regular" />
+      <div className={styles.titleWrapper}>
+        <Title text="OUR EXPERTS" font="fjalla-one-regular" />
+      </div>
       <ExpertCardSlider />
     </div>
   );

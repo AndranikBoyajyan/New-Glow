@@ -3,20 +3,29 @@ import footerImg from "/pngs/footerImg.png";
 import Subscribe from "../Subscribe";
 import LogoSVGWhite from "../../../assets/logoSvgWhite.svg";
 import { Link } from "react-router";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={cn(styles.footer, "poppins-regular")}>
       <div className={styles.topSideWithDivider}>
         <div className={styles.footerTopSideWrapper}>
           <Subscribe />
-          <div
-            className={styles.footerImg}
-            style={{ backgroundImage: `url(${footerImg})` }}
-          ></div>
+          {!isMobile && (
+            <div
+              className={styles.footerImg}
+              style={{
+                backgroundImage: `url(${footerImg})`,
+              }}
+            ></div>
+          )}
         </div>
-        <div className={styles.divider}></div>
+        {!isMobile && <div className={styles.divider}></div>}
       </div>
       <div className={styles.texts}>
         <div className={styles.topSide}>
@@ -97,7 +106,11 @@ export const Footer = () => {
           <span>Privacy Policy</span>
         </div>
       </div>
-      <Link to="/" className={styles.logo}>
+      <Link
+        to="/"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={styles.logo}
+      >
         <div
           className={styles.logoSvg}
           style={{ backgroundImage: `url(${LogoSVGWhite})` }}

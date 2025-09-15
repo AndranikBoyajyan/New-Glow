@@ -1,9 +1,7 @@
-import { Link } from "react-router";
 import FavoriteTreatmentsDescription from "../../../entities/FavoriteTreatmentsDescription";
-import cn from "classnames";
 import { favoriteTreatments } from "./constants/favoriteTreatments";
 import styles from "./FavoriteTreatments.module.css";
-import { getTreatmentPath } from "../../../helpers/getTreatmentPath";
+import SingleFavoriteTreatment from "./SingleFavoriteTreatment";
 
 export const FavoriteTreatments = () => {
   return (
@@ -11,20 +9,7 @@ export const FavoriteTreatments = () => {
       <FavoriteTreatmentsDescription />
       <div className={styles.imgs}>
         {favoriteTreatments.map((treatment) => (
-          <Link
-            to={`/${getTreatmentPath(treatment.name)}`}
-            key={treatment.id}
-            className={styles.link}
-          >
-            <div
-              className={styles.favoriteTreatment}
-              style={{ backgroundImage: `url(${treatment.imgUrl})` }}
-            >
-              <span className={cn(styles.name, "poppins-regular")}>
-                {treatment.name}
-              </span>
-            </div>
-          </Link>
+          <SingleFavoriteTreatment key={treatment.id} treatment={treatment} />
         ))}
       </div>
     </div>

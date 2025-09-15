@@ -43,17 +43,13 @@
 
 .logoSvg {
   width: 14vw;
-  height: 30px;
+  height: 48px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
   @media (width <= 1280px) {
     width: 20vw;
-  }
-
-  @media (width < 768px) {
-    height: 16px;
   }
 }
 
