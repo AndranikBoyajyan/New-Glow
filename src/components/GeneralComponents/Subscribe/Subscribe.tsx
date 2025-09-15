@@ -28,7 +28,7 @@ export const Subscribe = () => {
         Follow us on social media
       </span>
       <div className={styles.instagramWrapper}>
-        <img src={instagramLogo} alt="insta" />
+        <img src={instagramLogo} className={styles.instagramLogo} alt="insta" />
         <span className={cn(styles.instagramText, "poppins-regular")}>
           INSTAGRAM
         </span>

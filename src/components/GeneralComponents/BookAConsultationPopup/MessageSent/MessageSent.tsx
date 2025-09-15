@@ -26,7 +26,14 @@ export const MessageSent = ({ onClose }: MessageSentProps) => {
         style={{ backgroundImage: `url(${sentMessage})` }}
         className={styles.sentImage}
       ></div>
-      <Link to="/" onClick={onClose} className={styles.link}>
+      <Link
+        to="/"
+        onClick={() => {
+          onClose();
+          return window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        className={styles.link}
+      >
         <span className={cn(styles.redirectText, "poppins-medium")}>
           GO HOME
         </span>

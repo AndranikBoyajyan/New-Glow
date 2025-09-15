@@ -131,7 +131,7 @@
   background-image: url("/pngs/homepageSlider1.png");
   height: 92vh;
   background-position: right;
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   flex: 2;
 

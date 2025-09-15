@@ -13,3 +13,9 @@ export interface ILaserPageTreatmentCardList {
   duration: string;
   price: string;
 }
+
+export interface IFavoriteTreatmentsDescription {
+  id: number;
+  imgUrl: string;
+  name: string;
+}

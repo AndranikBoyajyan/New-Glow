@@ -40,7 +40,14 @@ export const Menu = () => {
           </button>
           {isOpen && (
             <ul className={styles.menu}>
-              <Link to="/" className={styles.logo} onClick={handleCloseModal}>
+              <Link
+                to="/"
+                className={styles.logo}
+                onClick={() => {
+                  handleCloseModal();
+                  return window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 <div
                   className={styles.logoSvg}
                   style={{ backgroundImage: `url(${LogoSVG})` }}

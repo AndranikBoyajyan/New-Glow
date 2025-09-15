@@ -1,4 +1,6 @@
-export const favoriteTreatments = [
+import type { IFavoriteTreatmentsDescription } from "../../../../types/global.types";
+
+export const favoriteTreatments: IFavoriteTreatmentsDescription[] = [
   {
     id: 1,
     imgUrl: "./pngs/favoritePng1.png",

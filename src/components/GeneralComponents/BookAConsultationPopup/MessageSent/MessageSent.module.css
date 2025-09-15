@@ -6,6 +6,17 @@
   gap: 20px;
   padding: 37.5px 22.5px;
   background-color: #f4eae991;
+
+  @media (width < 1280px) {
+    padding: 32px 18px;
+    gap: 16px;
+  }
+
+  @media (width < 768px) {
+    width: 100%;
+    padding: 24px 12px;
+    gap: 12px;
+  }
 }
 
 .descriptionWrapper {
@@ -15,6 +26,16 @@
   text-align: center;
   padding: 22.5px 44.5px;
   gap: 16px;
+
+  @media (width < 1280px) {
+    padding: 18px 28px;
+    gap: 12px;
+  }
+
+  @media (width < 768px) {
+    padding: 16px 24px;
+    gap: 8px;
+  }
 }
 
 .descriptionWrapper h2 {
@@ -24,6 +45,16 @@
 .description {
   font-size: 16px;
   color: #3c3c3c;
+
+  @media (width < 1280px) {
+    font-size: 14px;
+  }
+
+  @media (width < 768px) {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
 }
 
 .sentImage {

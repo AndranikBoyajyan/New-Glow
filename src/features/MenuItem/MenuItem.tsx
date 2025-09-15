@@ -56,7 +56,10 @@ export const MenuItem: FC<MenuItemProps> = ({
         <Link
           to={redirectUrl ?? ""}
           className={styles.redirectLink}
-          onClick={onClose}
+          onClick={() => {
+            closeMenu();
+            return window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
           <span className={cn(styles.itemName, "poppins-light")}>{name}</span>
         </Link>
