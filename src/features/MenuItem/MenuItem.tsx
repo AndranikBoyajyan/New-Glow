@@ -57,7 +57,7 @@ export const MenuItem: FC<MenuItemProps> = ({
           to={redirectUrl ?? ""}
           className={styles.redirectLink}
           onClick={() => {
-            closeMenu();
+            onClose?.();
             return window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >

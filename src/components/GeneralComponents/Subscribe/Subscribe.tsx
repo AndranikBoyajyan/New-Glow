@@ -6,6 +6,7 @@ import Title from "../../../shared/Title";
 import instagramLogo from "/pngs/instagramLogo.png";
 
 import styles from "./subscribe.module.css";
+import { Link } from "react-router";
 
 export const Subscribe = () => {
   const { width } = useWindowSize();
@@ -27,12 +28,15 @@ export const Subscribe = () => {
       <span className={cn(styles.followText, "poppins-regular")}>
         Follow us on social media
       </span>
-      <div className={styles.instagramWrapper}>
+      <Link
+        to={"https://www.instagram.com/newglowmedspa"}
+        className={styles.instagramWrapper}
+      >
         <img src={instagramLogo} className={styles.instagramLogo} alt="insta" />
         <span className={cn(styles.instagramText, "poppins-regular")}>
           INSTAGRAM
         </span>
-      </div>
+      </Link>
     </div>
   );
 };
