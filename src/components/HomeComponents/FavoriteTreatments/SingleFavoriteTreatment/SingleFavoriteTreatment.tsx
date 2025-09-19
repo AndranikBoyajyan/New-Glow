@@ -18,7 +18,6 @@ export const SingleFavoriteTreatment = ({
     <Link
       to={`/${getTreatmentPath(treatment.name)}`}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      key={treatment.id}
       className={cn(styles.link, styles[treatmentClassname])}
     >
       <div

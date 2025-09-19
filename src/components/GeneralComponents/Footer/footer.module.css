@@ -182,9 +182,12 @@
 }
 
 .address > .note {
-  width: 40%;
   margin: 0 auto;
   font-size: 12px;
+
+  @media (width < 768px) {
+    width: 40%;
+  }
 }
 
 .infoTitle {

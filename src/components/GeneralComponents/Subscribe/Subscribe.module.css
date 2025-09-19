@@ -31,8 +31,9 @@
   }
 
   @media (width < 768px) {
-    width: 84%;
+    width: 100%;
     gap: 32px;
+    /* flex-direction: column; */
   }
 }
 
@@ -53,6 +54,7 @@
   justify-content: center;
   align-items: center;
   gap: 6px;
+  text-decoration: none;
 }
 
 .instagramLogo {

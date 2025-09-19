@@ -97,6 +97,10 @@
 .title_h1_40 {
   font-size: 40px; /* For All Treatments page (Mobile) */
   color: #8a4f4c;
+
+  @media (width < 768px) {
+    text-align: center;
+  }
 }
 
 .title_h1_36 {

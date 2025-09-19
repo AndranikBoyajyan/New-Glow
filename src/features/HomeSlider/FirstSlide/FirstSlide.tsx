@@ -1,6 +1,6 @@
 import cn from "classnames";
 import Button from "../../../shared/Button";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import TitleSvg from "../../../assets/RadianceBeginsHere.svg";
 
 import styles from "./FirstSlide.module.css";
@@ -59,11 +59,18 @@ export const FirstSlide = () => {
               className="button_dark"
               handleClick={handleOpenModal}
             />
-            <Button
-              content="See all treatments"
-              className="button_light_transparent"
-              handleClick={handleSeeAllTreatments}
-            />
+            <Link
+              to={"/all-treatments"}
+              onClick={() => {
+                handleSeeAllTreatments();
+                return window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              <Button
+                content="See all treatments"
+                className="button_light_transparent"
+              />
+            </Link>
           </div>
         </div>
       </div>
