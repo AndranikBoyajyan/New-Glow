@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When is biorevitalization a Good Choice",
-  imgUrl: "/pngs/IPLPhototherapyWhen.png",
+  imgUrl: "/pngs/biorevitalizationWhen.png",
   answers: [
     {
       answer: "For Skin aging prevention",

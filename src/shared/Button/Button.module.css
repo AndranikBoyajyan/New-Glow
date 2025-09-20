@@ -155,7 +155,8 @@
   padding: 10px 16px;
   height: 40px;
   background-color: transparent;
-  border: 1px solid #b36a66;
-  color: #b36a66;
+  border: 1px solid #8a4f4c;
+  border-radius: 4px;
+  color: #8a4f4c;
   font-size: 12px;
 }

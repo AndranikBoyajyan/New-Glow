@@ -39,9 +39,17 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
         [styles.singleTreatmentHeaderBackGroundImg]: !isMobile,
       })}
     >
-      <div className={styles.singleTreatmentHeaderContent}>
+      <div
+        className={cn(styles.singleTreatmentHeaderContent, {
+          [styles.laserContent]: isLaserPage,
+        })}
+      >
         {!isMobile && (
-          <div className={styles.singleTreatmentHeaderTitle}>
+          <div
+            className={cn(styles.singleTreatmentHeaderTitle, {
+              [styles.laserTitle]: isLaserPage,
+            })}
+          >
             <Title text={title} className={getTitleClassName()} isH1 />
           </div>
         )}

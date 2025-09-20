@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When Are Facials a Good Choice",
-  imgUrl: "/pngs/chemicalPeelsWhenImg.png",
+  imgUrl: "/pngs/facialsWhen.png",
   answers: [
     {
       answer: "Acne or Breakouts",

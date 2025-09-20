@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When is moroheus 8 a Good Choice",
-  imgUrl: "/pngs/chemicalPeelsWhenImg.png",
+  imgUrl: "/pngs/morpheusWhen.png",
   answers: [
     {
       answer: " Early Signs of Aging",
