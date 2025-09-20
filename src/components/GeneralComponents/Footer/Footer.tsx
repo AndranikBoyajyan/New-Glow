@@ -1,3 +1,4 @@
+import { useState } from "react";
 import cn from "classnames";
 import footerImg from "/pngs/footerImg.png";
 import Subscribe from "../Subscribe";
@@ -7,11 +8,13 @@ import { useWindowSize } from "../../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 import { getTreatmentPath } from "../../../helpers/getTreatmentPath";
 import { TREATMENTS } from "../../../constants/treatments";
+import MapModal from "../../../features/MapModal";
 
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
   const { width } = useWindowSize();
+  const [isMapOpen, setIsMapOpen] = useState(false);
 
   const isMobile = width < MEDIA_TABLET_SMALL;
 
@@ -131,8 +134,26 @@ export const Footer = () => {
                 OUR ADDRESS
               </span>
               <span className={cn(styles.note, "poppins-regular")}>
-                10651 Riverside Drive Toluca Lake, CA 91602 newglow@yahoo.com
+                <button
+                  className={cn(styles.addressButton, "poppins-regular")}
+                  onClick={() => setIsMapOpen(true)}
+                >
+                  10651 Riverside Drive Toluca Lake, CA 91602
+                </button>
+                <Link
+                  to={"mailto:newglow@yahoo.com"}
+                  className={styles.phoneNumberLink}
+                >
+                  <span>newglow@yahoo.com</span>
+                </Link>
               </span>
+              {isMapOpen && (
+                <MapModal
+                  open={isMapOpen}
+                  address="10651 Riverside Drive Toluca Lake, CA 91602"
+                  onClose={() => setIsMapOpen(false)}
+                />
+              )}
             </div>
           </div>
         </div>
