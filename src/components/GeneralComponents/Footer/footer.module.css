@@ -148,6 +148,12 @@
   max-height: 200px;
   gap: 5px;
   font-size: 12px;
+
+  @media (width < 768px) {
+    max-height: 160px;
+    gap: 3px;
+    font-size: 10px;
+  }
 }
 
 .sitemapLink {
@@ -194,10 +200,17 @@
 .address > .note {
   margin: 0 auto;
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
 
   @media (width < 768px) {
     width: 40%;
   }
+}
+
+.addressButton {
+  all: unset;
+  cursor: pointer;
 }
 
 .infoTitle {

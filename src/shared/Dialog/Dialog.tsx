@@ -47,7 +47,9 @@ export const Dialog = ({
         tabIndex={-1}
         onBlur={handleBlur}
       >
-        {title && <h2 className={styles.modalTitle}>{title}</h2>}
+        {title && (
+          <h2 className={cn(styles.modalTitle, "poppins-regular")}>{title}</h2>
+        )}
 
         <div className={styles.modalBody}>{children}</div>
 
