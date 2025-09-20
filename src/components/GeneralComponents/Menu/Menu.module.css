@@ -52,6 +52,10 @@
   color: #8a4f4cbe;
 }
 
+.phoneNumberLink {
+  text-decoration: none;
+}
+
 .menu {
   min-width: 545px;
   height: 36px;

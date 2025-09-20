@@ -5,12 +5,18 @@ import LogoSVGWhite from "../../../assets/logoSvgWhite.svg";
 import { Link } from "react-router";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+import { getTreatmentPath } from "../../../helpers/getTreatmentPath";
+import { TREATMENTS } from "../../../constants/treatments";
+
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
   const { width } = useWindowSize();
 
   const isMobile = width < MEDIA_TABLET_SMALL;
+
+  const handleRedirect = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <div className={cn(styles.footer, "poppins-regular")}>
       <div className={styles.topSideWithDivider}>
@@ -32,10 +38,12 @@ export const Footer = () => {
           <div className={styles.contacts}>
             <div className={styles.contactWrapper}>
               <img src={"/pngs/phoneWhite.png"} alt="phone" />
-              <span className={cn(styles.phoneNumber, "poppins-bold")}>
-                {" "}
-                818 747 2470
-              </span>
+              <Link to={"tel:+18187472470"} className={styles.phoneNumberLink}>
+                <span className={cn(styles.phoneNumber, "poppins-regular")}>
+                  {" "}
+                  818 747 2470
+                </span>
+              </Link>
             </div>
             <div className={styles.contactWrapper}>
               <img src={"/pngs/email.png"} alt="email" />
@@ -59,23 +67,51 @@ export const Footer = () => {
               Sitemap
             </h6>
             <div className={cn(styles.sitemapItems, "poppins-regular")}>
-              <span>Home</span>
-              <span>About</span>
-              <span>All treatments</span>
-              <span>Blog</span>
-              <span>Specials</span>
-              <span>Botox treatments</span>
-              <span>Facial contouring</span>
-              <span>Fat Dissolving</span>
-              <span>Chemical peels</span>
-              <span>Vitamin therapy</span>
-              <span>Biorevitalization</span>
-              <span>Microneedling</span>
-              <span>Morpheus 8</span>
-              <span>Facial</span>
-              <span>IPL Phototherapy</span>
-              <span>Laser hair removal</span>
-              <span>Sculptra</span>
+              <Link
+                className={styles.sitemapLink}
+                to={"/"}
+                onClick={handleRedirect}
+              >
+                <span>Home</span>
+              </Link>
+              <Link
+                className={styles.sitemapLink}
+                to={"/about"}
+                onClick={handleRedirect}
+              >
+                <span>About</span>
+              </Link>
+              <Link
+                className={styles.sitemapLink}
+                to={"/all-treatments"}
+                onClick={handleRedirect}
+              >
+                <span>All treatments</span>
+              </Link>
+              <Link
+                className={styles.sitemapLink}
+                to={"/blog"}
+                onClick={handleRedirect}
+              >
+                <span>Blog</span>
+              </Link>
+              <Link
+                className={styles.sitemapLink}
+                to={"/specials"}
+                onClick={handleRedirect}
+              >
+                <span>Specials</span>
+              </Link>
+              {TREATMENTS.map((treatment) => (
+                <Link
+                  key={treatment.id}
+                  className={styles.sitemapLink}
+                  to={`/${getTreatmentPath(treatment.name)}`}
+                  onClick={handleRedirect}
+                >
+                  <span>{treatment.name}</span>
+                </Link>
+              ))}
             </div>
           </div>
           <div className={styles.openHours}>

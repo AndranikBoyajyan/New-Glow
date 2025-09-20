@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/viPeelPrecisionPlus.png",
+    imgUrl: "/pngs/morpheus8FaceNeck.png",
     name: "Face & Neck",
     description:
       "This combination treatment smooths and firms both the face and neck, addressing sagging skin and poor definition in the jawline and under-chin area. It helps create a more youthful, lifted appearance without surgery.",
@@ -10,7 +10,7 @@ export const cardsInfos = [
   },
   {
     id: 2,
-    imgUrl: "/pngs/viPeelPurifywPrecisionPlus.png",
+    imgUrl: "/pngs/morpheus8Eyes.png",
     name: "Eyes",
     description:
       "This combination treatment smooths and firms both the face and neck, addressing sagging skin and poor definition in the jawline and under-chin area. It helps create a more youthful, lifted appearance without surgery.",
@@ -19,7 +19,7 @@ export const cardsInfos = [
   },
   {
     id: 3,
-    imgUrl: "/pngs/bodyViPeelSmallArea.png",
+    imgUrl: "/pngs/morpheus8Decollete.png",
     name: "Décolleté",
     description:
       "For the chest area, Morpheus8 tightens thin, crepey skin and smooths out wrinkles caused by aging or sun damage. It also enhances skin tone and texture, making the décolleté look firmer and more refreshed.",
@@ -28,7 +28,7 @@ export const cardsInfos = [
   },
   {
     id: 4,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/morpheus8Hyperhidrosis.png",
     name: "Hyperhidrosis",
     description:
       "Morpheus8 can help reduce excessive sweating by targeting and weakening overactive sweat glands with radiofrequency heat. It’s commonly used for underarms and provides long-lasting relief after just a few sessions.",
@@ -37,7 +37,7 @@ export const cardsInfos = [
   },
   {
     id: 5,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/morpheus8SmellArea.png",
     name: "Body (Small Area)",
     description:
       "Morpheus8 can help reduce excessive sweating by targeting and weakening overactive sweat glands with radiofrequency heat. It’s commonly used for underarms and provides long-lasting relief after just a few sessions.",
@@ -46,7 +46,7 @@ export const cardsInfos = [
   },
   {
     id: 6,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/morpheus8MediumArea.png",
     name: "Body (Medium Area)",
     description:
       "Morpheus8 can help reduce excessive sweating by targeting and weakening overactive sweat glands with radiofrequency heat. It’s commonly used for underarms and provides long-lasting relief after just a few sessions.",
@@ -55,7 +55,7 @@ export const cardsInfos = [
   },
   {
     id: 7,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/morpheus8LargeArea.png",
     name: "Body (Large Area)",
     description:
       "Morpheus8 can help reduce excessive sweating by targeting and weakening overactive sweat glands with radiofrequency heat. It’s commonly used for underarms and provides long-lasting relief after just a few sessions.",

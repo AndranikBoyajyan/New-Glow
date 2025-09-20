@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/viPeelPrecisionPlus.png",
+    imgUrl: "/pngs/signatureFacial.png",
     name: "Signature Facial",
     description:
       "The Signature Facial is a deep pore cleansing facial, great for all skin types which helps to relax tension in the face, brighten, and improve the overall appearance of your skin. We customize each Signature Facial to help firm, hydrate, reduce roughness, restore its optimum texture, and achieve splendid glow. This treatment is tailored to your skin type and concerns and includes dual cleansing, steam, mechanical or chemical exfoliation, Ultrasound Skin Scrubber and/or extractions, hydrating Hydrojelly mask, relaxing massage techniques, treatment serum, and moisturizer based on the skin’s needs.",
@@ -10,7 +10,7 @@ export const cardsInfos = [
   },
   {
     id: 2,
-    imgUrl: "/pngs/viPeelPurifywPrecisionPlus.png",
+    imgUrl: "/pngs/akneDetox.png",
     name: "Acne detox facial",
     description:
       "The Signature Facial is a deep pore cleansing facial, great for all skin types which helps to relax tension in the face, brighten, and improve the overall appearance of your skin. We customize each Signature Facial to help firm, hydrate, reduce roughness, restore its optimum texture, and achieve splendid glow. This treatment is tailored to your skin type and concerns and includes dual cleansing, steam, mechanical or chemical exfoliation, Ultrasound Skin Scrubber and/or extractions, hydrating Hydrojelly mask, relaxing massage techniques, treatment serum, and moisturizer based on the skin’s needs.",
@@ -19,7 +19,7 @@ export const cardsInfos = [
   },
   {
     id: 3,
-    imgUrl: "/pngs/bodyViPeelSmallArea.png",
+    imgUrl: "/pngs/guaSha.png",
     name: "Gua sha Facial",
     description:
       "The Gua Sha Facial is focused on lifting, relaxing muscle tension, rejuvenating, healing, and inducing glow. Specific massage techniques manually and with jade stones/rollers are used in the Gua Sha treatment to invite healing into the skin, detoxify stagnant lymph, sculpt the face, firm and lift the skin, release tension, and aid in alleviating blocked sinuses and congestion.",
@@ -28,7 +28,7 @@ export const cardsInfos = [
   },
   {
     id: 4,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/oxygen.png",
     name: "Oxygen facial",
     description:
       "The Oxygen Facial is great for all skin types, especially oily, congested, or breakout prone. The procedure uses pure oxygen molecules to hydrate the skin and stimulate collagen production. The facial also infuses the skin with serums that contain vitamins, antioxidants, peptides, and hyaluronic acid. Results include improved clarity, texture, and skin tone. Recommended to do 4-5 treatments for the optimal results.",
@@ -37,7 +37,7 @@ export const cardsInfos = [
   },
   {
     id: 5,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/hydro.png",
     name: "Hydro Facial",
     description:
       "HydroDermabrasion is a unique and transformative facial treatment that combines the benefits of diamond microdermabrasion and hydrodermabrasion, providing deep skin cleansing and rejuvenation, efficiently removing dead skin cells and enhancing skin texture.",
@@ -46,7 +46,7 @@ export const cardsInfos = [
   },
   {
     id: 6,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/customFacial.png",
     name: "New glow custom facial",
     description:
       "The New Glow Custom Facial starts with a consultation to address skin conditions and concerns, a cleanse/steam treatment, and skin analysis. The Custom Facial will include customized exfoliation achieved by a Latic Acid Solution, Ultrasound Skin Scrubber, Microdermabrasion or HydroDermabrasion.  This one-of-a-kind glow inducing facial can include any or all of the following treatments: Diamond Microdermabrasion, LED light therapy, Microcurrent, Electroporation Therapy (MesoTherapy), RadioFrequency, HydroDermabrasion, Oxygen Infusion, Ultrasound, and High Frequency.",
@@ -55,7 +55,7 @@ export const cardsInfos = [
   },
   {
     id: 7,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/rfTightening.png",
     name: "RF Tightening Facial (Face)",
     description:
       "The Non-Invasive Fractional Radio Frequency Facial uses gentle electrical current that helps improve skin tone, production of collagen and elastin. This new level of anti-aging technology helps treat wrinkles, photo-damaged skin, post-acne scars and stretchmarks without any pain or downtime.",
@@ -64,7 +64,7 @@ export const cardsInfos = [
   },
   {
     id: 8,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/rfTighteningFaceNeck.png",
     name: "RF Tightening Facial (Face/Neck)",
     description:
       "The Non-Invasive Fractional Radio Frequency Facial uses gentle electrical current that helps improve skin tone, production of collagen and elastin. This new level of anti-aging technology helps treat wrinkles, photo-damaged skin, post-acne scars and stretchmarks without any pain or downtime.",
@@ -73,16 +73,25 @@ export const cardsInfos = [
   },
   {
     id: 9,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/pngs/dermaplaning.png",
     name: "Dermaplaning (Add On)",
+    description:
+      "Resurfacing procedure that uses sterile surgical scalpel to exfoliate the epidermis and rids the skin of fine vellus hair; revealing a smoother and brighter complexion.",
+    duration: "30 Min",
+    price: "$45",
+  },
+  {
+    id: 10,
+    imgUrl: "/pngs/microcurrent.png",
+    name: "Microcurrent (Add On)",
     description:
       "Our effective Microcurrent treatment can be an add-on to any of our facials to give you immediate results of a smooth, facelifted appearance. This “non-surgical facelift” treatment stimulates collagen and elastin production, giving you firmer, more youthful-looking skin.",
     duration: "30 Min",
     price: "$45",
   },
   {
-    id: 10,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    id: 11,
+    imgUrl: "/pngs/microdermabrasion.png",
     name: "Microdermabrasion (Add On)",
     description:
       "Microdermabrasion is an exfoliation treatment that uses a diamond-tipped wand and vacuum suction to remove dead skin and debris, while stimulating collagen production to restore elasticity. Microdermabrasion not only helps with rough textured skin, but also helps with acne scarring, dull skin, and fine lines.",
