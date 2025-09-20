@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When is microneedling a Good Choice",
-  imgUrl: "/pngs/chemicalPeelsWhenImg.png",
+  imgUrl: "/pngs/microWhen.png",
   answers: [
     {
       answer: " Fine Lines and Wrinkles",

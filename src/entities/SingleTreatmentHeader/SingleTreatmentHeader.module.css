@@ -29,6 +29,10 @@
   justify-content: space-between;
 }
 
+.laserContent {
+  flex-direction: row;
+}
+
 .singleTreatmentHeaderBackGroundImg {
   height: 420px;
   background-image: url("/pngs/treatmentHeaderBgImg.png");
@@ -60,6 +64,11 @@
   @media (width < 1024px) {
     margin-right: 4vw;
   }
+}
+
+.laserTitle {
+  margin-right: 0;
+  margin-left: 4vw;
 }
 
 .singleTreatmentHeaderImage,

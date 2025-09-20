@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When is IV  vitamin therapy a Good Choice",
-  imgUrl: "/pngs/chemicalPeelsWhenImg.png",
+  imgUrl: "/pngs/vitaminWhen.png",
   answers: [
     {
       answer: "You feel constantly tired, stressed, or low on energy",

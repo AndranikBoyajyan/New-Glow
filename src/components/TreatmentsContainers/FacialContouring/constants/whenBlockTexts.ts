@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When Is Facial Contouring a Good Choice",
-  imgUrl: "/pngs/chemicalPeelsWhenImg.png",
+  imgUrl: "/pngs/facialContWhen.png",
   answers: [
     {
       answer: "Lack of definition in cheekbones, jawline, or chin",
