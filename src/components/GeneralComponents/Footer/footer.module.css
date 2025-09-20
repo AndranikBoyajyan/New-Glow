@@ -99,6 +99,11 @@
   font-size: 16px;
 }
 
+.phoneNumberLink {
+  text-decoration: none;
+  color: #fff;
+}
+
 .additionalContact {
   font-size: 14px;
 }
@@ -143,6 +148,11 @@
   max-height: 200px;
   gap: 5px;
   font-size: 12px;
+}
+
+.sitemapLink {
+  text-decoration: none;
+  color: #fff;
 }
 
 .openHours {

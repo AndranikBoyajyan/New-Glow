@@ -87,6 +87,10 @@
   }
 }
 
+.phoneNumberLink {
+  text-decoration: none;
+}
+
 .phoneNumber {
   font-size: 20px;
   color: #b36a66;

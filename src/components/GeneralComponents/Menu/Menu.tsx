@@ -75,10 +75,15 @@ export const Menu = () => {
               />
               <div className={styles.phoneNumberWrapper}>
                 <img src={"/pngs/phone.png"} alt="phone" />
-                <span className={cn(styles.phoneNumber, "poppins-light")}>
-                  {" "}
-                  818 747 2470
-                </span>
+                <Link
+                  to={"tel:+18187472470"}
+                  className={styles.phoneNumberLink}
+                >
+                  <span className={cn(styles.phoneNumber, "poppins-regular")}>
+                    {" "}
+                    818 747 2470
+                  </span>
+                </Link>
               </div>
             </ul>
           )}
