@@ -148,6 +148,7 @@
   max-height: 200px;
   gap: 5px;
   font-size: 12px;
+  justify-content: start;
 
   @media (width < 768px) {
     max-height: 160px;
