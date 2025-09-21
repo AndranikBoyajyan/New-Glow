@@ -24,14 +24,6 @@ export const MapModal = ({ open, onClose, address }: MapModalProps) => {
           Google Maps
         </Link>
         <Link
-          to={`https://yandex.com/maps/?text=${encodedAddress}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          Yandex Maps
-        </Link>
-        <Link
           to={`http://maps.apple.com/?q=${encodedAddress}`}
           target="_blank"
           rel="noopener noreferrer"
