@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/morpheus8LargeArea.png",
+    imgUrl: "/pngs/cheeks.png",
     name: "Cheeks (2 Syringes)",
     description:
       "Nose fillers allow for reshaping and smoothing bumps or asymmetry in the nose without surgery. It’s a quick, minimally invasive procedure that improves the nose profile with no downtime. Results are temporary but can last up to 12–18 months with proper care.",

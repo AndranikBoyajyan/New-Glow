@@ -13,12 +13,16 @@ interface SingleTreatmentHeaderProps {
   title: string;
   imgUrl: string;
   isLaserPage?: boolean;
+  isFacialsPage?: boolean;
+  isFacialCont?: boolean;
 }
 
 export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
   title,
   imgUrl,
   isLaserPage,
+  isFacialsPage,
+  isFacialCont,
 }) => {
   const { width } = useWindowSize();
 
@@ -33,6 +37,9 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
 
     return "title_h1_86";
   };
+
+  const isReverseContent = isLaserPage || isFacialsPage || isFacialCont;
+
   return (
     <div
       className={cn(styles.singleTreatmentHeader, {
@@ -41,13 +48,13 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
     >
       <div
         className={cn(styles.singleTreatmentHeaderContent, {
-          [styles.laserContent]: isLaserPage,
+          [styles.reverseContent]: isReverseContent,
         })}
       >
         {!isMobile && (
           <div
             className={cn(styles.singleTreatmentHeaderTitle, {
-              [styles.laserTitle]: isLaserPage,
+              [styles.reverseTitle]: isReverseContent,
             })}
           >
             <Title text={title} className={getTitleClassName()} isH1 />

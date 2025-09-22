@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import chemicalPeelsHeaderImg from "/pngs/chemicalPeelsHeaderImg.png";
+import morpheus8Header from "/pngs/morpheus8Header.png";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";
@@ -13,10 +13,7 @@ export const Morpheus8 = () => {
   return (
     <div className={styles.morpheus}>
       <div className={styles.morpheusTopSide}>
-        <SingleTreatmentHeader
-          title="Morpheus-8"
-          imgUrl={chemicalPeelsHeaderImg}
-        />
+        <SingleTreatmentHeader title="Morpheus-8" imgUrl={morpheus8Header} />
         <SingleTreatmentDescription description={description} />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}

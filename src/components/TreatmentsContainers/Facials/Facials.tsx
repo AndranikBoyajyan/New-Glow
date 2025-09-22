@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import chemicalPeelsHeaderImg from "/pngs/chemicalPeelsHeaderImg.png";
+import facialsHeader from "/pngs/facialsHeader.png";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";
@@ -15,7 +15,8 @@ export const Facials = () => {
       <div className={styles.facialsTopSide}>
         <SingleTreatmentHeader
           title="Facials"
-          imgUrl={chemicalPeelsHeaderImg}
+          imgUrl={facialsHeader}
+          isFacialsPage
         />
         <SingleTreatmentDescription description={description} />
         <SingleTreatmentWhenBlock

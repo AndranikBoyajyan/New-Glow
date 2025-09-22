@@ -29,7 +29,7 @@
   justify-content: space-between;
 }
 
-.laserContent {
+.reverseContent {
   flex-direction: row;
 }
 
@@ -66,7 +66,7 @@
   }
 }
 
-.laserTitle {
+.reverseTitle {
   margin-right: 0;
   margin-left: 4vw;
 }

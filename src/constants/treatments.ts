@@ -68,7 +68,7 @@ export const TREATMENTS: ITreatment[] = [
   {
     id: 9,
     name: "Facials",
-    imgUrl: "./pngs/Facial.png",
+    imgUrl: "./pngs/facial.png",
     categoryId: 2,
     description:
       "Facials target your skin's unique needs, from hydration to anti-aging, giving you a healthy, luminous complexion with every session.",
@@ -76,7 +76,7 @@ export const TREATMENTS: ITreatment[] = [
   {
     id: 10,
     name: "Facial contouring",
-    imgUrl: "./pngs/FacialContouring.png",
+    imgUrl: "./pngs/facialContouring.png",
     categoryId: 1,
     description:
       "Dermal fillers restore lost volume, smooth wrinkles, and enhance facial contours with immediate, natural-looking results. Ideal for lips, cheeks, jawline, and under-eye areas.",
