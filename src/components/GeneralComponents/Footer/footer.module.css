@@ -150,8 +150,8 @@
   font-size: 12px;
   justify-content: start;
 
-  @media (width < 768px) {
-    max-height: 160px;
+  @media (width <= 768px) {
+    max-height: 170px;
     gap: 3px;
     font-size: 10px;
   }
