@@ -10,7 +10,7 @@ import TreatmentPageCard from "../../../entities/TreatmentPageCard";
 import Button from "../../../shared/Button";
 
 import styles from "./BotoxTreatments.module.css";
-import SingleTreatmentPatientsResults from "../../../entities/SingleTreatmentPatientsResults";
+import PatientsResults from "../../../entities/SingleTreatmentPatientsResults";
 import Dialog from "../../../shared/Dialog";
 import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
 import { useCallback, useState } from "react";
@@ -62,7 +62,7 @@ export const BotoxTreatments = () => {
         </div>
       </div>
       <div className={styles.patientsResultsWrapper}>
-        <SingleTreatmentPatientsResults firstName="Eyeopening and Bunny Lines botox (Xeomin)" />
+        <PatientsResults firstName="Eyeopening and Bunny Lines botox (Xeomin)" />
       </div>
       <Dialog
         open={isOpen}

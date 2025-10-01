@@ -19,3 +19,16 @@ export interface IFavoriteTreatmentsDescription {
   imgUrl: string;
   name: string;
 }
+
+export interface IBlogCardsInfo {
+  id: number;
+  specialistName: string;
+  date: string;
+  readTime: string;
+  title: string;
+  description: string;
+  views: number;
+  comments: number;
+  imgUrl: string;
+  likeCount?: number;
+}

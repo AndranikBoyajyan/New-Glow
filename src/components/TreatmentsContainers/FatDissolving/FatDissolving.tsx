@@ -7,7 +7,7 @@ import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock
 import { whenBlockTexts } from "./constants/whenBlockTexts";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
-import SingleTreatmentPatientsResults from "../../../entities/SingleTreatmentPatientsResults";
+import PatientsResults from "../../../entities/SingleTreatmentPatientsResults";
 import Button from "../../../shared/Button";
 import styles from "./fatDissolving.module.css";
 import Dialog from "../../../shared/Dialog";
@@ -52,7 +52,7 @@ export const FatDissolving = () => {
         </div>
       </div>
       <div className={styles.patientsResultsWrapper}>
-        <SingleTreatmentPatientsResults firstName="Acne detox facial (1 course completed) " />
+        <PatientsResults firstName="Acne detox facial (1 course completed) " />
       </div>
       <Dialog
         open={isOpen}

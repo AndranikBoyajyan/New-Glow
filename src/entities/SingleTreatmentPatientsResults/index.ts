@@ -1,3 +1,3 @@
-import { SingleTreatmentPatientsResults } from "./SingleTreatmentPatientsResults";
+import { PatientsResults } from "./SingleTreatmentPatientsResults";
 
-export default SingleTreatmentPatientsResults;
+export default PatientsResults;

@@ -1,0 +1,94 @@
+.blogPageCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.blogPageCardImg {
+  width: 100%;
+  height: 240px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 12px;
+}
+
+.nameDateAndTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nameWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.specialistName {
+  font-size: 16px;
+}
+
+.dateAndReadTime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.descriptionWrapper {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #3c3c3c;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewsAndComments {
+  display: flex;
+  gap: 20px;
+}
+
+.count {
+  color: #3c3c3c;
+  font-size: 14px;
+}
+
+.views,
+.comments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
