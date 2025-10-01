@@ -7,6 +7,7 @@ import About from "./pages/About";
 import AllTreatments from "./pages/AllTreatments";
 import SingleTreatment from "./pages/SingleTreatment";
 import ErrorPage from "./pages/Error404";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/:name" element={<SingleTreatment />} />
           <Route path="about/:name" element={<SingleTreatment />} />
           <Route path="all-treatments/:name" element={<SingleTreatment />} />
+          <Route path="blog" element={<Blog />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
         <Route path="pageNotFound" element={<ErrorPage />} />

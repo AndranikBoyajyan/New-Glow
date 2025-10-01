@@ -5,7 +5,7 @@ import type { FC } from "react";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 
-interface SingleTreatmentPatientsResultsProps {
+interface PatientsResultsProps {
   firstName: string;
   // beforeImg1: string;
   // afterImg1: string;
@@ -15,9 +15,7 @@ interface SingleTreatmentPatientsResultsProps {
 }
 // TODO
 
-export const SingleTreatmentPatientsResults: FC<
-  SingleTreatmentPatientsResultsProps
-> = (props) => {
+export const PatientsResults: FC<PatientsResultsProps> = (props) => {
   const { width } = useWindowSize();
   const { firstName } = props;
 

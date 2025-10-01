@@ -24,6 +24,11 @@
   font-size: 24px;
 }
 
+.title_18_textColor {
+  color: #3c3c3c;
+  font-size: 18px;
+}
+
 .title_20 {
   font-size: 20px;
 }
@@ -78,7 +83,7 @@
 }
 
 .title_h1_86 {
-  font-size: 86px; /* For Single Treatment page */
+  font-size: 86px; /* For Single Treatment and Blog page */
 }
 
 .title_h1_82 {
