@@ -9,29 +9,33 @@ import styles from "./BlogPageCard.module.css";
 
 interface BlogPageCardProps {
   specialistName: string;
+  id: number;
   date: string;
   readTime: string;
   title: string;
   description: string;
   views: number;
-  comments: number;
+  commentsCount: number;
   imgUrl: string;
   likeCount?: number;
+  handleNavigatePost: (id: number) => void;
 }
 
 export const BlogPageCard = ({
   specialistName,
+  id,
   date,
   readTime,
   title,
   description,
   views,
-  comments,
+  commentsCount,
   imgUrl,
   likeCount,
+  handleNavigatePost,
 }: BlogPageCardProps) => {
   return (
-    <div className={styles.blogPageCard}>
+    <div className={styles.blogPageCard} onClick={() => handleNavigatePost(id)}>
       <div
         className={styles.blogPageCardImg}
         style={{ backgroundImage: `url(${imgUrl})` }}
@@ -60,7 +64,7 @@ export const BlogPageCard = ({
         </div>
         <div className={styles.descriptionWrapper}>
           <span className={cn(styles.description, "poppins-regular")}>
-            {description}
+            {description}...
           </span>
         </div>
         <div className={styles.divider}></div>
@@ -75,7 +79,7 @@ export const BlogPageCard = ({
             <div className={styles.comments}>
               <img src={CommentSvg} alt="" />
               <span className={cn(styles.count, "poppins-regular")}>
-                {comments}
+                {commentsCount}
               </span>
             </div>
           </div>

@@ -28,7 +28,12 @@ export interface IBlogCardsInfo {
   title: string;
   description: string;
   views: number;
-  comments: number;
+  commentsCount: number;
   imgUrl: string;
   likeCount?: number;
+  allDescription:
+    | {
+        subTitle: string;
+        description: string;
+      }[];
 }
