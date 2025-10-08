@@ -1,0 +1,25 @@
+.singleBlogRecentPosts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.titleWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seeAll {
+  font-size: 18px;
+  color: #3c3c3c;
+  cursor: pointer;
+}
+
+.blogRecentPosts {
+  display: flex;
+  gap: 16px;
+}

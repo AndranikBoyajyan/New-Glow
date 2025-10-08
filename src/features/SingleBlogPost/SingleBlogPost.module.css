@@ -1,0 +1,95 @@
+.singleBlogPost {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 42px;
+  gap: 78px;
+}
+
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  gap: 32px;
+}
+
+.infoWrapper,
+.updated {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 18;
+  color: #3c3c3c;
+}
+
+.descriptionAndImg {
+  width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18;
+  color: #3c3c3c;
+  margin: 10px auto;
+}
+
+.allDescriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subTitle,
+.description {
+  font-size: 18px;
+  color: #3c3c3c;
+}
+
+.subTitle {
+  font-size: 22px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #3c3c3c;
+}
+
+.linksAndActions {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+  padding-left: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #3c3c3c;
+}
+
+.text,
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
