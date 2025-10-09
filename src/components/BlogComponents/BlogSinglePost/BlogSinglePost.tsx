@@ -4,9 +4,5 @@ import SingleBlogPost from "../../../features/SingleBlogPost";
 export const BlogSinglePost = () => {
   const { id } = useParams();
 
-  return (
-    <div>
-      <SingleBlogPost id={Number(id)} />
-    </div>
-  );
+  return <SingleBlogPost id={Number(id)} />;
 };

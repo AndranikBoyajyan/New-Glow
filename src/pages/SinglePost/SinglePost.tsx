@@ -1,9 +1,5 @@
 import BlogSinglePost from "../../components/BlogComponents/BlogSinglePost";
 
 export const SinglePost = () => {
-  return (
-    <div>
-      <BlogSinglePost />
-    </div>
-  );
+  return <BlogSinglePost />;
 };

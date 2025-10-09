@@ -10,6 +10,9 @@ import heartSvg from "../../../src/assets/HeartSvg.svg";
 
 import styles from "./SingleBlogPost.module.css";
 import SingleBlogRecentPosts from "../SingleBlogRecentPosts";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
+import PatientsResults from "../../entities/SingleTreatmentPatientsResults";
 
 interface SingleBlogPostProps {
   id: number;
@@ -17,6 +20,10 @@ interface SingleBlogPostProps {
 
 export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
   const post = BLOG_CARDS_INFO.find((post) => post.id === id);
+
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
 
   if (!post) return null;
 
@@ -27,7 +34,7 @@ export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
           <Title
             text={post.title}
             font="fjalla-one-regular"
-            className="title_42"
+            className={isMobile ? "title_36" : "title_42"}
           />
         </div>
         <div className={cn(styles.infoWrapper, "poppins-regular")}>
@@ -40,10 +47,18 @@ export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
           <span>Updated: Nov 14, 2024</span>
         </div>
         <div className={styles.descriptionAndImg}>
-          <img src={post.imgUrl} alt="post" height={500} />
+          <img
+            src={post.imgUrl}
+            alt="post"
+            height={500}
+            className={styles.img}
+          />
           <div className={styles.allDescriptions}>
-            {post.allDescription?.map((desc) => (
-              <div className={styles.descriptionWrapper}>
+            {post.allDescription?.map((desc, idx) => (
+              <div
+                key={desc.subTitle + idx}
+                className={styles.descriptionWrapper}
+              >
                 <span className={cn(styles.subTitle, "poppins-regular")}>
                   {desc.subTitle}
                 </span>
@@ -78,6 +93,7 @@ export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
         <div className={styles.divider}></div>
       </div>
       <SingleBlogRecentPosts id={id} />
+      <PatientsResults firstName="Acne detox facial (1 course completed) " />
     </div>
   );
 };

@@ -5,6 +5,10 @@
   align-items: start;
   padding: 42px;
   gap: 78px;
+
+  @media (width < 768px) {
+    padding: 24px;
+  }
 }
 
 .contentWrapper {
@@ -13,6 +17,10 @@
   flex-direction: column;
   padding: 0 40px;
   gap: 32px;
+
+  @media (width < 768px) {
+    padding: 0 12px;
+  }
 }
 
 .infoWrapper,
@@ -20,8 +28,13 @@
   display: flex;
   gap: 16px;
   align-items: center;
-  font-size: 18;
+  font-size: 18px;
   color: #3c3c3c;
+
+  @media (width < 768px) {
+    font-size: 16px;
+    gap: 8px;
+  }
 }
 
 .descriptionAndImg {
@@ -32,9 +45,31 @@
   gap: 16px;
   align-items: center;
   justify-content: center;
-  font-size: 18;
   color: #3c3c3c;
   margin: 10px auto;
+
+  @media (width < 1248px) {
+    width: 100%;
+  }
+
+  @media (width < 768px) {
+    margin: 10px auto;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.img {
+  @media (width < 768px) {
+    width: 100%;
+    height: 360px;
+    padding: 0 12px;
+  }
+
+  @media (width < 506px) {
+    height: 300px;
+  }
 }
 
 .allDescriptions {
@@ -53,10 +88,18 @@
 .description {
   font-size: 18px;
   color: #3c3c3c;
+
+  @media (width < 768px) {
+    font-size: 16px;
+  }
 }
 
 .subTitle {
-  font-size: 22px;
+  font-size: 24px;
+
+  @media (width < 768px) {
+    font-size: 20px;
+  }
 }
 
 .divider {
