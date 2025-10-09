@@ -22,4 +22,8 @@
 .blogRecentPosts {
   display: flex;
   gap: 16px;
+
+  @media (width < 768px) {
+    flex-wrap: wrap;
+  }
 }
