@@ -8,13 +8,21 @@ import { whenBlockTexts } from "./constants/whenBlockTexts";
 import styles from "./morpheus-8.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const Morpheus8 = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={styles.morpheus}>
       <div className={styles.morpheusTopSide}>
         <SingleTreatmentHeader title="Morpheus-8" imgUrl={morpheus8Header} />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "Morpheus-8" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}

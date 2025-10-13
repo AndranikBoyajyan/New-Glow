@@ -8,8 +8,14 @@ import { whenBlockTexts } from "./constants/whenBlockTexts";
 import styles from "./laserHairRemoval.module.css";
 import { cardsInfos } from "./constants/CardInfo";
 import LaserPageTreatmentCard from "../../../entities/LaserPageTreatmentCard";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const LaserHairRemoval = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   return (
     <div className={styles.laserHairRemoval}>
       <div className={styles.laserHairRemovalTopSide}>
@@ -18,7 +24,10 @@ export const LaserHairRemoval = () => {
           imgUrl={LaserHairRemovalHeaderImg}
           isLaserPage
         />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "Laser Hair Removal" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}

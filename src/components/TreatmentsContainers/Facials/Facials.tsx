@@ -8,8 +8,14 @@ import { whenBlockTexts } from "./constants/whenBlockTexts";
 import styles from "./facials.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const Facials = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   return (
     <div className={styles.facials}>
       <div className={styles.facialsTopSide}>
@@ -18,7 +24,10 @@ export const Facials = () => {
           imgUrl={facialsHeader}
           isFacialsPage
         />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "Facials" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}

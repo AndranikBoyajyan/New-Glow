@@ -8,8 +8,14 @@ import { whenBlockTexts } from "./constants/whenBlockTexts";
 import styles from "./FacialContouring.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const FacialContouring = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   return (
     <div className={styles.facialContouring}>
       <div className={styles.facialContouringTopSide}>
@@ -18,7 +24,10 @@ export const FacialContouring = () => {
           imgUrl={facialContHeader}
           isFacialCont
         />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "Facial Contouring" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}

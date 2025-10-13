@@ -13,8 +13,14 @@ import styles from "./fatDissolving.module.css";
 import Dialog from "../../../shared/Dialog";
 import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
 import { useCallback, useState } from "react";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const FatDissolving = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenModal = useCallback(() => {
@@ -32,7 +38,10 @@ export const FatDissolving = () => {
           title="Fat Dissolving"
           imgUrl={FatDissolvingHeader}
         />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "Fat Dissolving" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}

@@ -1,19 +1,26 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import IPLPhototherapyHeader from "/pngs/IPLPhototherapyHeader.png";
+import biorevitalization from "/pngs/biorevitalization.png";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";
 import cn from "classnames";
 import { whenBlockTexts } from "./constants/whenBlockTexts";
-import styles from "./Biorevitalization.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
 import Button from "../../../shared/Button";
 import { useCallback, useState } from "react";
 import Dialog from "../../../shared/Dialog";
 import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
+
+import styles from "./Biorevitalization.module.css";
 
 export const Biorevitalization = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenModal = useCallback(() => {
@@ -29,9 +36,12 @@ export const Biorevitalization = () => {
       <div className={styles.biorevitalizationTopSide}>
         <SingleTreatmentHeader
           title="Biorevitalization"
-          imgUrl={IPLPhototherapyHeader}
+          imgUrl={biorevitalization}
         />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "Biorevitalization" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}

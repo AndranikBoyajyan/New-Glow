@@ -8,6 +8,7 @@ import {
   MEDIA_TABLET_LARGE,
   MEDIA_TABLET_SMALL,
 } from "../../constants/windowSizes";
+import SingleTreatmentHeaderMobile from "./SignleTreatmentHeaderMobile";
 
 interface SingleTreatmentHeaderProps {
   title: string;
@@ -41,32 +42,39 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
   const isReverseContent = isLaserPage || isFacialsPage || isFacialCont;
 
   return (
-    <div
-      className={cn(styles.singleTreatmentHeader, {
-        [styles.singleTreatmentHeaderBackGroundImg]: !isMobile,
-      })}
-    >
-      <div
-        className={cn(styles.singleTreatmentHeaderContent, {
-          [styles.reverseContent]: isReverseContent,
-        })}
-      >
-        {!isMobile && (
+    <>
+      {!isMobile ? (
+        <div
+          className={cn(styles.singleTreatmentHeader, {
+            [styles.singleTreatmentHeaderBackGroundImg]: !isMobile,
+          })}
+        >
           <div
-            className={cn(styles.singleTreatmentHeaderTitle, {
-              [styles.reverseTitle]: isReverseContent,
+            className={cn(styles.singleTreatmentHeaderContent, {
+              [styles.reverseContent]: isReverseContent,
             })}
           >
-            <Title text={title} className={getTitleClassName()} isH1 />
+            <div
+              className={cn(styles.singleTreatmentHeaderTitle, {
+                [styles.reverseTitle]: isReverseContent,
+              })}
+            >
+              <Title text={title} className={getTitleClassName()} isH1 />
+            </div>
+            <div
+              className={cn(styles.singleTreatmentHeaderImage, {
+                [styles.laserPageHeaderImage]: isLaserPage,
+              })}
+              style={{ backgroundImage: `url(${imgUrl})` }}
+            ></div>
           </div>
-        )}
-        <div
-          className={cn(styles.singleTreatmentHeaderImage, {
-            [styles.laserPageHeaderImage]: isLaserPage,
-          })}
-          style={{ backgroundImage: `url(${imgUrl})` }}
-        ></div>
-      </div>
-    </div>
+        </div>
+      ) : (
+        <SingleTreatmentHeaderMobile
+          imgUrl={imgUrl}
+          isLaserPage={isLaserPage}
+        />
+      )}
+    </>
   );
 };
