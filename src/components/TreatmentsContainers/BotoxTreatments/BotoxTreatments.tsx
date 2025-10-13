@@ -37,6 +37,7 @@ export const BotoxTreatments = () => {
         <SingleTreatmentHeader
           title="Botox Treatments"
           imgUrl={botoxTreatmentHeaderImg}
+          isBotoxPage
         />
         <SingleTreatmentDescription
           title={isMobile ? "Botox Treatments" : undefined}

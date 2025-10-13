@@ -16,6 +16,7 @@ interface SingleTreatmentHeaderProps {
   isLaserPage?: boolean;
   isFacialsPage?: boolean;
   isFacialCont?: boolean;
+  isBotoxPage?: boolean;
 }
 
 export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
@@ -24,6 +25,7 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
   isLaserPage,
   isFacialsPage,
   isFacialCont,
+  isBotoxPage,
 }) => {
   const { width } = useWindowSize();
 
@@ -73,6 +75,7 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
         <SingleTreatmentHeaderMobile
           imgUrl={imgUrl}
           isLaserPage={isLaserPage}
+          isBotoxPage={isBotoxPage}
         />
       )}
     </>

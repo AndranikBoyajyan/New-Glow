@@ -25,12 +25,12 @@
   background-position: center;
   background-size: 100% 100%;
   position: absolute;
-
-  @media (width < 504px) {
-    height: 100%;
-  }
 }
 
 .laserPageTreatmentImg {
   height: 130%;
+}
+
+.botoxPageTreatmentImg {
+  width: 100%;
 }

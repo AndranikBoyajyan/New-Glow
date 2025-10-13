@@ -44,7 +44,7 @@ export const TREATMENTS: ITreatment[] = [
   {
     id: 6,
     name: "Biorevitalization",
-    imgUrl: "./pngs/Biorevitalization.png",
+    imgUrl: "./pngs/biorevitalizationAT.png",
     categoryId: 1,
     description:
       "Biorevitalization is a non-surgical cosmetic treatment that rejuvenates the skin by deeply hydrating it and stimulating natural collagen production.",
