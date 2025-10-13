@@ -1,0 +1,83 @@
+.julySpecials {
+  width: 100%;
+  height: 880px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1f5684;
+  position: relative;
+}
+
+.julySpecialsTopImages {
+  display: flex;
+  align-items: center;
+}
+
+.julyStars {
+  width: 28vw;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.star2 {
+  width: 15vw;
+  height: 248px;
+}
+
+.julyFlag {
+  width: 100%;
+  height: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+  padding: 30px 102px;
+}
+
+.title {
+  font-size: 72px;
+  color: white;
+}
+
+.blocks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.block {
+  width: 100%;
+  height: 323px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffffd8;
+}
+
+.text1,
+.text2 {
+  font-size: 48px;
+  color: #012768;
+}
+
+.text2 {
+  font-size: 56px;
+  max-width: 70%;
+
+  @media (width < 1024) {
+    font-size: 40px;
+    max-width: 60%;
+  }
+}

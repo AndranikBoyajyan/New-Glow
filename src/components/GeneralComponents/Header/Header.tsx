@@ -1,4 +1,5 @@
 import LogoSVG from "../../../assets/Logo.svg";
+import LogoMobile from "../../../assets/LogoMobile.svg";
 import cn from "classnames";
 
 import styles from "./Header.module.css";
@@ -20,7 +21,11 @@ export const Header = () => {
       >
         <div
           className={styles.logoSvg}
-          style={{ backgroundImage: `url(${LogoSVG})` }}
+          style={{
+            backgroundImage: isMobile
+              ? `url(${LogoMobile})`
+              : `url(${LogoSVG})`,
+          }}
         ></div>
       </Link>
       <div className={styles.menu}>

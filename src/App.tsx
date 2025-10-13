@@ -9,6 +9,7 @@ import SingleTreatment from "./pages/SingleTreatment";
 import ErrorPage from "./pages/Error404";
 import Blog from "./pages/Blog";
 import SinglePost from "./pages/SinglePost";
+import Specials from "./pages/Specials";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="all-treatments/:name" element={<SingleTreatment />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:id" element={<SinglePost />} />
+          <Route path="specials" element={<Specials />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
         <Route path="pageNotFound" element={<ErrorPage />} />

@@ -80,6 +80,12 @@
   font-style: italic;
 }
 
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .poppins-bold-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 700;

@@ -16,6 +16,10 @@
   background-size: cover;
   background-blend-mode: multiply;
   border-radius: 16px;
+
+  @media (width < 504px) {
+    height: 40%;
+  }
 }
 
 .treatmentImg {
@@ -33,4 +37,12 @@
 
 .botoxPageTreatmentImg {
   width: 100%;
+}
+
+.facialsPageTreatmentImg {
+  width: 80%;
+
+  @media (width < 504px) {
+    width: 100%;
+  }
 }

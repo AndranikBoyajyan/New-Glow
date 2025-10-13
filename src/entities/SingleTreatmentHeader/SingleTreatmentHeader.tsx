@@ -76,6 +76,7 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
           imgUrl={imgUrl}
           isLaserPage={isLaserPage}
           isBotoxPage={isBotoxPage}
+          isFacialsPage={isFacialsPage}
         />
       )}
     </>
