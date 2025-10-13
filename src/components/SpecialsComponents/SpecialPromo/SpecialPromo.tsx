@@ -7,10 +7,13 @@ import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 import { useCallback, useState } from "react";
 import Dialog from "../../../shared/Dialog";
 import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
+import { useNavigate } from "react-router";
 
 export const SpecialPromo = () => {
   const { width } = useWindowSize();
   const isMobile = width < MEDIA_TABLET_SMALL;
+
+  const navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,6 +24,11 @@ export const SpecialPromo = () => {
   const handleCloseModal = useCallback(() => {
     setIsOpen(false);
   }, [setIsOpen]);
+
+  const handleRedirect = () => {
+    navigate("specials");
+    return window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className={styles.specialPromo}>
@@ -53,6 +61,7 @@ export const SpecialPromo = () => {
                 content="See all promos"
                 className="button_light_transparent"
                 font="poppins-medium"
+                handleClick={handleRedirect}
               />
             </div>
           </div>

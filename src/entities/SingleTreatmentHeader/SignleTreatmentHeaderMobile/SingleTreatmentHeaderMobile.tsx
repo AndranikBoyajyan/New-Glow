@@ -7,12 +7,14 @@ interface SingleTreatmentHeaderMobileProps {
   imgUrl: string;
   isLaserPage?: boolean;
   isBotoxPage?: boolean;
+  isFacialsPage?: boolean;
 }
 
 export const SingleTreatmentHeaderMobile = ({
   imgUrl,
   isLaserPage,
   isBotoxPage,
+  isFacialsPage,
 }: SingleTreatmentHeaderMobileProps) => {
   return (
     <div className={styles.headerMobileWrapper}>
@@ -26,6 +28,7 @@ export const SingleTreatmentHeaderMobile = ({
         className={cn(styles.treatmentImg, {
           [styles.laserPageTreatmentImg]: isLaserPage,
           [styles.botoxPageTreatmentImg]: isBotoxPage,
+          [styles.facialsPageTreatmentImg]: isFacialsPage,
         })}
         style={{
           backgroundImage: `url(${imgUrl})`,
