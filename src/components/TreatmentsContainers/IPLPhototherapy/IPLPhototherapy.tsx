@@ -12,6 +12,8 @@ import Button from "../../../shared/Button";
 import { useCallback, useState } from "react";
 import Dialog from "../../../shared/Dialog";
 import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const IPLPhototherapy = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +26,10 @@ export const IPLPhototherapy = () => {
     setIsOpen(false);
   }, [setIsOpen]);
 
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   return (
     <div className={styles.IPLPhototherapy}>
       <div className={styles.IPLPhototherapyTopSide}>
@@ -31,7 +37,10 @@ export const IPLPhototherapy = () => {
           title="IPL Phototherapy"
           imgUrl={IPLPhototherapyHeader}
         />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "IPL Phototherapy" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}

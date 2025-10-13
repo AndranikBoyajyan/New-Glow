@@ -8,8 +8,13 @@ import { whenBlockTexts } from "./constants/whenBlockTexts";
 import styles from "./VitaminTherapy.module.css";
 import { cardsInfos } from "./constants/cardsInfo";
 import TreatmentPageCard from "../../../entities/TreatmentPageCard";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const VitaminTherapy = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={styles.vitaminTherapy}>
       <div className={styles.vitaminTherapyTopSide}>
@@ -17,7 +22,10 @@ export const VitaminTherapy = () => {
           title="IV Vitamin Therapy"
           imgUrl={vitaminHeader}
         />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "IV Vitamin Therapy" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}

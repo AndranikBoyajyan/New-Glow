@@ -14,8 +14,14 @@ import PatientsResults from "../../../entities/SingleTreatmentPatientsResults";
 import Dialog from "../../../shared/Dialog";
 import BookAConsultationPopup from "../../GeneralComponents/BookAConsultationPopup";
 import { useCallback, useState } from "react";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 
 export const BotoxTreatments = () => {
+  const { width } = useWindowSize();
+
+  const isMobile = width < MEDIA_TABLET_SMALL;
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenModal = useCallback(() => {
@@ -32,7 +38,10 @@ export const BotoxTreatments = () => {
           title="Botox Treatments"
           imgUrl={botoxTreatmentHeaderImg}
         />
-        <SingleTreatmentDescription description={description} />
+        <SingleTreatmentDescription
+          title={isMobile ? "Botox Treatments" : undefined}
+          description={description}
+        />
         <SingleTreatmentWhenBlock
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}
