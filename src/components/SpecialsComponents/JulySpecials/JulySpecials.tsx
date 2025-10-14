@@ -1,33 +1,16 @@
 import cn from "classnames";
-import julyImg1 from "/pngs/julyImg1.png";
-import julyImg2 from "/pngs/julyImg2.png";
-import julyFlag from "/pngs/julyFlag.png";
+import julySpecialBg from "../../../assets/julySpecialBg.svg";
 
 import styles from "./JulySpecials.module.css";
 
 export const JulySpecials = () => {
   return (
-    <div className={styles.julySpecials}>
-      <div className={styles.julySpecialsTopImages}>
-        <div
-          style={{
-            backgroundImage: `url(${julyImg1})`,
-          }}
-          className={cn(styles.julyStars, styles.star1)}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url(${julyImg2})`,
-          }}
-          className={cn(styles.julyStars, styles.star2)}
-        ></div>
-      </div>
-      <div
-        style={{
-          backgroundImage: `url(${julyFlag})`,
-        }}
-        className={styles.julyFlag}
-      ></div>
+    <div
+      className={styles.julySpecials}
+      style={{
+        backgroundImage: `url(${julySpecialBg})`,
+      }}
+    >
       <div className={styles.content}>
         <div className={styles.titleWrapper}>
           <span className={cn(styles.title, "poppins-bold")}>

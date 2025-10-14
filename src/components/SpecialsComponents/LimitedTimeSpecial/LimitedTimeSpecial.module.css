@@ -1,0 +1,112 @@
+.limitedTimeSpecialBg {
+  width: 100%;
+  height: 1080px;
+  background-image: url("../../../assets/limitedTimeBgColors.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.limitedTimeSpecialBgImg {
+  width: 100%;
+  height: 100%;
+  background-image: url("/pngs/specialsBg2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 216px;
+}
+
+.titleWrapper {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.titleTexts {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+.titleTexts h2:nth-child(1) {
+  margin-left: 20px;
+}
+.titleTexts h2:nth-child(2) {
+  margin-left: 80px;
+}
+.titleTexts h2:nth-child(3) {
+  margin-left: 140px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 100px;
+}
+
+.svgsWrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.topText {
+  width: 100%;
+  position: relative;
+}
+
+.bottomText {
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 32%;
+  align-self: center;
+}
+
+.svgsWrapper img {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.topText .svgStroke {
+  z-index: 2;
+}
+.topText .svgFill {
+  z-index: 1;
+}
+
+.bottomText .free {
+  width: 38%;
+}
+
+.bottomText .freeStroke {
+  width: 38%;
+}
+
+.underLineContainer {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}

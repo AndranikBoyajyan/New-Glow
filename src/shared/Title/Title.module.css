@@ -62,6 +62,11 @@
   font-size: 36px;
 }
 
+.title_h1_70 {
+  font-size: 70px;
+  color: #ffedeb;
+}
+
 .title_h1_120 {
   font-size: 120px; /* For About page */
 }
@@ -84,6 +89,10 @@
 
 .title_h1_86 {
   font-size: 86px; /* For Single Treatment and Blog page */
+}
+
+.title_h1_80 {
+  font-size: 80px;
 }
 
 .title_h1_82 {
@@ -110,4 +119,13 @@
 
 .title_h1_36 {
   font-size: 36px; /* For Single Treatment page (Mobile) */
+}
+
+.special_absolute_100 {
+  z-index: 4;
+  font-size: 100px;
+  background: linear-gradient(90deg, #fff, #ffc2bf);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }

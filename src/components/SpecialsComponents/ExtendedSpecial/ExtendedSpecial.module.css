@@ -1,0 +1,18 @@
+.extendedSpecial {
+  width: 100%;
+  height: 765px;
+  background-image: url("../../../assets/expendedSpecialSvg.svg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+}
+.extendedSpecialBgImg {
+  width: 48%;
+  height: 96%;
+  align-self: flex-end;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
