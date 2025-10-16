@@ -33,7 +33,7 @@ export interface IBlogCardsInfo {
   likeCount?: number;
   allDescription:
     | {
-        subTitle: string;
+        subTitle?: string;
         description: string;
       }[];
 }

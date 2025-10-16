@@ -56,7 +56,7 @@ export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
           <div className={styles.allDescriptions}>
             {post.allDescription?.map((desc, idx) => (
               <div
-                key={desc.subTitle + idx}
+                key={desc.description.slice(0, 10) + idx}
                 className={styles.descriptionWrapper}
               >
                 <span className={cn(styles.subTitle, "poppins-regular")}>
