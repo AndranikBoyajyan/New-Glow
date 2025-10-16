@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When Botox Is the Best Choice",
-  imgUrl: "/pngs/botoxTreatmentsWhenImg.png",
+  imgUrl: "/webpImages/botoxTreatmentsWhenImg.webp",
   answers: [
     {
       answer: "Visible fine lines and wrinkles from facial expressions",

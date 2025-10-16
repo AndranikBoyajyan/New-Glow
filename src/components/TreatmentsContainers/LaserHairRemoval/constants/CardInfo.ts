@@ -9,7 +9,7 @@ interface ILaserTreatmentBodyPartsList {
 export const cardsInfos: ILaserTreatmentBodyPartsList[] = [
   {
     id: 1,
-    imgUrl: "./pngs/image1.png",
+    imgUrl: "./webpImages/image1.webp",
     bodyParts: [
       {
         id: 1,
@@ -75,7 +75,7 @@ export const cardsInfos: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 2,
-    imgUrl: "./pngs/image2.png",
+    imgUrl: "./webpImages/image2.webp",
     bodyParts: [
       {
         id: 1,
@@ -117,7 +117,7 @@ export const cardsInfos: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 3,
-    imgUrl: "./pngs/image3.png",
+    imgUrl: "./webpImages/image3.webp",
     bodyParts: [
       {
         id: 1,
@@ -165,7 +165,7 @@ export const cardsInfos: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 4,
-    imgUrl: "./pngs/image4.png",
+    imgUrl: "./webpImages/image4.webp",
     bodyParts: [
       {
         id: 1,
@@ -207,7 +207,7 @@ export const cardsInfos: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 5,
-    imgUrl: "./pngs/image5.png",
+    imgUrl: "./webpImages/image5.webp",
     bodyParts: [
       {
         id: 1,
@@ -261,7 +261,7 @@ export const cardsInfos: ILaserTreatmentBodyPartsList[] = [
   },
   {
     id: 6,
-    imgUrl: "./pngs/image6.png",
+    imgUrl: "./webpImages/image6.webp",
     bodyParts: [
       {
         id: 1,

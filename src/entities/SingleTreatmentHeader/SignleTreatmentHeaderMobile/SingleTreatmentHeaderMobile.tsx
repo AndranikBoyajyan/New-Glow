@@ -1,4 +1,4 @@
-import bgMobilePng from "/pngs/headerMobileImg.png";
+import bgMobilePng from "/webpImages/headerMobileImg.webp";
 import cn from "classnames";
 
 import styles from "./SingleTreatmentHeaderMobile.module.css";

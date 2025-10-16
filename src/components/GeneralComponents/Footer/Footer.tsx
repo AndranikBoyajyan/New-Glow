@@ -1,6 +1,6 @@
 import { useState } from "react";
 import cn from "classnames";
-import footerImg from "/pngs/footerImg.png";
+import footerImg from "/webpImages/footerImg.webp";
 import Subscribe from "../Subscribe";
 import LogoSVGWhite from "../../../assets/logoSvgWhite.svg";
 import { Link } from "react-router";
@@ -40,7 +40,7 @@ export const Footer = () => {
         <div className={styles.topSide}>
           <div className={styles.contacts}>
             <div className={styles.contactWrapper}>
-              <img src={"/pngs/phoneWhite.png"} alt="phone" />
+              <img src={"/webpImages/phoneWhite.webp"} alt="phone" />
               <Link to={"tel:+18187472470"} className={styles.phoneNumberLink}>
                 <span className={cn(styles.phoneNumber, "poppins-regular")}>
                   {" "}
@@ -49,7 +49,7 @@ export const Footer = () => {
               </Link>
             </div>
             <div className={styles.contactWrapper}>
-              <img src={"/pngs/email.png"} alt="email" />
+              <img src={"/webpImages/email.webp"} alt="email" />
               <span className={cn(styles.phoneNumber, "poppins-bold")}>
                 {" "}
                 818-570-7990

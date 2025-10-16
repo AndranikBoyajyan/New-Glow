@@ -11,7 +11,7 @@
 .limitedTimeSpecialBgImg {
   width: 100%;
   height: 100%;
-  background-image: url("/pngs/specialsBg2.png");
+  background-image: url("/webpImages/specialsBg2.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

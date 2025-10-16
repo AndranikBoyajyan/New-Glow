@@ -52,7 +52,7 @@
 .consultationPopupContent {
   width: 50%;
   height: 480px;
-  background-image: url("/pngs/consultationImg.png");
+  background-image: url("/webpImages/consultationImg.webp");
   background-size: cover;
   background-position: center;
 

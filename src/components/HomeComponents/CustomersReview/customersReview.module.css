@@ -21,7 +21,7 @@
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
-  background-image: url("/pngs/OurCustomersBackground.png");
+  background-image: url("/webpImages/OurCustomersBackground.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

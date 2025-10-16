@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/MicroneedingFace.png",
+    imgUrl: "/webpImages/MicroneedingFace.webp",
     name: "Microneedling Face",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
@@ -10,7 +10,7 @@ export const cardsInfos = [
   },
   {
     id: 2,
-    imgUrl: "/pngs/microneedlingNeck.png",
+    imgUrl: "/webpImages/microneedlingNeck.webp",
     name: "Microneedling Neck",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
@@ -19,7 +19,7 @@ export const cardsInfos = [
   },
   {
     id: 3,
-    imgUrl: "/pngs/prpAddOn.png",
+    imgUrl: "/webpImages/prpAddOn.webp",
     name: "PRP Add on",
     description:
       "The Platelet-rich plasma (PRP) facial rejuvenation uses your own blood to promote collagen production and trigger growth factors. The groundbreaking solution for aging or damaged skin pairs microneedling with a plasma “serum,” leaving skin looking younger, smoother, and overall healthier.",
@@ -28,7 +28,7 @@ export const cardsInfos = [
   },
   {
     id: 4,
-    imgUrl: "/pngs/microneedlingUndereye.png",
+    imgUrl: "/webpImages/microneedlingUndereye.webp",
     name: "Microneedling Undereye",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
@@ -37,7 +37,7 @@ export const cardsInfos = [
   },
   {
     id: 5,
-    imgUrl: "/pngs/faceAndNeck.png",
+    imgUrl: "/webpImages/faceAndNeck.webp",
     name: "Microneedling face and neck",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
@@ -46,7 +46,7 @@ export const cardsInfos = [
   },
   {
     id: 6,
-    imgUrl: "/pngs/wSerums.png",
+    imgUrl: "/webpImages/wSerums.webp",
     name: "Microneedling w/Serums",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
@@ -55,7 +55,7 @@ export const cardsInfos = [
   },
   {
     id: 7,
-    imgUrl: "/pngs/aquaGold.png",
+    imgUrl: "/webpImages/aquaGold.webp",
     name: "AquaGold w/Serums",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
@@ -64,7 +64,7 @@ export const cardsInfos = [
   },
   {
     id: 8,
-    imgUrl: "/pngs/aquaGoldBotox.png",
+    imgUrl: "/webpImages/aquaGoldBotox.webp",
     name: "AqualGold W/Botox",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
@@ -73,7 +73,7 @@ export const cardsInfos = [
   },
   {
     id: 9,
-    imgUrl: "/pngs/aquaGoldFilter.png",
+    imgUrl: "/webpImages/aquaGoldFilter.webp",
     name: "AquaGold w/filler",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
@@ -82,7 +82,7 @@ export const cardsInfos = [
   },
   {
     id: 10,
-    imgUrl: "/pngs/exosomesHair.png",
+    imgUrl: "/webpImages/exosomesHair.webp",
     name: "Exosomes Hair",
     description:
       "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",

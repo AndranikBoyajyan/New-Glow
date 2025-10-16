@@ -1,8 +1,8 @@
 import { useState, type FC } from "react";
 import cn from "classnames";
 import Treatments from "../Treatments";
-import arrowDown from "/pngs/arrowDown.png";
-import arrowUp from "/pngs/arrowUp.png";
+import arrowDown from "/webpImages/arrowDown.webp";
+import arrowUp from "/webpImages/arrowUp.webp";
 import { Link } from "react-router";
 
 import styles from "./MenuItem.module.css";

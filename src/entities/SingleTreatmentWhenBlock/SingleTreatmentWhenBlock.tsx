@@ -47,7 +47,7 @@ export const SingleTreatmentWhenBlock: FC<SingleTreatmentWhenBlockProps> = ({
             key={answer.answer + index}
             className={styles.whenBlockAnswersWithIcon}
           >
-            <img src="/pngs/checkMark.png" alt="" width={41} />
+            <img src="/webpImages/checkMark.webp" alt="" width={41} />
             <div className={styles.whenBlockAnswers}>
               <span className={cn(styles.answer, "poppins-semibold")}>
                 {answer.answer}

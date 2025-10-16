@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import microneedlingHeaderImg from "/pngs/microneedlingHeaderImg.png";
+import microneedlingHeaderImg from "/webpImages/microneedlingHeaderImg.webp";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";

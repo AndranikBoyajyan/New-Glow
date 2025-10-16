@@ -3,7 +3,7 @@ import cn from "classnames";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import Button from "../../../shared/Button";
 import Title from "../../../shared/Title";
-import instagramLogo from "/pngs/instagramLogo.png";
+import instagramLogo from "/webpImages/instagramLogo.webp";
 
 import styles from "./subscribe.module.css";
 import { Link } from "react-router";

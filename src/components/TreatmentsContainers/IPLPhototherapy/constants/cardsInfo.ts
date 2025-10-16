@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/IPLPhototerapy1.png",
+    imgUrl: "/webpImages/IPLPhototerapy1.webp",
     name: "IPL Photofacial",
     description:
       "Intense pulsed light (IPL) therapy, also known as a photofacial, is a way to improve the color and texture of your skin without surgery. It can undo some of the visible damage caused by sun exposure -- called photoaging. You may notice it mostly on your face, neck, hands, or chest.",
@@ -10,7 +10,7 @@ export const cardsInfos = [
   },
   {
     id: 2,
-    imgUrl: "/pngs/IPLPhototerapy2.png",
+    imgUrl: "/webpImages/IPLPhototerapy2.webp",
     name: "Face And Neck",
     description:
       "Intense pulsed light (IPL) therapy, also known as a photofacial, is a way to improve the color and texture of your skin without surgery. It can undo some of the visible damage caused by sun exposure -- called photoaging. You may notice it mostly on your face, neck, hands, or chest.",
@@ -19,7 +19,7 @@ export const cardsInfos = [
   },
   {
     id: 3,
-    imgUrl: "/pngs/IPLPhototerapy3.png",
+    imgUrl: "/webpImages/IPLPhototerapy3.webp",
     name: "Décolleté Rejuvenation",
     description:
       "Intense pulsed light (IPL) therapy, also known as a photofacial, is a way to improve the color and texture of your skin without surgery. It can undo some of the visible damage caused by sun exposure -- called photoaging. You may notice it mostly on your face, neck, hands, or chest.",
@@ -28,7 +28,7 @@ export const cardsInfos = [
   },
   {
     id: 4,
-    imgUrl: "/pngs/IPLPhototerapy4.png",
+    imgUrl: "/webpImages/IPLPhototerapy4.webp",
     name: "Hands",
     description:
       "Intense pulsed light (IPL) therapy, also known as a photofacial, is a way to improve the color and texture of your skin without surgery. It can undo some of the visible damage caused by sun exposure -- called photoaging. You may notice it mostly on your face, neck, hands, or chest.",
@@ -37,7 +37,7 @@ export const cardsInfos = [
   },
   {
     id: 5,
-    imgUrl: "/pngs/IPLPhototerapy5.png",
+    imgUrl: "/webpImages/IPLPhototerapy5.webp",
     name: "Single spot",
     description:
       "Intense pulsed light (IPL) therapy, also known as a photofacial, is a way to improve the color and texture of your skin without surgery. It can undo some of the visible damage caused by sun exposure -- called photoaging. You may notice it mostly on your face, neck, hands, or chest.",
@@ -46,7 +46,7 @@ export const cardsInfos = [
   },
   {
     id: 6,
-    imgUrl: "/pngs/IPLPhototerapy6.png",
+    imgUrl: "/webpImages/IPLPhototerapy6.webp",
     name: "Body small area",
     description:
       "Intense pulsed light (IPL) therapy, also known as a photofacial, is a way to improve the color and texture of your skin without surgery. It can undo some of the visible damage caused by sun exposure -- called photoaging. You may notice it mostly on your face, neck, hands, or chest.",
@@ -55,7 +55,7 @@ export const cardsInfos = [
   },
   {
     id: 7,
-    imgUrl: "/pngs/IPLPhototerapy7.png",
+    imgUrl: "/webpImages/IPLPhototerapy7.webp",
     name: "Body Large area",
     description:
       "Intense pulsed light (IPL) therapy, also known as a photofacial, is a way to improve the color and texture of your skin without surgery. It can undo some of the visible damage caused by sun exposure -- called photoaging. You may notice it mostly on your face, neck, hands, or chest.",

@@ -33,7 +33,7 @@ export const Header = () => {
       </div>
       {!isMobile && (
         <div className={styles.phoneNumberWrapper}>
-          <img src={"/pngs/phone.png"} alt="phone" />
+          <img src={"/webpImages/phone.webp"} alt="phone" />
           <Link to={"tel:+18187472470"} className={styles.phoneNumberLink}>
             <span className={cn(styles.phoneNumber, "poppins-regular")}>
               {" "}

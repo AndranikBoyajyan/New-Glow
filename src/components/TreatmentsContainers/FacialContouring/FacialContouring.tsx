@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import facialContHeader from "/pngs/facialContHeader.png";
+import facialContHeader from "/webpImages/facialContHeader.webp";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";

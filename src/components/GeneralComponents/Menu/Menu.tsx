@@ -1,9 +1,9 @@
 import MenuItem from "../../../features/MenuItem";
 import cn from "classnames";
 import { useWindowSize } from "../../../hooks/useWindowSize";
-import menuImg from "/pngs/burgerMenuImg.png";
+import menuImg from "/webpImages/burgerMenuImg.webp";
 import LogoSVG from "../../../assets/Logo.svg";
-import menuCloseImg from "/pngs/mobileMenuCloseIcon.png";
+import menuCloseImg from "/webpImages/mobileMenuCloseIcon.webp";
 
 import styles from "./Menu.module.css";
 import { useState } from "react";
@@ -74,7 +74,7 @@ export const Menu = () => {
                 onClose={handleCloseModal}
               />
               <div className={styles.phoneNumberWrapper}>
-                <img src={"/pngs/phone.png"} alt="phone" />
+                <img src={"/webpImages/phone.webp"} alt="phone" />
                 <Link
                   to={"tel:+18187472470"}
                   className={styles.phoneNumberLink}

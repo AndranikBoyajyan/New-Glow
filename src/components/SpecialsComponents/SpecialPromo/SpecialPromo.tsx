@@ -1,4 +1,4 @@
-import specialPromoTitle from "/pngs/specialPromoTitle.png";
+import specialPromoTitle from "/webpImages/specialPromoTitle.webp";
 import cn from "classnames";
 import styles from "./SpecialPromo.module.css";
 import Button from "../../../shared/Button";

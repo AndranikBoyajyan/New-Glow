@@ -11,7 +11,7 @@ export const BLOG_CARDS_INFO: IBlogCardsInfo[] = [
       "Excessive sweating is not just an inconvenience—it can be a major roadblock in both personal confidence and daily activities. For an",
     views: 11,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg1.png",
+    imgUrl: "/webpImages/blogImg1.webp",
     allDescription: [
       {
         description:
@@ -136,7 +136,7 @@ Thank you for taking the time to learn about the many benefits of Botox for Hype
       "Excessive sweating is not just an inconvenience—it can be a major roadblock in both personal confidence and daily activities. For an",
     views: 11,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg2.png",
+    imgUrl: "/webpImages/blogImg2.webp",
     allDescription: [
       {
         description: `Let's talk sweat. Not the "just-finished-a-hot-yoga-class" kind, but the "why-am-I-dripping-in-an-air-conditioned-room" kind. Hyperhidrosis, or excessive sweating, is a legit struggle for millions, and it's way more than a social buzzkill—it can tank confidence, ruin clothes, and even make handshakes a nightmare. If you've ever Googled “non-surgical hyperhidrosis treatment” or wondered, “is excessive sweating during exercise a sign of heart disease?”, you're not alone.
@@ -330,7 +330,7 @@ Hungry for more? Dive into our Morpheus8 for FAQs, pricing, and glow-up inspo. Y
       "In the world of aesthetic enhancements, Juvederm fillers have become a household name. Whether you're scrolling through Instagram, wa",
     views: 5,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg3.png",
+    imgUrl: "/webpImages/blogImg3.webp",
     allDescription: [
       {
         description: `In the world of aesthetic enhancements, Juvederm fillers have become a household name. Whether you're scrolling through Instagram, watching a celebrity interview, or chatting with friends, chances are you've heard about this popular dermal filler. But what exactly is Juvederm, and how does it work? If you're curious about how this treatment can help you achieve a fresher, more youthful look, you're in the right place. In this blog post, we'll break down everything you need to know about Juvederm fillers, from what they are to how long they last, and even how they compare to other treatments like Botox or Restylane Kysse. Plus, we'll dive into why New Glow in North Hollywood is the go-to spot for your Juvederm treatments Hollywood style. Let's get into it!`,
@@ -416,7 +416,7 @@ Ready to take the next step? Browse our website to learn more about our services
       "The under-eye area is one of the first places to show signs of aging, stress, or fatigue. Dark circles, hollows, and fine lines can leave you looking perpet",
     views: 7,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg4.png",
+    imgUrl: "/webpImages/blogImg4.webp",
     allDescription: [
       {
         description: `The under-eye area is one of the first places to show signs of aging, stress, or fatigue. Dark circles, hollows, and fine lines can leave you looking perpetually exhausted, even when you're well-rested. While skincare products and makeup offer temporary fixes, PRP under eyes has emerged as a long-lasting, natural solution to rejuvenate this delicate zone. But how do you know if it's right for you? In this comprehensive guide, we'll explore the five key signs that indicate you might benefit from PRP for under eyes, break down the science behind the treatment, and answer critical questions like how long does PRP last under eyes? and what should you expect during recovery? Let's dive in.`,
@@ -558,7 +558,7 @@ Q: Can PRP replace fillers?A: For mild volume loss, yes. Severe hollows may stil
     views: 12,
     commentsCount: 0,
     likeCount: 1,
-    imgUrl: "/pngs/blogImg5.png",
+    imgUrl: "/webpImages/blogImg5.webp",
     allDescription: [
       {
         description: `You might have noticed some fine lines on either side of your nose when you scrunch it—they're called bunny lines. But what are bunny lines exactly, and why do they appear? These small wrinkles may seem subtle, but over time, they can become more noticeable and potentially affect your overall look. Here, we're diving deep into bunny lines, why they happen, and how bunny lines Botox can be a game-changer in smoothing them out. Whether you've just started spotting them or you're already considering treatment, this guide has everything you need to know. Let's get into it.`,
@@ -707,7 +707,7 @@ At New Glow, we're passionate about helping you look and feel your best. From bu
       "et's cut to the chase: the skincare world is flooded with trends, but few deliver results as consistently as the hydro dermabrasion facial. If you've",
     views: 11,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg6.png",
+    imgUrl: "/webpImages/blogImg6.webp",
     allDescription: [
       {
         description: `Let's cut to the chase: the skincare world is flooded with trends, but few deliver results as consistently as the hydro dermabrasion facial. If you've scrolled past glowing reviews or heard influencers rave about “glass skin,” this treatment is likely their not-so-secret weapon. Combining exfoliation, hydration, and advanced technology, hydro dermabrasion facials are a triple threat—detoxifying pores, quenching thirsty skin, and delivering active ingredients where they matter most.
@@ -831,7 +831,7 @@ But don't just take our word for it. Dive deeper into our blog for real client t
       "'What Is Dysport?' might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popul",
     views: 5,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg7.png",
+    imgUrl: "/webpImages/blogImg7.webp",
     allDescription: [
       {
         description: `"What Is Dysport?" might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popular neuromodulator, has gained recognition for its ability to reduce the appearance of fine lines and wrinkles. Whether you're considering this treatment or just curious about its benefits, this guide will give you the full scoop. From how it works to its aftercare, we'll dive deep into the world of Dysport and why it's a go-to for so many seeking effective skin rejuvenation.
@@ -967,7 +967,7 @@ Ready to take the next step? Browse through our blog for more insights or book a
       "'What Is Dysport?' might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popul",
     views: 9,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg8.png",
+    imgUrl: "/webpImages/blogImg8.webp",
     allDescription: [
       {
         description: `When it comes to choosing the right dermal filler, the decision often boils down to two popular options: Radiesse vs Sculptra. Both are highly regarded for their ability to rejuvenate the skin and restore lost volume, but each has unique properties that make them suitable for different needs. If you're on the fence about which filler to go for, you've come to the right place. Let's break it all down so you can make an informed decision that's best for your goals.
@@ -1077,7 +1077,7 @@ It depends on your goals. Radiesse is better for contouring and immediate volume
       "When it comes to skincare, we often focus solely on our face, forgetting that our back deserves just as much attention. But let's be real: maintainin",
     views: 18,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg9.png",
+    imgUrl: "/webpImages/blogImg9.webp",
     allDescription: [
       {
         description: `When it comes to skincare, we often focus solely on our face, forgetting that our back deserves just as much attention. But let's be real: maintaining a clear and smooth back can be challenging, especially if you deal with acne, clogged pores, or dryness in that area. Enter the back facial — the perfect solution for addressing all those concerns. But what is a back facial, and why is it worth adding to your skincare routine? Let's dive in to explore everything you need to know about this underrated treatment, including how it works, its benefits, and how it compares to other popular facial treatments.
@@ -1179,7 +1179,7 @@ Ready to level up your skincare game? Browse through our facials page at New Glo
       "Chemical peels are all the rage these days for anyone wanting to refresh their skin, reduce fine lines, or even address uneven pigmentation. Wheth",
     views: 46,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg10.png",
+    imgUrl: "/webpImages/blogImg10.webp",
     allDescription: [
       {
         description: `Chemical peels are all the rage these days for anyone wanting to refresh their skin, reduce fine lines, or even address uneven pigmentation. Whether you're new to chemical peels or just curious about the experience, understanding the chemical peel process day by day can help you prepare. Let's dive into the details, including how long the effects of dermal fillers last (yep, we'll touch on that too!), how to care for your skin post-peel, and what to avoid.
@@ -1325,7 +1325,7 @@ At New Glow, we're here to help you achieve your skincare goals with tailored tr
       "Dermal fillers are a popular cosmetic treatment for those looking to restore volume, smooth out wrinkles",
     views: 5,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg11.png",
+    imgUrl: "/webpImages/blogImg11.webp",
     allDescription: [
       {
         description: `Dermal fillers are a popular cosmetic treatment for those looking to restore volume, smooth out wrinkles, and enhance facial contours. If you've recently considered dermal fillers or are thinking about them, one of the most common questions people have is, How long do dermal fillers last? This is an important consideration when planning your treatment and ensuring that you are getting the best value for your investment. In this post, we'll explore everything you need to know about the longevity of dermal fillers, including factors that affect their lifespan, aftercare tips, and whether they're permanent.`,
@@ -1423,7 +1423,7 @@ Keep exploring our site for more information and tips about dermal fillers, and 
       "Let's talk gummy smiles. They're not exactly a medical problem, but for some, they can be a confidence blocker. A gummy smile happens",
     views: 6,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg12.png",
+    imgUrl: "/webpImages/blogImg12.webp",
     allDescription: [
       {
         description: `Let's talk gummy smiles. They're not exactly a medical problem, but for some, they can be a confidence blocker. A gummy smile happens when too much gum tissue shows when you smile. And while it's cute to some, others might want a solution that helps balance their smile. Enter Botox for gummy smile—a quick, minimally invasive treatment that's changing the game. In this post, we'll explore five solid reasons why you should consider Botox for gummy smile, discuss how it works, and why it's the go-to option for a lot of people these days.
@@ -1552,7 +1552,7 @@ Ready to explore more options for perfecting your smile? Check out our other tre
     views: 8,
     commentsCount: 0,
     likeCount: 1,
-    imgUrl: "/pngs/blogImg13.png",
+    imgUrl: "/webpImages/blogImg13.webp",
     allDescription: [
       {
         description: `Botox treatments have become a popular go-to solution for those looking to minimize fine lines and wrinkles, offering a quick and minimally invasive way to rejuvenate the skin. However, if you've recently had Botox, you might be wondering whether you can get a facial afterward. It's common for people to seek facial treatments to enhance their results, but after Botox, timing is everything. So, why should you wait before getting a facial after Botox?
@@ -1630,7 +1630,7 @@ Ready to explore facials that work seamlessly with Botox? Continue browsing our 
     views: 18,
     commentsCount: 0,
     likeCount: 1,
-    imgUrl: "/pngs/blogImg14.png",
+    imgUrl: "/webpImages/blogImg14.webp",
     allDescription: [
       {
         description: `IV vitamin therapy has quickly become the go-to wellness trend, offering everything from hydration to enhanced energy. But a common question pops up: How long does IV vitamin therapy last? Whether you're new to IV drips or already booking your next session, understanding the factors that influence its effects is key. Let's dive into the eight most significant elements that affect how long your IV vitamin therapy benefits stick around. And spoiler: It's all about personalization, lifestyle, and your unique health goals.`,
@@ -1741,7 +1741,7 @@ Ready to learn more? Explore our other blog posts or schedule your next appointm
     views: 23,
     commentsCount: 0,
     likeCount: 1,
-    imgUrl: "/pngs/blogImg15.png",
+    imgUrl: "/webpImages/blogImg15.webp",
     allDescription: [
       {
         description: `In today's world of aesthetic treatments, biostimulators are quickly becoming the ultimate game-changer for achieving natural, long-lasting rejuvenation. But wait, what exactly are biostimulators? If you've been scrolling through TikTok or reading about non-surgical ways to refresh your look, you've probably come across this term. Unlike fillers that simply add volume, biostimulators take it up a notch by actually encouraging your body to produce its own collagen. Yep, you read that right—your body does the work while biostimulators give it a little push in the right direction.
@@ -1875,7 +1875,7 @@ If you're curious about biostimulator injections or want to learn more about how
     views: 12,
     commentsCount: 0,
     likeCount: 1,
-    imgUrl: "/pngs/blogImg16.png",
+    imgUrl: "/webpImages/blogImg16.webp",
     allDescription: [
       {
         description: `Kybella has revolutionized the way people address stubborn fat under the chin, offering a non-surgical alternative for contouring and enhancing facial aesthetics. With its popularity growing, people have a lot of questions about how Kybella works, how long the results last, and what to expect before and after treatment.
@@ -2021,7 +2021,7 @@ Continue browsing our site to discover more about our comprehensive range of fat
       "An IPL photofacial is one of the most popular non-invasive cosmetic treatments for improving skin tone and texture. This advanced treatment",
     views: 11,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg17.png",
+    imgUrl: "/webpImages/blogImg17.webp",
     allDescription: [
       {
         description: `An IPL photofacial is one of the most popular non-invasive cosmetic treatments for improving skin tone and texture. This advanced treatment uses intense pulsed light (IPL) to target various skin concerns, including sun damage, pigmentation, redness, and fine lines. But what makes photofacials so effective, and why are they becoming a go-to solution for glowing, even-toned skin? Let's dive deep into what a photofacial treatment entails, its benefits, aftercare requirements, and how it works.
@@ -2184,7 +2184,7 @@ Ready to explore the transformative power of photofacials? At New Glow, we're de
       "Chemical peels have long been celebrated for their ability to transform the skin, addressing concerns like dullness, fine lines, disco",
     views: 16,
     commentsCount: 0,
-    imgUrl: "/pngs/blogImg18.png",
+    imgUrl: "/webpImages/blogImg18.webp",
     allDescription: [
       {
         description: `Chemical peels have long been celebrated for their ability to transform the skin, addressing concerns like dullness, fine lines, discoloration, and uneven texture. If you're wondering how often you should get a chemical peel, this guide will provide a thorough answer while diving into the many uses of chemical peels, including treatments for melasma, dark circles, sensitive skin, and more.
@@ -2327,7 +2327,7 @@ Ready to take the next step? Explore our website to learn more about our offerin
     views: 14,
     commentsCount: 0,
     likeCount: 1,
-    imgUrl: "/pngs/blogImg19.png",
+    imgUrl: "/webpImages/blogImg19.webp",
     allDescription: [
       {
         description: `If you're looking for an advanced skin treatment that can deliver stunning results without surgery, chances are you've heard about Morpheus 8. This cutting-edge treatment is quickly becoming a favorite among professionals and clients alike for its ability to tighten skin, smooth wrinkles, and even improve deep scars.
@@ -2448,7 +2448,7 @@ Start your journey to glowing, youthful skin today!`,
     views: 34,
     commentsCount: 0,
     likeCount: 1,
-    imgUrl: "/pngs/blogImg20.png",
+    imgUrl: "/webpImages/blogImg20.webp",
     allDescription: [
       {
         description: `More and more people are turning to laser hair removal as a reliable way to enjoy silky, hair-free skin. If you're considering this treatment, it's essential to understand the concept of laser hair removal zones, which refers to the specific areas of the body that can be treated. This blog post will walk you through the details, breaking it down into various zones, frequently asked questions, and how professional services like those at New Glow can make 
@@ -2581,7 +2581,7 @@ Ready to take the next step? Explore our laser hair removal services today and d
     views: 14,
     commentsCount: 0,
     likeCount: 1,
-    imgUrl: "/pngs/blogImg21.png",
+    imgUrl: "/webpImages/blogImg21.webp",
     allDescription: [
       {
         description: `Microneedling has become one of the top choices for skin rejuvenation, offering benefits like improved skin texture, reduced scars, and a youthful glow. However, if you want to get the most out of your treatment, understanding how to prepare for microneedling is crucial. Proper preparation can enhance results, minimize discomfort, and shorten recovery time. This guide will cover the essential steps on how to prepare for microneedling, tips to optimize your skincare regimen beforehand, and insights on post-treatment care.`,
@@ -2657,7 +2657,7 @@ As you continue exploring the world of skincare, keep browsing our articles and 
     views: 28,
     commentsCount: 0,
     likeCount: 3,
-    imgUrl: "/pngs/blogImg22.png",
+    imgUrl: "/webpImages/blogImg22.webp",
     allDescription: [
       {
         description: `In today's world, skincare has taken a leading role in self-care, with facial treatment being one of the most popular choices. Whether it's for relaxation, rejuvenation, or improving skin health, facial treatments have become essential for many looking to achieve glowing, youthful skin. Beyond simply cleansing, facials offer numerous advantages that can cater to individual desires, from minimizing pores to boosting collagen.
@@ -2764,7 +2764,7 @@ Whether you're looking to prepare your skin before a big event, relieve stress, 
     views: 46,
     commentsCount: 0,
     likeCount: 3,
-    imgUrl: "/pngs/blogImg23.png",
+    imgUrl: "/webpImages/blogImg23.webp",
     allDescription: [
       {
         description: `The pursuit of a youthful, radiant complexion is a timeless endeavor. In the modern age, Botox has emerged as a powerful ally in this quest, smoothing out wrinkles and lines, and even preventing new ones from forming. But amidst the buzz and readily available information, a crucial question arises: how often should you get Botox? This comprehensive guide delves into the intricacies of Botox treatments, addressing this critical question and offering insights into maximizing its benefits while prioritizing safety and natural-looking results.`,

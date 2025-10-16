@@ -1,6 +1,6 @@
-import specialist1 from "../../public/pngs/specialist1.png";
-import specialist2 from "../../public/pngs/specialist2.png";
-import specialist3 from "../../public/pngs/specialist3.png";
+import specialist1 from "../../public/webpImages/specialist1.webp";
+import specialist2 from "../../public/webpImages/specialist2.webp";
+import specialist3 from "../../public/webpImages/specialist3.webp";
 
 export const SPECIALISTS = [
   {

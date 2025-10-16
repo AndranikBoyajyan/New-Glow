@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import biorevitalization from "/pngs/biorevitalization.png";
+import biorevitalization from "../../../../public/webpImages/biorevitalization.webp";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";

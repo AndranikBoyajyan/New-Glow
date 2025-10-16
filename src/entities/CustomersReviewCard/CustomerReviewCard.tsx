@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import cn from "classnames";
 import styles from "./customerReviewCard.module.css";
-import commaRight from "/pngs/commaRight.png";
-import commaLeft from "/pngs/commaLeft.png";
+import commaRight from "/webpImages/commaRight.webp";
+import commaLeft from "/webpImages/commaLeft.webp";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 

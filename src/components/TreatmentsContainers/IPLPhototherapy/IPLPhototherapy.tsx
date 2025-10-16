@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import IPLPhototherapyHeader from "/pngs/IPLPhototherapyHeader.png";
+import IPLPhototherapyHeader from "/webpImages/IPLPhototherapyHeader.webp";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";

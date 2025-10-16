@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import chemicalPeelsHeaderImg from "/pngs/chemicalPeelsHeaderImg.png";
+import chemicalPeelsHeaderImg from "/webpImages/chemicalPeelsHeaderImg.webp";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";

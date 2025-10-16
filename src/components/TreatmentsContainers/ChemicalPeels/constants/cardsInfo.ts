@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/viPeelPrecisionPlus.png",
+    imgUrl: "/webpImages/viPeelPrecisionPlus.webp",
     name: "ViPeel Precision Plus",
     description:
       "Chemical peels help fade dark spots, sun damage, and melasma by accelerating cell turnover and shedding pigmented layers. They're especially helpful when other topical treatments aren’t enough.",
@@ -10,7 +10,7 @@ export const cardsInfos = [
   },
   {
     id: 2,
-    imgUrl: "/pngs/viPeelPurifywPrecisionPlus.png",
+    imgUrl: "/webpImages/viPeelPurifywPrecisionPlus.webp",
     name: "ViPeel Purify w Precision Plus",
     description:
       "Chemical peels help fade dark spots, sun damage, and melasma by accelerating cell turnover and shedding pigmented layers. They're especially helpful when other topical treatments aren’t enough.",
@@ -19,7 +19,7 @@ export const cardsInfos = [
   },
   {
     id: 3,
-    imgUrl: "/pngs/bodyViPeelSmallArea.png",
+    imgUrl: "/webpImages/bodyViPeelSmallArea.webp",
     name: "Body ViPeel Small Area",
     description:
       "Chemical peels help fade dark spots, sun damage, and melasma by accelerating cell turnover and shedding pigmented layers. They're especially helpful when other topical treatments aren’t enough.",
@@ -28,7 +28,7 @@ export const cardsInfos = [
   },
   {
     id: 4,
-    imgUrl: "/pngs/bodyViPeelLargeArea2.png",
+    imgUrl: "/webpImages/bodyViPeelLargeArea2.webp",
     name: "Body ViPeel Large Area",
     description:
       "Chemical peels help fade dark spots, sun damage, and melasma by accelerating cell turnover and shedding pigmented layers. They're especially helpful when other topical treatments aren’t enough.",

@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When are chemical peels a Good Choice",
-  imgUrl: "/pngs/chemicalPeelsWhenImg.png",
+  imgUrl: "/webpImages/chemicalPeelsWhenImg.webp",
   answers: [
     {
       answer: "Acne and Post-Acne Marks",

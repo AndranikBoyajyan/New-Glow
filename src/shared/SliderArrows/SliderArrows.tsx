@@ -1,7 +1,7 @@
 import type { FC, JSX } from "react";
 import cn from "classnames";
-import sliderArrowLeft from "/pngs/sliderArrowLeft.png";
-import sliderArrowRight from "/pngs/sliderArrowRight.png";
+import sliderArrowLeft from "/webpImages/sliderArrowLeft.webp";
+import sliderArrowRight from "/webpImages/sliderArrowRight.webp";
 
 import styles from "./SliderArrows.module.css";
 

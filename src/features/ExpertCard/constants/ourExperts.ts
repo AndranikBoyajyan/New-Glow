@@ -1,5 +1,5 @@
-import ourExpert1 from "/pngs/ourExpert1.png";
-import ourExpert2 from "/pngs/ourExpert2.png";
+import ourExpert1 from "/webpImages/ourExpert1.webp";
+import ourExpert2 from "/webpImages/ourExpert2.webp";
 import type { ExpertCard } from "../model";
 
 export const ourExperts: ExpertCard[] = [

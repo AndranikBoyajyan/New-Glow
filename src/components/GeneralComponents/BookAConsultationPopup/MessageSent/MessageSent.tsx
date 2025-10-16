@@ -1,6 +1,6 @@
 import cn from "classnames";
 import Title from "../../../../shared/Title";
-import sentMessage from "/pngs/sentMessage.png";
+import sentMessage from "/webpImages/sentMessage.webp";
 
 import { Link } from "react-router";
 import styles from "./MessageSent.module.css";

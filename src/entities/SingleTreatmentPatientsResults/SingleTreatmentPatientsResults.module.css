@@ -66,22 +66,22 @@
 }
 
 .beforeImg1 {
-  background-image: url("/pngs/beforeImg1.png");
+  background-image: url("/webpImages/beforeImg1.webp");
   background-position: right;
 }
 
 .afterImg1 {
-  background-image: url("/pngs/afterImg1.png");
+  background-image: url("/webpImages/afterImg1.webp");
   background-position: left;
 }
 
 .beforeImg2 {
-  background-image: url("/pngs/beforeImg2.png");
+  background-image: url("/webpImages/beforeImg2.webp");
   background-position: right;
 }
 
 .afterImg2 {
-  background-image: url("/pngs/afterImg2.png");
+  background-image: url("/webpImages/afterImg2.webp");
   background-position: left;
 }
 

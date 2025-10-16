@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When is IPL Phototherapy a Good Choice",
-  imgUrl: "/pngs/IPLPhototherapyWhen.png",
+  imgUrl: "/webpImages/IPLPhototherapyWhen.webp",
   answers: [
     {
       answer: "sun damage, pigmentation, or age spots",

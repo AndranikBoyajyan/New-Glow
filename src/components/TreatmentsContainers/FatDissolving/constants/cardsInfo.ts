@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/FatDissolving1.png",
+    imgUrl: "/webpImages/FatDissolving1.webp",
     name: "Kybella Under Chin",
     description:
       "Kybella is a non-surgical injectable treatment used to reduce fat beneath the chin, commonly known as submental fat or a double chin. It contains deoxycholic acid, a naturally occurring molecule in the body that aids in the breakdown and absorption of dietary fat.",
@@ -10,7 +10,7 @@ export const cardsInfos = [
   },
   {
     id: 2,
-    imgUrl: "/pngs/FatDissolving2.png",
+    imgUrl: "/webpImages/FatDissolving2.webp",
     name: "Kybella Jowls",
     description:
       "Kybella is a non-surgical injectable treatment used to reduce fat beneath the chin, commonly known as submental fat or a double chin. It contains deoxycholic acid, a naturally occurring molecule in the body that aids in the breakdown and absorption of dietary fat.",

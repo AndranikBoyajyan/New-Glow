@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When Is Facial Contouring a Good Choice",
-  imgUrl: "/pngs/facialContWhen.png",
+  imgUrl: "/webpImages/facialContWhen.webp",
   answers: [
     {
       answer: "Lack of definition in cheekbones, jawline, or chin",

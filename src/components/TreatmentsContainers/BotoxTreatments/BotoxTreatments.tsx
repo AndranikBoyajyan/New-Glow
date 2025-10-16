@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import botoxTreatmentHeaderImg from "/pngs/botoxTreatmentHeaderImg.png";
+import botoxTreatmentHeaderImg from "/webpImages/botoxTreatmentHeaderImg.webp";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";

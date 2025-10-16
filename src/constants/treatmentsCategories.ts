@@ -1,8 +1,8 @@
-import injectablesImage from "/pngs/injectablesHomeImage.png";
-import skincareImage from "/pngs/skincareHomeImage.png";
-import faceAndBodySculptingImage from "/pngs/faceAndBodySculptingHomeImage.png";
-import iplPhototherapyImage from "/pngs/iplPhototherapyHomeImage.png";
-import laserHairRemovalImage from "/pngs/laserHairRemovalHomeImage.png";
+import injectablesImage from "/webpImages/injectablesHomeImage.webp";
+import skincareImage from "/webpImages/skincareHomeImage.webp";
+import faceAndBodySculptingImage from "/webpImages/faceAndBodySculptingHomeImage.webp";
+import iplPhototherapyImage from "/webpImages/iplPhototherapyHomeImage.webp";
+import laserHairRemovalImage from "/webpImages/laserHairRemovalHomeImage.webp";
 import type { ITreatmentCategory } from "../types/global.types";
 import { TREATMENTS } from "../constants/treatments";
 

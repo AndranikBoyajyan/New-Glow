@@ -1,4 +1,4 @@
-import extendedSpecialBg from "/pngs/extendedSpecialBg.png";
+import extendedSpecialBg from "/webpImages/extendedSpecialBg.webp";
 
 import styles from "./ExtendedSpecial.module.css";
 

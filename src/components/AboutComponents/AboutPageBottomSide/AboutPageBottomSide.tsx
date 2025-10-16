@@ -1,4 +1,4 @@
-import aboutBottomSideImg from "/pngs/aboutPageBottomSide.png";
+import aboutBottomSideImg from "/webpImages/aboutPageBottomSide.webp";
 
 import AboutBookAConsultation from "../../../features/AboutBookAConsultation";
 import { useWindowSize } from "../../../hooks/useWindowSize";

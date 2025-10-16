@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When is biorevitalization a Good Choice",
-  imgUrl: "/pngs/biorevitalizationWhen.png",
+  imgUrl: "/webpImages/biorevitalizationWhen.webp",
   answers: [
     {
       answer: "For Skin aging prevention",

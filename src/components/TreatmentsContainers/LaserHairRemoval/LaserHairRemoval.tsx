@@ -1,5 +1,5 @@
 import SingleTreatmentHeader from "../../../entities/SingleTreatmentHeader";
-import LaserHairRemovalHeaderImg from "/pngs/LaserHairRemovalHeaderImg.png";
+import LaserHairRemovalHeaderImg from "/webpImages/LaserHairRemovalHeaderImg.webp";
 import SingleTreatmentDescription from "../../../entities/SingleTreatmentDescription";
 import { description } from "./constants/description";
 import SingleTreatmentWhenBlock from "../../../entities/SingleTreatmentWhenBlock";

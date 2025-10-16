@@ -3,17 +3,17 @@ import type { IFavoriteTreatmentsDescription } from "../../../../types/global.ty
 export const favoriteTreatments: IFavoriteTreatmentsDescription[] = [
   {
     id: 1,
-    imgUrl: "./pngs/favoritePng1.png",
+    imgUrl: "./webpImages/favoritePng1.webp",
     name: "Botox treatments",
   },
   {
     id: 2,
-    imgUrl: "./pngs/favoritePng2.png",
+    imgUrl: "./webpImages/favoritePng2.webp",
     name: "Morpheus 8",
   },
   {
     id: 3,
-    imgUrl: "./pngs/favoritePng3.png",
+    imgUrl: "./webpImages/favoritePng3.webp",
     name: "Facials",
   },
 ];

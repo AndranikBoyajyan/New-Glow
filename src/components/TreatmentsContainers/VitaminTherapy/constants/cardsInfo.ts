@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/vitaminTherapy1.png",
+    imgUrl: "/webpImages/vitaminTherapy1.webp",
     name: "Immunity Boost",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
@@ -10,7 +10,7 @@ export const cardsInfos = [
   },
   {
     id: 2,
-    imgUrl: "/pngs/vitaminTherapy2.png",
+    imgUrl: "/webpImages/vitaminTherapy2.webp",
     name: "Fatigue Fighter",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
@@ -19,7 +19,7 @@ export const cardsInfos = [
   },
   {
     id: 3,
-    imgUrl: "/pngs/vitaminTherapy3.png",
+    imgUrl: "/webpImages/vitaminTherapy3.webp",
     name: "Hangover",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
@@ -28,7 +28,7 @@ export const cardsInfos = [
   },
   {
     id: 4,
-    imgUrl: "/pngs/vitaminTherapy4.png",
+    imgUrl: "/webpImages/vitaminTherapy4.webp",
     name: "Post covid",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
@@ -37,7 +37,7 @@ export const cardsInfos = [
   },
   {
     id: 5,
-    imgUrl: "/pngs/vitaminTherapy5.png",
+    imgUrl: "/webpImages/vitaminTherapy5.webp",
     name: "Myers Cocktail",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
@@ -46,7 +46,7 @@ export const cardsInfos = [
   },
   {
     id: 6,
-    imgUrl: "/pngs/vitaminTherapy6.png",
+    imgUrl: "/webpImages/vitaminTherapy6.webp",
     name: "Muscle Recovery",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
@@ -55,7 +55,7 @@ export const cardsInfos = [
   },
   {
     id: 7,
-    imgUrl: "/pngs/vitaminTherapy7.png",
+    imgUrl: "/webpImages/vitaminTherapy7.webp",
     name: "Glamour",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
@@ -64,7 +64,7 @@ export const cardsInfos = [
   },
   {
     id: 8,
-    imgUrl: "/pngs/vitaminTherapy8.png",
+    imgUrl: "/webpImages/vitaminTherapy8.webp",
     name: "Energy",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
@@ -73,7 +73,7 @@ export const cardsInfos = [
   },
   {
     id: 9,
-    imgUrl: "/pngs/vitaminTherapy9.png",
+    imgUrl: "/webpImages/vitaminTherapy9.webp",
     name: "NAD",
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",

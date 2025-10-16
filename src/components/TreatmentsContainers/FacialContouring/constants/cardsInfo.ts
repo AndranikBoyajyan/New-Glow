@@ -1,7 +1,7 @@
 export const cardsInfos = [
   {
     id: 1,
-    imgUrl: "/pngs/cheeks.png",
+    imgUrl: "/webpImages/cheeks.webp",
     name: "Cheeks (2 Syringes)",
     description:
       "Nose fillers allow for reshaping and smoothing bumps or asymmetry in the nose without surgery. It’s a quick, minimally invasive procedure that improves the nose profile with no downtime. Results are temporary but can last up to 12–18 months with proper care.",
@@ -10,7 +10,7 @@ export const cardsInfos = [
   },
   {
     id: 2,
-    imgUrl: "/pngs/chin.png",
+    imgUrl: "/webpImages/chin.webp",
     name: "Chin (2 Syringes)",
     description:
       "Nose fillers allow for reshaping and smoothing bumps or asymmetry in the nose without surgery. It’s a quick, minimally invasive procedure that improves the nose profile with no downtime. Results are temporary but can last up to 12–18 months with proper care.",
@@ -19,7 +19,7 @@ export const cardsInfos = [
   },
   {
     id: 3,
-    imgUrl: "/pngs/jawline.png",
+    imgUrl: "/webpImages/jawline.webp",
     name: "Jawline (2 Syringes)",
     description:
       "Nose fillers allow for reshaping and smoothing bumps or asymmetry in the nose without surgery. It’s a quick, minimally invasive procedure that improves the nose profile with no downtime. Results are temporary but can last up to 12–18 months with proper care.",
@@ -28,7 +28,7 @@ export const cardsInfos = [
   },
   {
     id: 4,
-    imgUrl: "/pngs/nonSurgical.png",
+    imgUrl: "/webpImages/nonSurgical.webp",
     name: "Non-Surgical Rhinoplasty",
     description:
       "Nose fillers allow for reshaping and smoothing bumps or asymmetry in the nose without surgery. It’s a quick, minimally invasive procedure that improves the nose profile with no downtime. Results are temporary but can last up to 12–18 months with proper care.",

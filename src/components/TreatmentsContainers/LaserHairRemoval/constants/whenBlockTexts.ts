@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When is Laser Hair Removal a Good Choice",
-  imgUrl: "/pngs/LaserHairRemovalImg.png",
+  imgUrl: "/webpImages/LaserHairRemovalImg.webp",
   answers: [
     {
       answer: "Frequent ingrown hairs or skin irritation from other methods",

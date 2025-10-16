@@ -33,7 +33,9 @@ export const FirstSlide = () => {
     <div
       className={cn(styles.firstSlide)}
       style={{
-        backgroundImage: isMobile ? `url(/pngs/homepageSlider1.png)` : "",
+        backgroundImage: isMobile
+          ? `url(/webpImages/homepageSlider1.webp)`
+          : "",
       }}
     >
       <div className={cn(styles.radianceBegin)}>

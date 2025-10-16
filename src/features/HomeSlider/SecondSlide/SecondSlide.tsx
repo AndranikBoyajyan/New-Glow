@@ -33,7 +33,9 @@ export const SecondSlide = () => {
     <div
       className={cn(styles.secondSlide)}
       style={{
-        backgroundImage: isMobile ? `url(/pngs/homepageSlider2.png)` : "",
+        backgroundImage: isMobile
+          ? `url(/webpImages/homepageSlider2.webp)`
+          : "",
       }}
     >
       <div className={cn(styles.img)}></div>

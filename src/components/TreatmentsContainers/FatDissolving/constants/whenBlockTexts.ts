@@ -1,6 +1,6 @@
 export const whenBlockTexts = {
   question: "When is Fat dissolving a Good Choice",
-  imgUrl: "/pngs/FatDissolvingWhen.png",
+  imgUrl: "/webpImages/FatDissolvingWhen.webp",
   answers: [
     {
       answer: "Submental fullness (double chin)",
