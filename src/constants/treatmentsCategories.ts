@@ -9,7 +9,7 @@ import { TREATMENTS } from "../constants/treatments";
 export const TREATMENTS_CATEGORIES: ITreatmentCategory[] = [
   {
     id: 1,
-    name: "Injectables",
+    name: "Facial Contouring",
     imgUrl: injectablesImage,
     treatments: TREATMENTS.filter((treatment) => treatment.categoryId === 1),
   },

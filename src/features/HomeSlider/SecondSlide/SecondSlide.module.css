@@ -11,6 +11,10 @@
     background-repeat: no-repeat;
     justify-content: end;
   }
+
+  @media (width < 506px) {
+    background-size: cover;
+  }
 }
 
 .radianceBegin {
@@ -129,7 +133,7 @@
 
 .img {
   background-image: url("/webpImages/homepageSlider2.webp");
-  height: 800px;
+  height: 860px;
   background-position: left;
   background-size: 100% 100%;
   background-repeat: no-repeat;

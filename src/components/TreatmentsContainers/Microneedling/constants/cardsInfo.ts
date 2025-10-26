@@ -3,8 +3,7 @@ export const cardsInfos = [
     id: 1,
     imgUrl: "/webpImages/MicroneedingFace.webp",
     name: "Microneedling Face",
-    description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+    description: "",
     duration: "1 hr",
     price: "$295",
   },
@@ -13,7 +12,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/microneedlingNeck.webp",
     name: "Microneedling Neck",
     description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+      "By enhancing the skin’s natural regeneration, this treatment refreshes and revitalizes the neck, complementing facial treatments for a harmonious, rejuvenated look. Over time, the skin appears smoother, more toned, and naturally lifted.",
     duration: "1 hr",
     price: "$295",
   },
@@ -31,7 +30,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/microneedlingUndereye.webp",
     name: "Microneedling Undereye",
     description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+      "Undereye microneedling is a delicate treatment designed to rejuvenate the sensitive skin beneath the eyes. By stimulating collagen and elastin production, it helps reduce fine lines, dark circles, and mild puffiness, leaving the area smoother and more refreshed.",
     duration: "1 hr",
     price: "$195",
   },
@@ -40,7 +39,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/faceAndNeck.webp",
     name: "Microneedling face and neck",
     description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+      "Microneedling for the face and neck is a comprehensive rejuvenation treatment that stimulates collagen and elastin production across both areas. By creating micro-channels in the skin, it improves texture, reduces fine lines, softens acne scars, and firms sagging skin, leaving a smoother, more youthful appearance from the face down to the neckline.",
     duration: "1 hr",
     price: "$495",
   },
@@ -49,7 +48,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/wSerums.webp",
     name: "Microneedling w/Serums",
     description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+      "Microneedling with serums combines the benefits of collagen-stimulating microneedling with the enhanced delivery of potent, targeted serums. Tiny micro-channels created during the treatment allow active ingredients—such as hyaluronic acid, vitamins, or peptides—to penetrate deeply, boosting hydration, brightening, and overall skin health.",
     duration: "1 hr",
     price: "$395",
   },
@@ -58,7 +57,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/aquaGold.webp",
     name: "AquaGold w/Serums",
     description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+      "AquaGold is a revolutionary microneedling treatment that delivers custom-blended serums directly into the skin through ultra-fine, 24-karat gold-plated needles. This precise delivery enhances hydration, brightening, and overall skin health while targeting fine lines, texture, and uneven tone.",
     duration: "1 hr",
     price: "$195",
   },
@@ -67,7 +66,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/aquaGoldBotox.webp",
     name: "AqualGold W/Botox",
     description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+      "This minimally invasive treatment also stimulates collagen production and enhances the skin’s natural renewal process. Over a series of sessions, it leaves skin smoother, firmer, and more youthful-looking with a subtle, refreshed appearance.",
     duration: "1 hr",
     price: "$295",
   },
@@ -76,7 +75,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/aquaGoldFilter.webp",
     name: "AquaGold w/filler",
     description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+      "Ideal for those seeking subtle, natural-looking volume and skin revitalization, AquaGold with Filler provides a non-surgical, precision approach to smooth, radiant, and rejuvenated skin.",
     duration: "1 hr",
     price: "$495",
   },
@@ -85,7 +84,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/exosomesHair.webp",
     name: "Exosomes Hair",
     description:
-      "Microneedling, also known as collagen induction therapy, can improve the appearance and texture of your skin by stimulating your body to produce collagen. The procedure involves delivering sterile needles vertically into the skin to create micro-wounds, which trigger the body's natural healing response. The skin reacts by producing more collagen and elastin to close the wounds.",
+      "Exosomes hair treatment is an advanced therapy designed to stimulate hair growth and improve scalp health. Exosomes, which are tiny signaling vesicles derived from stem cells, help activate dormant hair follicles, promote cell regeneration, and strengthen existing hair.",
     duration: "1 hr",
     price: "$595",
   },

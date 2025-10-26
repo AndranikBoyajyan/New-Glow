@@ -9,12 +9,14 @@ interface SingleTreatmentWhenBlockProps {
   question: string;
   imgUrl: string;
   answers: IAnswer[];
+  isMorpheus8?: boolean;
 }
 
 export const SingleTreatmentWhenBlock: FC<SingleTreatmentWhenBlockProps> = ({
   question,
   answers,
   imgUrl,
+  isMorpheus8,
 }) => {
   const { width } = useWindowSize();
 
@@ -62,7 +64,9 @@ export const SingleTreatmentWhenBlock: FC<SingleTreatmentWhenBlockProps> = ({
       {!isMobile && (
         <div
           style={{ backgroundImage: `url(${imgUrl})` }}
-          className={styles.whenBlockImg}
+          className={cn(styles.whenBlockImg, {
+            [styles.whenBlockImgMorpheus8]: isMorpheus8,
+          })}
         ></div>
       )}
     </div>

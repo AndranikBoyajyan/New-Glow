@@ -2,7 +2,7 @@ export const cardsInfos = [
   {
     id: 1,
     imgUrl: "/webpImages/cheeks.webp",
-    name: "Cheeks (2 Syringes)",
+    name: "CHEEK CONTOURING",
     description:
       "Nose fillers allow for reshaping and smoothing bumps or asymmetry in the nose without surgery. It’s a quick, minimally invasive procedure that improves the nose profile with no downtime. Results are temporary but can last up to 12–18 months with proper care.",
     duration: "1 hr",
@@ -11,7 +11,7 @@ export const cardsInfos = [
   {
     id: 2,
     imgUrl: "/webpImages/chin.webp",
-    name: "Chin (2 Syringes)",
+    name: "CHIN ENHANCEMENT",
     description:
       "Nose fillers allow for reshaping and smoothing bumps or asymmetry in the nose without surgery. It’s a quick, minimally invasive procedure that improves the nose profile with no downtime. Results are temporary but can last up to 12–18 months with proper care.",
     duration: "1 hr 15 Min",
@@ -20,7 +20,7 @@ export const cardsInfos = [
   {
     id: 3,
     imgUrl: "/webpImages/jawline.webp",
-    name: "Jawline (2 Syringes)",
+    name: "JAWLINE DEFINING",
     description:
       "Nose fillers allow for reshaping and smoothing bumps or asymmetry in the nose without surgery. It’s a quick, minimally invasive procedure that improves the nose profile with no downtime. Results are temporary but can last up to 12–18 months with proper care.",
     duration: "1 hr",

@@ -27,6 +27,7 @@ export const Morpheus8 = () => {
           question={whenBlockTexts.question}
           answers={whenBlockTexts.answers}
           imgUrl={whenBlockTexts.imgUrl}
+          isMorpheus8
         />
       </div>
       <div className={styles.cards}>

@@ -12,6 +12,14 @@
   padding: 48px;
   gap: 16px;
 
+  @media (width < 1248px) {
+    padding: 36px;
+  }
+
+  @media (width < 1024px) {
+    padding: 30px;
+  }
+
   @media (width < 768px) {
     padding: 20px;
     gap: 10px;
@@ -59,6 +67,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @media (width < 1024px) {
+    gap: 6px;
+  }
 }
 
 .answer {
@@ -87,11 +99,30 @@
   }
 }
 
-.whenBlockImg {
+.whenBlockImg,
+.whenBlockImgMorpheus8 {
   width: 55vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+
+  @media (width < 1024px) {
+    width: 100%;
+    background-size: contain;
+  }
+
+  @media (width < 768px) {
+    display: none;
+  }
+}
+
+.whenBlockImgMorpheus8 {
+  width: 38vw;
+
+  @media (width < 1248px) {
+    width: 42vw;
+    background-size: contain;
+  }
 
   @media (width < 1024px) {
     width: 100%;
