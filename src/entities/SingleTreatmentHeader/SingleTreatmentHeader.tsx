@@ -17,6 +17,7 @@ interface SingleTreatmentHeaderProps {
   isFacialsPage?: boolean;
   isFacialCont?: boolean;
   isBotoxPage?: boolean;
+  isSculptraPage?: boolean;
 }
 
 export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
@@ -26,6 +27,7 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
   isFacialsPage,
   isFacialCont,
   isBotoxPage,
+  isSculptraPage,
 }) => {
   const { width } = useWindowSize();
 
@@ -41,7 +43,8 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
     return "title_h1_86";
   };
 
-  const isReverseContent = isLaserPage || isFacialsPage || isFacialCont;
+  const isReverseContent =
+    isLaserPage || isFacialsPage || isFacialCont || isSculptraPage;
 
   return (
     <>
@@ -49,6 +52,7 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
         <div
           className={cn(styles.singleTreatmentHeader, {
             [styles.singleTreatmentHeaderBackGroundImg]: !isMobile,
+            [styles.isSculptraPageBg]: isSculptraPage,
           })}
         >
           <div
@@ -66,6 +70,7 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
             <div
               className={cn(styles.singleTreatmentHeaderImage, {
                 [styles.laserPageHeaderImage]: isLaserPage,
+                [styles.isSculptraPageImg]: isSculptraPage,
               })}
               style={{ backgroundImage: `url(${imgUrl})` }}
             ></div>
@@ -77,6 +82,7 @@ export const SingleTreatmentHeader: FC<SingleTreatmentHeaderProps> = ({
           isLaserPage={isLaserPage}
           isBotoxPage={isBotoxPage}
           isFacialsPage={isFacialsPage}
+          isSculptraPage={isSculptraPage}
         />
       )}
     </>

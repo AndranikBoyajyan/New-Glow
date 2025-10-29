@@ -46,3 +46,11 @@
     width: 100%;
   }
 }
+
+.sculptraPageTreatmentImg {
+  width: 60%;
+
+  @media (width < 504px) {
+    width: 100%;
+  }
+}

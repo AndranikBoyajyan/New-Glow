@@ -26,7 +26,8 @@
   }
 }
 
-.whenBlockQuestionWrapperMobile {
+.whenBlockQuestionWrapperMobile,
+.whenBlockImgSculptraImg {
   width: 100vw;
   height: 172px;
   display: flex;
@@ -39,7 +40,12 @@
   background-size: contain;
 }
 
-.WhenBlockQuestionText {
+.whenBlockImgSculptraImg {
+  height: 100px;
+}
+
+.WhenBlockQuestionText,
+.sculptraWhenBlockText {
   font-size: 36px;
   color: #fff6f5;
   text-align: left;
@@ -53,6 +59,12 @@
     color: #b36a66;
     line-height: 150%;
     width: 60%;
+  }
+}
+
+.sculptraWhenBlockText {
+  @media (width < 768px) {
+    width: 50%;
   }
 }
 

@@ -1,8 +1,10 @@
-import type { FC } from "react";
+import { useCallback, useState, type FC } from "react";
 import cn from "classnames";
 import type { ILaserPageTreatmentCardList } from "../../types/global.types";
 import Button from "../../shared/Button";
 import styles from "./laserPageTreatmentCard.module.css";
+import Dialog from "../../shared/Dialog";
+import BookAConsultationPopup from "../../components/GeneralComponents/BookAConsultationPopup";
 
 interface LaserPageTreatmentCardProps {
   BodyPartList: ILaserPageTreatmentCardList[];
@@ -13,6 +15,16 @@ export const LaserPageTreatmentCard: FC<LaserPageTreatmentCardProps> = ({
   BodyPartList,
   imgUrl,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = useCallback(() => {
+    setIsOpen(true);
+  }, [setIsOpen]);
+
+  const handleCloseModal = useCallback(() => {
+    setIsOpen(false);
+  }, [setIsOpen]);
+
   return (
     <div className={styles.laserPageTreatmentCard}>
       <div
@@ -28,9 +40,6 @@ export const LaserPageTreatmentCard: FC<LaserPageTreatmentCardProps> = ({
               </span>
               <div className={styles.durationAndPriceBlock}>
                 <span className={cn(styles.txt, "poppins-light-italic")}>
-                  {treatmentType.duration}
-                </span>
-                <span className={cn(styles.txt, "poppins-light-italic")}>
                   {treatmentType.price}
                 </span>
               </div>
@@ -38,8 +47,19 @@ export const LaserPageTreatmentCard: FC<LaserPageTreatmentCardProps> = ({
           ))}
         </div>
         <div className={styles.buttonWrapper}>
-          <Button content="BOOK NOW" className="button_light_transparent" />
+          <Button
+            handleClick={handleOpenModal}
+            content="BOOK NOW"
+            className="button_light_transparent"
+          />
         </div>
+        <Dialog
+          open={isOpen}
+          onClose={handleCloseModal}
+          contentClassName={"consultationPopupContent"}
+        >
+          <BookAConsultationPopup onClose={handleCloseModal} />
+        </Dialog>
       </div>
     </div>
   );
