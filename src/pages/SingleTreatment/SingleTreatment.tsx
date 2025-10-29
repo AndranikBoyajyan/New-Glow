@@ -14,6 +14,7 @@ import BotoxTreatments from "../../components/TreatmentsContainers/BotoxTreatmen
 import VitaminTherapy from "../../components/TreatmentsContainers/VitaminTherapy";
 import IPLPhototherapy from "../../components/TreatmentsContainers/IPLPhototherapy";
 import { getTreatmentPath } from "../../helpers/getTreatmentPath";
+import Sculptra from "../../components/TreatmentsContainers/Sculptra";
 
 export const SingleTreatment = () => {
   const treatmentsTrueNames = TREATMENTS.map((treatment) =>
@@ -35,6 +36,7 @@ export const SingleTreatment = () => {
   if (name === "botox-treatments") return <BotoxTreatments />;
   if (name === "vitamin-therapy") return <VitaminTherapy />;
   if (name === "ipl-phototherapy") return <IPLPhototherapy />;
+  if (name === "sculptra") return <Sculptra />;
 
   return <div className={styles.singleTreatment}>{name}</div>;
 };

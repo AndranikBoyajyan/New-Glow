@@ -1,15 +1,16 @@
-import { useState, type FC } from "react";
+import { useCallback, useState, type FC } from "react";
 import styles from "./TreatmentPageCard.module.css";
 import Title from "../../shared/Title";
 import cn from "classnames";
 import Button from "../../shared/Button";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
+import Dialog from "../../shared/Dialog";
+import BookAConsultationPopup from "../../components/GeneralComponents/BookAConsultationPopup";
 
 interface TreatmentPageCardProps {
   name: string;
   description: string;
-  duration: string;
   price: string;
   imgUrl: string;
 }
@@ -17,10 +18,19 @@ interface TreatmentPageCardProps {
 export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
   name,
   description,
-  duration,
   price,
   imgUrl,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = useCallback(() => {
+    setIsOpen(true);
+  }, [setIsOpen]);
+
+  const handleCloseModal = useCallback(() => {
+    setIsOpen(false);
+  }, [setIsOpen]);
+
   const [showMore, setShowMore] = useState(false);
 
   const { width } = useWindowSize();
@@ -64,13 +74,21 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
 
         <div className={styles.priceAndButtonBlock}>
           <div className={styles.durationAndPriceBlock}>
-            <span className={cn(styles.duration, "poppins-light")}>
-              {duration}
-            </span>
             <span className={cn(styles.price, "poppins-light")}>{price}</span>
           </div>
-          <Button content="BOOK NOW" className="button_light_transparent" />
+          <Button
+            handleClick={handleOpenModal}
+            content="BOOK NOW"
+            className="button_light_transparent"
+          />
         </div>
+        <Dialog
+          open={isOpen}
+          onClose={handleCloseModal}
+          contentClassName={"consultationPopupContent"}
+        >
+          <BookAConsultationPopup onClose={handleCloseModal} />
+        </Dialog>
       </div>
     </div>
   );

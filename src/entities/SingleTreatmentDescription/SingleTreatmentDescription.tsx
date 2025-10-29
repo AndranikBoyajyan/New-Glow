@@ -12,7 +12,7 @@ export const SingleTreatmentDescription: FC<
   SingleTreatmentDescriptionProps
 > = ({ description, title }) => {
   const descriptionParts = description.split(".");
-  descriptionParts.pop();
+  if (descriptionParts.length !== 1) descriptionParts.pop();
 
   return (
     <div className={styles.singleTreatmentDescriptionWrapper}>

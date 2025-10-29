@@ -10,6 +10,7 @@ interface SingleTreatmentWhenBlockProps {
   imgUrl: string;
   answers: IAnswer[];
   isMorpheus8?: boolean;
+  isSculptra?: boolean;
 }
 
 export const SingleTreatmentWhenBlock: FC<SingleTreatmentWhenBlockProps> = ({
@@ -17,6 +18,7 @@ export const SingleTreatmentWhenBlock: FC<SingleTreatmentWhenBlockProps> = ({
   answers,
   imgUrl,
   isMorpheus8,
+  isSculptra,
 }) => {
   const { width } = useWindowSize();
 
@@ -25,11 +27,15 @@ export const SingleTreatmentWhenBlock: FC<SingleTreatmentWhenBlockProps> = ({
     <div className={isMobile ? styles.WhenBlockMobile : styles.WhenBlock}>
       {isMobile && (
         <div
-          className={styles.whenBlockQuestionWrapperMobile}
+          className={cn(styles.whenBlockQuestionWrapperMobile, {
+            [styles.whenBlockImgSculptraImg]: isSculptra && isMobile,
+          })}
           style={{ backgroundImage: `url(${imgUrl})` }}
         >
           <span
-            className={cn(styles.WhenBlockQuestionText, "fjalla-one-regular")}
+            className={cn(styles.WhenBlockQuestionText, "fjalla-one-regular", {
+              [styles.sculptraWhenBlockText]: isSculptra,
+            })}
           >
             {question.toUpperCase()}
           </span>
