@@ -1,4 +1,4 @@
-import ourExpert1 from "/webpImages/ourExpert1.webp";
+import ourExpert1 from "/webpImages/specialist1.webp";
 import ourExpert2 from "/webpImages/ourExpert2.webp";
 import type { ExpertCard } from "../model";
 
