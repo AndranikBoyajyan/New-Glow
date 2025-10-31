@@ -10,6 +10,7 @@
   @media (width < 1024px) {
     width: 100%;
     padding: 38px 16px;
+    z-index: 1;
   }
 }
 
