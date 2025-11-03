@@ -89,7 +89,8 @@
 }
 
 .button_light_transparent:hover {
-  border: 3px solid #8a4f4c;
+  border: 2px solid #8a4f4c;
+  color: #8a4f4c;
 }
 
 .button_transparent {

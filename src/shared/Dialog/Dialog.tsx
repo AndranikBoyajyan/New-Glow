@@ -32,7 +32,7 @@ export const Dialog = ({
   const handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {
     const related = e.relatedTarget as Node | null;
     if (contentRef.current && !contentRef.current.contains(related)) {
-      onClose();
+      // onClose();
     }
   };
 

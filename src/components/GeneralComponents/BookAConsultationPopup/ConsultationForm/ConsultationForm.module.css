@@ -4,11 +4,11 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 36px 22px 30px;
+  padding: 36px 22px 40px;
   background-color: #f4eae991;
 
   @media (width < 1280px) {
-    padding: 28px 18px 12px;
+    padding: 28px 18px 16px;
     gap: 16px;
   }
 
@@ -19,7 +19,7 @@
 
   @media (width < 768px) {
     width: 100%;
-    padding: 24px 12px;
+    padding: 18px 12px;
     gap: 12px;
   }
 }
@@ -30,11 +30,11 @@
   text-align: center;
 
   @media (width < 1280px) {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   @media (width < 768px) {
-    font-size: 12px;
+    font-size: 10px;
     text-align: left;
     margin-bottom: 16px;
   }
@@ -49,6 +49,10 @@
 
   @media (width < 1280px) {
     gap: 24px;
+  }
+
+  @media (width < 1024px) {
+    gap: 16px;
   }
 
   @media (width < 768px) {
@@ -101,4 +105,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (width < 1024px) {
+    height: 36px;
+  }
+
+  @media (width < 768px) {
+    height: 32px;
+  }
+}
+
+.errorInput {
+  border: 1px solid #ff5f56;
+}
+
+.error {
+  color: #ff5f56;
+  font-size: 12px;
+  margin-top: 4px;
 }
