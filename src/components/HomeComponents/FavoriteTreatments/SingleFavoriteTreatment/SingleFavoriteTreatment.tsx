@@ -1,31 +1,33 @@
 import { Link } from "react-router";
 import cn from "classnames";
 import { getTreatmentPath } from "../../../../helpers/getTreatmentPath";
-import type { IFavoriteTreatmentsDescription } from "../../../../types/global.types";
+import type { IFavoriteTreatments } from "../../../../types/global.types";
 
 import styles from "./SingleFavoriteTreatment.module.css";
+import { BASE_URL } from "../service/getFavTreatments";
 
 interface SingleFavoriteTreatmentProps {
-  treatment: IFavoriteTreatmentsDescription;
+  treatment: IFavoriteTreatments;
 }
 
 export const SingleFavoriteTreatment = ({
   treatment,
 }: SingleFavoriteTreatmentProps) => {
-  const treatmentClassname = treatment.name.replaceAll(" ", "").toLowerCase();
+  if (!treatment) return null;
+  const treatmentClassname = treatment.title.replaceAll(" ", "").toLowerCase();
 
   return (
     <Link
-      to={`/${getTreatmentPath(treatment.name)}`}
+      to={`/${getTreatmentPath(treatment.title)}`}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className={cn(styles.link, styles[treatmentClassname])}
     >
       <div
         className={styles.favoriteTreatment}
-        style={{ backgroundImage: `url(${treatment.imgUrl})` }}
+        style={{ backgroundImage: `url(${BASE_URL}${treatment.imageUrl})` }}
       >
         <span className={cn(styles.name, "poppins-regular")}>
-          {treatment.name}
+          {treatment.title}
         </span>
       </div>
     </Link>

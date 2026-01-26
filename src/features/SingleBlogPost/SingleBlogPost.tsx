@@ -7,12 +7,12 @@ import linkedinSvg from "../../../src/assets/linkedIn.svg";
 import linkSvg from "../../../src/assets/link.svg";
 import SpecialistSvg from "../../../src/assets/Vahe.svg";
 import heartSvg from "../../../src/assets/HeartSvg.svg";
-
-import styles from "./SingleBlogPost.module.css";
+import PatientsResults from "../../entities/SingleTreatmentPatientsResults";
 import SingleBlogRecentPosts from "../SingleBlogRecentPosts";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
-import PatientsResults from "../../entities/SingleTreatmentPatientsResults";
+
+import styles from "./SingleBlogPost.module.css";
 
 interface SingleBlogPostProps {
   id: number;

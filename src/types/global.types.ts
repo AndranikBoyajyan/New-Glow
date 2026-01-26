@@ -14,10 +14,10 @@ export interface ILaserPageTreatmentCardList {
   price: string;
 }
 
-export interface IFavoriteTreatmentsDescription {
+export interface IFavoriteTreatments {
   id: number;
-  imgUrl: string;
-  name: string;
+  imageUrl: string;
+  title: string;
 }
 
 export interface IBlogCardsInfo {
