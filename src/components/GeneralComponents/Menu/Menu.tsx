@@ -4,21 +4,34 @@ import { useWindowSize } from "../../../hooks/useWindowSize";
 import menuImg from "/webpImages/burgerMenuImg.webp";
 import LogoSVG from "../../../assets/Logo.svg";
 import menuCloseImg from "/webpImages/mobileMenuCloseIcon.webp";
-
-import styles from "./Menu.module.css";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 import { Link } from "react-router";
+import type { MenuItem as MenuItemType } from "./lib/model";
+import { getMenuItems } from "./service/getMenuItems";
+
+import styles from "./Menu.module.css";
 
 export const Menu = () => {
   const { width } = useWindowSize();
   const [isOpen, setIsOpen] = useState(false);
+
+  const [menuItems, setMenuItems] = useState<MenuItemType[]>([]);
+
+  const getMenu = useCallback(async () => {
+    const items = await getMenuItems();
+    setMenuItems(items);
+  }, []);
 
   const isMobile = width < MEDIA_TABLET_SMALL;
 
   const handleCloseModal = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    getMenu();
+  }, [getMenu]);
 
   return (
     <div
@@ -53,26 +66,14 @@ export const Menu = () => {
                   style={{ backgroundImage: `url(${LogoSVG})` }}
                 ></div>
               </Link>
-              <MenuItem
-                redirectUrl="/about"
-                name="ABOUT US"
-                onClose={handleCloseModal}
-              />
-              <MenuItem
-                name="TREATMENTS"
-                isDropDown
-                onClose={handleCloseModal}
-              />
-              <MenuItem
-                redirectUrl="/products"
-                name="PRODUCTS"
-                onClose={handleCloseModal}
-              />
-              <MenuItem
-                redirectUrl="/blog"
-                name="BLOG"
-                onClose={handleCloseModal}
-              />
+              {menuItems.map((item) => (
+                <MenuItem
+                  key={item.id}
+                  name={item.name.toUpperCase()}
+                  isDropDown={item.isDropDown}
+                  redirectUrl={item.name.split(" ")[0].toLowerCase()}
+                />
+              ))}
               <div className={styles.phoneNumberWrapper}>
                 <img src={"/webpImages/phone.webp"} alt="phone" />
                 <Link
@@ -90,10 +91,15 @@ export const Menu = () => {
         </div>
       ) : (
         <ul className={styles.menu}>
-          <MenuItem redirectUrl="/about" name="ABOUT US" />
-          <MenuItem name="TREATMENTS" isDropDown />
-          <MenuItem redirectUrl="/products" name="PRODUCTS" />
-          <MenuItem redirectUrl="/blog" name="BLOG" />
+          {menuItems.map((item) => (
+            <MenuItem
+              key={item.id}
+              name={item.name.toUpperCase()}
+              isDropDown={item.isDropDown}
+              redirectUrl={item.name.split(" ")[0].toLowerCase()}
+              onClose={handleCloseModal}
+            />
+          ))}
         </ul>
       )}
     </div>

@@ -1,14 +1,27 @@
+import { useCallback, useEffect, useState } from "react";
 import FavoriteTreatmentsDescription from "../../../entities/FavoriteTreatmentsDescription";
-import { favoriteTreatments } from "./constants/favoriteTreatments";
 import styles from "./FavoriteTreatments.module.css";
 import SingleFavoriteTreatment from "./SingleFavoriteTreatment";
+import { getFavTreatments } from "./service/getFavTreatments";
+import type { IFavoriteTreatments } from "../../../types/global.types";
 
 export const FavoriteTreatments = () => {
+  const [favTreatments, setFavTreatments] = useState<IFavoriteTreatments[]>([]);
+
+  const getFavoriteTreatments = useCallback(async () => {
+    const treatments = await getFavTreatments();
+    setFavTreatments(treatments);
+  }, []);
+
+  useEffect(() => {
+    getFavoriteTreatments();
+  }, [getFavoriteTreatments]);
+
   return (
     <div className={styles.favoriteTreatments}>
       <FavoriteTreatmentsDescription />
       <div className={styles.imgs}>
-        {favoriteTreatments.map((treatment) => (
+        {favTreatments.map((treatment) => (
           <SingleFavoriteTreatment key={treatment.id} treatment={treatment} />
         ))}
       </div>
