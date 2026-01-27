@@ -5,7 +5,6 @@ import fbSvg from "../../../src/assets/fb.svg";
 import twitterSvg from "../../../src/assets/twitter.svg";
 import linkedinSvg from "../../../src/assets/linkedIn.svg";
 import linkSvg from "../../../src/assets/link.svg";
-import SpecialistSvg from "../../../src/assets/Vahe.svg";
 import heartSvg from "../../../src/assets/HeartSvg.svg";
 import PatientsResults from "../../entities/SingleTreatmentPatientsResults";
 import SingleBlogRecentPosts from "../SingleBlogRecentPosts";
@@ -38,7 +37,7 @@ export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
           />
         </div>
         <div className={cn(styles.infoWrapper, "poppins-regular")}>
-          <img src={SpecialistSvg} alt="Vahe" />
+          <img src={"/webpImages/Vahe.webp"} alt="Vahe" width={59} />
           <span>{post.specialistName}</span>
           <span>{post.readTime}</span>
           <span>{post.date}</span>
