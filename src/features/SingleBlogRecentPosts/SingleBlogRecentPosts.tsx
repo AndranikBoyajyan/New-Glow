@@ -8,27 +8,29 @@ import Title from "../../shared/Title";
 import styles from "./SingleBlogRecentPosts.module.css";
 
 interface SingleBlogRecentPostsProps {
-  id: number;
+  title: string;
 }
 
-export const SingleBlogRecentPosts = ({ id }: SingleBlogRecentPostsProps) => {
+export const SingleBlogRecentPosts = ({
+  title,
+}: SingleBlogRecentPostsProps) => {
   const latestPosts = BLOG_CARDS_INFO.slice(0, 4);
 
-  const ids = latestPosts.map((post) => post.id);
-  const isActive = ids.includes(id);
+  const titles = latestPosts.map((post) => post.title);
+  const isActive = titles.includes(title);
 
   let recentPosts = latestPosts;
 
   if (isActive) {
-    recentPosts = latestPosts.filter((post) => post.id !== id);
+    recentPosts = latestPosts.filter((post) => post.title !== title);
     recentPosts.push(BLOG_CARDS_INFO[4]);
   }
 
   const navigate = useNavigate();
 
   const handleNavigatePost = useCallback(
-    (id: number) => {
-      navigate(`/blog/${id}`);
+    (slug: string) => {
+      navigate(`/blog/${slug}`);
       return window.scrollTo({ top: 0, behavior: "smooth" });
     },
     [navigate]
@@ -53,8 +55,7 @@ export const SingleBlogRecentPosts = ({ id }: SingleBlogRecentPostsProps) => {
       <div className={styles.blogRecentPosts}>
         {recentPosts.map((post) => (
           <BlogPageCard
-            key={post.id}
-            id={post.id}
+            key={post.title}
             specialistName={post.specialistName}
             commentsCount={post.commentsCount}
             date={post.date}

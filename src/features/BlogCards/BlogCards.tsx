@@ -9,8 +9,8 @@ export const BlogCards = () => {
   const navigate = useNavigate();
 
   const handleNavigatePost = useCallback(
-    (id: number) => {
-      navigate(`/blog/${id}`);
+    (slug: string) => {
+      navigate(`/blog/${slug}`);
       return window.scrollTo({ top: 0, behavior: "smooth" });
     },
     [navigate]
@@ -21,7 +21,6 @@ export const BlogCards = () => {
       {BLOG_CARDS_INFO.map((blogCardInfo) => (
         <BlogPageCard
           key={blogCardInfo.id}
-          id={blogCardInfo.id}
           specialistName={blogCardInfo.specialistName}
           commentsCount={blogCardInfo.commentsCount}
           date={blogCardInfo.date}

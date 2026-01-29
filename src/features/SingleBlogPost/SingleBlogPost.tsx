@@ -14,11 +14,13 @@ import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 import styles from "./SingleBlogPost.module.css";
 
 interface SingleBlogPostProps {
-  id: number;
+  title: string;
 }
 
-export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
-  const post = BLOG_CARDS_INFO.find((post) => post.id === id);
+export const SingleBlogPost = ({ title }: SingleBlogPostProps) => {
+  const post = BLOG_CARDS_INFO.find(
+    (post) => post.title.replaceAll("?", "") === title
+  );
 
   const { width } = useWindowSize();
 
@@ -77,7 +79,7 @@ export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
             <img src={linkSvg} alt="link" />
           </div>
           <div className={cn(styles.actions, "poppins-regular")}>
-            <span className={styles.text}>{post.views} views</span>
+            <span className={styles.text}>{post.views} views</span> {/** */}
             <span className={styles.text}>{post.commentsCount} comments</span>
             {post.likeCount && (
               <div className={styles.like}>
@@ -91,7 +93,7 @@ export const SingleBlogPost = ({ id }: SingleBlogPostProps) => {
         </div>
         <div className={styles.divider}></div>
       </div>
-      <SingleBlogRecentPosts id={id} />
+      <SingleBlogRecentPosts title={post.title} />
       <PatientsResults firstName="Acne detox facial (1 course completed) " />
     </div>
   );

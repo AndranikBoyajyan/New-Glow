@@ -10,16 +10,15 @@ import ErrorPage from "./pages/Error404";
 import Blog from "./pages/Blog";
 import SinglePost from "./pages/SinglePost";
 import Specials from "./pages/Specials";
-import { useEffect } from "react";
-import { instance } from "./service/axiosInstance";
-
-const base_url = import.meta.env.VITE_SERVER_API;
+import { useEffect, useState } from "react";
+import { api } from "./service/axiosInstance";
 
 function App() {
+  const [user, setUser] = useState();
   useEffect(() => {
-    instance.get(base_url + "api/anonymous/user", {
-      withCredentials: true,
-    });
+    api
+      .get("/anonymous/user", { withCredentials: true })
+      .then((res) => setUser(res.data));
   }, []);
 
   return (
@@ -33,7 +32,7 @@ function App() {
           <Route path="about/:name" element={<SingleTreatment />} />
           <Route path="all-treatments/:name" element={<SingleTreatment />} />
           <Route path="blog" element={<Blog />} />
-          <Route path="blog/:id" element={<SinglePost />} />
+          <Route path="blog/:slug" element={<SinglePost />} />
           <Route path="specials" element={<Specials />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />

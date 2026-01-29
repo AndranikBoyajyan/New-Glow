@@ -9,7 +9,6 @@ import styles from "./BlogPageCard.module.css";
 
 interface BlogPageCardProps {
   specialistName: string;
-  id: number;
   date: string;
   readTime: string;
   title: string;
@@ -18,12 +17,11 @@ interface BlogPageCardProps {
   commentsCount: number;
   imgUrl: string;
   likeCount?: number;
-  handleNavigatePost: (id: number) => void;
+  handleNavigatePost: (slug: string) => void;
 }
 
 export const BlogPageCard = ({
   specialistName,
-  id,
   date,
   readTime,
   title,
@@ -34,8 +32,12 @@ export const BlogPageCard = ({
   likeCount,
   handleNavigatePost,
 }: BlogPageCardProps) => {
+  const slug = title.replaceAll(" ", "-").replaceAll("?", "");
   return (
-    <div className={styles.blogPageCard} onClick={() => handleNavigatePost(id)}>
+    <div
+      className={styles.blogPageCard}
+      onClick={() => handleNavigatePost(slug)}
+    >
       <div
         className={styles.blogPageCardImg}
         style={{ backgroundImage: `url(${imgUrl})` }}

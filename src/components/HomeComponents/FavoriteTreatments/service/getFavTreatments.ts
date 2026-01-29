@@ -1,7 +1,7 @@
-import { instance } from "../../../../service/axiosInstance";
+import { api } from "../../../../service/axiosInstance";
 
 export const getFavTreatments = async () => {
-  const response = await instance(`/api/favorite-treatments`);
+  const response = await api.get(`/favorite-treatments`);
 
   return response.data;
 };
