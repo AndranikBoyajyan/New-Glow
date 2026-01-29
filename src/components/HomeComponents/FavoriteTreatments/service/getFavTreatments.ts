@@ -1,9 +1,7 @@
-import axios from "axios";
-
-export const BASE_URL = import.meta.env.VITE_SERVER_API;
+import { instance } from "../../../../service/axiosInstance";
 
 export const getFavTreatments = async () => {
-  const response = await axios(`${BASE_URL}api/favorite-treatments`);
+  const response = await instance(`/api/favorite-treatments`);
 
   return response.data;
 };

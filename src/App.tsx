@@ -11,13 +11,13 @@ import Blog from "./pages/Blog";
 import SinglePost from "./pages/SinglePost";
 import Specials from "./pages/Specials";
 import { useEffect } from "react";
-import axios from "axios";
+import { instance } from "./service/axiosInstance";
 
 const base_url = import.meta.env.VITE_SERVER_API;
 
 function App() {
   useEffect(() => {
-    axios.get(base_url + "api/anonymous/user", {
+    instance.get(base_url + "api/anonymous/user", {
       withCredentials: true,
     });
   }, []);
