@@ -4,7 +4,6 @@ import { getTreatmentPath } from "../../../../helpers/getTreatmentPath";
 import type { IFavoriteTreatments } from "../../../../types/global.types";
 
 import styles from "./SingleFavoriteTreatment.module.css";
-import { BASE_URL } from "../service/getFavTreatments";
 
 interface SingleFavoriteTreatmentProps {
   treatment: IFavoriteTreatments;
@@ -24,7 +23,11 @@ export const SingleFavoriteTreatment = ({
     >
       <div
         className={styles.favoriteTreatment}
-        style={{ backgroundImage: `url(${BASE_URL}${treatment.imageUrl})` }}
+        style={{
+          backgroundImage: `url(${import.meta.env.VITE_SERVER_API}${
+            treatment.imageUrl
+          })`,
+        }}
       >
         <span className={cn(styles.name, "poppins-regular")}>
           {treatment.title}

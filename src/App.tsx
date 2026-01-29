@@ -10,8 +10,18 @@ import ErrorPage from "./pages/Error404";
 import Blog from "./pages/Blog";
 import SinglePost from "./pages/SinglePost";
 import Specials from "./pages/Specials";
+import { useEffect } from "react";
+import { instance } from "./service/axiosInstance";
+
+const base_url = import.meta.env.VITE_SERVER_API;
 
 function App() {
+  useEffect(() => {
+    instance.get(base_url + "api/anonymous/user", {
+      withCredentials: true,
+    });
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
