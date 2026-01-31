@@ -16,10 +16,10 @@ import { api } from "./service/axiosInstance";
 function App() {
   const [user, setUser] = useState();
   useEffect(() => {
-    api
-      .get("/anonymous/user", { withCredentials: true })
-      .then((res) => setUser(res.data));
+    api.get("/anonymous/user").then((res) => setUser(res.data));
   }, []);
+
+  console.log({ user });
 
   return (
     <BrowserRouter>

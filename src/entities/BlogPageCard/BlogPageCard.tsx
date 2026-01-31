@@ -32,7 +32,7 @@ export const BlogPageCard = ({
   likeCount,
   handleNavigatePost,
 }: BlogPageCardProps) => {
-  const slug = title.replaceAll(" ", "-").replaceAll("?", "");
+  const slug = title.replaceAll(" ", "-").replaceAll("?", ""); // es slug@ arden backic a galu
   return (
     <div
       className={styles.blogPageCard}

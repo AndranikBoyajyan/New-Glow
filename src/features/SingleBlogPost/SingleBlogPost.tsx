@@ -79,7 +79,7 @@ export const SingleBlogPost = ({ title }: SingleBlogPostProps) => {
             <img src={linkSvg} alt="link" />
           </div>
           <div className={cn(styles.actions, "poppins-regular")}>
-            <span className={styles.text}>{post.views} views</span> {/** */}
+            <span className={styles.text}>{post.views} views</span>
             <span className={styles.text}>{post.commentsCount} comments</span>
             {post.likeCount && (
               <div className={styles.like}>

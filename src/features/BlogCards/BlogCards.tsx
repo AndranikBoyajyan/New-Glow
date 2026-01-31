@@ -5,8 +5,21 @@ import BlogPageCard from "../../entities/BlogPageCard";
 import styles from "./BlogCards.module.css";
 import { useNavigate } from "react-router";
 
+// interface Card {
+//   id: number;
+//   slug: string;
+//   views: number;
+//   comments: string[];
+//   likeCount: number;
+// }
+
 export const BlogCards = () => {
   const navigate = useNavigate();
+
+  // const [cards, setCards] = useState<Card[]>([]);
+
+  // frontum mtacum ei unenayi senc interface en inch@ dinamika u
+  // backic a galis senc pahei u nkarei lav tarberak a @st qez?
 
   const handleNavigatePost = useCallback(
     (slug: string) => {
