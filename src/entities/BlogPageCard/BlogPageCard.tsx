@@ -12,6 +12,7 @@ interface BlogPageCardProps {
   date: string;
   readTime: string;
   title: string;
+  slug: string;
   description: string;
   views: number;
   commentsCount: number;
@@ -25,6 +26,7 @@ export const BlogPageCard = ({
   date,
   readTime,
   title,
+  slug,
   description,
   views,
   commentsCount,
@@ -32,7 +34,6 @@ export const BlogPageCard = ({
   likeCount,
   handleNavigatePost,
 }: BlogPageCardProps) => {
-  const slug = title.replaceAll(" ", "-").replaceAll("?", ""); // es slug@ arden backic a galu
   return (
     <div
       className={styles.blogPageCard}
@@ -73,7 +74,7 @@ export const BlogPageCard = ({
         <div className={styles.actions}>
           <div className={styles.viewsAndComments}>
             <div className={styles.views}>
-              <img src={EyeSvg} alt="" />
+              {!!views && <img src={EyeSvg} alt="" />}
               <span className={cn(styles.count, "poppins-regular")}>
                 {views}
               </span>

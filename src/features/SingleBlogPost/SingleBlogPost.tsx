@@ -14,13 +14,11 @@ import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 import styles from "./SingleBlogPost.module.css";
 
 interface SingleBlogPostProps {
-  title: string;
+  slug: string;
 }
 
-export const SingleBlogPost = ({ title }: SingleBlogPostProps) => {
-  const post = BLOG_CARDS_INFO.find(
-    (post) => post.title.replaceAll("?", "") === title
-  );
+export const SingleBlogPost = ({ slug }: SingleBlogPostProps) => {
+  const post = BLOG_CARDS_INFO.find((post) => post.slug === slug);
 
   const { width } = useWindowSize();
 
@@ -93,7 +91,7 @@ export const SingleBlogPost = ({ title }: SingleBlogPostProps) => {
         </div>
         <div className={styles.divider}></div>
       </div>
-      <SingleBlogRecentPosts title={post.title} />
+      <SingleBlogRecentPosts slug={slug} />
       <PatientsResults firstName="Acne detox facial (1 course completed) " />
     </div>
   );

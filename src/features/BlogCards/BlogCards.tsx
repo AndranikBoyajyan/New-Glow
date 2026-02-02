@@ -1,25 +1,52 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { BLOG_CARDS_INFO } from "../../constants/blogCardsInfo";
 import BlogPageCard from "../../entities/BlogPageCard";
 
 import styles from "./BlogCards.module.css";
 import { useNavigate } from "react-router";
-
-// interface Card {
-//   id: number;
-//   slug: string;
-//   views: number;
-//   comments: string[];
-//   likeCount: number;
-// }
+import { getBlogViews } from "./service/getBlogViews";
+import { getBlogCards } from "./service/getCards";
 
 export const BlogCards = () => {
   const navigate = useNavigate();
 
-  // const [cards, setCards] = useState<Card[]>([]);
+  const [views, setViews] = useState<Record<string, number>>({});
+  const [cards, setCards] = useState<{ id: number; slug: string }[]>([]);
 
-  // frontum mtacum ei unenayi senc interface en inch@ dinamika u
-  // backic a galis senc pahei u nkarei lav tarberak a @st qez?
+  const blogCardIds = Object.keys(views);
+
+  const getViews = useCallback(async () => {
+    const currentViews = await getBlogViews();
+
+    setViews(currentViews);
+  }, []);
+
+  const getCards = useCallback(async () => {
+    const cards = await getBlogCards();
+
+    setCards(cards);
+  }, []);
+
+  useEffect(() => {
+    getViews();
+    getCards();
+  }, [getViews, getCards]);
+
+  const cardsToRender = BLOG_CARDS_INFO.map((card) => {
+    const postId =
+      blogCardIds.find((cardId) => Number(cardId) === card.id) ?? "";
+
+    const viewCount = views[postId];
+    const slug = cards.find((cardFromApi) => cardFromApi.id === card.id)?.slug;
+    card.slug = slug ?? ""; // kastila che es moment@?
+
+    // add comments and likes
+    return {
+      ...card,
+      views: viewCount,
+      slug,
+    };
+  });
 
   const handleNavigatePost = useCallback(
     (slug: string) => {
@@ -31,7 +58,7 @@ export const BlogCards = () => {
 
   return (
     <div className={styles.blogCards}>
-      {BLOG_CARDS_INFO.map((blogCardInfo) => (
+      {cardsToRender.map((blogCardInfo) => (
         <BlogPageCard
           key={blogCardInfo.id}
           specialistName={blogCardInfo.specialistName}
@@ -39,6 +66,7 @@ export const BlogCards = () => {
           date={blogCardInfo.date}
           readTime={blogCardInfo.readTime}
           title={blogCardInfo.title}
+          slug={blogCardInfo.slug ?? ""}
           description={blogCardInfo.description}
           views={blogCardInfo.views}
           imgUrl={blogCardInfo.imgUrl}

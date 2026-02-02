@@ -8,21 +8,19 @@ import Title from "../../shared/Title";
 import styles from "./SingleBlogRecentPosts.module.css";
 
 interface SingleBlogRecentPostsProps {
-  title: string;
+  slug: string;
 }
 
-export const SingleBlogRecentPosts = ({
-  title,
-}: SingleBlogRecentPostsProps) => {
+export const SingleBlogRecentPosts = ({ slug }: SingleBlogRecentPostsProps) => {
   const latestPosts = BLOG_CARDS_INFO.slice(0, 4);
 
-  const titles = latestPosts.map((post) => post.title);
-  const isActive = titles.includes(title);
+  const slugs = latestPosts.map((post) => post.slug);
+  const isActive = slugs.includes(slug);
 
   let recentPosts = latestPosts;
 
   if (isActive) {
-    recentPosts = latestPosts.filter((post) => post.title !== title);
+    recentPosts = latestPosts.filter((post) => post.slug !== slug);
     recentPosts.push(BLOG_CARDS_INFO[4]);
   }
 
@@ -61,6 +59,7 @@ export const SingleBlogRecentPosts = ({
             date={post.date}
             readTime={post.readTime}
             title={post.title}
+            slug={slug}
             description={post.description}
             views={post.views}
             handleNavigatePost={handleNavigatePost}
