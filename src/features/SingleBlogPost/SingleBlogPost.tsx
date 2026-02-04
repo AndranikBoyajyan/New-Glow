@@ -10,8 +10,12 @@ import PatientsResults from "../../entities/SingleTreatmentPatientsResults";
 import SingleBlogRecentPosts from "../SingleBlogRecentPosts";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
+import CommentsBlock from "./CommentsBlock";
+import { getBlogComments } from "../BlogCards/service/getAllComments";
+import { useCallback, useEffect, useState } from "react";
 
 import styles from "./SingleBlogPost.module.css";
+import type { Comment } from "./model";
 
 interface SingleBlogPostProps {
   slug: string;
@@ -22,6 +26,17 @@ export const SingleBlogPost = ({ slug, id }: SingleBlogPostProps) => {
   const post = BLOG_CARDS_INFO.find((post) => post.id === id);
 
   const { width } = useWindowSize();
+  const [comments, setComments] = useState<Comment[]>([]);
+
+  const getComments = useCallback(async () => {
+    const newCommentsAndCount = await getBlogComments(String(id));
+
+    setComments(newCommentsAndCount.comments);
+  }, [id]);
+
+  useEffect(() => {
+    getComments();
+  }, [getComments]);
 
   const isMobile = width < MEDIA_TABLET_SMALL;
 
@@ -92,6 +107,11 @@ export const SingleBlogPost = ({ slug, id }: SingleBlogPostProps) => {
         </div>
         <div className={styles.divider}></div>
       </div>
+      <CommentsBlock
+        blogId={post.id}
+        comments={comments}
+        getComments={getComments}
+      />
       <SingleBlogRecentPosts slug={slug} />
       <PatientsResults firstName="Acne detox facial (1 course completed) " />
     </div>
