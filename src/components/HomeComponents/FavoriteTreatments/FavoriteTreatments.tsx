@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import FavoriteTreatmentsDescription from "../../../entities/FavoriteTreatmentsDescription";
 import styles from "./FavoriteTreatments.module.css";
 import SingleFavoriteTreatment from "./SingleFavoriteTreatment";
@@ -8,14 +8,9 @@ import type { IFavoriteTreatments } from "../../../types/global.types";
 export const FavoriteTreatments = () => {
   const [favTreatments, setFavTreatments] = useState<IFavoriteTreatments[]>([]);
 
-  const getFavoriteTreatments = useCallback(async () => {
-    const treatments = await getFavTreatments();
-    setFavTreatments(treatments);
-  }, []);
-
   useEffect(() => {
-    getFavoriteTreatments();
-  }, [getFavoriteTreatments]);
+    getFavTreatments().then((res) => setFavTreatments(res));
+  }, []);
 
   return (
     <div className={styles.favoriteTreatments}>

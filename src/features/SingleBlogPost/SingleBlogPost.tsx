@@ -15,10 +15,11 @@ import styles from "./SingleBlogPost.module.css";
 
 interface SingleBlogPostProps {
   slug: string;
+  id: number;
 }
 
-export const SingleBlogPost = ({ slug }: SingleBlogPostProps) => {
-  const post = BLOG_CARDS_INFO.find((post) => post.slug === slug);
+export const SingleBlogPost = ({ slug, id }: SingleBlogPostProps) => {
+  const post = BLOG_CARDS_INFO.find((post) => post.id === id);
 
   const { width } = useWindowSize();
 

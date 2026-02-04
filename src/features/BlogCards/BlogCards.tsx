@@ -6,45 +6,27 @@ import styles from "./BlogCards.module.css";
 import { useNavigate } from "react-router";
 import { getBlogViews } from "./service/getBlogViews";
 import { getBlogCards } from "./service/getCards";
+import type { CardType, ViewsType } from "./model";
 
 export const BlogCards = () => {
   const navigate = useNavigate();
 
-  const [views, setViews] = useState<Record<string, number>>({});
-  const [cards, setCards] = useState<{ id: number; slug: string }[]>([]);
-
-  const blogCardIds = Object.keys(views);
-
-  const getViews = useCallback(async () => {
-    const currentViews = await getBlogViews();
-
-    setViews(currentViews);
-  }, []);
-
-  const getCards = useCallback(async () => {
-    const cards = await getBlogCards();
-
-    setCards(cards);
-  }, []);
+  const [views, setViews] = useState<ViewsType[]>([]);
+  const [cards, setCards] = useState<CardType[]>([]);
 
   useEffect(() => {
-    getViews();
-    getCards();
-  }, [getViews, getCards]);
+    getBlogViews().then((res) => setViews(res));
+    getBlogCards().then((res) => setCards(res));
+  }, []);
 
   const cardsToRender = BLOG_CARDS_INFO.map((card) => {
-    const postId =
-      blogCardIds.find((cardId) => Number(cardId) === card.id) ?? "";
+    const slug =
+      cards.find((cardFromApi) => cardFromApi.id === card.id)?.slug ?? "";
+    card.slug = slug;
+    card.views = views.find((view) => view.blog_id === card.id)?.count ?? 0;
 
-    const viewCount = views[postId];
-    const slug = cards.find((cardFromApi) => cardFromApi.id === card.id)?.slug;
-    card.slug = slug ?? ""; // kastila che es moment@?
-
-    // add comments and likes
     return {
       ...card,
-      views: viewCount,
-      slug,
     };
   });
 
@@ -66,7 +48,7 @@ export const BlogCards = () => {
           date={blogCardInfo.date}
           readTime={blogCardInfo.readTime}
           title={blogCardInfo.title}
-          slug={blogCardInfo.slug ?? ""}
+          slug={blogCardInfo.slug}
           description={blogCardInfo.description}
           views={blogCardInfo.views}
           imgUrl={blogCardInfo.imgUrl}

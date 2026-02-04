@@ -59,7 +59,7 @@ export const SingleBlogRecentPosts = ({ slug }: SingleBlogRecentPostsProps) => {
             date={post.date}
             readTime={post.readTime}
             title={post.title}
-            slug={slug}
+            slug={post.slug}
             description={post.description}
             views={post.views}
             handleNavigatePost={handleNavigatePost}

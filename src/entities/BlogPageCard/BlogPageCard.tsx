@@ -74,7 +74,7 @@ export const BlogPageCard = ({
         <div className={styles.actions}>
           <div className={styles.viewsAndComments}>
             <div className={styles.views}>
-              {!!views && <img src={EyeSvg} alt="" />}
+              <img src={EyeSvg} alt="" />
               <span className={cn(styles.count, "poppins-regular")}>
                 {views}
               </span>

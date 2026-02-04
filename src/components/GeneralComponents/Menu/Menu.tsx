@@ -4,7 +4,7 @@ import { useWindowSize } from "../../../hooks/useWindowSize";
 import menuImg from "/webpImages/burgerMenuImg.webp";
 import LogoSVG from "../../../assets/Logo.svg";
 import menuCloseImg from "/webpImages/mobileMenuCloseIcon.webp";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 import { Link } from "react-router";
 import type { MenuItem as MenuItemType } from "./lib/model";
@@ -18,11 +18,6 @@ export const Menu = () => {
 
   const [menuItems, setMenuItems] = useState<MenuItemType[]>([]);
 
-  const getMenu = useCallback(async () => {
-    const items = await getMenuItems();
-    setMenuItems(items);
-  }, []);
-
   const isMobile = width < MEDIA_TABLET_SMALL;
 
   const handleCloseModal = () => {
@@ -30,8 +25,8 @@ export const Menu = () => {
   };
 
   useEffect(() => {
-    getMenu();
-  }, [getMenu]);
+    getMenuItems().then((res) => setMenuItems(res));
+  }, []);
 
   return (
     <div
