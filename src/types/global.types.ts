@@ -26,6 +26,7 @@ export interface IBlogCardsInfo {
   date: string;
   readTime: string;
   title: string;
+  slug: string;
   description: string;
   views: number;
   commentsCount: number;

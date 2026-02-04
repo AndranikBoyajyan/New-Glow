@@ -6,6 +6,7 @@ export const BLOG_CARDS_INFO: IBlogCardsInfo[] = [
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Feb 2",
     readTime: "7 min read",
+    slug: "",
     title: "Top 5 Benefits of Using Botox for Hyperhidrosis",
     description:
       "Excessive sweating is not just an inconvenience—it can be a major roadblock in both personal confidence and daily activities. For an",
@@ -131,6 +132,7 @@ Thank you for taking the time to learn about the many benefits of Botox for Hype
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Jan 27",
     readTime: "5 min read",
+    slug: "",
     title: "How Morpheus8 Works for Hyperhidrosis",
     description:
       "Excessive sweating is not just an inconvenience—it can be a major roadblock in both personal confidence and daily activities. For an",
@@ -325,6 +327,7 @@ Hungry for more? Dive into our Morpheus8 for FAQs, pricing, and glow-up inspo. Y
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Jan 23",
     readTime: "6 min read",
+    slug: "",
     title: "What are Juvederm Fillers and How Does It Work?",
     description:
       "In the world of aesthetic enhancements, Juvederm fillers have become a household name. Whether you're scrolling through Instagram, wa",
@@ -411,6 +414,7 @@ Ready to take the next step? Browse our website to learn more about our services
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Jan 19",
     readTime: "4 min read",
+    slug: "",
     title: "5 Signs You Might Need PRP Under Eyes Treatment",
     description:
       "The under-eye area is one of the first places to show signs of aging, stress, or fatigue. Dark circles, hollows, and fine lines can leave you looking perpet",
@@ -552,6 +556,7 @@ Q: Can PRP replace fillers?A: For mild volume loss, yes. Severe hollows may stil
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Jan 15",
     readTime: "7 min read",
+    slug: "",
     title: "What Are Bunny Lines and How Can Botox Help?",
     description:
       "You might have noticed some fine lines on either side of your nose when you scrunch it—they're called bunny lines. But what are bunny lines exactly",
@@ -702,6 +707,7 @@ At New Glow, we're passionate about helping you look and feel your best. From bu
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Jan 11",
     readTime: "5 min read",
+    slug: "",
     title: "7 Benefits of Hydro Dermabrasion Facials",
     description:
       "et's cut to the chase: the skincare world is flooded with trends, but few deliver results as consistently as the hydro dermabrasion facial. If you've",
@@ -826,6 +832,7 @@ But don't just take our word for it. Dive deeper into our blog for real client t
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Jan 7",
     readTime: "5 min read",
+    slug: "",
     title: "What Is Dysport and How Does It Work?",
     description:
       "'What Is Dysport?' might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popul",
@@ -962,6 +969,7 @@ Ready to take the next step? Browse through our blog for more insights or book a
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Jan 4",
     readTime: "5 min read",
+    slug: "",
     title: "Radiesse vs Sculptra: Which Filler is Right for You?",
     description:
       "'What Is Dysport?' might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popul",
@@ -1072,6 +1080,7 @@ It depends on your goals. Radiesse is better for contouring and immediate volume
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Jan 2",
     readTime: "5 min read",
+    slug: "",
     title: "What Is a Back Facial and How Does It Work?",
     description:
       "When it comes to skincare, we often focus solely on our face, forgetting that our back deserves just as much attention. But let's be real: maintainin",
@@ -1174,6 +1183,7 @@ Ready to level up your skincare game? Browse through our facials page at New Glo
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 29, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "Chemical Peel Process Day by Day: What to Expect at Each Stage",
     description:
       "Chemical peels are all the rage these days for anyone wanting to refresh their skin, reduce fine lines, or even address uneven pigmentation. Wheth",
@@ -1320,6 +1330,7 @@ At New Glow, we're here to help you achieve your skincare goals with tailored tr
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 27, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "How Long Do Dermal Fillers Last? Longevity and Care Tips",
     description:
       "Dermal fillers are a popular cosmetic treatment for those looking to restore volume, smooth out wrinkles",
@@ -1418,6 +1429,7 @@ Keep exploring our site for more information and tips about dermal fillers, and 
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 24, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "5 Reasons to Consider Botox for a Gummy Smile",
     description:
       "Let's talk gummy smiles. They're not exactly a medical problem, but for some, they can be a confidence blocker. A gummy smile happens",
@@ -1546,6 +1558,7 @@ Ready to explore more options for perfecting your smile? Check out our other tre
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 23, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "Why Should You Wait Before Getting a Facial After Botox?",
     description:
       "Botox treatments have become a popular go-to solution for those looking to minimize fine lines and wrinkles, offering a quick and minimall",
@@ -1624,6 +1637,7 @@ Ready to explore facials that work seamlessly with Botox? Continue browsing our 
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 22, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "8 Key Factors That Impact How Long IV Vitamin Therapy Lasts",
     description:
       "IV vitamin therapy has quickly become the go-to wellness trend, offering everything from hydration to enhanced energy. But a common que",
@@ -1735,6 +1749,7 @@ Ready to learn more? Explore our other blog posts or schedule your next appointm
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 20, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "What Are Biostimulators? Everything You Need To Know",
     description:
       "In today's world of aesthetic treatments, biostimulators are quickly becoming the ultimate game-changer for achieving natural, long-la",
@@ -1869,6 +1884,7 @@ If you're curious about biostimulator injections or want to learn more about how
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 17, 2024",
     readTime: "6 min read",
+    slug: "",
     title: "How Long Does Kybella Last and What Is It?",
     description:
       "Kybella has revolutionized the way people address stubborn fat under the chin, offering a non-surgical alternative for contouring and",
@@ -2016,6 +2032,7 @@ Continue browsing our site to discover more about our comprehensive range of fat
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 12, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "What Is an IPL Photofacial? 5 Benefits and Aftercare Tips",
     description:
       "An IPL photofacial is one of the most popular non-invasive cosmetic treatments for improving skin tone and texture. This advanced treatment",
@@ -2179,6 +2196,7 @@ Ready to explore the transformative power of photofacials? At New Glow, we're de
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Dec 6, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "How Often Should You Get a Chemical Peel?",
     description:
       "Chemical peels have long been celebrated for their ability to transform the skin, addressing concerns like dullness, fine lines, disco",
@@ -2321,6 +2339,7 @@ Ready to take the next step? Explore our website to learn more about our offerin
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Nov 29, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "What Is Morpheus 8?",
     description:
       "If you're looking for an advanced skin treatment that can deliver stunning results without surgery, chances are you've heard about Morpheus 8. This cutting-edge treatment is quickly",
@@ -2442,6 +2461,7 @@ Start your journey to glowing, youthful skin today!`,
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Nov 25, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "Laser Hair Removal Zones: Everything You Need to Know",
     description:
       "More and more people are turning to laser hair removal as a reliable way to enjoy silky, hair-free skin. If you're considering this treatment, it's essential",
@@ -2575,6 +2595,7 @@ Ready to take the next step? Explore our laser hair removal services today and d
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Nov 20, 2024",
     readTime: "4 min read",
+    slug: "",
     title: "How to Prepare for Microneedling",
     description:
       "Microneedling has become one of the top choices for skin rejuvenation, offering benefits like improved skin texture, reduced scars, and a youthful glow. However, if you want to get the",
@@ -2651,6 +2672,7 @@ As you continue exploring the world of skincare, keep browsing our articles and 
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Nov 13, 2024",
     readTime: "5 min read",
+    slug: "",
     title: "What Desires Can You Have for Facial Service?",
     description:
       "In today's world, skincare has taken a leading role in self-care, with facial treatment being one of the most popular choices. Whether it's for relax",
@@ -2758,6 +2780,7 @@ Whether you're looking to prepare your skin before a big event, relieve stress, 
     specialistName: "Vahe-Ter Yegishyan FNP-C",
     date: "Nov 14, 2024",
     readTime: "4 min read",
+    slug: "",
     title: "How Often Should You Get Botox?",
     description:
       "The pursuit of a youthful, radiant complexion is a timeless endeavor. In the modern age, Botox has emerged as a powerful ally in this quest, smoothing out wrinkles and lines, and",

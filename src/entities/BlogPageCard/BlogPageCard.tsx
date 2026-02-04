@@ -9,24 +9,24 @@ import styles from "./BlogPageCard.module.css";
 
 interface BlogPageCardProps {
   specialistName: string;
-  id: number;
   date: string;
   readTime: string;
   title: string;
+  slug: string;
   description: string;
   views: number;
   commentsCount: number;
   imgUrl: string;
   likeCount?: number;
-  handleNavigatePost: (id: number) => void;
+  handleNavigatePost: (slug: string) => void;
 }
 
 export const BlogPageCard = ({
   specialistName,
-  id,
   date,
   readTime,
   title,
+  slug,
   description,
   views,
   commentsCount,
@@ -35,7 +35,10 @@ export const BlogPageCard = ({
   handleNavigatePost,
 }: BlogPageCardProps) => {
   return (
-    <div className={styles.blogPageCard} onClick={() => handleNavigatePost(id)}>
+    <div
+      className={styles.blogPageCard}
+      onClick={() => handleNavigatePost(slug)}
+    >
       <div
         className={styles.blogPageCardImg}
         style={{ backgroundImage: `url(${imgUrl})` }}

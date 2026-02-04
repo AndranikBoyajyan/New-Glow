@@ -1,7 +1,7 @@
-import { instance } from "../../../../service/axiosInstance";
+import { api } from "../../../../service/axiosInstance";
 
 export const getMenuItems = async () => {
-  const response = await instance(`api/menu-items?activeId=2`);
+  const response = await api.get(`menu-items?activeId=2`);
 
   return response.data;
 };
