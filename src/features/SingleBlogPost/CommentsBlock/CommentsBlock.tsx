@@ -10,29 +10,20 @@ import { Controller, useForm } from "react-hook-form";
 interface CommentsBlockProps {
   blogId: number;
   comments: Comment[];
-  getComments: () => Promise<void>;
 }
 
-export const CommentsBlock = ({
-  blogId,
-  comments,
-  getComments,
-}: CommentsBlockProps) => {
+export const CommentsBlock = ({ blogId, comments }: CommentsBlockProps) => {
   const { control, handleSubmit, reset } = useForm<Form>({
     defaultValues: {
       comment: "",
     },
   });
 
-  const handleAddComment = async (data: Form) => {
-    console.log("start");
-
-    await addComment(data.comment, blogId);
+  const handleAddComment = (data: Form) => {
+    addComment(data.comment, blogId);
     reset();
 
-    // es moment@ chjogi vonc lav arji anel karoxa WS kpcnem?
-    // vor uxarkeluc miangamic ereva
-    await getComments();
+    // stex zaprosa petq vor ga nor comment@
   };
 
   return (

@@ -54,6 +54,7 @@ export const SingleBlogRecentPosts = ({ slug }: SingleBlogRecentPostsProps) => {
         {recentPosts.map((post) => (
           <BlogPageCard
             key={post.title}
+            id={post.id}
             specialistName={post.specialistName}
             commentsCount={post.commentsCount}
             date={post.date}

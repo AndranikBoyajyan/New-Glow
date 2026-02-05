@@ -6,39 +6,35 @@ import twitterSvg from "../../../src/assets/twitter.svg";
 import linkedinSvg from "../../../src/assets/linkedIn.svg";
 import linkSvg from "../../../src/assets/link.svg";
 import heartSvg from "../../../src/assets/HeartSvg.svg";
+import redHeart from "../../../src/assets/heart-red.svg";
 import PatientsResults from "../../entities/SingleTreatmentPatientsResults";
 import SingleBlogRecentPosts from "../SingleBlogRecentPosts";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 import CommentsBlock from "./CommentsBlock";
-import { getBlogComments } from "../BlogCards/service/getAllComments";
-import { useCallback, useEffect, useState } from "react";
+import type { Comment } from "./model";
+import { useCallback, useState } from "react";
+import { addLike } from "./service/addLike";
 
 import styles from "./SingleBlogPost.module.css";
-import type { Comment } from "./model";
 
 interface SingleBlogPostProps {
   slug: string;
   id: number;
+  comments: Comment[];
 }
 
-export const SingleBlogPost = ({ slug, id }: SingleBlogPostProps) => {
+export const SingleBlogPost = ({ slug, id, comments }: SingleBlogPostProps) => {
   const post = BLOG_CARDS_INFO.find((post) => post.id === id);
 
+  const [isLiked, setIsLiked] = useState(false);
+
   const { width } = useWindowSize();
-  const [comments, setComments] = useState<Comment[]>([]);
-
-  const getComments = useCallback(async () => {
-    const newCommentsAndCount = await getBlogComments(String(id));
-
-    setComments(newCommentsAndCount.comments);
-  }, [id]);
-
-  useEffect(() => {
-    getComments();
-  }, [getComments]);
-
   const isMobile = width < MEDIA_TABLET_SMALL;
+
+  const handleLike = useCallback(async () => {
+    await addLike(id).then((res) => setIsLiked(res));
+  }, [id]);
 
   if (!post) return null;
 
@@ -95,23 +91,21 @@ export const SingleBlogPost = ({ slug, id }: SingleBlogPostProps) => {
           <div className={cn(styles.actions, "poppins-regular")}>
             <span className={styles.text}>{post.views} views</span>
             <span className={styles.text}>{post.commentsCount} comments</span>
-            {post.likeCount && (
-              <div className={styles.like}>
-                <span className={cn(styles.count, "poppins-regular")}>
-                  {post.likeCount}
-                </span>
-                <img src={heartSvg} alt="" />
-              </div>
-            )}
+            <button className={styles.like} onClick={handleLike}>
+              <span className={cn(styles.count, "poppins-regular")}>
+                {post.likeCount}
+              </span>
+              {!isLiked ? (
+                <img src={heartSvg} alt="empty-heart" />
+              ) : (
+                <img src={redHeart} alt="red-heart" />
+              )}
+            </button>
           </div>
         </div>
         <div className={styles.divider}></div>
       </div>
-      <CommentsBlock
-        blogId={post.id}
-        comments={comments}
-        getComments={getComments}
-      />
+      <CommentsBlock blogId={post.id} comments={comments} />
       <SingleBlogRecentPosts slug={slug} />
       <PatientsResults firstName="Acne detox facial (1 course completed) " />
     </div>

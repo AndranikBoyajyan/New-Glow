@@ -4,10 +4,14 @@ import ForwardSvg from "../../../src/assets/forward.svg";
 import EyeSvg from "../../../src/assets/EyeSvg.svg";
 import CommentSvg from "../../../src/assets/CommentSvg.svg";
 import heartSvg from "../../../src/assets/HeartSvg.svg";
+import redHeart from "../../../src/assets/heart-red.svg";
 
 import styles from "./BlogPageCard.module.css";
+import { useCallback, useState } from "react";
+import { addLike } from "../../features/SingleBlogPost/service/addLike";
 
 interface BlogPageCardProps {
+  id: number;
   specialistName: string;
   date: string;
   readTime: string;
@@ -22,6 +26,7 @@ interface BlogPageCardProps {
 }
 
 export const BlogPageCard = ({
+  id,
   specialistName,
   date,
   readTime,
@@ -34,6 +39,13 @@ export const BlogPageCard = ({
   likeCount,
   handleNavigatePost,
 }: BlogPageCardProps) => {
+  const [isLiked, setIsLiked] = useState(false);
+
+  // TODO
+  const handleLike = useCallback(async (id: number) => {
+    await addLike(id).then((res) => setIsLiked(res));
+  }, []);
+
   return (
     <div
       className={styles.blogPageCard}
@@ -86,14 +98,22 @@ export const BlogPageCard = ({
               </span>
             </div>
           </div>
-          <div className={styles.like}>
-            {likeCount && (
-              <span className={cn(styles.count, "poppins-regular")}>
-                {likeCount}
-              </span>
+          <button
+            className={styles.like}
+            onClick={async (e) => {
+              e.stopPropagation();
+              await handleLike(id);
+            }}
+          >
+            <span className={cn(styles.count, "poppins-regular")}>
+              {likeCount}
+            </span>
+            {!isLiked ? (
+              <img src={heartSvg} alt="empty-heart" />
+            ) : (
+              <img src={redHeart} alt="red-heart" />
             )}
-            <img src={heartSvg} alt="" />
-          </div>
+          </button>
         </div>
       </div>
     </div>

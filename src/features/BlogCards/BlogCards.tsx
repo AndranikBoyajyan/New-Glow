@@ -1,34 +1,41 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { BLOG_CARDS_INFO } from "../../constants/blogCardsInfo";
 import BlogPageCard from "../../entities/BlogPageCard";
 
 import styles from "./BlogCards.module.css";
 import { useNavigate } from "react-router";
-import { getBlogViews } from "./service/getBlogViews";
 import { getBlogCards } from "./service/getCards";
-import type { CardType, ViewsType } from "./model";
+import type { CardType } from "./model";
 
 export const BlogCards = () => {
   const navigate = useNavigate();
 
-  const [views, setViews] = useState<ViewsType[]>([]);
   const [cards, setCards] = useState<CardType[]>([]);
 
+  // esi hanvelu a global state vor sax texer@ chisht tvyal ereva
+  const joinedCards = useMemo(
+    () =>
+      BLOG_CARDS_INFO.map((card) => {
+        const post = cards.find((cardFromApi) => cardFromApi.id === card.id);
+
+        if (!post) {
+          return card;
+        }
+
+        card.views = post.viewCount ?? 0;
+        card.commentsCount = post.commentCount ?? 0;
+        card.likeCount = post.likeCount ?? 0;
+
+        return {
+          ...card,
+        };
+      }),
+    [cards]
+  );
+
   useEffect(() => {
-    getBlogViews().then((res) => setViews(res));
     getBlogCards().then((res) => setCards(res));
   }, []);
-
-  const cardsToRender = BLOG_CARDS_INFO.map((card) => {
-    const slug =
-      cards.find((cardFromApi) => cardFromApi.id === card.id)?.slug ?? "";
-    card.slug = slug;
-    card.views = views.find((view) => view.blog_id === card.id)?.count ?? 0;
-
-    return {
-      ...card,
-    };
-  });
 
   const handleNavigatePost = useCallback(
     (slug: string) => {
@@ -40,9 +47,10 @@ export const BlogCards = () => {
 
   return (
     <div className={styles.blogCards}>
-      {cardsToRender.map((blogCardInfo) => (
+      {joinedCards.map((blogCardInfo) => (
         <BlogPageCard
           key={blogCardInfo.id}
+          id={blogCardInfo.id}
           specialistName={blogCardInfo.specialistName}
           commentsCount={blogCardInfo.commentsCount}
           date={blogCardInfo.date}
@@ -51,6 +59,7 @@ export const BlogCards = () => {
           slug={blogCardInfo.slug}
           description={blogCardInfo.description}
           views={blogCardInfo.views}
+          likeCount={blogCardInfo.likeCount}
           imgUrl={blogCardInfo.imgUrl}
           handleNavigatePost={handleNavigatePost}
         />

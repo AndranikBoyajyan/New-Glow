@@ -132,6 +132,10 @@
   color: #3c3c3c;
 }
 
+.like {
+  all: unset;
+}
+
 .text,
 .like {
   display: flex;

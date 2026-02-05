@@ -7,4 +7,6 @@ export interface Comment {
   user_id: number;
   blog_id: number;
   comment: string;
+  createdAt: string;
+  updatedAt: string;
 }
