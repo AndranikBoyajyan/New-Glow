@@ -1,4 +1,4 @@
-import type { BaseSyntheticEvent, FC } from "react";
+import type { FC } from "react";
 import cn from "classnames";
 
 import styles from "./Button.module.css";
@@ -8,11 +8,10 @@ interface ButtonProps {
   className: string;
   slideIndex?: number;
   isActive?: boolean;
-  type?: "submit" | "reset" | "button";
   font?: string;
   isSliderBgDark?: boolean;
+  isPrevent?: boolean;
   handleClick?: (index?: number) => void;
-  hookFormClick?: (e?: BaseSyntheticEvent<object> | undefined) => Promise<void>;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -20,26 +19,22 @@ export const Button: FC<ButtonProps> = ({
   className,
   slideIndex,
   isActive,
-  type,
   font = "poppins-medium",
   isSliderBgDark,
+  isPrevent = true,
   handleClick,
-  hookFormClick,
 }) => {
   return (
     <button
       onClick={(e) => {
-        e.preventDefault();
+        if (isPrevent) e.preventDefault();
         handleClick?.(slideIndex);
-
-        if (type === "submit") hookFormClick?.(e);
       }}
       className={cn(styles.button, styles[className], font, {
         [styles.active]: isActive,
         [styles.slider_button_light]: isSliderBgDark,
         [styles.active_light]: isSliderBgDark && isActive,
       })}
-      type={type}
     >
       {content.toUpperCase()}
     </button>

@@ -7,7 +7,7 @@ import heartSvg from "../../../src/assets/HeartSvg.svg";
 import redHeart from "../../../src/assets/heart-red.svg";
 
 import styles from "./BlogPageCard.module.css";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { addLike } from "../../features/SingleBlogPost/service/addLike";
 
 interface BlogPageCardProps {
@@ -20,6 +20,7 @@ interface BlogPageCardProps {
   description: string;
   views: number;
   commentsCount: number;
+  isLiked: boolean;
   imgUrl: string;
   likeCount?: number;
   handleNavigatePost: (slug: string) => void;
@@ -35,16 +36,21 @@ export const BlogPageCard = ({
   description,
   views,
   commentsCount,
+  isLiked,
   imgUrl,
   likeCount,
   handleNavigatePost,
 }: BlogPageCardProps) => {
-  const [isLiked, setIsLiked] = useState(false);
+  const [isPostLiked, setIsPostLiked] = useState(isLiked);
 
   // TODO
   const handleLike = useCallback(async (id: number) => {
-    await addLike(id).then((res) => setIsLiked(res));
+    await addLike(id).then((res) => setIsPostLiked(res));
   }, []);
+
+  useEffect(() => {
+    setIsPostLiked(isLiked);
+  }, [isLiked]);
 
   return (
     <div
@@ -108,7 +114,7 @@ export const BlogPageCard = ({
             <span className={cn(styles.count, "poppins-regular")}>
               {likeCount}
             </span>
-            {!isLiked ? (
+            {!isPostLiked ? (
               <img src={heartSvg} alt="empty-heart" />
             ) : (
               <img src={redHeart} alt="red-heart" />

@@ -25,6 +25,8 @@ export const BlogCards = () => {
         card.views = post.viewCount ?? 0;
         card.commentsCount = post.commentCount ?? 0;
         card.likeCount = post.likeCount ?? 0;
+        card.slug = post.slug;
+        card.isLiked = post.isLiked;
 
         return {
           ...card,
@@ -60,6 +62,7 @@ export const BlogCards = () => {
           description={blogCardInfo.description}
           views={blogCardInfo.views}
           likeCount={blogCardInfo.likeCount}
+          isLiked={blogCardInfo.isLiked}
           imgUrl={blogCardInfo.imgUrl}
           handleNavigatePost={handleNavigatePost}
         />

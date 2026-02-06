@@ -22,8 +22,6 @@ export const CommentsBlock = ({ blogId, comments }: CommentsBlockProps) => {
   const handleAddComment = (data: Form) => {
     addComment(data.comment, blogId);
     reset();
-
-    // stex zaprosa petq vor ga nor comment@
   };
 
   return (
@@ -33,9 +31,9 @@ export const CommentsBlock = ({ blogId, comments }: CommentsBlockProps) => {
         <div className={styles.commentsWrapper}>
           {comments.map((comm) => (
             <div className={styles.commentBlock} key={comm.id}>
-              <h3 className={cn(styles.userName, "poppins-medium")}>
+              <p className={cn(styles.userName, "poppins-medium")}>
                 USER{comm.user_id}
-              </h3>
+              </p>
               <span className={cn(styles.comment, "poppins-regular")}>
                 {comm.comment}
               </span>
@@ -48,16 +46,16 @@ export const CommentsBlock = ({ blogId, comments }: CommentsBlockProps) => {
             name="comment"
             render={({ field: { onBlur, onChange, value } }) => {
               return (
-                <input onBlur={onBlur} onChange={onChange} value={value} />
+                <input
+                  name="comment"
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  value={value}
+                />
               );
             }}
           />
-          <Button
-            className="button_send"
-            type="submit"
-            content=">"
-            hookFormClick={handleSubmit(handleAddComment)}
-          />
+          <Button isPrevent={false} className="button_send" content=">" />
         </form>
       </div>
     </div>

@@ -11,11 +11,11 @@ export const BlogSinglePost = () => {
   const [blogPost, setBlogPost] = useState<BlogPost>();
 
   useEffect(() => {
-    createBlogView(slug ?? "");
-    getBlogPost(slug ?? "").then((res) => setBlogPost(res));
+    getBlogPost(slug ?? "").then((res) => {
+      setBlogPost(res);
+      createBlogView(res.id);
+    });
   }, [slug]);
-
-  console.log({ blogPost });
 
   if (!blogPost) return null;
 

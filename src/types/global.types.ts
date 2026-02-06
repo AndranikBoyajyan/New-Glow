@@ -29,6 +29,7 @@ export interface IBlogCardsInfo {
   slug: string;
   description: string;
   views: number;
+  isLiked: boolean;
   commentsCount: number;
   imgUrl: string;
   likeCount?: number;

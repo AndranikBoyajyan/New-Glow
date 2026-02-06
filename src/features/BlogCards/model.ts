@@ -9,4 +9,5 @@ export interface CardType {
   commentCount: number;
   viewCount: number;
   likeCount: number;
+  isLiked: boolean;
 }
