@@ -1,43 +1,24 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { BLOG_CARDS_INFO } from "../../constants/blogCardsInfo";
+import { useCallback, useEffect, useState } from "react";
 import BlogPageCard from "../../entities/BlogPageCard";
+import { useNavigate } from "react-router";
+import type { CardType } from "../../types/global.types";
+import { getBlogCards } from "../../service/endpoints/getCards";
+import { joinCards } from "../../helpers/joinCards";
 
 import styles from "./BlogCards.module.css";
-import { useNavigate } from "react-router";
-import { getBlogCards } from "./service/getCards";
-import type { CardType } from "./model";
 
 export const BlogCards = () => {
   const navigate = useNavigate();
 
-  const [cards, setCards] = useState<CardType[]>([]);
-
-  // esi hanvelu a global state vor sax texer@ chisht tvyal ereva
-  const joinedCards = useMemo(
-    () =>
-      BLOG_CARDS_INFO.map((card) => {
-        const post = cards.find((cardFromApi) => cardFromApi.id === card.id);
-
-        if (!post) {
-          return card;
-        }
-
-        card.views = post.viewCount ?? 0;
-        card.commentsCount = post.commentCount ?? 0;
-        card.likeCount = post.likeCount ?? 0;
-        card.slug = post.slug;
-        card.isLiked = post.isLiked;
-
-        return {
-          ...card,
-        };
-      }),
-    [cards]
-  );
+  const [cardsDynamicValues, setCardsDynamicValues] = useState<CardType[]>([]);
 
   useEffect(() => {
-    getBlogCards().then((res) => setCards(res));
+    getBlogCards().then((res) => {
+      setCardsDynamicValues(res);
+    });
   }, []);
+
+  const cardsToRender = joinCards(cardsDynamicValues);
 
   const handleNavigatePost = useCallback(
     (slug: string) => {
@@ -49,7 +30,7 @@ export const BlogCards = () => {
 
   return (
     <div className={styles.blogCards}>
-      {joinedCards.map((blogCardInfo) => (
+      {cardsToRender.map((blogCardInfo) => (
         <BlogPageCard
           key={blogCardInfo.id}
           id={blogCardInfo.id}
@@ -61,8 +42,8 @@ export const BlogCards = () => {
           slug={blogCardInfo.slug}
           description={blogCardInfo.description}
           views={blogCardInfo.views}
-          likeCount={blogCardInfo.likeCount}
-          isLiked={blogCardInfo.isLiked}
+          postLikeCount={blogCardInfo.likeCount}
+          isPostLiked={blogCardInfo.isLiked}
           imgUrl={blogCardInfo.imgUrl}
           handleNavigatePost={handleNavigatePost}
         />

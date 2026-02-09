@@ -1,9 +1,9 @@
 import { useParams } from "react-router";
 import SingleBlogPost from "../../../features/SingleBlogPost";
-import { createBlogView } from "./service/createView";
 import { useEffect, useState } from "react";
-import { getBlogPost } from "./service/getBlogCard";
 import type { BlogPost } from "./model";
+import { getBlogPost } from "../../../service/endpoints/getBlogCard";
+import { createBlogView } from "../../../service/endpoints/createView";
 
 export const BlogSinglePost = () => {
   const { slug } = useParams();
@@ -24,6 +24,10 @@ export const BlogSinglePost = () => {
       slug={slug ?? ""}
       id={blogPost.id}
       comments={blogPost.comments}
+      viewCount={blogPost.viewCount}
+      postLikeCount={blogPost.likeCount}
+      isPostLiked={blogPost.isLiked}
+      commentsCount={blogPost.commentsCount}
     />
   );
 };

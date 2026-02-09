@@ -8,5 +8,5 @@ export interface Comment {
   blog_id: number;
   comment: string;
   createdAt: string;
-  updatedAt: string;
+  updatedAt?: string;
 }

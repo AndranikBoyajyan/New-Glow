@@ -7,8 +7,8 @@ import heartSvg from "../../../src/assets/HeartSvg.svg";
 import redHeart from "../../../src/assets/heart-red.svg";
 
 import styles from "./BlogPageCard.module.css";
-import { useCallback, useEffect, useState } from "react";
-import { addLike } from "../../features/SingleBlogPost/service/addLike";
+import { useCallback, useState } from "react";
+import { addOrRemoveLike } from "../../service/endpoints/addLike";
 
 interface BlogPageCardProps {
   id: number;
@@ -20,9 +20,9 @@ interface BlogPageCardProps {
   description: string;
   views: number;
   commentsCount: number;
-  isLiked: boolean;
+  isPostLiked: boolean;
   imgUrl: string;
-  likeCount?: number;
+  postLikeCount: number;
   handleNavigatePost: (slug: string) => void;
 }
 
@@ -36,21 +36,22 @@ export const BlogPageCard = ({
   description,
   views,
   commentsCount,
-  isLiked,
+  isPostLiked,
   imgUrl,
-  likeCount,
+  postLikeCount,
   handleNavigatePost,
 }: BlogPageCardProps) => {
-  const [isPostLiked, setIsPostLiked] = useState(isLiked);
+  const [isLiked, setIsLiked] = useState(isPostLiked);
+  const [likeCount, setLikeCount] = useState(postLikeCount);
 
-  // TODO
-  const handleLike = useCallback(async (id: number) => {
-    await addLike(id).then((res) => setIsPostLiked(res));
-  }, []);
-
-  useEffect(() => {
-    setIsPostLiked(isLiked);
-  }, [isLiked]);
+  const handleLike = useCallback(async () => {
+    if (isLiked) {
+      setLikeCount((prev) => prev - 1);
+    } else {
+      setLikeCount((prev) => prev + 1);
+    }
+    await addOrRemoveLike(id).then((res) => setIsLiked(res));
+  }, [id, isLiked]);
 
   return (
     <div
@@ -108,13 +109,13 @@ export const BlogPageCard = ({
             className={styles.like}
             onClick={async (e) => {
               e.stopPropagation();
-              await handleLike(id);
+              await handleLike();
             }}
           >
             <span className={cn(styles.count, "poppins-regular")}>
               {likeCount}
             </span>
-            {!isPostLiked ? (
+            {!isLiked ? (
               <img src={heartSvg} alt="empty-heart" />
             ) : (
               <img src={redHeart} alt="red-heart" />

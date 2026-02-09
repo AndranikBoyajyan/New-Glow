@@ -12,7 +12,9 @@ export const BLOG_CARDS_INFO: IBlogCardsInfo[] = [
       "Excessive sweating is not just an inconvenience—it can be a major roadblock in both personal confidence and daily activities. For an",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg1.webp",
     allDescription: [
       {
@@ -139,7 +141,9 @@ Thank you for taking the time to learn about the many benefits of Botox for Hype
       "Excessive sweating is not just an inconvenience—it can be a major roadblock in both personal confidence and daily activities. For an",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg2.webp",
     allDescription: [
       {
@@ -335,7 +339,9 @@ Hungry for more? Dive into our Morpheus8 for FAQs, pricing, and glow-up inspo. Y
       "In the world of aesthetic enhancements, Juvederm fillers have become a household name. Whether you're scrolling through Instagram, wa",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg3.webp",
     allDescription: [
       {
@@ -423,7 +429,9 @@ Ready to take the next step? Browse our website to learn more about our services
       "The under-eye area is one of the first places to show signs of aging, stress, or fatigue. Dark circles, hollows, and fine lines can leave you looking perpet",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg4.webp",
     allDescription: [
       {
@@ -566,8 +574,9 @@ Q: Can PRP replace fillers?A: For mild volume loss, yes. Severe hollows may stil
       "You might have noticed some fine lines on either side of your nose when you scrunch it—they're called bunny lines. But what are bunny lines exactly",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg5.webp",
     allDescription: [
       {
@@ -718,7 +727,9 @@ At New Glow, we're passionate about helping you look and feel your best. From bu
       "et's cut to the chase: the skincare world is flooded with trends, but few deliver results as consistently as the hydro dermabrasion facial. If you've",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg6.webp",
     allDescription: [
       {
@@ -844,7 +855,9 @@ But don't just take our word for it. Dive deeper into our blog for real client t
       "'What Is Dysport?' might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popul",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg7.webp",
     allDescription: [
       {
@@ -982,7 +995,9 @@ Ready to take the next step? Browse through our blog for more insights or book a
       "'What Is Dysport?' might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popul",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg8.webp",
     allDescription: [
       {
@@ -1094,7 +1109,9 @@ It depends on your goals. Radiesse is better for contouring and immediate volume
       "When it comes to skincare, we often focus solely on our face, forgetting that our back deserves just as much attention. But let's be real: maintainin",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg9.webp",
     allDescription: [
       {
@@ -1198,7 +1215,9 @@ Ready to level up your skincare game? Browse through our facials page at New Glo
       "Chemical peels are all the rage these days for anyone wanting to refresh their skin, reduce fine lines, or even address uneven pigmentation. Wheth",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg10.webp",
     allDescription: [
       {
@@ -1346,7 +1365,9 @@ At New Glow, we're here to help you achieve your skincare goals with tailored tr
       "Dermal fillers are a popular cosmetic treatment for those looking to restore volume, smooth out wrinkles",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg11.webp",
     allDescription: [
       {
@@ -1446,7 +1467,9 @@ Keep exploring our site for more information and tips about dermal fillers, and 
       "Let's talk gummy smiles. They're not exactly a medical problem, but for some, they can be a confidence blocker. A gummy smile happens",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg12.webp",
     allDescription: [
       {
@@ -1576,8 +1599,9 @@ Ready to explore more options for perfecting your smile? Check out our other tre
       "Botox treatments have become a popular go-to solution for those looking to minimize fine lines and wrinkles, offering a quick and minimall",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg13.webp",
     allDescription: [
       {
@@ -1656,8 +1680,9 @@ Ready to explore facials that work seamlessly with Botox? Continue browsing our 
       "IV vitamin therapy has quickly become the go-to wellness trend, offering everything from hydration to enhanced energy. But a common que",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg14.webp",
     allDescription: [
       {
@@ -1769,8 +1794,9 @@ Ready to learn more? Explore our other blog posts or schedule your next appointm
       "In today's world of aesthetic treatments, biostimulators are quickly becoming the ultimate game-changer for achieving natural, long-la",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg15.webp",
     allDescription: [
       {
@@ -1905,8 +1931,9 @@ If you're curious about biostimulator injections or want to learn more about how
       "Kybella has revolutionized the way people address stubborn fat under the chin, offering a non-surgical alternative for contouring and",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg16.webp",
     allDescription: [
       {
@@ -2054,7 +2081,9 @@ Continue browsing our site to discover more about our comprehensive range of fat
       "An IPL photofacial is one of the most popular non-invasive cosmetic treatments for improving skin tone and texture. This advanced treatment",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg17.webp",
     allDescription: [
       {
@@ -2219,7 +2248,9 @@ Ready to explore the transformative power of photofacials? At New Glow, we're de
       "Chemical peels have long been celebrated for their ability to transform the skin, addressing concerns like dullness, fine lines, disco",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg18.webp",
     allDescription: [
       {
@@ -2363,8 +2394,9 @@ Ready to take the next step? Explore our website to learn more about our offerin
       "If you're looking for an advanced skin treatment that can deliver stunning results without surgery, chances are you've heard about Morpheus 8. This cutting-edge treatment is quickly",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg19.webp",
     allDescription: [
       {
@@ -2486,8 +2518,9 @@ Start your journey to glowing, youthful skin today!`,
       "More and more people are turning to laser hair removal as a reliable way to enjoy silky, hair-free skin. If you're considering this treatment, it's essential",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg20.webp",
     allDescription: [
       {
@@ -2621,8 +2654,9 @@ Ready to take the next step? Explore our laser hair removal services today and d
       "Microneedling has become one of the top choices for skin rejuvenation, offering benefits like improved skin texture, reduced scars, and a youthful glow. However, if you want to get the",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg21.webp",
     allDescription: [
       {
@@ -2699,8 +2733,9 @@ As you continue exploring the world of skincare, keep browsing our articles and 
       "In today's world, skincare has taken a leading role in self-care, with facial treatment being one of the most popular choices. Whether it's for relax",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 3,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg22.webp",
     allDescription: [
       {
@@ -2808,8 +2843,9 @@ Whether you're looking to prepare your skin before a big event, relieve stress, 
       "The pursuit of a youthful, radiant complexion is a timeless endeavor. In the modern age, Botox has emerged as a powerful ally in this quest, smoothing out wrinkles and lines, and",
     views: 0,
     isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 3,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg23.webp",
     allDescription: [
       {

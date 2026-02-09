@@ -63,7 +63,8 @@ export const SingleBlogRecentPosts = ({ slug }: SingleBlogRecentPostsProps) => {
             slug={post.slug}
             description={post.description}
             views={post.views}
-            isLiked={post.isLiked}
+            isPostLiked={post.isLiked}
+            postLikeCount={post.likeCount}
             handleNavigatePost={handleNavigatePost}
             imgUrl={post.imgUrl}
           />

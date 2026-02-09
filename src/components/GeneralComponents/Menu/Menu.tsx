@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { MEDIA_TABLET_SMALL } from "../../../constants/windowSizes";
 import { Link } from "react-router";
 import type { MenuItem as MenuItemType } from "./lib/model";
-import { getMenuItems } from "./service/getMenuItems";
+import { getMenuItems } from "../../../service/endpoints/getMenuItems";
 
 import styles from "./Menu.module.css";
 

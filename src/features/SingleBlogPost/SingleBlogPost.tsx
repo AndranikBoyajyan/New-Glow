@@ -14,7 +14,7 @@ import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 import CommentsBlock from "./CommentsBlock";
 import type { Comment } from "./model";
 import { useCallback, useState } from "react";
-import { addLike } from "./service/addLike";
+import { addOrRemoveLike } from "../../service/endpoints/addLike";
 
 import styles from "./SingleBlogPost.module.css";
 
@@ -22,19 +22,42 @@ interface SingleBlogPostProps {
   slug: string;
   id: number;
   comments: Comment[];
+  viewCount: number;
+  postLikeCount: number;
+  commentsCount: number;
+  isPostLiked: boolean;
 }
 
-export const SingleBlogPost = ({ slug, id, comments }: SingleBlogPostProps) => {
+export const SingleBlogPost = ({
+  slug,
+  id,
+  comments,
+  commentsCount,
+  postLikeCount,
+  viewCount,
+  isPostLiked,
+}: SingleBlogPostProps) => {
   const post = BLOG_CARDS_INFO.find((post) => post.id === id);
 
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(isPostLiked);
+  const [likeCount, setLikeCount] = useState(postLikeCount);
+  const [commCount, setCommCount] = useState(commentsCount);
 
   const { width } = useWindowSize();
   const isMobile = width < MEDIA_TABLET_SMALL;
 
+  const handleAddCount = useCallback(() => {
+    setCommCount((prev) => prev + 1);
+  }, []);
+
   const handleLike = useCallback(async () => {
-    await addLike(id).then((res) => setIsLiked(res));
-  }, [id]);
+    if (isLiked) {
+      setLikeCount((prev) => prev - 1);
+    } else {
+      setLikeCount((prev) => prev + 1);
+    }
+    await addOrRemoveLike(id).then((res) => setIsLiked(res));
+  }, [id, isLiked]);
 
   if (!post) return null;
 
@@ -89,11 +112,11 @@ export const SingleBlogPost = ({ slug, id, comments }: SingleBlogPostProps) => {
             <img src={linkSvg} alt="link" />
           </div>
           <div className={cn(styles.actions, "poppins-regular")}>
-            <span className={styles.text}>{post.views} views</span>
-            <span className={styles.text}>{post.commentsCount} comments</span>
+            <span className={styles.text}>{viewCount} Views</span>
+            <span className={styles.text}>{commCount} Comment</span>
             <button className={styles.like} onClick={handleLike}>
               <span className={cn(styles.count, "poppins-regular")}>
-                {post.likeCount}
+                {likeCount}
               </span>
               {!isLiked ? (
                 <img src={heartSvg} alt="empty-heart" />
@@ -105,7 +128,11 @@ export const SingleBlogPost = ({ slug, id, comments }: SingleBlogPostProps) => {
         </div>
         <div className={styles.divider}></div>
       </div>
-      <CommentsBlock blogId={post.id} comments={comments} />
+      <CommentsBlock
+        blogId={post.id}
+        comments={comments}
+        handleAddCount={handleAddCount}
+      />
       <SingleBlogRecentPosts slug={slug} />
       <PatientsResults firstName="Acne detox facial (1 course completed) " />
     </div>

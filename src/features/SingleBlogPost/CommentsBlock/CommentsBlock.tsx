@@ -2,25 +2,42 @@ import Button from "../../../shared/Button";
 import cn from "classnames";
 import Title from "../../../shared/Title";
 import type { Comment, Form } from "../model";
-import { addComment } from "../service/addComment";
+import { addComment } from "../../../service/endpoints/addComment";
 
 import styles from "./CommentsBlock.module.css";
 import { Controller, useForm } from "react-hook-form";
+import { useState } from "react";
 
 interface CommentsBlockProps {
   blogId: number;
   comments: Comment[];
+  handleAddCount: () => void;
 }
 
-export const CommentsBlock = ({ blogId, comments }: CommentsBlockProps) => {
+export const CommentsBlock = ({
+  blogId,
+  comments,
+  handleAddCount,
+}: CommentsBlockProps) => {
+  const [allComments, setAllComments] = useState(comments);
+
   const { control, handleSubmit, reset } = useForm<Form>({
     defaultValues: {
       comment: "",
     },
   });
 
-  const handleAddComment = (data: Form) => {
-    addComment(data.comment, blogId);
+  const handleAddComment = async ({ comment }: Form) => {
+    handleAddCount();
+    const newComment: Comment = {
+      blog_id: blogId,
+      comment,
+      createdAt: String(Date.now()),
+      id: Math.random(),
+      user_id: Math.random(),
+    };
+    setAllComments((prev) => [...prev, newComment]);
+    await addComment(comment, blogId);
     reset();
   };
 
@@ -29,10 +46,10 @@ export const CommentsBlock = ({ blogId, comments }: CommentsBlockProps) => {
       <Title text="Comments" font="fjalla-one-regular" />
       <div className={styles.content}>
         <div className={styles.commentsWrapper}>
-          {comments.map((comm) => (
+          {allComments.map((comm) => (
             <div className={styles.commentBlock} key={comm.id}>
               <p className={cn(styles.userName, "poppins-medium")}>
-                USER{comm.user_id}
+                {comm.user_id <= 1 ? "YOU" : "USER" + comm.user_id}
               </p>
               <span className={cn(styles.comment, "poppins-regular")}>
                 {comm.comment}
