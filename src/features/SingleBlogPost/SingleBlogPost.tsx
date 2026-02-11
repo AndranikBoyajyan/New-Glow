@@ -13,29 +13,30 @@ import { useWindowSize } from "../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
 import CommentsBlock from "./CommentsBlock";
 import type { Comment } from "./model";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { addOrRemoveLike } from "../../service/endpoints/addLike";
+import type { CardType } from "../../types/global.types";
 
 import styles from "./SingleBlogPost.module.css";
 
 interface SingleBlogPostProps {
-  slug: string;
   id: number;
   comments: Comment[];
   viewCount: number;
   postLikeCount: number;
   commentsCount: number;
   isPostLiked: boolean;
+  recentPosts: CardType[];
 }
 
 export const SingleBlogPost = ({
-  slug,
   id,
   comments,
   commentsCount,
   postLikeCount,
   viewCount,
   isPostLiked,
+  recentPosts,
 }: SingleBlogPostProps) => {
   const post = BLOG_CARDS_INFO.find((post) => post.id === id);
 
@@ -49,6 +50,18 @@ export const SingleBlogPost = ({
   const handleAddCount = useCallback(() => {
     setCommCount((prev) => prev + 1);
   }, []);
+
+  useEffect(() => {
+    setCommCount(commentsCount);
+  }, [commentsCount]);
+
+  useEffect(() => {
+    setLikeCount(postLikeCount);
+  }, [postLikeCount]);
+
+  useEffect(() => {
+    setIsLiked(isPostLiked);
+  }, [isPostLiked]);
 
   const handleLike = useCallback(async () => {
     if (isLiked) {
@@ -133,7 +146,7 @@ export const SingleBlogPost = ({
         comments={comments}
         handleAddCount={handleAddCount}
       />
-      <SingleBlogRecentPosts slug={slug} />
+      <SingleBlogRecentPosts recentPosts={recentPosts} />
       <PatientsResults firstName="Acne detox facial (1 course completed) " />
     </div>
   );

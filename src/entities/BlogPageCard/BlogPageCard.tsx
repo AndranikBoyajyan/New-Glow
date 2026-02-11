@@ -7,7 +7,7 @@ import heartSvg from "../../../src/assets/HeartSvg.svg";
 import redHeart from "../../../src/assets/heart-red.svg";
 
 import styles from "./BlogPageCard.module.css";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { addOrRemoveLike } from "../../service/endpoints/addLike";
 
 interface BlogPageCardProps {
@@ -41,8 +41,8 @@ export const BlogPageCard = ({
   postLikeCount,
   handleNavigatePost,
 }: BlogPageCardProps) => {
-  const [isLiked, setIsLiked] = useState(isPostLiked);
-  const [likeCount, setLikeCount] = useState(postLikeCount);
+  const [isLiked, setIsLiked] = useState<boolean>(isPostLiked);
+  const [likeCount, setLikeCount] = useState<number>(postLikeCount);
 
   const handleLike = useCallback(async () => {
     if (isLiked) {
@@ -52,6 +52,14 @@ export const BlogPageCard = ({
     }
     await addOrRemoveLike(id).then((res) => setIsLiked(res));
   }, [id, isLiked]);
+
+  useEffect(() => {
+    setIsLiked(isPostLiked);
+  }, [isPostLiked]);
+
+  useEffect(() => {
+    setLikeCount(postLikeCount);
+  }, [postLikeCount]);
 
   return (
     <div
