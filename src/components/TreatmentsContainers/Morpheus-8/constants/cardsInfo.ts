@@ -24,7 +24,7 @@ export const cardsInfos = [
     description:
       "For the chest area, Morpheus8 tightens thin, crepey skin and smooths out wrinkles caused by aging or sun damage. It also enhances skin tone and texture, making the décolleté look firmer and more refreshed.",
     duration: "1 hr",
-    price: "$140",
+    price: "$795",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const cardsInfos = [
     description:
       "Morpheus8 can help reduce excessive sweating by targeting and weakening overactive sweat glands with radiofrequency heat. It’s commonly used for underarms and provides long-lasting relief after just a few sessions.",
     duration: "1 hr",
-    price: "$160",
+    price: "$695",
   },
   {
     id: 5,

@@ -32,6 +32,7 @@ export const ExpertCardSlider = () => {
         ))}
         isArrow={!isMobile}
         bulletsClassName="bullets_experts"
+        spaceBetween={isMobile ? 0 : 15}
       />
     </div>
   );

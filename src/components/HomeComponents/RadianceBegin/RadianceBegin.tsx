@@ -9,8 +9,9 @@ export const RadianceBegin = () => {
   return (
     <div className={cn(styles.fadeSlide)}>
       <CustomSwiper
-        slides={[FirstSlide(), SecondSlide()]}
+        slides={[<FirstSlide key={1} />, <SecondSlide key={2} />]}
         bulletsClassName="bullets_radiance_begin"
+        spaceBetween={-1}
       />
     </div>
   );

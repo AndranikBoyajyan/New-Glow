@@ -15,7 +15,16 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    api.get("/anonymous/user");
+    api.get("/anonymous/user").then((res) => {
+      const serverUser = res.data;
+
+      const cached = localStorage.getItem("user");
+      const parsed = cached ? JSON.parse(cached) : null;
+
+      if (!parsed || parsed.id !== serverUser.id) {
+        localStorage.setItem("user", JSON.stringify(serverUser));
+      }
+    });
   }, []);
 
   return (

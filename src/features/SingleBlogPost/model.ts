@@ -8,5 +8,11 @@ export interface Comment {
   blog_id: number;
   comment: string;
   createdAt: string;
+  user_show_id?: number;
   updatedAt?: string;
+}
+
+export interface CommentCreator {
+  id: number;
+  createdAt: string;
 }

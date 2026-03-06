@@ -26,7 +26,7 @@ export const BlogSinglePost = () => {
   return (
     <SingleBlogPost
       id={blogPost.id}
-      comments={blogPost.comments}
+      slug={slug ?? ""}
       viewCount={blogPost.viewCount}
       postLikeCount={blogPost.likeCount}
       isPostLiked={blogPost.isLiked}

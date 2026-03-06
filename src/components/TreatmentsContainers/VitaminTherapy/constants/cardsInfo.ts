@@ -6,7 +6,7 @@ export const cardsInfos = [
     description:
       "Vitamin IV therapy, also referred to as intravenous micronutrient therapy, administers a high dose of minerals and vitamins directly into your bloodstream. While your body ordinarily absorbs nutrients slowly, vitamin IV therapy allows it to rapidly absorb nutrients at higher doses.",
     duration: "1 hr",
-    price: "$128",
+    price: "$195",
   },
   {
     id: 2,

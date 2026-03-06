@@ -18,10 +18,11 @@ import { addOrRemoveLike } from "../../service/endpoints/addLike";
 import type { CardType } from "../../types/global.types";
 
 import styles from "./SingleBlogPost.module.css";
+import { getComments } from "../../service/endpoints/getCommentsBySlug";
 
 interface SingleBlogPostProps {
   id: number;
-  comments: Comment[];
+  slug: string;
   viewCount: number;
   postLikeCount: number;
   commentsCount: number;
@@ -31,7 +32,7 @@ interface SingleBlogPostProps {
 
 export const SingleBlogPost = ({
   id,
-  comments,
+  slug,
   commentsCount,
   postLikeCount,
   viewCount,
@@ -39,6 +40,9 @@ export const SingleBlogPost = ({
   recentPosts,
 }: SingleBlogPostProps) => {
   const post = BLOG_CARDS_INFO.find((post) => post.id === id);
+
+  const [comments, setComments] = useState<Comment[]>([]);
+  const user = JSON.parse(localStorage.getItem("user") || "null");
 
   const [isLiked, setIsLiked] = useState(isPostLiked);
   const [likeCount, setLikeCount] = useState(postLikeCount);
@@ -50,6 +54,10 @@ export const SingleBlogPost = ({
   const handleAddCount = useCallback(() => {
     setCommCount((prev) => prev + 1);
   }, []);
+
+  useEffect(() => {
+    getComments(slug).then((res) => setComments(res));
+  }, [slug]);
 
   useEffect(() => {
     setCommCount(commentsCount);
@@ -144,6 +152,7 @@ export const SingleBlogPost = ({
       <CommentsBlock
         blogId={post.id}
         comments={comments}
+        currentUser={user}
         handleAddCount={handleAddCount}
       />
       <SingleBlogRecentPosts recentPosts={recentPosts} />
