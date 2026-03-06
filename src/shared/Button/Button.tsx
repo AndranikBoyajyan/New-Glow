@@ -10,6 +10,7 @@ interface ButtonProps {
   isActive?: boolean;
   font?: string;
   isSliderBgDark?: boolean;
+  isPrevent?: boolean;
   handleClick?: (index?: number) => void;
 }
 
@@ -20,12 +21,13 @@ export const Button: FC<ButtonProps> = ({
   isActive,
   font = "poppins-medium",
   isSliderBgDark,
+  isPrevent = true,
   handleClick,
 }) => {
   return (
     <button
       onClick={(e) => {
-        e.preventDefault();
+        if (isPrevent) e.preventDefault();
         handleClick?.(slideIndex);
       }}
       className={cn(styles.button, styles[className], font, {

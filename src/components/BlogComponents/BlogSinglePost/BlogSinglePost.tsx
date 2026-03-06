@@ -1,20 +1,37 @@
 import { useParams } from "react-router";
 import SingleBlogPost from "../../../features/SingleBlogPost";
-import { createBlogView } from "./service/createView";
 import { useEffect, useState } from "react";
-import { getBlogPost } from "./service/getBlogCard";
+import type { BlogPost } from "./model";
+import { getBlogPost } from "../../../service/endpoints/getBlogCard";
+import { createBlogView } from "../../../service/endpoints/createView";
+import { getRecentPosts } from "../../../service/endpoints/getRecentPosts";
+import type { CardType } from "../../../types/global.types";
 
 export const BlogSinglePost = () => {
   const { slug } = useParams();
 
-  const [blogPost, setBlogPost] = useState<{ id: number; slug: string }>();
+  const [blogPost, setBlogPost] = useState<BlogPost>();
+  const [recentPosts, setRecentPosts] = useState<CardType[]>([]);
 
   useEffect(() => {
-    createBlogView(slug ?? "");
-    getBlogPost(slug ?? "").then((res) => setBlogPost(res));
+    getBlogPost(slug ?? "").then((res) => {
+      setBlogPost(res);
+      createBlogView(res.id);
+      getRecentPosts(res.id).then((res) => setRecentPosts(res));
+    });
   }, [slug]);
 
   if (!blogPost) return null;
 
-  return <SingleBlogPost slug={slug ?? ""} id={blogPost.id} />;
+  return (
+    <SingleBlogPost
+      id={blogPost.id}
+      slug={slug ?? ""}
+      viewCount={blogPost.viewCount}
+      postLikeCount={blogPost.likeCount}
+      isPostLiked={blogPost.isLiked}
+      commentsCount={blogPost.commentsCount}
+      recentPosts={recentPosts}
+    />
+  );
 };

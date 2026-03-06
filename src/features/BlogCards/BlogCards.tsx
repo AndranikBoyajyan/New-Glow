@@ -1,34 +1,24 @@
 import { useCallback, useEffect, useState } from "react";
-import { BLOG_CARDS_INFO } from "../../constants/blogCardsInfo";
 import BlogPageCard from "../../entities/BlogPageCard";
+import { useNavigate } from "react-router";
+import type { CardType } from "../../types/global.types";
+import { getBlogCards } from "../../service/endpoints/getCards";
+import { joinCards } from "../../helpers/joinCards";
 
 import styles from "./BlogCards.module.css";
-import { useNavigate } from "react-router";
-import { getBlogViews } from "./service/getBlogViews";
-import { getBlogCards } from "./service/getCards";
-import type { CardType, ViewsType } from "./model";
 
 export const BlogCards = () => {
   const navigate = useNavigate();
 
-  const [views, setViews] = useState<ViewsType[]>([]);
-  const [cards, setCards] = useState<CardType[]>([]);
+  const [cardsDynamicValues, setCardsDynamicValues] = useState<CardType[]>([]);
 
   useEffect(() => {
-    getBlogViews().then((res) => setViews(res));
-    getBlogCards().then((res) => setCards(res));
+    getBlogCards().then((res) => {
+      setCardsDynamicValues(res);
+    });
   }, []);
 
-  const cardsToRender = BLOG_CARDS_INFO.map((card) => {
-    const slug =
-      cards.find((cardFromApi) => cardFromApi.id === card.id)?.slug ?? "";
-    card.slug = slug;
-    card.views = views.find((view) => view.blog_id === card.id)?.count ?? 0;
-
-    return {
-      ...card,
-    };
-  });
+  const cardsToRender = joinCards(cardsDynamicValues);
 
   const handleNavigatePost = useCallback(
     (slug: string) => {
@@ -43,6 +33,7 @@ export const BlogCards = () => {
       {cardsToRender.map((blogCardInfo) => (
         <BlogPageCard
           key={blogCardInfo.id}
+          id={blogCardInfo.id}
           specialistName={blogCardInfo.specialistName}
           commentsCount={blogCardInfo.commentsCount}
           date={blogCardInfo.date}
@@ -51,6 +42,8 @@ export const BlogCards = () => {
           slug={blogCardInfo.slug}
           description={blogCardInfo.description}
           views={blogCardInfo.views}
+          postLikeCount={blogCardInfo.likeCount}
+          isPostLiked={blogCardInfo.isLiked}
           imgUrl={blogCardInfo.imgUrl}
           handleNavigatePost={handleNavigatePost}
         />

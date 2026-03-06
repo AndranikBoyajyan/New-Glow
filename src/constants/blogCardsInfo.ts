@@ -10,8 +10,11 @@ export const BLOG_CARDS_INFO: IBlogCardsInfo[] = [
     title: "Top 5 Benefits of Using Botox for Hyperhidrosis",
     description:
       "Excessive sweating is not just an inconvenience—it can be a major roadblock in both personal confidence and daily activities. For an",
-    views: 11,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg1.webp",
     allDescription: [
       {
@@ -136,8 +139,11 @@ Thank you for taking the time to learn about the many benefits of Botox for Hype
     title: "How Morpheus8 Works for Hyperhidrosis",
     description:
       "Excessive sweating is not just an inconvenience—it can be a major roadblock in both personal confidence and daily activities. For an",
-    views: 11,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg2.webp",
     allDescription: [
       {
@@ -331,8 +337,11 @@ Hungry for more? Dive into our Morpheus8 for FAQs, pricing, and glow-up inspo. Y
     title: "What are Juvederm Fillers and How Does It Work?",
     description:
       "In the world of aesthetic enhancements, Juvederm fillers have become a household name. Whether you're scrolling through Instagram, wa",
-    views: 5,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg3.webp",
     allDescription: [
       {
@@ -418,8 +427,11 @@ Ready to take the next step? Browse our website to learn more about our services
     title: "5 Signs You Might Need PRP Under Eyes Treatment",
     description:
       "The under-eye area is one of the first places to show signs of aging, stress, or fatigue. Dark circles, hollows, and fine lines can leave you looking perpet",
-    views: 7,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg4.webp",
     allDescription: [
       {
@@ -560,9 +572,11 @@ Q: Can PRP replace fillers?A: For mild volume loss, yes. Severe hollows may stil
     title: "What Are Bunny Lines and How Can Botox Help?",
     description:
       "You might have noticed some fine lines on either side of your nose when you scrunch it—they're called bunny lines. But what are bunny lines exactly",
-    views: 12,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg5.webp",
     allDescription: [
       {
@@ -711,8 +725,11 @@ At New Glow, we're passionate about helping you look and feel your best. From bu
     title: "7 Benefits of Hydro Dermabrasion Facials",
     description:
       "et's cut to the chase: the skincare world is flooded with trends, but few deliver results as consistently as the hydro dermabrasion facial. If you've",
-    views: 11,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg6.webp",
     allDescription: [
       {
@@ -836,8 +853,11 @@ But don't just take our word for it. Dive deeper into our blog for real client t
     title: "What Is Dysport and How Does It Work?",
     description:
       "'What Is Dysport?' might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popul",
-    views: 5,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg7.webp",
     allDescription: [
       {
@@ -973,8 +993,11 @@ Ready to take the next step? Browse through our blog for more insights or book a
     title: "Radiesse vs Sculptra: Which Filler is Right for You?",
     description:
       "'What Is Dysport?' might be a question you've asked while exploring cosmetic treatments for smoother, younger-looking skin. Dysport, a popul",
-    views: 9,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg8.webp",
     allDescription: [
       {
@@ -1084,8 +1107,11 @@ It depends on your goals. Radiesse is better for contouring and immediate volume
     title: "What Is a Back Facial and How Does It Work?",
     description:
       "When it comes to skincare, we often focus solely on our face, forgetting that our back deserves just as much attention. But let's be real: maintainin",
-    views: 18,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg9.webp",
     allDescription: [
       {
@@ -1187,8 +1213,11 @@ Ready to level up your skincare game? Browse through our facials page at New Glo
     title: "Chemical Peel Process Day by Day: What to Expect at Each Stage",
     description:
       "Chemical peels are all the rage these days for anyone wanting to refresh their skin, reduce fine lines, or even address uneven pigmentation. Wheth",
-    views: 46,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg10.webp",
     allDescription: [
       {
@@ -1334,8 +1363,11 @@ At New Glow, we're here to help you achieve your skincare goals with tailored tr
     title: "How Long Do Dermal Fillers Last? Longevity and Care Tips",
     description:
       "Dermal fillers are a popular cosmetic treatment for those looking to restore volume, smooth out wrinkles",
-    views: 5,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg11.webp",
     allDescription: [
       {
@@ -1433,8 +1465,11 @@ Keep exploring our site for more information and tips about dermal fillers, and 
     title: "5 Reasons to Consider Botox for a Gummy Smile",
     description:
       "Let's talk gummy smiles. They're not exactly a medical problem, but for some, they can be a confidence blocker. A gummy smile happens",
-    views: 6,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg12.webp",
     allDescription: [
       {
@@ -1562,9 +1597,11 @@ Ready to explore more options for perfecting your smile? Check out our other tre
     title: "Why Should You Wait Before Getting a Facial After Botox?",
     description:
       "Botox treatments have become a popular go-to solution for those looking to minimize fine lines and wrinkles, offering a quick and minimall",
-    views: 8,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg13.webp",
     allDescription: [
       {
@@ -1641,9 +1678,11 @@ Ready to explore facials that work seamlessly with Botox? Continue browsing our 
     title: "8 Key Factors That Impact How Long IV Vitamin Therapy Lasts",
     description:
       "IV vitamin therapy has quickly become the go-to wellness trend, offering everything from hydration to enhanced energy. But a common que",
-    views: 18,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg14.webp",
     allDescription: [
       {
@@ -1753,9 +1792,11 @@ Ready to learn more? Explore our other blog posts or schedule your next appointm
     title: "What Are Biostimulators? Everything You Need To Know",
     description:
       "In today's world of aesthetic treatments, biostimulators are quickly becoming the ultimate game-changer for achieving natural, long-la",
-    views: 23,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg15.webp",
     allDescription: [
       {
@@ -1888,9 +1929,11 @@ If you're curious about biostimulator injections or want to learn more about how
     title: "How Long Does Kybella Last and What Is It?",
     description:
       "Kybella has revolutionized the way people address stubborn fat under the chin, offering a non-surgical alternative for contouring and",
-    views: 12,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg16.webp",
     allDescription: [
       {
@@ -2036,8 +2079,11 @@ Continue browsing our site to discover more about our comprehensive range of fat
     title: "What Is an IPL Photofacial? 5 Benefits and Aftercare Tips",
     description:
       "An IPL photofacial is one of the most popular non-invasive cosmetic treatments for improving skin tone and texture. This advanced treatment",
-    views: 11,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg17.webp",
     allDescription: [
       {
@@ -2200,8 +2246,11 @@ Ready to explore the transformative power of photofacials? At New Glow, we're de
     title: "How Often Should You Get a Chemical Peel?",
     description:
       "Chemical peels have long been celebrated for their ability to transform the skin, addressing concerns like dullness, fine lines, disco",
-    views: 16,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg18.webp",
     allDescription: [
       {
@@ -2343,9 +2392,11 @@ Ready to take the next step? Explore our website to learn more about our offerin
     title: "What Is Morpheus 8?",
     description:
       "If you're looking for an advanced skin treatment that can deliver stunning results without surgery, chances are you've heard about Morpheus 8. This cutting-edge treatment is quickly",
-    views: 14,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg19.webp",
     allDescription: [
       {
@@ -2465,9 +2516,11 @@ Start your journey to glowing, youthful skin today!`,
     title: "Laser Hair Removal Zones: Everything You Need to Know",
     description:
       "More and more people are turning to laser hair removal as a reliable way to enjoy silky, hair-free skin. If you're considering this treatment, it's essential",
-    views: 34,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg20.webp",
     allDescription: [
       {
@@ -2599,9 +2652,11 @@ Ready to take the next step? Explore our laser hair removal services today and d
     title: "How to Prepare for Microneedling",
     description:
       "Microneedling has become one of the top choices for skin rejuvenation, offering benefits like improved skin texture, reduced scars, and a youthful glow. However, if you want to get the",
-    views: 14,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 1,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg21.webp",
     allDescription: [
       {
@@ -2676,9 +2731,11 @@ As you continue exploring the world of skincare, keep browsing our articles and 
     title: "What Desires Can You Have for Facial Service?",
     description:
       "In today's world, skincare has taken a leading role in self-care, with facial treatment being one of the most popular choices. Whether it's for relax",
-    views: 28,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 3,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg22.webp",
     allDescription: [
       {
@@ -2784,9 +2841,11 @@ Whether you're looking to prepare your skin before a big event, relieve stress, 
     title: "How Often Should You Get Botox?",
     description:
       "The pursuit of a youthful, radiant complexion is a timeless endeavor. In the modern age, Botox has emerged as a powerful ally in this quest, smoothing out wrinkles and lines, and",
-    views: 46,
+    views: 0,
+    isLiked: false,
+    comments: [],
     commentsCount: 0,
-    likeCount: 3,
+    likeCount: 0,
     imgUrl: "/webpImages/blogImg23.webp",
     allDescription: [
       {

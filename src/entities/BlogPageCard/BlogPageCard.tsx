@@ -4,10 +4,14 @@ import ForwardSvg from "../../../src/assets/forward.svg";
 import EyeSvg from "../../../src/assets/EyeSvg.svg";
 import CommentSvg from "../../../src/assets/CommentSvg.svg";
 import heartSvg from "../../../src/assets/HeartSvg.svg";
+import redHeart from "../../../src/assets/heart-red.svg";
 
 import styles from "./BlogPageCard.module.css";
+import { useCallback, useEffect, useState } from "react";
+import { addOrRemoveLike } from "../../service/endpoints/addLike";
 
 interface BlogPageCardProps {
+  id: number;
   specialistName: string;
   date: string;
   readTime: string;
@@ -16,12 +20,14 @@ interface BlogPageCardProps {
   description: string;
   views: number;
   commentsCount: number;
+  isPostLiked: boolean;
   imgUrl: string;
-  likeCount?: number;
+  postLikeCount: number;
   handleNavigatePost: (slug: string) => void;
 }
 
 export const BlogPageCard = ({
+  id,
   specialistName,
   date,
   readTime,
@@ -30,10 +36,31 @@ export const BlogPageCard = ({
   description,
   views,
   commentsCount,
+  isPostLiked,
   imgUrl,
-  likeCount,
+  postLikeCount,
   handleNavigatePost,
 }: BlogPageCardProps) => {
+  const [isLiked, setIsLiked] = useState<boolean>(isPostLiked);
+  const [likeCount, setLikeCount] = useState<number>(postLikeCount);
+
+  const handleLike = useCallback(async () => {
+    if (isLiked) {
+      setLikeCount((prev) => prev - 1);
+    } else {
+      setLikeCount((prev) => prev + 1);
+    }
+    await addOrRemoveLike(id).then((res) => setIsLiked(res));
+  }, [id, isLiked]);
+
+  useEffect(() => {
+    setIsLiked(isPostLiked);
+  }, [isPostLiked]);
+
+  useEffect(() => {
+    setLikeCount(postLikeCount);
+  }, [postLikeCount]);
+
   return (
     <div
       className={styles.blogPageCard}
@@ -86,14 +113,22 @@ export const BlogPageCard = ({
               </span>
             </div>
           </div>
-          <div className={styles.like}>
-            {likeCount && (
-              <span className={cn(styles.count, "poppins-regular")}>
-                {likeCount}
-              </span>
+          <button
+            className={styles.like}
+            onClick={async (e) => {
+              e.stopPropagation();
+              await handleLike();
+            }}
+          >
+            <span className={cn(styles.count, "poppins-regular")}>
+              {likeCount}
+            </span>
+            {!isLiked ? (
+              <img src={heartSvg} alt="empty-heart" />
+            ) : (
+              <img src={redHeart} alt="red-heart" />
             )}
-            <img src={heartSvg} alt="" />
-          </div>
+          </button>
         </div>
       </div>
     </div>

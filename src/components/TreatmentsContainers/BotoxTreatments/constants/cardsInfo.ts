@@ -42,7 +42,7 @@ export const cardsInfos = [
     description:
       "Botox can be used for a non-surgical nose lift by relaxing the muscles that pull the nose tip down, allowing it to elevate naturally. Botox injections are a minimally invasive alternative to rhinoplasty, and can also be used to address a wide nose.",
     duration: "30 min",
-    price: "$895",
+    price: "$795",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ export const cardsInfos = [
     description:
       "Botox is injected in the area between your upper lip and nose to temporarily freeze the muscles that contract or elevate when you smile which allows you to smile without showing your gums.",
     duration: "30 min",
-    price: "$895",
+    price: "$150",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export const cardsInfos = [
     description:
       "Botox injections can be used to correct a downturned smile by relaxing the muscles that pull the corners of the mouth down. This allows the mouth to lift and smooth out, which can make a person look younger and more cheerful.",
     duration: "30 min",
-    price: "$895",
+    price: "$150",
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ export const cardsInfos = [
     description:
       "Botox can be used for a non-surgical nose lift by relaxing the muscles that pull the nose tip down, allowing it to elevate naturally. Botox injections are a minimally invasive alternative to rhinoplasty, and can also be used to address a wide nose.",
     duration: "30 min",
-    price: "$895",
+    price: "$150",
   },
   {
     id: 10,

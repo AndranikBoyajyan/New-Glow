@@ -40,6 +40,7 @@ export const HomeAllTreatments = () => {
               />
             ))}
             bulletsClassName="bullets_home_all_treatments"
+            spaceBetween={0}
           />
         )}
       </div>

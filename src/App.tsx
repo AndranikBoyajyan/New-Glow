@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-
-import "./App.css";
 import LayoutWrapper from "./pages/LayoutWrapper";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,16 +8,24 @@ import ErrorPage from "./pages/Error404";
 import Blog from "./pages/Blog";
 import SinglePost from "./pages/SinglePost";
 import Specials from "./pages/Specials";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { api } from "./service/axiosInstance";
 
-function App() {
-  const [user, setUser] = useState();
-  useEffect(() => {
-    api.get("/anonymous/user").then((res) => setUser(res.data));
-  }, []);
+import "./App.css";
 
-  console.log({ user });
+function App() {
+  useEffect(() => {
+    api.get("/anonymous/user").then((res) => {
+      const serverUser = res.data;
+
+      const cached = localStorage.getItem("user");
+      const parsed = cached ? JSON.parse(cached) : null;
+
+      if (!parsed || parsed.id !== serverUser.id) {
+        localStorage.setItem("user", JSON.stringify(serverUser));
+      }
+    });
+  }, []);
 
   return (
     <BrowserRouter>

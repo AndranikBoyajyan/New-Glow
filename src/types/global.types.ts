@@ -29,12 +29,23 @@ export interface IBlogCardsInfo {
   slug: string;
   description: string;
   views: number;
+  isLiked: boolean;
+  comments: string[];
   commentsCount: number;
   imgUrl: string;
-  likeCount?: number;
+  likeCount: number;
   allDescription:
     | {
         subTitle?: string;
         description: string;
       }[];
+}
+
+export interface CardType {
+  id: number;
+  slug: string;
+  commentCount: number;
+  viewCount: number;
+  likeCount: number;
+  isLiked: boolean;
 }

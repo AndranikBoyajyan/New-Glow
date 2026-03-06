@@ -24,7 +24,7 @@ export const SingleFavoriteTreatment = ({
       <div
         className={styles.favoriteTreatment}
         style={{
-          backgroundImage: `url(${import.meta.env.VITE_SERVER_API}${
+          backgroundImage: `url(${import.meta.env.VITE_FILES_API}${
             treatment.imageUrl
           })`,
         }}

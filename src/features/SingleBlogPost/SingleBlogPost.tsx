@@ -6,24 +6,79 @@ import twitterSvg from "../../../src/assets/twitter.svg";
 import linkedinSvg from "../../../src/assets/linkedIn.svg";
 import linkSvg from "../../../src/assets/link.svg";
 import heartSvg from "../../../src/assets/HeartSvg.svg";
+import redHeart from "../../../src/assets/heart-red.svg";
 import PatientsResults from "../../entities/SingleTreatmentPatientsResults";
 import SingleBlogRecentPosts from "../SingleBlogRecentPosts";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { MEDIA_TABLET_SMALL } from "../../constants/windowSizes";
+import CommentsBlock from "./CommentsBlock";
+import type { Comment } from "./model";
+import { useCallback, useEffect, useState } from "react";
+import { addOrRemoveLike } from "../../service/endpoints/addLike";
+import type { CardType } from "../../types/global.types";
 
 import styles from "./SingleBlogPost.module.css";
+import { getComments } from "../../service/endpoints/getCommentsBySlug";
 
 interface SingleBlogPostProps {
-  slug: string;
   id: number;
+  slug: string;
+  viewCount: number;
+  postLikeCount: number;
+  commentsCount: number;
+  isPostLiked: boolean;
+  recentPosts: CardType[];
 }
 
-export const SingleBlogPost = ({ slug, id }: SingleBlogPostProps) => {
+export const SingleBlogPost = ({
+  id,
+  slug,
+  commentsCount,
+  postLikeCount,
+  viewCount,
+  isPostLiked,
+  recentPosts,
+}: SingleBlogPostProps) => {
   const post = BLOG_CARDS_INFO.find((post) => post.id === id);
 
-  const { width } = useWindowSize();
+  const [comments, setComments] = useState<Comment[]>([]);
+  const user = JSON.parse(localStorage.getItem("user") || "null");
 
+  const [isLiked, setIsLiked] = useState(isPostLiked);
+  const [likeCount, setLikeCount] = useState(postLikeCount);
+  const [commCount, setCommCount] = useState(commentsCount);
+
+  const { width } = useWindowSize();
   const isMobile = width < MEDIA_TABLET_SMALL;
+
+  const handleAddCount = useCallback(() => {
+    setCommCount((prev) => prev + 1);
+  }, []);
+
+  useEffect(() => {
+    getComments(slug).then((res) => setComments(res));
+  }, [slug]);
+
+  useEffect(() => {
+    setCommCount(commentsCount);
+  }, [commentsCount]);
+
+  useEffect(() => {
+    setLikeCount(postLikeCount);
+  }, [postLikeCount]);
+
+  useEffect(() => {
+    setIsLiked(isPostLiked);
+  }, [isPostLiked]);
+
+  const handleLike = useCallback(async () => {
+    if (isLiked) {
+      setLikeCount((prev) => prev - 1);
+    } else {
+      setLikeCount((prev) => prev + 1);
+    }
+    await addOrRemoveLike(id).then((res) => setIsLiked(res));
+  }, [id, isLiked]);
 
   if (!post) return null;
 
@@ -78,21 +133,29 @@ export const SingleBlogPost = ({ slug, id }: SingleBlogPostProps) => {
             <img src={linkSvg} alt="link" />
           </div>
           <div className={cn(styles.actions, "poppins-regular")}>
-            <span className={styles.text}>{post.views} views</span>
-            <span className={styles.text}>{post.commentsCount} comments</span>
-            {post.likeCount && (
-              <div className={styles.like}>
-                <span className={cn(styles.count, "poppins-regular")}>
-                  {post.likeCount}
-                </span>
-                <img src={heartSvg} alt="" />
-              </div>
-            )}
+            <span className={styles.text}>{viewCount} Views</span>
+            <span className={styles.text}>{commCount} Comment</span>
+            <button className={styles.like} onClick={handleLike}>
+              <span className={cn(styles.count, "poppins-regular")}>
+                {likeCount}
+              </span>
+              {!isLiked ? (
+                <img src={heartSvg} alt="empty-heart" />
+              ) : (
+                <img src={redHeart} alt="red-heart" />
+              )}
+            </button>
           </div>
         </div>
         <div className={styles.divider}></div>
       </div>
-      <SingleBlogRecentPosts slug={slug} />
+      <CommentsBlock
+        blogId={post.id}
+        comments={comments}
+        currentUser={user}
+        handleAddCount={handleAddCount}
+      />
+      <SingleBlogRecentPosts recentPosts={recentPosts} />
       <PatientsResults firstName="Acne detox facial (1 course completed) " />
     </div>
   );

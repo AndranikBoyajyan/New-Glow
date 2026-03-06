@@ -1,28 +1,40 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router";
 import cn from "classnames";
-import { BLOG_CARDS_INFO } from "../../constants/blogCardsInfo";
 import BlogPageCard from "../../entities/BlogPageCard";
 import Title from "../../shared/Title";
+import type { CardType, IBlogCardsInfo } from "../../types/global.types";
+import { BLOG_CARDS_INFO } from "../../constants/blogCardsInfo";
 
 import styles from "./SingleBlogRecentPosts.module.css";
 
 interface SingleBlogRecentPostsProps {
-  slug: string;
+  recentPosts: CardType[];
 }
 
-export const SingleBlogRecentPosts = ({ slug }: SingleBlogRecentPostsProps) => {
-  const latestPosts = BLOG_CARDS_INFO.slice(0, 4);
+export const SingleBlogRecentPosts = ({
+  recentPosts,
+}: SingleBlogRecentPostsProps) => {
+  const [recPosts, setRecPosts] = useState<IBlogCardsInfo[]>([]);
 
-  const slugs = latestPosts.map((post) => post.slug);
-  const isActive = slugs.includes(slug);
+  const mergedCards = useMemo(() => {
+    return recentPosts.map((recentPost) => {
+      const card = BLOG_CARDS_INFO.find((card) => card.id === recentPost.id);
 
-  let recentPosts = latestPosts;
+      return {
+        ...card,
+        isLiked: recentPost.isLiked,
+        views: recentPost.viewCount,
+        likeCount: recentPost.likeCount,
+        commentsCount: recentPost.commentCount,
+        slug: recentPost.slug,
+      };
+    }) as IBlogCardsInfo[];
+  }, [recentPosts]);
 
-  if (isActive) {
-    recentPosts = latestPosts.filter((post) => post.slug !== slug);
-    recentPosts.push(BLOG_CARDS_INFO[4]);
-  }
+  useEffect(() => {
+    setRecPosts(mergedCards);
+  }, [mergedCards]);
 
   const navigate = useNavigate();
 
@@ -51,9 +63,10 @@ export const SingleBlogRecentPosts = ({ slug }: SingleBlogRecentPostsProps) => {
         </span>
       </div>
       <div className={styles.blogRecentPosts}>
-        {recentPosts.map((post) => (
+        {recPosts.map((post) => (
           <BlogPageCard
             key={post.title}
+            id={post.id}
             specialistName={post.specialistName}
             commentsCount={post.commentsCount}
             date={post.date}
@@ -62,6 +75,8 @@ export const SingleBlogRecentPosts = ({ slug }: SingleBlogRecentPostsProps) => {
             slug={post.slug}
             description={post.description}
             views={post.views}
+            isPostLiked={post.isLiked}
+            postLikeCount={post.likeCount}
             handleNavigatePost={handleNavigatePost}
             imgUrl={post.imgUrl}
           />

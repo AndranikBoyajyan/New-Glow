@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import FavoriteTreatmentsDescription from "../../../entities/FavoriteTreatmentsDescription";
 import styles from "./FavoriteTreatments.module.css";
 import SingleFavoriteTreatment from "./SingleFavoriteTreatment";
-import { getFavTreatments } from "./service/getFavTreatments";
+import { getFavTreatments } from "../../../service/endpoints/getFavTreatments";
 import type { IFavoriteTreatments } from "../../../types/global.types";
 
 export const FavoriteTreatments = () => {
