@@ -69,7 +69,7 @@ export const cardsInfos: ILaserTreatmentBodyPartsList[] = [
         id: 10,
         name: "Head",
         duration: "1 Hr",
-        price: "$20",
+        price: "$120",
       },
     ],
   },

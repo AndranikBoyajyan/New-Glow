@@ -6,7 +6,7 @@ export const cardsInfos = [
     description:
       "A thread lift is a nonsurgical cosmetic procedure that lifts and tightens your skin for a younger look. A thread lift also stimulates your body’s collagen production. Collagen creates firmer, more supple skin and naturally diminishes with age. A thread lift procedure has a quick recovery with minimal complications.",
     duration: "1 hr",
-    price: "$295",
+    price: "$995",
   },
   {
     id: 2,

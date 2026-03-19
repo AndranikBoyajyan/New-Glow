@@ -3,7 +3,8 @@ export const cardsInfos = [
     id: 1,
     imgUrl: "/webpImages/MicroneedingFace.webp",
     name: "Microneedling Face",
-    description: "",
+    description:
+      "Facial microneedling stimulates collagen production to improve skin texture, firmness, and tone. It targets fine lines, acne scars, and uneven skin, leaving the face smoother, rejuvenated, and radiant.",
     duration: "1 hr",
     price: "$295",
   },

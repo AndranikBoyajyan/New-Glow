@@ -4,7 +4,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/viPeelPrecisionPlus.webp",
     name: "ViPeel Precision Plus",
     description:
-      "Chemical peels help fade dark spots, sun damage, and melasma by accelerating cell turnover and shedding pigmented layers. They're especially helpful when other topical treatments aren’t enough.",
+      "ViPeel Precision Plus is an advanced chemical peel designed to improve skin tone, texture, and clarity. Its unique formula targets pigmentation, fine lines, acne scars, and sun damage, promoting a smoother, brighter, and more even complexion.",
     duration: "1 hr",
     price: "$795",
   },
@@ -13,7 +13,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/viPeelPurifywPrecisionPlus.webp",
     name: "ViPeel Purify w Precision Plus",
     description:
-      "Chemical peels help fade dark spots, sun damage, and melasma by accelerating cell turnover and shedding pigmented layers. They're especially helpful when other topical treatments aren’t enough.",
+      "Ideal for those seeking a comprehensive solution for acne-prone or oily skin, ViPeel Purify with Precision Plus provides noticeable improvements in texture, tone, and overall skin health with minimal downtime.",
     duration: "1 hr",
     price: "$995",
   },
@@ -22,7 +22,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/bodyViPeelSmallArea.webp",
     name: "Body ViPeel Small Area",
     description:
-      "Chemical peels help fade dark spots, sun damage, and melasma by accelerating cell turnover and shedding pigmented layers. They're especially helpful when other topical treatments aren’t enough.",
+      "Body ViPeel for small areas is a targeted chemical peel designed to improve skin texture, tone, and clarity on localized spots. It helps reduce pigmentation, acne scars, and roughness, promoting smoother, healthier-looking skin.",
     duration: "1 hr",
     price: "$195",
   },
@@ -31,7 +31,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/bodyViPeelLargeArea2.webp",
     name: "Body ViPeel Large Area",
     description:
-      "Chemical peels help fade dark spots, sun damage, and melasma by accelerating cell turnover and shedding pigmented layers. They're especially helpful when other topical treatments aren’t enough.",
+      "This treatment stimulates natural skin renewal across extensive areas such as the back, chest, or legs. Over a series of sessions, it gradually enhances skin health, leaving it firmer, more even, and revitalized.",
     duration: "1 hr",
     price: "$795",
   },

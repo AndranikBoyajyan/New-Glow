@@ -13,8 +13,8 @@ export const cardsInfos = [
     imgUrl: "/webpImages/FatDissolving2.webp",
     name: "Kybella Jowls",
     description:
-      "Kybella is a non-surgical injectable treatment used to reduce fat beneath the chin, commonly known as submental fat or a double chin. It contains deoxycholic acid, a naturally occurring molecule in the body that aids in the breakdown and absorption of dietary fat.",
+      "This non-surgical procedure gradually diminishes fullness in the jowls, resulting in a smoother, more sculpted appearance. Over a series of treatments, it enhances definition and restores a youthful, balanced profile.",
     duration: "1 hr 15 Min",
-    price: "$148",
+    price: "$945",
   },
 ];
