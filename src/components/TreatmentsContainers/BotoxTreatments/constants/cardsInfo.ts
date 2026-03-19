@@ -49,7 +49,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/botoxTreatmentsImg6.webp",
     name: "Facial/Shoulder Slimming",
     description:
-      "Botox can be used for a non-surgical nose lift by relaxing the muscles that pull the nose tip down, allowing it to elevate naturally. Botox injections are a minimally invasive alternative to rhinoplasty, and can also be used to address a wide nose.",
+      "Botox is injected into the masseter muscles (the chewing muscles at the jaw). When these muscles are overdeveloped (from genetics or teeth grinding), they create a wide lower face.Botox relaxes the muscle → the muscle gradually shrinks → the jawline looks slimmer and more V-shaped.",
     duration: "30 min",
     price: "$895",
   },
@@ -76,7 +76,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/botoxTreatmentsImg9.webp",
     name: "Chin Dimpling",
     description:
-      "Botox can be used for a non-surgical nose lift by relaxing the muscles that pull the nose tip down, allowing it to elevate naturally. Botox injections are a minimally invasive alternative to rhinoplasty, and can also be used to address a wide nose.",
+      "Chin dimpling Botox is a quick cosmetic procedure that relaxes the overactive mentalis muscle to smooth the “orange peel” texture of the chin. A small amount of botulinum toxin is injected, with minimal discomfort and no downtime. Results typically appear within a few days and last about 3–6 months.",
     duration: "30 min",
     price: "$150",
   },

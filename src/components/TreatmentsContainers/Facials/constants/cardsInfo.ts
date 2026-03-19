@@ -13,7 +13,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/akneDetox.webp",
     name: "Acne detox facial",
     description:
-      "The Signature Facial is a deep pore cleansing facial, great for all skin types which helps to relax tension in the face, brighten, and improve the overall appearance of your skin. We customize each Signature Facial to help firm, hydrate, reduce roughness, restore its optimum texture, and achieve splendid glow. This treatment is tailored to your skin type and concerns and includes dual cleansing, steam, mechanical or chemical exfoliation, Ultrasound Skin Scrubber and/or extractions, hydrating Hydrojelly mask, relaxing massage techniques, treatment serum, and moisturizer based on the skin’s needs.",
+      "The Acne Detox Facial is a deep-cleansing treatment designed to target acne, excess oil, and impurities while soothing inflamed skin. It helps unclog pores, reduce breakouts, and restore balance for a clearer, healthier complexion.",
     duration: "1 hr 15 Min",
     price: "$148",
   },
@@ -22,7 +22,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/guaSha.webp",
     name: "Gua sha Facial",
     description:
-      "The Gua Sha Facial is focused on lifting, relaxing muscle tension, rejuvenating, healing, and inducing glow. Specific massage techniques manually and with jade stones/rollers are used in the Gua Sha treatment to invite healing into the skin, detoxify stagnant lymph, sculpt the face, firm and lift the skin, release tension, and aid in alleviating blocked sinuses and congestion.",
+      "This soothing facial encourages detoxification and boosts blood flow, supporting the skin’s natural renewal process. Over a series of sessions, it can help firm and lift the skin while leaving it refreshed and revitalized.",
     duration: "1 hr",
     price: "$140",
   },
@@ -58,7 +58,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/rfTightening.webp",
     name: "RF Tightening Facial (Face)",
     description:
-      "The Non-Invasive Fractional Radio Frequency Facial uses gentle electrical current that helps improve skin tone, production of collagen and elastin. This new level of anti-aging technology helps treat wrinkles, photo-damaged skin, post-acne scars and stretchmarks without any pain or downtime.",
+      "The Non-Invasive Fractional Radio Frequency Facial uses gentle electrical current that helps improve skin tone, production of collagen and elastin. This new level of anti-aging technology helps treat wrinkles, photo-damaged skin, post-acne scars and stretchmarks without any pain or downtime. This highly effective RF energy penetrates the skin resulting in the reduction of pore appearance, tightening and lifting of the skin, improving elasticity, and visibly enhancing skin complexion. Patients often can feel results immediately during and after the treatment.",
     duration: "1 hr",
     price: "$220",
   },
@@ -67,7 +67,7 @@ export const cardsInfos = [
     imgUrl: "/webpImages/rfTighteningFaceNeck.webp",
     name: "RF Tightening Facial (Face/Neck)",
     description:
-      "The Non-Invasive Fractional Radio Frequency Facial uses gentle electrical current that helps improve skin tone, production of collagen and elastin. This new level of anti-aging technology helps treat wrinkles, photo-damaged skin, post-acne scars and stretchmarks without any pain or downtime.",
+      "The RF (Radiofrequency) Tightening Facial is a non-invasive treatment that uses radiofrequency energy to stimulate collagen and elastin production in the skin. It helps tighten sagging areas, smooth fine lines, and improve overall texture for a firmer, more youthful appearance.",
     duration: "1 hr",
     price: "$360",
   },
