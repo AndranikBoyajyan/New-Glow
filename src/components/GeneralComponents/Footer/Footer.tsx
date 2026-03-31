@@ -18,8 +18,6 @@ export const Footer = () => {
 
   const isMobile = width < MEDIA_TABLET_SMALL;
 
-  const handleRedirect = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <div className={cn(styles.footer, "poppins-regular")}>
       <div className={styles.topSideWithDivider}>
@@ -50,7 +48,7 @@ export const Footer = () => {
             </div>
             <div className={styles.contactWrapper}>
               <img src={"/webpImages/email.webp"} alt="email" />
-              <span className={cn(styles.phoneNumber, "poppins-bold")}>
+              <span className={cn(styles.phoneNumber, "poppins-regular")}>
                 {" "}
                 818-570-7990
               </span>
@@ -70,39 +68,19 @@ export const Footer = () => {
               Sitemap
             </h6>
             <div className={cn(styles.sitemapItems, "poppins-regular")}>
-              <Link
-                className={styles.sitemapLink}
-                to={"/"}
-                onClick={handleRedirect}
-              >
+              <Link className={styles.sitemapLink} to={"/"}>
                 <span>Home</span>
               </Link>
-              <Link
-                className={styles.sitemapLink}
-                to={"/about"}
-                onClick={handleRedirect}
-              >
+              <Link className={styles.sitemapLink} to={"/about"}>
                 <span>About</span>
               </Link>
-              <Link
-                className={styles.sitemapLink}
-                to={"/all-treatments"}
-                onClick={handleRedirect}
-              >
+              <Link className={styles.sitemapLink} to={"/all-treatments"}>
                 <span>All treatments</span>
               </Link>
-              <Link
-                className={styles.sitemapLink}
-                to={"/blog"}
-                onClick={handleRedirect}
-              >
+              <Link className={styles.sitemapLink} to={"/blog"}>
                 <span>Blog</span>
               </Link>
-              <Link
-                className={styles.sitemapLink}
-                to={"/specials"}
-                onClick={handleRedirect}
-              >
+              <Link className={styles.sitemapLink} to={"/specials"}>
                 <span>Specials</span>
               </Link>
               {TREATMENTS.map((treatment) => (
@@ -110,7 +88,6 @@ export const Footer = () => {
                   key={treatment.id}
                   className={styles.sitemapLink}
                   to={`/${getTreatmentPath(treatment.name)}`}
-                  onClick={handleRedirect}
                 >
                   <span>{treatment.name}</span>
                 </Link>
@@ -163,11 +140,7 @@ export const Footer = () => {
           <span>Privacy Policy</span>
         </div>
       </div>
-      <Link
-        to="/"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={styles.logo}
-      >
+      <Link to="/" className={styles.logo}>
         <div
           className={styles.logoSvg}
           style={{ backgroundImage: `url(${LogoSVGWhite})` }}

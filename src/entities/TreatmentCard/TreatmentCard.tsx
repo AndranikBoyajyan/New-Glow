@@ -26,11 +26,7 @@ export const TreatmentCard: FC<TreatmentCardProps> = ({
   };
 
   return (
-    <Link
-      to={urlParamsName}
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className={styles.link}
-    >
+    <Link to={urlParamsName} className={styles.link}>
       <div
         className={cn(styles.treatmentCard, {
           [styles.treatmentCardRight]: isRight,

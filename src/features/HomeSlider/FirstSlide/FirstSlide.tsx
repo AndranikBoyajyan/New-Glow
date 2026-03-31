@@ -65,7 +65,6 @@ export const FirstSlide = () => {
               to={"/all-treatments"}
               onClick={() => {
                 handleSeeAllTreatments();
-                return window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
               <Button

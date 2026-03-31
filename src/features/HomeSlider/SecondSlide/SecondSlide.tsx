@@ -62,13 +62,7 @@ export const SecondSlide = () => {
               className="button_dark"
               handleClick={handleOpenModal}
             />
-            <Link
-              to={"/all-treatments"}
-              onClick={() => {
-                handleSeeAllTreatments();
-                return window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
+            <Link to={"/all-treatments"} onClick={handleSeeAllTreatments}>
               <Button
                 content="See all treatments"
                 className="button_light_transparent"

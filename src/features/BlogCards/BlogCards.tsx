@@ -23,7 +23,6 @@ export const BlogCards = () => {
   const handleNavigatePost = useCallback(
     (slug: string) => {
       navigate(`/blog/${slug}`);
-      return window.scrollTo({ top: 0, behavior: "smooth" });
     },
     [navigate]
   );

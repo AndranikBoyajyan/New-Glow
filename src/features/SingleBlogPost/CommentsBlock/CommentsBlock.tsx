@@ -73,12 +73,14 @@ export const CommentsBlock = ({
                 <span className={cn(styles.createdAt, "poppins-regular")}>
                   {new Date(comm.createdAt).toLocaleDateString()}
                 </span>
-                <button
-                  onClick={() => deleteCommentById(comm.id)}
-                  className={cn(styles.delete, "poppins-regular")}
-                >
-                  <img src={deleteSvg} alt="delete" />
-                </button>
+                {comm.user_id === currentUser.id && (
+                  <button
+                    onClick={() => deleteCommentById(comm.id)}
+                    className={cn(styles.delete, "poppins-regular")}
+                  >
+                    <img src={deleteSvg} alt="delete" />
+                  </button>
+                )}
               </div>
             </div>
           ))}

@@ -27,7 +27,6 @@ export const SpecialPromo = () => {
 
   const handleRedirect = () => {
     navigate("specials");
-    return window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
