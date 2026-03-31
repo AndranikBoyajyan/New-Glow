@@ -1,4 +1,4 @@
-import { useCallback, useState, type FC } from "react";
+import { useCallback, useEffect, useRef, useState, type FC } from "react";
 import styles from "./TreatmentPageCard.module.css";
 import Title from "../../shared/Title";
 import cn from "classnames";
@@ -31,12 +31,19 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
     setIsOpen(false);
   }, [setIsOpen]);
 
-  const [showMore, setShowMore] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const ref = useRef<HTMLSpanElement | null>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    setShowButton(el.scrollHeight > el.clientHeight);
+  }, [description]);
 
   const { width } = useWindowSize();
   const isMobile = width < MEDIA_TABLET_SMALL;
-
-  const slicedDescription = description.slice(0, description.indexOf(".") + 1);
 
   return (
     <div className={styles.treatmentPageCard}>
@@ -49,26 +56,29 @@ export const TreatmentPageCard: FC<TreatmentPageCardProps> = ({
             className={isMobile ? "title_20" : "title_24"}
             font="poppins-light"
           />
-          <div
-            className={
-              !showMore ? styles.descriptionBlock : styles.descriptionBlockShow
-            }
+          <span
+            ref={ref}
+            className={cn(styles.description, "poppins-regular", {
+              [styles.clamped]: !expanded,
+            })}
           >
-            <span className={cn(styles.description, "poppins-regular")}>
-              {showMore ? description : slicedDescription}
-            </span>
-          </div>
+            {description}
+          </span>
           <div>
-            <button
-              className={styles.showMoreButton}
-              onClick={() => setShowMore(!showMore)}
-            >
-              <span
-                className={cn(styles.showMoreButtonWrapper, "poppins-italic")}
+            {showButton && (
+              <button
+                className={styles.showMoreButton}
+                onClick={() => {
+                  setExpanded((prev) => !prev);
+                }}
               >
-                {showMore ? "less" : "read more"}
-              </span>
-            </button>
+                <span
+                  className={cn(styles.showMoreButtonWrapper, "poppins-italic")}
+                >
+                  {expanded ? "Show less" : "Read more"}
+                </span>
+              </button>
+            )}
           </div>
         </div>
 

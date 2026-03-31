@@ -32,11 +32,7 @@ export const ErrorPage = () => {
             </span>
             <span className={cn(styles.redirectText, "poppins-regular")}>
               Let's take you back to{" "}
-              <Link
-                to="/"
-                className={styles.Link}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
+              <Link to="/" className={styles.Link}>
                 <span className={cn(styles.redirectText, "poppins-semibold")}>
                   Homepage
                 </span>

@@ -82,7 +82,7 @@ export const cardsInfos = [
   },
   {
     id: 10,
-    imgUrl: "/webpImages/botoxTreatmentsImg10.webp",
+    imgUrl: "/webpImages/botoxTmj.webp",
     name: "TMJ Pain relief",
     description:
       "Botox injections can help relieve temporomandibular joint (TMJ) pain and jaw tension by relaxing the muscles around the joint. Botox can also help prevent teeth grinding, which can make TMJ symptoms worse.",

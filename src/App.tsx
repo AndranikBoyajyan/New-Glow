@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { api } from "./service/axiosInstance";
 
 import "./App.css";
+import ScrollToTop from "./helpers/scrollToTop";
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<LayoutWrapper />}>
           <Route index element={<Home />} />

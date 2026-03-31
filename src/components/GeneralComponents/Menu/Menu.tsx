@@ -53,7 +53,6 @@ export const Menu = () => {
                 className={styles.logo}
                 onClick={() => {
                   handleCloseModal();
-                  return window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <div

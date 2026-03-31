@@ -41,14 +41,12 @@ export const SingleBlogRecentPosts = ({
   const handleNavigatePost = useCallback(
     (slug: string) => {
       navigate(`/blog/${slug}`);
-      return window.scrollTo({ top: 0, behavior: "smooth" });
     },
     [navigate]
   );
 
   const handleSeeAllPosts = () => {
     navigate("/blog");
-    return window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

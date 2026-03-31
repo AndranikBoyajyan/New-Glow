@@ -14,11 +14,7 @@ export const Header = () => {
   const isMobile = width < MEDIA_TABLET_SMALL;
   return (
     <div className={styles.header}>
-      <Link
-        to="/"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={styles.logo}
-      >
+      <Link to="/" className={styles.logo}>
         <div
           className={styles.logoSvg}
           style={{
